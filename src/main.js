@@ -1,6 +1,12 @@
+const { response, request } = require('express');
 const express = require('express')
 const app = express();
 const port = 3000;
+
+/**
+ * 使用json中间件
+ */
+app.use(express.json());
 
 app.listen(port, () => {
   console.log('🚀 服务已启动!');
@@ -33,4 +39,20 @@ app.get('/posts/:postId', (request, response) => {
   const posts = data.filter(item => item.id == postId)
 
   response.send(posts[0])
+})
+
+/**
+ * 创建内容
+ */
+app.post('/posts', (request, response) => {
+  // 获取请求里的数据
+  const { content } = request.body;
+
+  // 设置响应状态码
+  response.status(201);
+
+  // 做出响应
+  response.send({
+    message: `成功创建了内容: ${content}`
+  })
 })
