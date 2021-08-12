@@ -1,5 +1,5 @@
-const { response, request } = require('express');
-const express = require('express')
+import express from 'express';
+import { Request, Response } from 'express';
 const app = express();
 const port = 3000;
 
@@ -12,7 +12,7 @@ app.listen(port, () => {
   console.log('🚀 服务已启动!');
 })
 
-app.get('/', (request, response) => {
+app.get('/', (request: Request, response: Response) => {
   response.send('你好');
 });
 
@@ -25,18 +25,18 @@ const data = [
   {
     id: 2,
     title: '关山月1',
-    content: '明月出天山,苍茫云海间1'
+    content: '明月出天山,苍茫云海间2'
   }
 ]
 
-app.get('/posts', (request, response) => {
+app.get('/posts', (request: Request, response: Response) => {
   response.send(data)
 })
 
-app.get('/posts/:postId', (request, response) => {
+app.get('/posts/:postId', (request: Request, response: Response) => {
   const { postId } = request.params;
 
-  const posts = data.filter(item => item.id == postId)
+  const posts = data.filter(item => item.id == parseInt(postId, 10))
 
   response.send(posts[0])
 })
