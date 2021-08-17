@@ -21,6 +21,9 @@ export const defaultErrorHandler = (
   response: Response,
   next: NextFunction
 ) => {
+  if (error.message) {
+    console.log('❌', error.message, '🔚')
+  }
   let statusCode: number, message: string;
 
   /**
@@ -29,9 +32,7 @@ export const defaultErrorHandler = (
   switch (error.message) {
     default:
       statusCode = 500;
-      message = "服务暂时出了点问题 ~~🐿"
-      console.log(error.message);
-
+      message = "服务暂时出了点问题 ~~ 🐿"
       break;
   }
 
