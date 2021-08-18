@@ -50,6 +50,18 @@ export const defaultErrorHandler = (
       statusCode = 409;
       message = "此邮箱已注册"
       break;
+    case 'USER_NAME_INVALID_FORMAT':
+      statusCode = 400;
+      message = "用户名格式错误"
+      break;
+    case 'PASSWORD_INVALID_FORMAT':
+      statusCode = 400;
+      message = "密码格式错误"
+      break;
+    case 'USER_EMAIL_INVALID_FORMAT':
+      statusCode = 400;
+      message = "邮箱格式错误"
+      break;
     default:
       statusCode = 500;
       message = "服务暂时出了点问题 ~~ 🐿"

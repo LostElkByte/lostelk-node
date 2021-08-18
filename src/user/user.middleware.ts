@@ -27,6 +27,21 @@ export const validateUserData = async (
   const userEmail = await userService.getUserByEmail(email)
   if (userEmail) return next(new Error('USER_EMAIL_ALREADY_EXIST'))
 
+  // 验证用户名格式
+  const userNameReg = /^[-_a-zA-Z0-9\u4E00-\u9FA5]{1,20}$/;
+  const userNameRegex = userNameReg.test(name)
+  if (!userNameRegex) return next(new Error('USER_NAME_INVALID_FORMAT'))
+
+  // 验证邮箱格式
+  const userEmailReg = /^$|^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$/;
+  const userEmailRegex = userEmailReg.test(email)
+  if (!userEmailRegex) return next(new Error('USER_EMAIL_INVALID_FORMAT'))
+
+  // 验证密码格式
+  const passwordReg = /^.{6,16}$/;
+  const passwordRegex = passwordReg.test(password)
+  if (!passwordRegex) return next(new Error('PASSWORD_INVALID_FORMAT'))
+
   // 下一步
   next();
 }
