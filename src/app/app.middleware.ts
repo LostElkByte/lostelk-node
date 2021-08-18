@@ -42,6 +42,14 @@ export const defaultErrorHandler = (
       statusCode = 400;
       message = "请提供邮箱地址"
       break;
+    case 'USER_NAME_ALREADY_EXIST':
+      statusCode = 409;
+      message = "此用户名已被占用"
+      break;
+    case 'USER_EMAIL_ALREADY_EXIST':
+      statusCode = 409;
+      message = "此邮箱已注册"
+      break;
     default:
       statusCode = 500;
       message = "服务暂时出了点问题 ~~ 🐿"
