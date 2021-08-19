@@ -3,7 +3,7 @@ import bcrypt from 'bcrypt'
 import * as userService from './user.service'
 
 /**
- * 验证用户数据
+ * 注册 - 验证用户数据
  */
 export const validateUserData = async (
   request: Request,
@@ -20,14 +20,6 @@ export const validateUserData = async (
   if (!password) return next(new Error('PASSWORD_IS_REQUIRED'))
   if (!email) return next(new Error('EMAIL_IS_REQUIRED'))
 
-  // 验证用户名是否唯一
-  const userName = await userService.getUserByName(name)
-  if (userName) return next(new Error('USER_NAME_ALREADY_EXIST'))
-
-  // 验证邮箱名是否唯一
-  const userEmail = await userService.getUserByEmail(email)
-  if (userEmail) return next(new Error('USER_EMAIL_ALREADY_EXIST'))
-
   // 验证用户名格式
   const userNameReg = /^[-_a-zA-Z0-9\u4E00-\u9FA5]{1,20}$/;
   const userNameRegex = userNameReg.test(name)
@@ -43,12 +35,27 @@ export const validateUserData = async (
   const passwordRegex = passwordReg.test(password)
   if (!passwordRegex) return next(new Error('PASSWORD_INVALID_FORMAT'))
 
+  // 验证邮箱名是否唯一
+  const userStatus = await userService.statusIsAvailable(email)
+  const userEmail = await userService.getUserByEmail(email)
+  if (userEmail && userStatus == 1) return next(new Error('USER_EMAIL_ALREADY_EXIST'))
+
+  // 判断邮箱状态如果为 0 ,则删除此未完成注册记录
+  if (userStatus == 0) {
+    const deleteUser = await userService.deleteUser(email)
+  }
+
+  // 验证用户名是否唯一
+  const userName = await userService.getUserByName(name)
+  if (userName) return next(new Error('USER_NAME_ALREADY_EXIST'))
+
   // 下一步
   next();
 }
 
+
 /**
- * HASH 密码 邮箱
+ * 注册 - HASH 密码 邮箱
  */
 export const hashPasswordAndEmail = async (
   request: Request,
@@ -62,7 +69,7 @@ export const hashPasswordAndEmail = async (
   request.body.password = await bcrypt.hash(password, 10)
 
   // HASH 邮箱
-  request.body.email = await bcrypt.hash(email, 10)
+  // request.body.email = await bcrypt.hash(email, 10)
 
   // 下一步
   next()

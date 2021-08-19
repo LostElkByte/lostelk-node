@@ -51,3 +51,77 @@ export const getUserByEmail = async (email: string) => {
   // 提供数据
   return data[0]
 }
+
+/**
+ * 判断用户账号状态是否可用
+ */
+export const statusIsAvailable = async (email: string) => {
+  // 准备查询
+  const statement = `
+   SELECT status
+   FROM user
+   WHERE email = ?
+ `;
+
+  // 执行查询
+  const [data] = await connection.promise().query(statement, email)
+
+  // 提供数据
+  if (data[0]) {
+    return data[0].status
+  } else {
+    return data
+  }
+}
+
+/**
+ * 删除账号
+ */
+export const deleteUser = async (email: string) => {
+  // 准备查询
+  const statement = `
+    DELETE
+    FROM user
+    WHERE email = ?
+  `;
+
+  // 执行查询
+  const [data] = await connection.promise().query(statement, email)
+
+  return data
+}
+
+/**
+ * 存储邮箱验证码
+ */
+export const setEmailVerifyKey = async (email: string, verify_key: string) => {
+  // 准备查询
+  const statement = `
+    UPDATE user 
+    SET verify_key = ? 
+    where email = ?
+  `;
+
+  // 执行查询
+  const [data] = await connection.promise().query(statement, [verify_key, email])
+  console.log(data);
+
+  return data
+}
+
+/**
+ * 修改用户状态
+ */
+export const updateUserStatus = async (email: string) => {
+  // 准备查询
+  const statement = `
+    UPDATE user 
+    SET status = 1 
+    where email = ?
+  `;
+
+  // 执行查询
+  const [data] = await connection.promise().query(statement, email)
+
+  return data
+}
