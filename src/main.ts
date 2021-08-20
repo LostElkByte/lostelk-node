@@ -7,7 +7,7 @@ app.listen(APP_PORT, () => {
 })
 
 /**
- * 测试使用数据服务连接
+ * 数据服务连接
  */
 connection.connect(error => {
   if (error) {
