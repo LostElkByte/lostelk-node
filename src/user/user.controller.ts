@@ -57,17 +57,17 @@ export const emailVerify = async (
       userService.updateUserStatus(email as string, 1)
       userService.deleteVerift_key(email as string)
       sendActivateSuccess({ name, email })
-      response.status(201).send(`您的账户: ${email} 激活成功`)
+      response.status(201).send({ isSucceed: 1, message: `您的账户: ${email} 激活成功` })
       return
     }
 
     if (data.verify_key === verify_key && create_time - data.create_time > 1800) {
-      response.status(409).send('此激活链接已过期, 请重新注册')
+      response.status(409).send({ isSucceed: 0, message: '此激活链接已过期, 请重新注册' })
       return
     }
 
     if (data.verify_key != verify_key) {
-      response.status(409).send('此激活链接校验失败')
+      response.status(409).send({ isSucceed: 0, message: '此激活链接校验失败' })
       return
     }
 
