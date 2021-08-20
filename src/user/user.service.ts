@@ -53,50 +53,6 @@ export const getUserByEmail = async (email: string) => {
 }
 
 /**
- * 通过邮箱判断用户账号状态是否可用
- */
-export const statusIsAvailableByEmail = async (email: string) => {
-  // 准备查询
-  const statement = `
-   SELECT status
-   FROM user
-   WHERE email = ?
- `;
-
-  // 执行查询
-  const [data] = await connection.promise().query(statement, email)
-
-  // 提供数据
-  if (data[0]) {
-    return data[0].status
-  } else {
-    return data
-  }
-}
-
-/**
- * 通过用户名判断用户账号状态是否可用
- */
-export const statusIsAvailableByName = async (name: string) => {
-  // 准备查询
-  const statement = `
-   SELECT status
-   FROM user
-   WHERE name = ?
- `;
-
-  // 执行查询
-  const [data] = await connection.promise().query(statement, name)
-
-  // 提供数据
-  if (data[0]) {
-    return data[0].status
-  } else {
-    return data
-  }
-}
-
-/**
  * 通过邮箱删除账号
  */
 export const deleteUserByEmail = async (email: string) => {
@@ -143,7 +99,6 @@ export const setEmailVerifyKey = async (email: string, verify_key: string) => {
 
   // 执行查询
   const [data] = await connection.promise().query(statement, [verify_key, email])
-  console.log(data);
 
   return data
 }
@@ -151,16 +106,50 @@ export const setEmailVerifyKey = async (email: string, verify_key: string) => {
 /**
  * 修改用户状态
  */
-export const updateUserStatus = async (email: string) => {
+export const updateUserStatus = async (email: string, status: number) => {
   // 准备查询
   const statement = `
     UPDATE user 
-    SET status = 1 
+    SET status = ? 
     where email = ?
   `;
 
   // 执行查询
+  const [data] = await connection.promise().query(statement, [status, email])
+
+  return data
+}
+
+/**
+ * 通过邮箱查询校验码, 创建时间
+ */
+export const getVerift_key = async (email: string) => {
+  // 准备查询
+  const statement = `
+    SELECT verify_key, create_time
+    FROM user
+    WHERE email = ?
+  `;
+
+  // 执行查询
   const [data] = await connection.promise().query(statement, email)
+
+  return data[0]
+}
+
+/**
+ * 清空 verift_key
+ */
+export const deleteVerift_key = async (email: string) => {
+  // 准备查询
+  const statement = `
+  UPDATE user
+  SET verify_key = ? 
+  WHERE email = ?
+  `;
+
+  // 执行查询
+  const [data] = await connection.promise().query(statement, ['', email])
 
   return data
 }

@@ -10,6 +10,11 @@ const router = express.Router()
 router.post('/users', validateUserData, hashPasswordAndEmail, userController.store)
 
 /**
+ * 注册 - 激活邮箱
+ */
+router.get('/activat_email', userController.emailVerify)
+
+/**
  * 导出路由
  */
 export default router

@@ -45,12 +45,12 @@ export const validateUserData = async (
   if (userEmail && userEmail.status == 1) return next(new Error('USER_EMAIL_ALREADY_EXIST'))
 
   // 通过邮箱判断账号状态如果为 0 ,并且 距离创建时间 ＞ 1800秒, 则删除此未完成注册记录
-  if (userEmail && userEmail.status == 0 && create_time - userEmail.create_time >= 1800) {
+  if (userEmail && userEmail.status == 0 && create_time - userEmail.create_time > 1800) {
     await userService.deleteUserByEmail(email)
   }
 
   // 通过用户名判断账号状态如果为 0 并且 距离创建时间 < 1800秒 , 则提示此邮箱正在注册流程中
-  if (userEmail && userEmail.status == 0 && create_time - userEmail.create_time < 1800) return next(new Error('USER_EMAIL_WAITING_VERIFICATION'))
+  if (userEmail && userEmail.status == 0 && create_time - userEmail.create_time <= 1800) return next(new Error('USER_EMAIL_WAITING_VERIFICATION'))
 
   /**
    * 验证用户名
@@ -60,17 +60,16 @@ export const validateUserData = async (
   if (userName && userName.status == 1) return next(new Error('USER_NAME_ALREADY_EXIST'))
 
   // 通过用户名判断账号状态如果为 0 并且 距离创建时间 ＞ 1800秒 ,则删除此未完成注册记录
-  if (userName && userName.status == 0 && create_time - userName.create_time >= 1800) {
+  if (userName && userName.status == 0 && create_time - userName.create_time > 1800) {
     await userService.deleteUserByName(name)
   }
 
   // 通过用户名判断账号状态如果为 0 并且 距离创建时间 < 1800秒 , 则提示用户名已占用
-  if (userName && userName.status == 0 && create_time - userName.create_time < 1800) return next(new Error('USER_NAME_ALREADY_EXIST'))
+  if (userName && userName.status == 0 && create_time - userName.create_time <= 1800) return next(new Error('USER_NAME_ALREADY_EXIST'))
 
   // 下一步
   next();
 }
-
 
 /**
  * 注册 - HASH 密码

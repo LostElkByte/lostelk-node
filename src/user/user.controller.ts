@@ -2,7 +2,7 @@ import { Request, Response, NextFunction } from 'express'
 import { UserModel } from './user.model'
 import { v4 as uuidv4 } from 'uuid'
 import dayjs from 'dayjs'
-import { sendRegisterEmail } from '../app/nodemailer'
+import { sendRegisterEmail, sendActivateSuccess } from '../app/nodemailer'
 import * as userService from './user.service'
 
 /**
@@ -35,4 +35,44 @@ export const store = async (
   } catch (error) {
     next(error)
   }
+}
+
+/**
+ * 邮箱校验
+ */
+export const emailVerify = async (
+  request: Request,
+  response: Response,
+  next: NextFunction
+) => {
+  // 准备数据
+  const { email, name, verify_key } = request.query
+  const create_time = dayjs().unix()
+
+  // 通过邮箱查询校验码
+  const data = await userService.getVerift_key(email as string)
+
+  try {
+    if (data.verify_key === verify_key && create_time - data.create_time <= 1800) {
+      userService.updateUserStatus(email as string, 1)
+      userService.deleteVerift_key(email as string)
+      sendActivateSuccess({ name, email })
+      response.status(201).send(`您的账户: ${email} 激活成功`)
+      return
+    }
+
+    if (data.verify_key === verify_key && create_time - data.create_time > 1800) {
+      response.status(409).send('此激活链接已过期, 请重新注册')
+      return
+    }
+
+    if (data.verify_key != verify_key) {
+      response.status(409).send('此激活链接校验失败')
+      return
+    }
+
+  } catch (error) {
+    next(error)
+  }
+
 }
