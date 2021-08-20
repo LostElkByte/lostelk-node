@@ -13,6 +13,7 @@
   "description": "LostElk服务端应用",
   "dependencies": {
     "bcrypt": "^4.0.1",
+    "dayjs": "^1.10.6",
     "express": "^4.17.1",
     "lodash": "^4.17.15",
     "mysql2": "^2.3.0",

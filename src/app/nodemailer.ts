@@ -17,21 +17,29 @@ const transporter = nodemailer.createTransport({
  * 注册用户时发送邮箱
  */
 export const sendRegisterEmail = ({ name, email, verify_key }) => {
-  const url = `${EMAIL_IP}/regiter_success?name=${name}&verify_key=${verify_key}`;
+  const url = `${EMAIL_IP}/activat_email?name=${name}&verify_key=${verify_key}`;
   const loginUrl = `${EMAIL_IP}/login`;
+  const registerUrl = `${EMAIL_IP}/register`;
   const params = {
     from: 'lostElk<email.lostelk@qq.com>', // 收件人显示的发件人信息,xxxxxxx换成自己的qq
     to: email, // 目标邮箱号
     subject: 'LostElk',
-    html: `${name}
+    html: `尊敬的: ${name}
           </br>
           </br> 
-          感谢您注册 LostElk, 点击下面的链接即可激活您的账号:
+          感谢您注册 LostElk，如确认是您本人注册的本站账号。
+          </br>
+          </br> 
+          请在30分钟内点击下面的链接即可激活您的账号：
           <a style="color: #87CEFA" href="${url}">${url}</a>
           </br>
           </br>
-          这个链接只能使用一次, 点击激活之后就可以在  <a style="color: #87CEFA" href="${loginUrl}">${loginUrl}</a>
-          使用下列账号和密码登录了
+          这个链接只能使用一次，请在30分钟内使用。如超过激活时间导致链接失效，您可以点击此链接重新注册。
+          <a style="color: #87CEFA" href="${registerUrl}">${registerUrl}</a>
+          </br>
+          </br>
+          点击激活之后您就可以在 <a style="color: #87CEFA" href="${loginUrl}">${loginUrl}</a>
+          使用您的账号和密码登录了
           </br>
           </br>
           — LostElk 团队

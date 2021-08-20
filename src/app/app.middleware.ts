@@ -62,6 +62,10 @@ export const defaultErrorHandler = (
       statusCode = 400;
       message = "邮箱格式错误"
       break;
+    case 'USER_EMAIL_WAITING_VERIFICATION':
+      statusCode = 409;
+      message = "您输入的邮箱正在等待激活!验证信息已发送到您的邮箱,请按照操作流程在30分钟内进行激活账号"
+      break;
     default:
       statusCode = 500;
       message = "服务暂时出了点问题 ~~ 🐿"

@@ -23,7 +23,7 @@ export const createUser = async (user: UserModel) => {
 export const getUserByName = async (name: string) => {
   // 准备查询
   const statement = `
-    SELECT id, name
+    SELECT id, name, email, status, create_time
     FROM user
     WHERE name = ?
   `;
@@ -41,7 +41,7 @@ export const getUserByName = async (name: string) => {
 export const getUserByEmail = async (email: string) => {
   // 准备查询
   const statement = `
-    SELECT id, name, email
+    SELECT id, name, email, status, create_time
     FROM user
     WHERE email = ?
   `;
@@ -53,9 +53,9 @@ export const getUserByEmail = async (email: string) => {
 }
 
 /**
- * 判断用户账号状态是否可用
+ * 通过邮箱判断用户账号状态是否可用
  */
-export const statusIsAvailable = async (email: string) => {
+export const statusIsAvailableByEmail = async (email: string) => {
   // 准备查询
   const statement = `
    SELECT status
@@ -75,9 +75,31 @@ export const statusIsAvailable = async (email: string) => {
 }
 
 /**
- * 删除账号
+ * 通过用户名判断用户账号状态是否可用
  */
-export const deleteUser = async (email: string) => {
+export const statusIsAvailableByName = async (name: string) => {
+  // 准备查询
+  const statement = `
+   SELECT status
+   FROM user
+   WHERE name = ?
+ `;
+
+  // 执行查询
+  const [data] = await connection.promise().query(statement, name)
+
+  // 提供数据
+  if (data[0]) {
+    return data[0].status
+  } else {
+    return data
+  }
+}
+
+/**
+ * 通过邮箱删除账号
+ */
+export const deleteUserByEmail = async (email: string) => {
   // 准备查询
   const statement = `
     DELETE
@@ -87,6 +109,23 @@ export const deleteUser = async (email: string) => {
 
   // 执行查询
   const [data] = await connection.promise().query(statement, email)
+
+  return data
+}
+
+/**
+ * 通过用户名删除账号
+ */
+export const deleteUserByName = async (name: string) => {
+  // 准备查询
+  const statement = `
+    DELETE
+    FROM user
+    WHERE name = ?
+  `;
+
+  // 执行查询
+  const [data] = await connection.promise().query(statement, name)
 
   return data
 }
