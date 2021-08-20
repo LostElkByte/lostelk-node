@@ -18,6 +18,40 @@ export const createUser = async (user: UserModel) => {
 }
 
 /**
+ * 存储邮箱验证码
+ */
+export const setEmailVerifyKey = async (email: string, verify_key: string) => {
+  // 准备查询
+  const statement = `
+    UPDATE user 
+    SET verify_key = ? 
+    where email = ?
+  `;
+
+  // 执行查询
+  const [data] = await connection.promise().query(statement, [verify_key, email])
+
+  return data
+}
+
+/**
+ * 修改用户状态
+ */
+export const updateUserStatus = async (email: string, status: number) => {
+  // 准备查询
+  const statement = `
+    UPDATE user 
+    SET status = ? 
+    where email = ?
+  `;
+
+  // 执行查询
+  const [data] = await connection.promise().query(statement, [status, email])
+
+  return data
+}
+
+/**
  * 按用户名查找用户
  */
 export const getUserByName = async (name: string) => {
@@ -53,6 +87,23 @@ export const getUserByEmail = async (email: string) => {
 }
 
 /**
+ * 通过邮箱查询校验码, 创建时间
+ */
+export const getVerift_key = async (email: string) => {
+  // 准备查询
+  const statement = `
+    SELECT verify_key, create_time
+    FROM user
+    WHERE email = ?
+  `;
+
+  // 执行查询
+  const [data] = await connection.promise().query(statement, email)
+
+  return data[0]
+}
+
+/**
  * 通过邮箱删除账号
  */
 export const deleteUserByEmail = async (email: string) => {
@@ -84,57 +135,6 @@ export const deleteUserByName = async (name: string) => {
   const [data] = await connection.promise().query(statement, name)
 
   return data
-}
-
-/**
- * 存储邮箱验证码
- */
-export const setEmailVerifyKey = async (email: string, verify_key: string) => {
-  // 准备查询
-  const statement = `
-    UPDATE user 
-    SET verify_key = ? 
-    where email = ?
-  `;
-
-  // 执行查询
-  const [data] = await connection.promise().query(statement, [verify_key, email])
-
-  return data
-}
-
-/**
- * 修改用户状态
- */
-export const updateUserStatus = async (email: string, status: number) => {
-  // 准备查询
-  const statement = `
-    UPDATE user 
-    SET status = ? 
-    where email = ?
-  `;
-
-  // 执行查询
-  const [data] = await connection.promise().query(statement, [status, email])
-
-  return data
-}
-
-/**
- * 通过邮箱查询校验码, 创建时间
- */
-export const getVerift_key = async (email: string) => {
-  // 准备查询
-  const statement = `
-    SELECT verify_key, create_time
-    FROM user
-    WHERE email = ?
-  `;
-
-  // 执行查询
-  const [data] = await connection.promise().query(statement, email)
-
-  return data[0]
 }
 
 /**
