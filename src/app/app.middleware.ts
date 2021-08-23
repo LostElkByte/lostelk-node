@@ -42,6 +42,10 @@ export const defaultErrorHandler = (
       statusCode = 400;
       message = "请提供邮箱地址"
       break;
+    case 'NAME_OR_EMAIL_IS_REQUIRED':
+      statusCode = 400;
+      message = "请提供用户名或邮箱"
+      break;
     case 'USER_NAME_ALREADY_EXIST':
       statusCode = 409;
       message = "此用户名已被占用"
@@ -64,7 +68,19 @@ export const defaultErrorHandler = (
       break;
     case 'USER_EMAIL_WAITING_VERIFICATION':
       statusCode = 409;
-      message = "您输入的邮箱正在等待激活!验证信息已发送到您的邮箱,请按照操作流程在30分钟内进行激活账号"
+      message = "您的账户正在等待激活!激活链接已发送到您的邮箱,请在注册起30分钟内进行激活"
+      break;
+    case 'PLEASE_RE-REGISTER_BECAUSE_OF_TIMEOUT_ACTIVATION':
+      statusCode = 409;
+      message = "由于此账号激活超时,请重新注册"
+      break;
+    case 'USER_DOES_NOT_EXIST':
+      statusCode = 409;
+      message = "账号或密码错误"
+      break;
+    case 'PASSWORD_DOES_NOT_MATCH':
+      statusCode = 409;
+      message = "账号或密码错误"
       break;
     default:
       statusCode = 500;

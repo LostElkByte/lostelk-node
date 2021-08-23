@@ -54,10 +54,22 @@ export const updateUserStatus = async (email: string, status: number) => {
 /**
  * 按用户名查找用户
  */
-export const getUserByName = async (name: string) => {
+
+interface GetUserOptions {
+  needPassword?: boolean
+}
+
+export const getUserByName = async (name: string, options: GetUserOptions = {}) => {
+  // 准备选项
+  const { needPassword } = options
   // 准备查询
   const statement = `
-    SELECT id, name, email, status, create_time
+    SELECT id,
+    name,
+    email,
+    status, 
+    create_time
+    ${needPassword ? ', password' : ''}
     FROM user
     WHERE name = ?
   `;
@@ -72,10 +84,17 @@ export const getUserByName = async (name: string) => {
 /**
  * 按照邮箱名查找用户
  */
-export const getUserByEmail = async (email: string) => {
+export const getUserByEmail = async (email: string, options: GetUserOptions = {}) => {
+  // 准备选项
+  const { needPassword } = options
   // 准备查询
   const statement = `
-    SELECT id, name, email, status, create_time
+    SELECT id, 
+    name, 
+    email, 
+    status, 
+    create_time
+    ${needPassword ? ', password' : ''}
     FROM user
     WHERE email = ?
   `;

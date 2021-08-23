@@ -29,12 +29,12 @@ export const sendRegisterEmail = ({ name, email, verify_key }) => {
           感谢您注册 LostElk，如确认是您本人注册的本站账号。
           </br> 
           请在30分钟内点击下面的链接即可激活您的账号：
-          <a style="color: #87CEFA" href="${url}">${url}</a>
+          <a style="color: #87CEFA" href="${url}">点击激活邮箱</a>
           </br>
           这个链接只能使用一次，请在30分钟内使用。如超过激活时间导致链接失效，您可以点击此链接重新注册。
-          <a style="color: #87CEFA" href="${registerUrl}">${registerUrl}</a>
+          <a style="color: #87CEFA" href="${registerUrl}">点击注册</a>
           </br>
-          点击激活之后您就可以在 <a style="color: #87CEFA" href="${loginUrl}">${loginUrl}</a>
+          点击激活之后您就可以在 <a style="color: #87CEFA" href="${loginUrl}">点击登录</a>
           使用您的账号和密码登录了
           </br>
           </br>
@@ -58,7 +58,7 @@ export const sendActivateSuccess = ({ name, email }) => {
           您的账号：${email} 已经激活成功
           </br>
           您现在即可点击链接
-           <a style="color: #87CEFA" href="${loginUrl}">${loginUrl}</a>
+           <a style="color: #87CEFA" href="${loginUrl}">点击登录</a>
           使用您的账号和密码登录了
           </br>
           </br>
