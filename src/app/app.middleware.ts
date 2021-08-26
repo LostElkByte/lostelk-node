@@ -82,6 +82,10 @@ export const defaultErrorHandler = (
       statusCode = 409;
       message = "账号或密码错误"
       break;
+    case 'UNAUTHORIZED':
+      statusCode = 401;
+      message = "请先登录"
+      break;
     default:
       statusCode = 500;
       message = "服务暂时出了点问题 ~~ 🐿"
