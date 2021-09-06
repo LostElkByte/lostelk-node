@@ -26,5 +26,11 @@
 			"  $4",
 			"}",
 		]
+	},
+	"import express": {
+		"prefix": "ie",
+		"body": [
+			"import { Request, Response, NextFunction } from 'express'"
+		]
 	}
 }
