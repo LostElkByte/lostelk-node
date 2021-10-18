@@ -80,3 +80,87 @@ export const deleteComment = async (
   // 提供数据
   return data
 }
+
+/**
+* 创建回复评论
+*/
+export const createReplyComment = async (
+  comment: CommentModel
+) => {
+  // 准备查询
+  const statement = `
+    INSERT INTO reply_comment
+    SET ?
+  `;
+
+  // 执行查询
+  const [data] = await connection.promise().query(statement, comment)
+
+  // 提供数据
+  return data
+}
+
+/**
+ * 通过回复评论id查找回复评论的父id
+ */
+export const getParentId = async (
+  id: number
+) => {
+  // 准备查询
+  const statement = `
+    SELECT parentId 
+    FROM reply_comment 
+    WHERE id = ?
+  `;
+
+  // 执行查询
+  const [data] = await connection.promise().query(statement, id)
+
+  // 提供数据
+  return data
+}
+
+/**
+* 修改回复评论
+*/
+export const updateReplyComment = async (
+  comment: CommentModel
+) => {
+  // 准备数据
+  const { id, content } = comment
+
+  // 准备查询
+  const statement = `
+    UPDATE reply_comment
+    SET content = ?
+    WHERE id = ?
+  `;
+
+  // 执行查询
+  const [data] = await connection.promise().query(statement, [content, id])
+
+  // 返回结果
+  return data
+}
+
+
+/**
+* 删除回复评论
+*/
+export const deleteReplyComment = async (
+  commentId: number
+) => {
+  // 准备查询
+  const statement = `
+    DELETE FROM reply_comment
+    WHERE id = ?
+  `;
+
+  // 执行查询
+  const [data] = await connection.promise().query(statement, commentId)
+
+  // 提供数据
+  return data
+}
+
+

@@ -21,9 +21,19 @@ router.post('/comments/:commentId/reply', authGuard, commentController.reply)
 router.patch('/comments/:commentId', authGuard, accessControl({ possession: true }), commentController.update)
 
 /**
+ * 修改回复评论
+ */
+router.patch('/reply_comment/:reply_commentId', authGuard, accessControl({ possession: true }), commentController.updateReply)
+
+/**
  * 删除评论
  */
 router.delete('/comments/:commentId', authGuard, accessControl({ possession: true }), commentController.destroy)
+
+/**
+ * 删除回复评论
+ */
+router.delete('/reply_comment/:reply_commentId', authGuard, accessControl({ possession: true }), commentController.destroyReplyComment)
 
 /**
  * 导出路由

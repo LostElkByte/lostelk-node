@@ -32,6 +32,8 @@ interface PossessOptions {
 export const possess = async (option: PossessOptions) => {
   // 准备选项
   const { resourceId, resourceType, userId } = option
+  console.log({ resourceId, resourceType, userId });
+
 
   // 准备查询
   const statement = `
