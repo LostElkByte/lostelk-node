@@ -10,19 +10,18 @@ export const store = async (
   response: Response,
   next: NextFunction
 ) => {
-  // 准备数据
-  const { id: userId } = request.user
-  const { content, postId } = request.body
-  const create_time = dayjs().unix()
-
-  const comment = {
-    content,
-    postId,
-    userId,
-    create_time
-  }
-
   try {
+    // 准备数据
+    const { id: userId } = request.user
+    const { content, postId } = request.body
+    const create_time = dayjs().unix()
+
+    const comment = {
+      content,
+      postId,
+      userId,
+      create_time
+    }
     // 保存评论
     const data = await createComment(comment)
 
@@ -41,40 +40,39 @@ export const reply = async (
   response: Response,
   next: NextFunction
 ) => {
-  // 准备数据
-  const { commentId } = request.params
-  const commentIdTurnInt = parseInt(commentId, 10)
-  const { id: userId } = request.user
-  const { content, postId, isReplyParentComment } = request.body
-  const create_time = dayjs().unix()
-  let comment
-  // 如果是回复父级评论
-  if (isReplyParentComment == 1) {
-    comment = {
-      content,
-      postId,
-      userId,
-      parentId: commentIdTurnInt,
-      create_time
-    }
-  } else if (isReplyParentComment == 0) {
-    const data = await getParentId(commentIdTurnInt)
-
-    comment = {
-      content,
-      postId,
-      userId,
-      parentId: data[0].parentId,
-      reply_commentId: commentIdTurnInt,
-      create_time
-    }
-
-  } else {
-    return next(new Error('PARAMETER_ERROR'))
-  }
-
-
   try {
+    // 准备数据
+    const { commentId } = request.params
+    const commentIdTurnInt = parseInt(commentId, 10)
+    const { id: userId } = request.user
+    const { content, postId, isReplyParentComment } = request.body
+    const create_time = dayjs().unix()
+    let comment
+    // 如果是回复父级评论
+    if (isReplyParentComment == 1) {
+      comment = {
+        content,
+        postId,
+        userId,
+        parentId: commentIdTurnInt,
+        create_time
+      }
+    } else if (isReplyParentComment == 0) {
+      const data = await getParentId(commentIdTurnInt)
+
+      comment = {
+        content,
+        postId,
+        userId,
+        parentId: data[0].parentId,
+        reply_commentId: commentIdTurnInt,
+        create_time
+      }
+
+    } else {
+      return next(new Error('PARAMETER_ERROR'))
+    }
+
     // 回复评论
     const data = await createReplyComment(comment)
 

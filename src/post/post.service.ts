@@ -1,5 +1,6 @@
 import { connection } from '../app/database/mysql'
 import { PostModel } from './post.model';
+import { sqlFragment } from './post.provider';
 /**
  * 获取内容列表
  */
@@ -9,13 +10,10 @@ export const getPosts = async () => {
       post.id,
       post.title,
       post.content,
-      JSON_OBJECT(
-        'id', user.id,
-        'name', user.name
-      ) as suer
+      ${sqlFragment.user},
+      ${sqlFragment.totalComments}
     FROM post
-    LEFT JOIN user
-      ON user.id = post.userId
+    ${sqlFragment.leftJoinUser}
   `;
 
   const [data] = await connection.promise().query(statement)
@@ -32,7 +30,7 @@ export const createPost = async (post: PostModel) => {
   // 准备查询
   const statement = `
     INSERT INTO post
-    SET ? 
+    SET ?
   `;
 
   // 执行查询
