@@ -6,7 +6,7 @@ export const sqlFragment = {
   JSON_OBJECT(
     'id', user.id,
     'name', user.name
-  ) as suer
+  ) as user
   `,
 	leftJoinUser: `
     LEFT JOIN user
