@@ -5,7 +5,7 @@ import authRouter from '../auth/auth.router'
 import fileRouter from '../file/file.router'
 import tagRouter from '../tag/tag.router'
 import commentRouter from '../comment/comment.router'
-import avatarRouter from '../comment/comment.router'
+import avatarRouter from '../avatar/avatar.router'
 import { defaultErrorHandler } from './app.middleware'
 
 /**
