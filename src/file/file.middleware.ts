@@ -31,7 +31,7 @@ const fileUploadFilter = fileFilter(['image/png', 'image/jpg', 'image/jpeg'])
  * 创建一个Multer
  */
 const fileUpload = multer({
-  dest: 'uploads/',
+  dest: 'uploads/files',
   fileFilter: fileUploadFilter
 })
 

@@ -52,6 +52,7 @@ export const serve = async (
 ) => {
   // 从地址参数里得到文件 ID
   const { fileId } = request.params
+
   // 要提供的图像尺寸
   const { size } = request.query
 
@@ -61,7 +62,7 @@ export const serve = async (
 
     // 文件名与目录
     let filename = file.filename
-    let root = 'uploads'
+    let root = 'uploads/files'
     let resized = 'resized'
 
     if (size) {
