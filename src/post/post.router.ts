@@ -37,6 +37,11 @@ router.post('/posts/:postId/tag', authGuard, accessControl({ possession: true })
  */
 router.delete('/posts/:postId/tag', authGuard, accessControl({ possession: true }), postController.destroyPostTag)
 
+/**
+ * 单个内容
+ */
+router.get('/posts/:postId', postController.show)
+
 
 /**
  * 导出路由
