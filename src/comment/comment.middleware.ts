@@ -22,8 +22,19 @@ export const filter = async (
     request.filter = {
       name: 'postComments',
       sql: 'comment.postId = ?',
-      param: post.toString(),
+      param: post.toString()
     }
   }
+
+  // 用户的评论
+  if (user && action == 'published' && !post) {
+    request.filter = {
+      name: 'userPublished',
+      sql: 'comment.userId = ?',
+      param: user.toString()
+    }
+  }
+
+  // 下一步
   next()
 }

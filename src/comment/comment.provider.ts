@@ -24,5 +24,14 @@ export const sqlFragment = {
       'id', post.id,
       'title', post.title
     ) AS post
+  `,
+  totalReplies: `
+    (
+      SELECT
+        COUNT(reply_comment.id)
+      FROM
+        reply_comment
+      WHERE comment.id = reply_comment.parentId
+    ) AS totalReplies
   `
 }

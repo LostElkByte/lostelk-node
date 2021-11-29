@@ -188,7 +188,8 @@ export const getComments = async (options: GetCommentOptions) => {
       comment.id,
       comment.content,
       ${sqlFragment.user},
-      ${sqlFragment.post}
+      ${sqlFragment.post},
+      ${sqlFragment.totalReplies}
     FROM
       comment
     ${sqlFragment.leftJoinUser}
