@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express'
-import { createComment, isReplyComment, updateComent, deleteComment, getParentId, createReplyComment, updateReplyComment, deleteReplyComment } from './comment.service'
+import { createComment, updateComent, deleteComment, getParentId, createReplyComment, updateReplyComment, deleteReplyComment, isThisCommentIncludedInPost } from './comment.service'
 import dayjs from 'dayjs'
 
 /**
@@ -48,29 +48,39 @@ export const reply = async (
     const { content, postId, isReplyParentComment } = request.body
     const create_time = dayjs().unix()
     let comment
-    // 如果是回复父级评论
-    if (isReplyParentComment == 1) {
-      comment = {
-        content,
-        postId,
-        userId,
-        parentId: commentIdTurnInt,
-        create_time
-      }
-    } else if (isReplyParentComment == 0) {
-      const data = await getParentId(commentIdTurnInt)
 
-      comment = {
-        content,
-        postId,
-        userId,
-        parentId: data[0].parentId,
-        reply_commentId: commentIdTurnInt,
-        create_time
-      }
+    switch (isReplyParentComment) {
+      // 如果是回复父级评论 
+      case 1:
+        // 判断客户端传来的postId与commentId是否对应
+        const isIncludeComment = await isThisCommentIncludedInPost('comment', commentIdTurnInt, postId)
+        if (!isIncludeComment[0]) return next(new Error('THIS_COMMENT_NOT_INCLUDED_POST'))
 
-    } else {
-      return next(new Error('PARAMETER_ERROR'))
+        comment = {
+          content,
+          postId,
+          userId,
+          parentId: commentIdTurnInt,
+          create_time
+        }
+        break
+      // 如果是回复子级评论 
+      case 0:
+        // 判断客户端传来的postId与commentId是否对应
+        const isIncludeReplyComment = await isThisCommentIncludedInPost('reply_comment', commentIdTurnInt, postId)
+        if (!isIncludeReplyComment[0]) return next(new Error('THIS_COMMENT_NOT_INCLUDED_POST'))
+
+        comment = {
+          content,
+          postId,
+          userId,
+          parentId: isIncludeReplyComment[0].parentId,
+          reply_commentId: commentIdTurnInt,
+          create_time
+        }
+        break
+      default:
+        return next(new Error('PARAMETER_ERROR'))
     }
 
     // 回复评论

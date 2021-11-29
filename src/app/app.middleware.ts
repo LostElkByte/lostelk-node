@@ -106,6 +106,10 @@ export const defaultErrorHandler = (
       statusCode = 400;
       message = "参数错误"
       break;
+    case 'THIS_COMMENT_NOT_INCLUDED_POST':
+      statusCode = 404;
+      message = "您要回复的评论不在这篇帖子中"
+      break;
     case 'FILE_TYPE_NOT_ACCEPT':
       statusCode = 400;
       message = "不能上传此类型的文件"

@@ -23,21 +23,21 @@ export const createComment = async (
 /**
 * 检查评论是否为回复评论
 */
-export const isReplyComment = async (
-  commentId: number
-) => {
-  //准备查询
-  const statement = `
-    SELECT parentId FROM comment
-    WHERE id = ?
-  `;
+// export const isReplyComment = async (
+//   commentId: number
+// ) => {
+//   //准备查询
+//   const statement = `
+//     SELECT parentId FROM comment
+//     WHERE id = ?
+//   `;
 
-  // 执行查询
-  const [data] = await connection.promise().query(statement, commentId)
+//   // 执行查询
+//   const [data] = await connection.promise().query(statement, commentId)
 
-  // 返回结果
-  return data[0].parentId ? true : false
-}
+//   // 返回结果
+//   return data[0].parentId ? true : false
+// }
 
 /**
 * 修改评论
@@ -119,6 +119,42 @@ export const getParentId = async (
   // 提供数据
   return data
 }
+
+/**
+ * 1.通过回复评论id查找回复评论的父id
+ * 2.判断评论是否位于当前内容下,帖子里有这个评论吗?
+ */
+export const isThisCommentIncludedInPost = async (
+  table: string,
+  commentId: number,
+  postId: number
+
+) => {
+  let statement: string
+  if (table === 'comment') {
+    // 准备查询
+    statement = `
+      SELECT *
+      FROM comment
+      WHERE id = ? AND postId = ?
+    `;
+  } else if (table === 'reply_comment') {
+    // 准备查询
+    statement = `
+      SELECT *
+      FROM reply_comment
+      WHERE id = ? AND postId = ?
+    `;
+  }
+
+  // 执行查询
+  const [data] = await connection.promise().query(statement, [commentId, postId])
+  console.log(data);
+
+  // 返回结果
+  return data
+}
+
 
 /**
 * 修改回复评论
