@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express'
-import { createComment, updateComent, deleteComment, getParentId, createReplyComment, updateReplyComment, deleteReplyComment, isThisCommentIncludedInPost } from './comment.service'
+import { createComment, updateComent, deleteComment, createReplyComment, updateReplyComment, deleteReplyComment, isThisCommentIncludedInPost, getComments } from './comment.service'
 import dayjs from 'dayjs'
 
 /**
@@ -186,6 +186,26 @@ export const destroyReplyComment = async (
     const data = await deleteReplyComment(parseInt(reply_commentId, 10))
     // 做出响应
     response.send(data)
+  } catch (error) {
+    next(error)
+  }
+}
+
+/**
+* 评论列表
+*/
+export const index = async (
+  request: Request,
+  response: Response,
+  next: NextFunction
+) => {
+  // 获取评论列表
+  try {
+
+    const comments = await getComments({ filter: request.filter })
+
+    // 做出响应
+    response.send(comments)
   } catch (error) {
     next(error)
   }

@@ -2,6 +2,7 @@ import express from 'express'
 import { sendActivateSuccess } from '../app/nodemailer';
 import { accessControl, authGuard } from '../auth/auth.middleware';
 import * as commentController from './comment.controller'
+import { filter } from "./comment.middleware";
 
 const router = express.Router()
 
@@ -34,6 +35,11 @@ router.delete('/comments/:commentId', authGuard, accessControl({ possession: tru
  * 删除回复评论
  */
 router.delete('/reply_comment/:reply_commentId', authGuard, accessControl({ possession: true }), commentController.destroyReplyComment)
+
+/**
+ * 评论列表
+ */
+router.get('/comments', filter, commentController.index)
 
 /**
  * 导出路由
