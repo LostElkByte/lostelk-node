@@ -8,6 +8,12 @@ export const sqlFragment = {
     LEFT JOIN avatar
       ON user.id = avatar.userId
   `,
+  replyCommentLeftJoinUser: `
+    LEFT JOIN user
+      ON user.id = reply_comment.userId
+    LEFT JOIN avatar
+      ON user.id = avatar.userId
+  `,
   user: `
     JSON_OBJECT(
       'id', user.id,

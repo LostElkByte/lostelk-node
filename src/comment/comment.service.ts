@@ -248,5 +248,72 @@ export const getCommentsTotalCount = async (
 
   // 提供结果
   return data[0].total
+}
+
+/**
+ * 评论回复列表
+ */
+interface GetCommentRepliesOptions {
+  commentId: number;
+  pagination?: GetPostsOptionsPagination
+}
+
+export const getCommentReplies = async (
+  options: GetCommentRepliesOptions
+) => {
+  // 解构选项
+  const { commentId, pagination: { limit, offset } } = options
+
+  // SQL参数
+  let params: Array<any> = [commentId, limit, offset]
+
+  // 准备查询
+  const statement = `
+    SELECT
+      reply_comment.id,
+      reply_comment.content,
+      ${sqlFragment.user}
+    FROM
+      reply_comment
+    ${sqlFragment.replyCommentLeftJoinUser}
+    WHERE
+      reply_comment.parentId = ?
+    GROUP BY
+      reply_comment.id
+    LIMIT ?
+    OFFSET ?
+  `
+
+  // 执行查询
+  const [data] = await connection.promise().query(statement, params)
+
+  // 提供数据
+  return data
+}
+
+
+/**
+* 统计回复评论数据
+*/
+export const getCommentsRepliesTotalCount = async (
+  commentId: number
+) => {
+  // 准备查询
+  const statement = `
+    SELECT
+      COUNT(
+        DISTINCT reply_comment.id
+      ) as total
+    FROM 
+      reply_comment
+    WHERE
+      reply_comment.parentId = ?
+  `
+
+  // 执行查询
+  const [data] = await connection.promise().query(statement, commentId)
+
+  // 提供结果
+  return data[0].total
 
 }
