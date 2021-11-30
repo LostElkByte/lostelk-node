@@ -3,6 +3,9 @@ import { sendActivateSuccess } from '../app/nodemailer';
 import { accessControl, authGuard } from '../auth/auth.middleware';
 import * as commentController from './comment.controller'
 import { filter } from "./comment.middleware";
+import { paginate } from "../post/post.middleware";
+import { COMMENTS_PER_PAGE } from "../app/app.config";
+
 
 const router = express.Router()
 
@@ -39,7 +42,7 @@ router.delete('/reply_comment/:reply_commentId', authGuard, accessControl({ poss
 /**
  * 评论列表
  */
-router.get('/comments', filter, commentController.index)
+router.get('/comments', filter, paginate(COMMENTS_PER_PAGE), commentController.index)
 
 /**
  * 导出路由

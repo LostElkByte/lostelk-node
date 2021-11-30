@@ -1,6 +1,7 @@
 import { Request, Response, NextFunction } from 'express'
-import { createComment, updateComent, deleteComment, createReplyComment, updateReplyComment, deleteReplyComment, isThisCommentIncludedInPost, getComments } from './comment.service'
+import { createComment, updateComent, deleteComment, createReplyComment, updateReplyComment, deleteReplyComment, isThisCommentIncludedInPost, getComments, getCommentsTotalCount } from './comment.service'
 import dayjs from 'dayjs'
+import { filter } from '../post/post.middleware'
 
 /**
 * 发表评论
@@ -199,10 +200,19 @@ export const index = async (
   response: Response,
   next: NextFunction
 ) => {
+  // 统计评论数量
+  try {
+    const totalCount = await getCommentsTotalCount({ filter: request.filter })
+
+    // 设置响应头部
+    response.header('X-Total-Count', totalCount)
+  } catch (error) {
+    next(error)
+  }
+
   // 获取评论列表
   try {
-
-    const comments = await getComments({ filter: request.filter })
+    const comments = await getComments({ filter: request.filter, pagination: request.pagination })
 
     // 做出响应
     response.send(comments)
