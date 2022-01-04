@@ -52,58 +52,78 @@ export const updateUserStatus = async (email: string, status: number) => {
 }
 
 /**
- * 按用户名查找用户
+ * 获取用户
  */
 
 interface GetUserOptions {
   needPassword?: boolean
 }
 
-export const getUserByName = async (name: string, options: GetUserOptions = {}) => {
-  // 准备选项
-  const { needPassword } = options
-  // 准备查询
-  const statement = `
-    SELECT id,
-    name,
-    email,
-    status, 
-    create_time
-    ${needPassword ? ', password' : ''}
-    FROM user
-    WHERE name = ?
-  `;
+export const getUser = (condition: string) => {
+  return async (param: string | number, options: GetUserOptions = {}) => {
+    // 准备选项
+    const { needPassword } = options
+    // 准备查询
+    const statement = `
+      SELECT 
+      user.id,
+      user.name,
+      user.email,
+      user.status, 
+      user.create_time
+      IF (
+        COUNT(avatar.id), 1, NULL
+      ) AS avatar
+      ${needPassword ? ', password' : ''}
+      FROM user
+      LEFT JOIN avatar
+        ON avatar.userId = user.id
+      WHERE
+        ${condition} = ?
+    `;
 
-  // 执行查询
-  const [data] = await connection.promise().query(statement, name)
+    // 执行查询
+    const [data] = await connection.promise().query(statement, param)
 
-  // 提供数据
-  return data[0]
+    // 提供数据
+    return data[0].id ? data[0] : null
+  }
 }
+
+/**
+* 按用户名获取用户
+*/
+export const getUserByName = getUser('user.name')
+
+/** 
+* 按照用户ID获取用户 
+*/
+export const getUserById = getUser('user.id')
 
 /**
  * 按照邮箱名查找用户
  */
-export const getUserByEmail = async (email: string, options: GetUserOptions = {}) => {
-  // 准备选项
-  const { needPassword } = options
-  // 准备查询
-  const statement = `
-    SELECT id, 
-    name, 
-    email, 
-    status, 
-    create_time
-    ${needPassword ? ', password' : ''}
-    FROM user
-    WHERE email = ?
-  `;
-  // 执行查询
-  const [data] = await connection.promise().query(statement, email)
+export const getUserByEmail = getUser('user.email')
+// export const getUserByEmail = async (email: string, options: GetUserOptions = {}) => {
+//   // 准备选项
+//   const { needPassword } = options
+//   // 准备查询
+//   const statement = `
+//     SELECT id, 
+//     name, 
+//     email, 
+//     status, 
+//     create_time
+//     ${needPassword ? ', password' : ''}
+//     FROM user
+//     WHERE email = ?
+//   `;
+//   // 执行查询
+//   const [data] = await connection.promise().query(statement, email)
 
-  // 提供数据
-  return data[0]
-}
+//   // 提供数据
+//   return data[0]
+// }
 
 /**
  * 通过邮箱查询校验码, 创建时间
