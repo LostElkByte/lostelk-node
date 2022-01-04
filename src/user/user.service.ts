@@ -70,7 +70,7 @@ export const getUser = (condition: string) => {
       user.name,
       user.email,
       user.status, 
-      user.create_time
+      user.create_time,
       IF (
         COUNT(avatar.id), 1, NULL
       ) AS avatar
