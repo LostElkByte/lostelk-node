@@ -198,7 +198,7 @@ export const deleteVerift_key = async (email: string) => {
  */
 export const updateUser = async (
   userId: number,
-  userData = UserModel
+  userData: UserModel
 ) => {
   // 准备查询
   const statement = `
