@@ -15,6 +15,11 @@ router.post('/users', validateUserData, hashPasswordAndEmail, userController.sto
 router.get('/activat_email', userController.emailVerify)
 
 /**
+ * 用户账户
+ */
+router.get('/users/:userId', userController.show)
+
+/**
  * 导出路由
  */
 export default router
