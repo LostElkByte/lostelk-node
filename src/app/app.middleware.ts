@@ -38,6 +38,10 @@ export const defaultErrorHandler = (
       statusCode = 400;
       message = "请提供用户密码"
       break;
+    case 'PASSWORD_IS_THE_SAME':
+      statusCode = 400;
+      message = "要修改的密码不能跟原密码一样"
+      break;
     case 'EMAIL_IS_REQUIRED':
       statusCode = 400;
       message = "请提供邮箱地址"
