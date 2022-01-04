@@ -31,7 +31,7 @@ export const store = async (
     // 发送校验邮箱
     sendRegisterEmail({ name, email, verify_key });
 
-    response.status(201).send(data)
+    response.status(201).send({ isSucceed: 1, message: '注册成功! 激活链接已发送到您的邮箱,请在注册起30分钟内进行激活' })
   } catch (error) {
     next(error)
   }
