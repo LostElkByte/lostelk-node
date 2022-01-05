@@ -20,16 +20,16 @@ export const createUser = async (user: UserModel) => {
 /**
  * 存储邮箱验证码
  */
-export const setEmailVerifyKey = async (email: string, verify_key: string) => {
+export const setEmailVerifyKey = async (email: string, registration_verify_key: string) => {
   // 准备查询
   const statement = `
     UPDATE user 
-    SET verify_key = ? 
+    SET registration_verify_key = ? 
     where email = ?
   `;
 
   // 执行查询
-  const [data] = await connection.promise().query(statement, [verify_key, email])
+  const [data] = await connection.promise().query(statement, [registration_verify_key, email])
 
   return data
 }
@@ -131,7 +131,7 @@ export const getUserByEmail = getUser('user.email')
 export const getVerift_key = async (email: string) => {
   // 准备查询
   const statement = `
-    SELECT verify_key, create_time
+    SELECT registration_verify_key, create_time
     FROM user
     WHERE email = ?
   `;
@@ -183,7 +183,7 @@ export const deleteVerift_key = async (email: string) => {
   // 准备查询
   const statement = `
   UPDATE user
-  SET verify_key = ? 
+  SET registration_verify_key = ? 
   WHERE email = ?
   `;
 

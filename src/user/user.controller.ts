@@ -23,13 +23,13 @@ export const store = async (
     const data = await userService.createUser({ name, password, email, create_time })
 
     // 生成邮箱验证码
-    const verify_key = uuidv4();
+    const registration_verify_key = uuidv4();
 
     // 存储邮箱验证码
-    await userService.setEmailVerifyKey(email, verify_key)
+    await userService.setEmailVerifyKey(email, registration_verify_key)
 
     // 发送校验邮箱
-    sendRegisterEmail({ name, email, verify_key });
+    sendRegisterEmail({ name, email, registration_verify_key });
 
     response.status(201).send({ isSucceed: 1, message: '注册成功! 激活链接已发送到您的邮箱,请在注册起30分钟内进行激活' })
   } catch (error) {
@@ -46,14 +46,14 @@ export const emailVerify = async (
   next: NextFunction
 ) => {
   // 准备数据
-  const { email, name, verify_key } = request.query
+  const { email, name, registration_verify_key } = request.query
   const create_time = dayjs().unix()
 
   // 通过邮箱查询校验码
   const data = await userService.getVerift_key(email as string)
 
   try {
-    if (data.verify_key === verify_key && create_time - data.create_time <= 1800) {
+    if (data.registration_verify_key === registration_verify_key && create_time - data.create_time <= 1800) {
       userService.updateUserStatus(email as string, 1)
       userService.deleteVerift_key(email as string)
       sendActivateSuccess({ name, email })
@@ -61,12 +61,12 @@ export const emailVerify = async (
       return
     }
 
-    if (data.verify_key === verify_key && create_time - data.create_time > 1800) {
+    if (data.registration_verify_key === registration_verify_key && create_time - data.create_time > 1800) {
       response.status(409).send({ isSucceed: 0, message: '此激活链接已过期, 请重新注册' })
       return
     }
 
-    if (data.verify_key != verify_key) {
+    if (data.registration_verify_key != registration_verify_key) {
       response.status(409).send({ isSucceed: 0, message: '此激活链接校验失败' })
       return
     }

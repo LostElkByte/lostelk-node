@@ -16,8 +16,8 @@ const transporter = nodemailer.createTransport({
 /**
  * 注册用户时发送邮箱
  */
-export const sendRegisterEmail = ({ name, email, verify_key }) => {
-  const url = `${EMAIL_IP}/activat_email?email=${email}&name=${name}&verify_key=${verify_key}`;
+export const sendRegisterEmail = ({ name, email, registration_verify_key }) => {
+  const url = `${EMAIL_IP}/activat_email?email=${email}&name=${name}&registration_verify_key=${registration_verify_key}`;
   const loginUrl = `${EMAIL_IP}/login`;
   const registerUrl = `${EMAIL_IP}/register`;
   const params = {
@@ -73,12 +73,12 @@ export const sendActivateSuccess = ({ name, email }) => {
  * 找回密码时发送校验码
  * @param {*} params
  */
-export const sendCode = ({ email, verify_key }) => {
+export const sendCode = ({ email, registration_verify_key }) => {
   const params = {
     from: 'lostElk<email.lostelk@qq.com>', // 收件人显示的发件人信息,xxxxxxx换成自己的qq
     to: email, // 目标邮箱号
     subject: '找回密码',
-    html: `邮箱验证码:${verify_key}`,
+    html: `邮箱验证码:${registration_verify_key}`,
   };
   return sendMsg(params);
 };
