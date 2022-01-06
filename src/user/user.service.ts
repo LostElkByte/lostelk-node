@@ -18,7 +18,7 @@ export const createUser = async (user: UserModel) => {
 }
 
 /**
- * 存储邮箱验证码
+ * 注册 - 存储邮箱验证码
  */
 export const setEmailVerifyKey = async (email: string, registration_verify_key: string) => {
   // 准备查询
@@ -126,7 +126,7 @@ export const getUserByEmail = getUser('user.email')
 // }
 
 /**
- * 通过邮箱查询校验码, 创建时间
+ * 注册 - 通过邮箱查询注册校验码, 创建时间
  */
 export const getVerift_key = async (email: string) => {
   // 准备查询

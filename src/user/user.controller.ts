@@ -38,7 +38,7 @@ export const store = async (
 }
 
 /**
- * 邮箱校验
+ * 注册 - 邮箱校验
  */
 export const emailVerify = async (
   request: Request,
