@@ -104,26 +104,6 @@ export const getUserById = getUser('user.id')
  * 按照邮箱名查找用户
  */
 export const getUserByEmail = getUser('user.email')
-// export const getUserByEmail = async (email: string, options: GetUserOptions = {}) => {
-//   // 准备选项
-//   const { needPassword } = options
-//   // 准备查询
-//   const statement = `
-//     SELECT id, 
-//     name, 
-//     email, 
-//     status, 
-//     create_time
-//     ${needPassword ? ', password' : ''}
-//     FROM user
-//     WHERE email = ?
-//   `;
-//   // 执行查询
-//   const [data] = await connection.promise().query(statement, email)
-
-//   // 提供数据
-//   return data[0]
-// }
 
 /**
  * 注册 - 通过邮箱查询注册校验码, 创建时间
