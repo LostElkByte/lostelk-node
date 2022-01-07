@@ -242,13 +242,28 @@ export const getRetrievePasswordVerifyKey = async (email: string) => {
 export const deleteRetrievePasswordData = async (email: string) => {
   // 准备查询
   const statement = `
-  UPDATE user
-  SET retrieve_password_verify_key = ?, launch_retrieval_password_time = ?
-  WHERE email = ?
+    UPDATE user
+    SET retrieve_password_verify_key = ?, launch_retrieval_password_time = ?
+    WHERE email = ?
   `;
 
   // 执行查询
   const [data] = await connection.promise().query(statement, [null, null, email])
 
   return data
+}
+
+/**
+ * 找回密码 - 修改密码
+ */
+export const retrievePassword = async (email: string, password: string) => {
+  // 准备查询
+  const statement = `
+    UPDATE user
+    SET password = ?
+    WHERE email = ?
+  `;
+
+  // 执行查询
+  const [data] = await connection.promise().query(statement, [password, email])
 }

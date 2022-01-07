@@ -36,6 +36,11 @@ router.post('/send_retrieve_password_verify_key', emailWhetherRegistered, userCo
 router.post('/verify_retrieve_password_verify_key', userController.retrievePasswordVerify)
 
 /**
+ * 找回密码 - 修改密码
+ */
+router.patch('/retrieve_password', userController.retrievePasswordPatch)
+
+/**
  * 导出路由
  */
 export default router

@@ -1,6 +1,7 @@
 import { Request, Response, NextFunction } from 'express'
 import _ from 'lodash'
 import { v4 as uuidv4 } from 'uuid'
+import bcrypt from 'bcrypt'
 import dayjs from 'dayjs'
 import { sendRegisterEmail, sendActivateSuccess, sendRetrievePasswordEmail } from '../app/nodemailer'
 import * as userService from './user.service'
@@ -168,10 +169,10 @@ export const retrievePasswordVerify = async (
   const { email, retrieve_password_verify_key } = request.body
   const launch_retrieval_password_time = dayjs().unix()
 
-  // 通过邮箱查询校验码 与 校验码发送时间
-  const data = await userService.getRetrievePasswordVerifyKey(email as string)
-
   try {
+    // 通过邮箱查询校验码 与 校验码发送时间
+    const data = await userService.getRetrievePasswordVerifyKey(email as string)
+
     // 验证码发送时间相较当前时间大于1分钟
     if (launch_retrieval_password_time - data.launch_retrieval_password_time > 60) {
       response.status(409).send({ isSucceed: 0, message: '验证码已过期,请重新获取' })
@@ -195,4 +196,54 @@ export const retrievePasswordVerify = async (
   } catch (error) {
     next(error)
   }
+}
+
+/**
+* 找回密码 - 修改密码
+*/
+export const retrievePasswordPatch = async (
+  request: Request,
+  response: Response,
+  next: NextFunction
+) => {
+  // 准备数据
+  const { email, password, retrieve_password_verify_key } = request.body
+  const launch_retrieval_password_time = dayjs().unix()
+
+  try {
+    // HASH 用户更新密码
+    const hashPassword = await bcrypt.hash(password, 10)
+
+    // 通过邮箱查询校验码 与 校验码发送时间
+    const data = await userService.getRetrievePasswordVerifyKey(email as string)
+
+
+    // 验证码发送时间相较当前时间大于10分钟
+    if (launch_retrieval_password_time - data.launch_retrieval_password_time > 600) {
+      response.status(409).send({ isSucceed: 0, message: '本次修改密码已超时,请重新进行忘记密码步骤' })
+      return
+    }
+
+    // 验证码错误
+    if (data.retrieve_password_verify_key != retrieve_password_verify_key) {
+      response.status(409).send({ isSucceed: 0, message: '当前状态不可修改密码,请重新进行忘记密码步骤' })
+      return
+    }
+
+    // 成功
+    if (data.retrieve_password_verify_key === retrieve_password_verify_key && launch_retrieval_password_time - data.launch_retrieval_password_time <= 600) {
+      //  修改密码
+      await userService.retrievePassword(email, hashPassword)
+
+      // 清空 retrieve_password_verify_key、launch_retrieval_password_time
+      await userService.deleteRetrievePasswordData(email as string)
+
+      response.status(201).send({ isSucceed: 1, message: `修改密码成功` })
+      return
+    }
+
+  } catch (error) {
+    next(error)
+  }
+
 }
