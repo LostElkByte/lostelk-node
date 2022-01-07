@@ -187,7 +187,7 @@ export const retrievePasswordVerify = async (
     // 成功
     if (data.retrieve_password_verify_key === retrieve_password_verify_key && launch_retrieval_password_time - data.launch_retrieval_password_time <= 60) {
       // 清空 retrieve_password_verify_key、launch_retrieval_password_time
-      await userService.deleteRetrievePasswordData(email as string)
+      // await userService.deleteRetrievePasswordData(email as string)
       response.status(201).send({ isSucceed: 1, message: `验证成功,请修改密码` })
       return
     }
