@@ -147,3 +147,26 @@ export const validateUpdateUserData = async (
   // 下一步
   next()
 }
+
+/**
+ * 找回密码 - 验证邮箱是否注册(存在于user表)
+ */
+export const emailWhetherRegistered = async (
+  request: Request,
+  response: Response,
+  next: NextFunction
+) => {
+  // 准备数据
+  const { email } = request.body
+
+  // 通过邮箱获取用户信息
+  const user = await userService.getUserByEmail(email, { needPassword: false })
+
+  // 判断是否存在此邮箱绑定的账号
+  if (!user) {
+    return next(new Error('USER_NOT_FOUND'))
+  }
+
+  // 下一步
+  next()
+}

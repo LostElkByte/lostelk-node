@@ -73,12 +73,12 @@ export const sendActivateSuccess = ({ name, email }) => {
  * 找回密码时发送校验码
  * @param {*} params
  */
-export const sendCode = ({ email, registration_verify_key }) => {
+export const sendRetrievePasswordEmail = ({ email, retrieve_password_verify_key }) => {
   const params = {
     from: 'lostElk<email.lostelk@qq.com>', // 收件人显示的发件人信息,xxxxxxx换成自己的qq
     to: email, // 目标邮箱号
     subject: '找回密码',
-    html: `邮箱验证码:${registration_verify_key}`,
+    html: `邮箱验证码:${retrieve_password_verify_key}`,
   };
   return sendMsg(params);
 };

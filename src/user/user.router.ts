@@ -1,6 +1,6 @@
 import express from 'express'
 import * as userController from './user.controller'
-import { validateUserData, hashPasswordAndEmail, validateUpdateUserData } from './user.middleware'
+import { validateUserData, hashPasswordAndEmail, validateUpdateUserData, emailWhetherRegistered } from './user.middleware'
 import { authGuard } from '../auth/auth.middleware'
 
 const router = express.Router()
@@ -24,6 +24,11 @@ router.get('/users/:userId', userController.show)
  * 更新用户
  */
 router.patch('/users', authGuard, validateUpdateUserData, userController.update)
+
+/**
+ * 找回密码 - 发送验证码
+ */
+router.post('/send_retrieve_password_verify_key', emailWhetherRegistered, userController.sendRetrievePasswordVerifyKey)
 
 /**
  * 导出路由

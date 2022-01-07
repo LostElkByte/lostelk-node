@@ -2,7 +2,7 @@ import { Request, Response, NextFunction } from 'express'
 import _ from 'lodash'
 import { v4 as uuidv4 } from 'uuid'
 import dayjs from 'dayjs'
-import { sendRegisterEmail, sendActivateSuccess } from '../app/nodemailer'
+import { sendRegisterEmail, sendActivateSuccess, sendRetrievePasswordEmail } from '../app/nodemailer'
 import * as userService from './user.service'
 
 /**
@@ -121,6 +121,37 @@ export const update = async (
 
     // 做出响应
     response.send(data)
+  } catch (error) {
+    next(error)
+  }
+}
+
+/**
+ * 找回密码 - 发送邮箱验证码
+ */
+export const sendRetrievePasswordVerifyKey = async (
+  request: Request,
+  response: Response,
+  next: NextFunction
+) => {
+  // 准备数据
+  const { email } = request.body
+
+  // 创建用户
+  try {
+    // 生成当前时间戳
+    const launch_retrieval_password_time = dayjs().unix()
+
+    // 生成找回密码验证码
+    const retrieve_password_verify_key = uuidv4().slice(0, 6);
+
+    // 存储生成找回密码验证码与当前时间戳
+    await userService.setRetrievePasswordVerifyKey(email, retrieve_password_verify_key, launch_retrieval_password_time)
+
+    // 发送校验邮箱
+    sendRetrievePasswordEmail({ email, retrieve_password_verify_key });
+
+    response.status(201).send({ isSucceed: 1, message: '验证码已发送到您的邮箱,请注意查收' })
   } catch (error) {
     next(error)
   }

@@ -216,3 +216,22 @@ export const updateUser = async (
   // 提供数据
   return data
 }
+
+/**
+ * 找回密码 - 存储找回密码验证码与找回密码发起时间
+ */
+export const setRetrievePasswordVerifyKey = async (email: string, retrieve_password_verify_key: string, launch_retrieval_password_time: number) => {
+  // 准备查询
+  const statement = `
+    UPDATE user 
+    SET
+    retrieve_password_verify_key = ?,
+    launch_retrieval_password_time = ?
+    where email = ?
+  `;
+
+  // 执行查询
+  const [data] = await connection.promise().query(statement, [retrieve_password_verify_key, launch_retrieval_password_time, email])
+
+  return data
+}
