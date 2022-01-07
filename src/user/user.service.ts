@@ -168,7 +168,7 @@ export const deleteVerift_key = async (email: string) => {
   `;
 
   // 执行查询
-  const [data] = await connection.promise().query(statement, ['', email])
+  const [data] = await connection.promise().query(statement, [null, email])
 
   return data
 }
@@ -207,11 +207,48 @@ export const setRetrievePasswordVerifyKey = async (email: string, retrieve_passw
     SET
     retrieve_password_verify_key = ?,
     launch_retrieval_password_time = ?
-    where email = ?
+    WHERE email = ?
   `;
 
   // 执行查询
   const [data] = await connection.promise().query(statement, [retrieve_password_verify_key, launch_retrieval_password_time, email])
+
+  return data
+}
+
+/**
+ * 找回密码 - 通过邮箱查询找回密码验证码, 发送时间
+ */
+export const getRetrievePasswordVerifyKey = async (email: string) => {
+
+  // 准备查询
+  const statement = `
+    SELECT 
+    retrieve_password_verify_key, 
+    launch_retrieval_password_time
+    FROM user
+    WHERE email = ?
+  `;
+
+  // 执行查询
+  const [data] = await connection.promise().query(statement, email)
+
+  return data[0]
+}
+
+/**
+ * 找回密码 - 清空 retrieve_password_verify_key、launch_retrieval_password_time
+ */
+export const deleteRetrievePasswordData = async (email: string) => {
+  // 准备查询
+  const statement = `
+  UPDATE user
+  SET retrieve_password_verify_key = ?, launch_retrieval_password_time = ?
+  WHERE email = ?
+  `;
+
+  // 执行查询
+  const [data] = await connection.promise().query(statement, [null, null, email])
 
   return data
 }

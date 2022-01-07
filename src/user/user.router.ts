@@ -31,6 +31,11 @@ router.patch('/users', authGuard, validateUpdateUserData, userController.update)
 router.post('/send_retrieve_password_verify_key', emailWhetherRegistered, userController.sendRetrievePasswordVerifyKey)
 
 /**
+ * 找回密码 - 校验验证码
+ */
+router.post('/verify_retrieve_password_verify_key', userController.retrievePasswordVerify)
+
+/**
  * 导出路由
  */
 export default router

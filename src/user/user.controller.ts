@@ -53,15 +53,7 @@ export const emailVerify = async (
   const data = await userService.getVerift_key(email as string)
 
   try {
-    if (data.registration_verify_key === registration_verify_key && create_time - data.create_time <= 1800) {
-      userService.updateUserStatus(email as string, 1)
-      userService.deleteVerift_key(email as string)
-      sendActivateSuccess({ name, email })
-      response.status(201).send({ isSucceed: 1, message: `您的账户: ${email} 激活成功` })
-      return
-    }
-
-    if (data.registration_verify_key === registration_verify_key && create_time - data.create_time > 1800) {
+    if (create_time - data.create_time > 1800) {
       response.status(409).send({ isSucceed: 0, message: '此激活链接已过期, 请重新注册' })
       return
     }
@@ -71,10 +63,17 @@ export const emailVerify = async (
       return
     }
 
+    if (data.registration_verify_key === registration_verify_key && create_time - data.create_time <= 1800) {
+      userService.updateUserStatus(email as string, 1)
+      userService.deleteVerift_key(email as string)
+      sendActivateSuccess({ name, email })
+      response.status(201).send({ isSucceed: 1, message: `您的账户: ${email} 激活成功` })
+      return
+    }
+
   } catch (error) {
     next(error)
   }
-
 }
 
 /**
@@ -152,6 +151,47 @@ export const sendRetrievePasswordVerifyKey = async (
     sendRetrievePasswordEmail({ email, retrieve_password_verify_key });
 
     response.status(201).send({ isSucceed: 1, message: '验证码已发送到您的邮箱,请注意查收' })
+  } catch (error) {
+    next(error)
+  }
+}
+
+/**
+ * 找回密码 - 验证码校验
+ */
+export const retrievePasswordVerify = async (
+  request: Request,
+  response: Response,
+  next: NextFunction
+) => {
+  // 准备数据
+  const { email, retrieve_password_verify_key } = request.body
+  const launch_retrieval_password_time = dayjs().unix()
+
+  // 通过邮箱查询校验码 与 校验码发送时间
+  const data = await userService.getRetrievePasswordVerifyKey(email as string)
+
+  try {
+    // 验证码发送时间相较当前时间大于1分钟
+    if (launch_retrieval_password_time - data.launch_retrieval_password_time > 60) {
+      response.status(409).send({ isSucceed: 0, message: '验证码已过期,请重新获取' })
+      return
+    }
+
+    // 验证码错误
+    if (data.retrieve_password_verify_key != retrieve_password_verify_key) {
+      response.status(409).send({ isSucceed: 0, message: '验证码错误,请查验后输入' })
+      return
+    }
+
+    // 成功
+    if (data.retrieve_password_verify_key === retrieve_password_verify_key && launch_retrieval_password_time - data.launch_retrieval_password_time <= 60) {
+      // 清空 retrieve_password_verify_key、launch_retrieval_password_time
+      await userService.deleteRetrievePasswordData(email as string)
+      response.status(201).send({ isSucceed: 1, message: `验证成功,请修改密码` })
+      return
+    }
+
   } catch (error) {
     next(error)
   }
