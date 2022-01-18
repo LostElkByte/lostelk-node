@@ -44,7 +44,7 @@ export const getPosts = async (options: GetPostsOptions) => {
       ${sqlFragment.totalLikes}
     FROM post
     ${sqlFragment.leftJoinUser}
-    ${sqlFragment.leftJoinOneFile}
+    ${sqlFragment.innerJoinOneFile}
     ${sqlFragment.leftJoinTag}
     ${filter.name == 'userLiked' ? sqlFragment.innerJoinUserLikePost : ''}
     WHERE ${filter.sql}
@@ -171,7 +171,6 @@ export const deletePostTag = async (
 
 /**
 * 统计内容数量
-  ${sqlFragment.leftJoinOneFile} 应该可以删除 ~
 */
 export const getPostsTotalCount = async (
   options: GetPostsOptions
@@ -187,7 +186,7 @@ export const getPostsTotalCount = async (
       COUNT(DISTINCT post.id) AS total
     FROM post
     ${sqlFragment.leftJoinUser}
-    ${sqlFragment.leftJoinOneFile}
+    ${sqlFragment.innerJoinOneFile}
     ${sqlFragment.leftJoinTag}
     ${filter.name == 'userLiked' ? sqlFragment.innerJoinUserLikePost : ''}
     WHERE ${filter.sql}
