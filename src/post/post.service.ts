@@ -1,4 +1,6 @@
+import { Cipher } from 'crypto';
 import { connection } from '../app/database/mysql'
+import { TokenPayload } from '../auth/auth.interface';
 import { PostModel } from './post.model';
 import { sqlFragment } from './post.provider';
 /**
@@ -19,10 +21,11 @@ interface GetPostsOptions {
   sort?: string;
   filter?: GetPostsOptionsFilter;
   pagination?: GetPostsOptionsPagination;
+  currentUser?: TokenPayload
 }
 
 export const getPosts = async (options: GetPostsOptions) => {
-  const { sort, filter, pagination: { limit, offset } } = options
+  const { sort, filter, pagination: { limit, offset }, currentUser } = options
 
   // SQL 参数
   let params: Array<any> = [limit, offset]
@@ -31,6 +34,9 @@ export const getPosts = async (options: GetPostsOptions) => {
   if (filter.param) {
     params = [filter.param, ...params]
   }
+
+  // 当前用户
+  const { id: userId } = currentUser
 
   const statement = `
     SELECT 
@@ -41,7 +47,14 @@ export const getPosts = async (options: GetPostsOptions) => {
       ${sqlFragment.totalComments},
       ${sqlFragment.file},
       ${sqlFragment.tags},
-      ${sqlFragment.totalLikes}
+      ${sqlFragment.totalLikes},
+      (
+        SELECT COUNT(user_like_post.postId)
+        FROM user_like_post
+        WHERE
+          user_like_post.postId = post.id
+          && user_like_post.userId = ${userId}
+      ) as liked
     FROM post
     ${sqlFragment.leftJoinUser}
     ${sqlFragment.innerJoinOneFile}
