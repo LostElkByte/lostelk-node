@@ -8,6 +8,7 @@ import commentRouter from '../comment/comment.router'
 import avatarRouter from '../avatar/avatar.router'
 import likeRouter from '../like/like.router'
 import { defaultErrorHandler } from './app.middleware'
+import { currentUser } from '../auth/auth.middleware'
 
 /**
  * 创建应用
@@ -18,6 +19,11 @@ const app = express()
  * 处理 JSON
  */
 app.use(express.json())
+
+/**
+ * 当前用户
+ */
+app.use(currentUser)
 
 /**
  * 路由
