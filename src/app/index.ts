@@ -1,4 +1,5 @@
 import express from 'express'
+import cors from 'cors'
 import postRouter from '../post/post.router'
 import userRouter from '../user/user.router'
 import authRouter from '../auth/auth.router'
@@ -9,11 +10,22 @@ import avatarRouter from '../avatar/avatar.router'
 import likeRouter from '../like/like.router'
 import { defaultErrorHandler } from './app.middleware'
 import { currentUser } from '../auth/auth.middleware'
+import { ALLOW_ORIGIN } from './app.config'
 
 /**
  * 创建应用
  */
 const app = express()
+
+/**
+ * 跨域资源共享
+ */
+app.use(
+  cors({
+    origin: ALLOW_ORIGIN,
+    exposedHeaders: 'X-Total-Count'
+  })
+)
 
 /**
  * 处理 JSON

@@ -40,3 +40,8 @@ export const COMMENTS_PER_PAGE = parseInt(process.env['COMMENTS_PER_PAGE'], 10)
  * 回复评论分页
  */
 export const REPLY_COMMENTS_PER_PAGE = parseInt(process.env['REPLY_COMMENTS_PER_PAGE'], 10)
+
+/**
+ * 跨域资源共享
+ */
+export const ALLOW_ORIGIN = process.env['ALLOW_ORIGIN']
