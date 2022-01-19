@@ -272,7 +272,8 @@ export const getCommentReplies = async (
     SELECT
       reply_comment.id,
       reply_comment.content,
-      ${sqlFragment.user}
+      ${sqlFragment.user},
+      ${sqlFragment.repliesUser}
     FROM
       reply_comment
     ${sqlFragment.replyCommentLeftJoinUser}

@@ -21,6 +21,20 @@ export const sqlFragment = {
       'avatar', IF(COUNT(avatar.id), 1, NULL)
     ) AS user
   `,
+  repliesUser: `
+    (
+   	 	SELECT
+   	 	 JSON_OBJECT(
+   	 	  'id', user.id,
+	      'name', user.name,
+	      'avatar', IF(COUNT(avatar.id), 1, NULL)
+	       )
+	 	  FROM
+	 		  user
+	  	WHERE
+      	user.id = reply_comment.reply_userId
+   	) AS replyUser
+  `,
   leftJoinPost: `
     LEFT JOIN post
       ON post.id = comment.postId

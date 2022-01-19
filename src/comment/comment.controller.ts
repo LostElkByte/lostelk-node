@@ -61,7 +61,8 @@ export const reply = async (
           postId,
           userId,
           parentId: commentIdTurnInt,
-          create_time
+          create_time,
+          reply_userId: isIncludeComment[0].userId
         }
         break
       // 如果是回复子级评论 
@@ -76,7 +77,8 @@ export const reply = async (
           userId,
           parentId: isIncludeReplyComment[0].parentId,
           reply_commentId: commentIdTurnInt,
-          create_time
+          create_time,
+          reply_userId: isIncludeReplyComment[0].userId
         }
         break
       default:
