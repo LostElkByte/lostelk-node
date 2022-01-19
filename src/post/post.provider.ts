@@ -41,6 +41,10 @@ export const sqlFragment = {
 			LIMIT 1
 		) AS file ON post.id = file.postId
 	`,
+	innerJoinFile: `
+			INNER JOIN file
+				ON file.postId = post.id
+	`,
 	innerJoinOneFile: `
 		INNER JOIN LATERAL (
 			SELECT *
