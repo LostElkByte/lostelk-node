@@ -1,7 +1,7 @@
 import express from 'express'
 import { authGuard } from '../auth/auth.middleware';
 import * as fileController from './file.controller'
-import { fileInterceptor, fileProcessor } from './file.middleware';
+import { fileDownloadGuard, fileInterceptor, fileProcessor } from './file.middleware';
 
 const router = express.Router();
 
@@ -19,6 +19,15 @@ router.get('/files/:fileId/serve', fileController.serve)
  * 文件信息
  */
 router.get('/files/:fileId/metadata', fileController.metadata)
+
+/**
+ * 下载文件
+ */
+router.get(
+  '/files/:fileId/download',
+  fileDownloadGuard,
+  fileController.download,
+)
 
 /**
  * 导出路由

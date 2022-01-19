@@ -122,3 +122,31 @@ export const metadata = async (
     next(error)
   }
 }
+
+/**
+ * 文件下载
+ */
+export const download = async (
+  request: Request,
+  response: Response,
+  next: NextFunction,
+) => {
+  // 准备数据
+  const {
+    body: { file },
+  } = request;
+
+  try {
+    const filePath = path.join('uploads/files', file.filename);
+
+    // 设置头部
+    response.header({
+      'Content-Type': `${file.mimetype}`,
+    });
+
+    // 做出响应
+    response.download(filePath, file.originalname);
+  } catch (error) {
+    next(error);
+  }
+};

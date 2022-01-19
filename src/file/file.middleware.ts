@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from 'express'
 import multer, { FileFilterCallback } from 'multer'
 import Jimp from 'jimp'
-import { imageResizer } from './file.service'
+import { findFileById, imageResizer } from './file.service'
 
 /**
  * 文件过滤器
@@ -88,3 +88,32 @@ export const fileProcessor = async (
   // 下一步
   next();
 }
+
+/**
+ * 文件下载守卫
+ */
+export const fileDownloadGuard = async (
+  request: Request,
+  response: Response,
+  next: NextFunction,
+) => {
+  // 准备数据
+  const {
+    query: { token, socketId },
+    params: { fileId },
+  } = request;
+
+  try {
+
+    // 检查资源是否匹配
+    const file = await findFileById(parseInt(fileId, 10));
+
+    // 设置请求
+    request.body = { file };
+  } catch (error) {
+    return next(error);
+  }
+
+  // 下一步
+  next();
+};
