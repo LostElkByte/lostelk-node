@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express'
-import { createComment, updateComent, deleteComment, createReplyComment, updateReplyComment, deleteReplyComment, isThisCommentIncludedInPost, getComments, getCommentsTotalCount, getCommentReplies, getCommentsRepliesTotalCount, getCommentById } from './comment.service'
+import { createComment, updateComent, deleteComment, createReplyComment, updateReplyComment, deleteReplyComment, isThisCommentIncludedInPost, getComments, getCommentsTotalCount, getCommentReplies, getCommentsRepliesTotalCount, getCommentById, getReplyCommentById } from './comment.service'
 import dayjs from 'dayjs'
 import { socketIoServer } from '../app/app.server'
 
@@ -44,7 +44,7 @@ export const store = async (
 }
 
 /**
-* 回复评论
+* 创建回复评论
 */
 export const reply = async (
   request: Request,
@@ -58,6 +58,7 @@ export const reply = async (
     const { id: userId } = request.user
     const { content, postId, isReplyParentComment } = request.body
     const create_time = dayjs().unix()
+    const socketId = request.header('X-Socket-Id')
     let comment
 
     switch (isReplyParentComment) {
@@ -98,6 +99,15 @@ export const reply = async (
 
     // 回复评论
     const data = await createReplyComment(comment)
+
+    // 调取新创建的回复评论
+    const createdReplyComment = await getReplyCommentById(parseInt(commentId, 10))
+
+    // 触发事件
+    socketIoServer.emit('commentReplyCreated', {
+      comment: createdReplyComment,
+      socketId,
+    })
 
     // 做出响应
     response.status(201).send(data)

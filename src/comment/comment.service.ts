@@ -111,7 +111,6 @@ export const isThisCommentIncludedInPost = async (
 
   // 执行查询
   const [data] = await connection.promise().query(statement, [commentId, postId])
-  console.log(data);
 
   // 返回结果
   return data
@@ -345,6 +344,37 @@ export const getCommentById = async (
   `
   // 执行查询
   const [data] = await connection.promise().query(statement, params)
+
+  // 提供数据
+  return data[0] as any
+
+}
+
+/**
+ * 按ID调取回复评论getReplyCommentById
+ */
+export const getReplyCommentById = async (
+  commentId: number,
+) => {
+  // SQL 参数
+  const params: Array<any> = [commentId]
+
+  // 准备查询
+  const statement = `
+  SELECT
+    reply_comment.id,
+    reply_comment.content,
+    ${sqlFragment.user},
+    ${sqlFragment.repliesUser}
+    FROM
+      reply_comment
+    ${sqlFragment.replyCommentLeftJoinUser}
+    WHERE
+      reply_comment.id = ?
+  `
+  // 执行查询
+  const [data] = await connection.promise().query(statement, params)
+
 
   // 提供数据
   return data[0] as any
