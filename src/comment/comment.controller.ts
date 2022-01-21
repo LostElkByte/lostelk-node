@@ -1,6 +1,7 @@
 import { Request, Response, NextFunction } from 'express'
-import { createComment, updateComent, deleteComment, createReplyComment, updateReplyComment, deleteReplyComment, isThisCommentIncludedInPost, getComments, getCommentsTotalCount, getCommentReplies, getCommentsRepliesTotalCount } from './comment.service'
+import { createComment, updateComent, deleteComment, createReplyComment, updateReplyComment, deleteReplyComment, isThisCommentIncludedInPost, getComments, getCommentsTotalCount, getCommentReplies, getCommentsRepliesTotalCount, getCommentById } from './comment.service'
 import dayjs from 'dayjs'
+import { socketIoServer } from '../app/app.server'
 
 /**
 * 发表评论
@@ -15,6 +16,7 @@ export const store = async (
     const { id: userId } = request.user
     const { content, postId } = request.body
     const create_time = dayjs().unix()
+    const socketId = request.header('X-Socket-Id')
 
     const comment = {
       content,
@@ -24,6 +26,15 @@ export const store = async (
     }
     // 保存评论
     const data = await createComment(comment)
+
+    // 调取新创建的评论
+    const createdComment = await getCommentById(data.insertId)
+
+    // 触发事件
+    socketIoServer.emit('commentCreated', {
+      comment: createdComment,
+      socketId,
+    })
 
     // 做出响应
     response.status(201).send(data)

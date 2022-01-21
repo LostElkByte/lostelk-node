@@ -19,7 +19,7 @@ export const createComment = async (
   const [data] = await connection.promise().query(statement, comment)
 
   // 提供数据
-  return data
+  return data as any
 }
 
 /**
@@ -91,7 +91,6 @@ export const isThisCommentIncludedInPost = async (
   table: string,
   commentId: number,
   postId: number
-
 ) => {
   let statement: string
   if (table === 'comment') {
@@ -316,5 +315,38 @@ export const getCommentsRepliesTotalCount = async (
 
   // 提供结果
   return data[0].total
+
+}
+
+/**
+ * 按ID调取评论
+ */
+
+export const getCommentById = async (
+  commentId: number,
+) => {
+  // SQL 参数
+  const params: Array<any> = [commentId]
+
+  // 准备查询
+  const statement = `
+  SELECT
+      comment.id,
+      comment.content,
+      ${sqlFragment.user},
+      ${sqlFragment.post},
+      ${sqlFragment.totalReplies}
+    FROM
+      comment
+    ${sqlFragment.leftJoinUser}
+    ${sqlFragment.leftJoinPost}
+    WHERE
+      comment.id = ?
+  `
+  // 执行查询
+  const [data] = await connection.promise().query(statement, params)
+
+  // 提供数据
+  return data[0] as any
 
 }
