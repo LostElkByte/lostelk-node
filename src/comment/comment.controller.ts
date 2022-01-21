@@ -172,10 +172,17 @@ export const destroy = async (
 ) => {
   // 准备数据
   const { commentId } = request.params
+  const socketId = request.header('X-Socket-Id')
 
   try {
     // 删除评论
     const data = await deleteComment(parseInt(commentId, 10))
+
+    // 触发事件
+    socketIoServer.emit('commentDelete', {
+      commentId: commentId,
+      socketId,
+    })
     // 做出响应
     response.send(data)
   } catch (error) {
