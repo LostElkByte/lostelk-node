@@ -42,7 +42,7 @@ export const updateComent = async (
   const [data] = await connection.promise().query(statement, [content, id])
 
   // 返回结果
-  return data
+  return data as any
 }
 
 /**

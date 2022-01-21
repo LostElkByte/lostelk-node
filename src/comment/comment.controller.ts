@@ -117,6 +117,7 @@ export const update = async (
   // 准备数据
   const { commentId } = request.params
   const { content } = request.body
+  const socketId = request.header('X-Socket-Id')
 
   const comment = {
     id: parseInt(commentId, 10),
@@ -126,6 +127,14 @@ export const update = async (
   try {
     // 修改评论
     const data = await updateComent(comment)
+
+
+    // 触发事件
+    socketIoServer.emit('updateDelete', {
+      commentId,
+      content,
+      socketId,
+    })
     // 做出响应
     response.send(data)
   } catch (error) {
