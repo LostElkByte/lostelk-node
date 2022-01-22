@@ -140,7 +140,7 @@ export const update = async (
 
 
     // 触发事件
-    socketIoServer.emit('updateDelete', {
+    socketIoServer.emit('updateComment', {
       commentId,
       content,
       socketId,
@@ -163,6 +163,7 @@ export const updateReply = async (
   // 准备数据
   const { reply_commentId } = request.params
   const { content } = request.body
+  const socketId = request.header('X-Socket-Id')
 
   const comment = {
     id: parseInt(reply_commentId, 10),
@@ -170,9 +171,16 @@ export const updateReply = async (
   }
 
   try {
-
     // 修改评论
     const data = await updateReplyComment(comment)
+
+    // 触发事件
+    socketIoServer.emit('updateReplyComment', {
+      replyCommentId: reply_commentId,
+      content,
+      socketId,
+    })
+
     // 做出响应
     response.send(data)
 
