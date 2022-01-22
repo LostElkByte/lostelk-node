@@ -101,7 +101,7 @@ export const reply = async (
     const data = await createReplyComment(comment)
 
     // 调取新创建的回复评论
-    const createdReplyComment = await getReplyCommentById(parseInt(commentId, 10))
+    const createdReplyComment = await getReplyCommentById(data.insertId)
 
     // 触发事件
     socketIoServer.emit('commentReplyCreated', {
