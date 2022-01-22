@@ -31,6 +31,8 @@ export const sqlFragment = {
 	       )
 	 	  FROM
 	 		  user
+      LEFT JOIN avatar
+        ON user.id = avatar.userId
 	  	WHERE
       	user.id = reply_comment.reply_userId
    	) AS replyUser
