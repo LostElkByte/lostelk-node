@@ -364,6 +364,7 @@ export const getReplyCommentById = async (
   SELECT
     reply_comment.id,
     reply_comment.content,
+    reply_comment.parentId,
     ${sqlFragment.user},
     ${sqlFragment.repliesUser}
     FROM
