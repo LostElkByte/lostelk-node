@@ -186,6 +186,7 @@ export const getComments = async (options: GetCommentsOptions) => {
     SELECT
       comment.id,
       comment.content,
+      comment.create_time,
       ${sqlFragment.user},
       ${sqlFragment.post},
       ${sqlFragment.totalReplies}
@@ -270,6 +271,7 @@ export const getCommentReplies = async (
     SELECT
       reply_comment.id,
       reply_comment.content,
+      reply_comment.create_time,
       ${sqlFragment.user},
       ${sqlFragment.repliesUser}
     FROM
