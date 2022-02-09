@@ -64,7 +64,7 @@ export const imageResizer = async (
   if (width > 1280) {
     image
       .resize(1280, Jimp.AUTO)
-      .quality(85)
+      .quality(100)
       .write(`${filePath}-large`)
   }
 
@@ -80,7 +80,7 @@ export const imageResizer = async (
   if (width > 320) {
     image
       .resize(320, Jimp.AUTO)
-      .quality(85)
+      .quality(20)
       .write(`${filePath}-thumbnail`)
   }
 }
