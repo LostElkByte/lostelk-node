@@ -9,7 +9,7 @@ const transporter = nodemailer.createTransport({
   secure: false, //465为true,其他为false
   auth: {
     user: 'email.lostelk@qq.com', // 自己的邮箱
-    pass: 'rhfyeexriqctcbcd', // 授权码,邮箱的授权码
+    pass: 'xarucblqhqjlbhhb', // 授权码,邮箱的授权码
   },
 });
 
@@ -17,28 +17,26 @@ const transporter = nodemailer.createTransport({
  * 注册用户时发送邮箱
  */
 export const sendRegisterEmail = ({ name, email, registration_verify_key }) => {
-  const url = `${EMAIL_IP}/activat_email?email=${email}&name=${name}&registration_verify_key=${registration_verify_key}`;
+  const url = `${EMAIL_IP}?email=${email}&name=${name}&registration_verify_key=${registration_verify_key}`;
   const loginUrl = `${EMAIL_IP}/login`;
   const registerUrl = `${EMAIL_IP}/register`;
   const params = {
     from: 'lostElk<email.lostelk@qq.com>', // 收件人显示的发件人信息,xxxxxxx换成自己的qq
     to: email, // 目标邮箱号
-    subject: 'LostElk 激活账号',
-    html: `尊敬的: ${name}
-          </br> 
-          感谢您注册 LostElk，如确认是您本人注册的本站账号。
-          </br> 
-          请在30分钟内点击下面的链接即可激活您的账号：
-          <a style="color: #87CEFA" href="${url}">点击激活邮箱</a>
-          </br>
-          这个链接只能使用一次，请在30分钟内使用。如超过激活时间导致链接失效，您可以点击此链接重新注册。
-          <a style="color: #87CEFA" href="${registerUrl}">点击注册</a>
-          </br>
-          点击激活之后您就可以在 <a style="color: #87CEFA" href="${loginUrl}">点击登录</a>
-          使用您的账号和密码登录了
-          </br>
-          </br>
-          — LostElk 团队
+    subject: '确认您的 LostElk 账户',
+    html: `<p>嗨: ${name}</p>
+          <p>感谢您注册 LostElk，如确认是您本人注册的本站账号,</p>
+          <p>请在30分钟内点击下面的链接即可激活您的账号：
+            <a style="color: #87CEFA" href="${url}">点击激活邮箱</a>
+          </p>
+          <p>此激活链接只能使用一次，请在30分钟内使用。如超过激活时间导致链接失效，您可以点击此链接
+            <a style="color: #87CEFA" href="${registerUrl}">点击注册</a> 重新注册。
+          </p>
+          <p>注：如果您未注册此账号，您可以忽略该邮件，该账号将在30分钟后被删除。</p>
+          <p>激活成功后之后您就可以在 <a style="color: #87CEFA" href="${loginUrl}">点击登录</a>
+          使用您的账号和密码登录啦~</p>
+        
+          <p>— LostElk</p>
           `,
   };
   return sendMsg(params);
