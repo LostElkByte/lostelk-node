@@ -3,7 +3,6 @@ import fs from 'fs'
 import Jimp from 'jimp'
 import { connection } from '../app/database/mysql'
 import { FileModel } from './file.model'
-import { start } from 'repl'
 
 /**
 * 存储文件信息
@@ -58,14 +57,17 @@ export const imageResizer = async (
   }
 
   // 文件路径
-  const filePath = path.join(file.destination, 'resized', file.filename)
+  const largeFilePath = path.join(file.destination, 'resized', `large-${file.filename}`)
+  const mediumFilePath = path.join(file.destination, 'resized', `medium-${file.filename}`)
+  const thumbnailFilePath = path.join(file.destination, 'resized', `thumbnail-${file.filename}`)
+
 
   // 大尺寸
   if (width > 1280) {
     image
       .resize(1280, Jimp.AUTO)
       .quality(100)
-      .write(`${filePath}-large`)
+      .write(`${largeFilePath}`)
   }
 
   // 中等尺寸
@@ -73,7 +75,7 @@ export const imageResizer = async (
     image
       .resize(640, Jimp.AUTO)
       .quality(85)
-      .write(`${filePath}-medium`)
+      .write(`${mediumFilePath}`)
   }
 
   // 缩略图
@@ -81,7 +83,7 @@ export const imageResizer = async (
     image
       .resize(320, Jimp.AUTO)
       .quality(20)
-      .write(`${filePath}-thumbnail`)
+      .write(`${thumbnailFilePath}`)
   }
 }
 
@@ -116,9 +118,9 @@ export const deletePostFiles = async (files: Array<FileModel>) => {
   files.map(file => {
     const filesToDelete = [
       [uploads, file.filename],
-      [...resized, `${file.filename}-thumbnail`],
-      [...resized, `${file.filename}-medium`],
-      [...resized, `${file.filename}-large`],
+      [...resized, `thumbnail-${file.filename}`],
+      [...resized, `medium-${file.filename}`],
+      [...resized, `large-${file.filename}`],
     ]
 
     filesToDelete.map(item => {

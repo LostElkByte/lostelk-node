@@ -13,6 +13,7 @@
   "description": "LostElk服务端应用",
   "dependencies": {
     "bcrypt": "^4.0.1",
+    "colorthief": "^2.3.2",
     "cors": "^2.8.5",
     "dayjs": "^1.10.6",
     "express": "^4.17.1",

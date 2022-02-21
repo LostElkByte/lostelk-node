@@ -2,6 +2,7 @@ import { Request, Response, NextFunction } from 'express'
 import multer, { FileFilterCallback } from 'multer'
 import Jimp from 'jimp'
 import { findFileById, imageResizer } from './file.service'
+import path from 'path'
 
 /**
  * 文件过滤器
@@ -30,10 +31,20 @@ const fileUploadFilter = fileFilter(['image/png', 'image/jpg', 'image/jpeg'])
 /**
  * 创建一个Multer
  */
-const fileUpload = multer({
-  dest: 'uploads/files',
-  fileFilter: fileUploadFilter
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'uploads/files')
+  },
+  filename: function (req, file, cb) {
+    const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9)
+    cb(null, file.fieldname + '-' + uniqueSuffix + path.extname(file.originalname))
+  },
 })
+const fileUpload = multer({ storage: storage, fileFilter: fileUploadFilter })
+// const fileUpload1 = multer({
+//   dest: 'uploads/files',
+//   fileFilter: fileUploadFilter
+// })
 
 /**
  * 文件拦截器
@@ -52,6 +63,7 @@ export const fileProcessor = async (
   const { path } = request.file
 
   let image: Jimp;
+
 
   try {
     // 读取图像文件

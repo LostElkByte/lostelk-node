@@ -76,12 +76,12 @@ export const serve = async (
 
       // 检查文件是否存在
       const fileExist = fs.existsSync(
-        path.join(root, resized, `${filename}-${size}`)
+        path.join(root, resized, `${size}-${filename}`)
       )
 
       // 设置文件名与目录
       if (fileExist) {
-        filename = `${filename}-${size}`
+        filename = `${size}-${filename}`
         root = path.join(root, resized)
       }
     }
