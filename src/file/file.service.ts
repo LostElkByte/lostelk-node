@@ -1,4 +1,4 @@
-import path, { resolve } from 'path'
+import path from 'path'
 import fs from 'fs'
 import Jimp from 'jimp'
 import ColorThief from 'colorthief'
