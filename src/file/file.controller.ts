@@ -114,7 +114,7 @@ export const metadata = async (
     const file = await findFileById(parseInt(fileId, 10))
 
     // 准备相应数据
-    const data = _.pick(file, ['id', 'isze', 'width', 'height', 'metadata'])
+    const data = _.pick(file, ['id', 'isze', 'width', 'height', 'metadata', 'mainColor', 'paletteColor'])
 
     // 做出响应
     response.send(data)
