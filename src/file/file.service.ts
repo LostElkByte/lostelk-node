@@ -115,7 +115,7 @@ export const extractionColor = async (
       .catch(err => { console.log(err) })
 
     // 提取图片副色
-    await ColorThief.getPalette(mediumFilePath, 8)
+    await ColorThief.getPalette(mediumFilePath, 5)
       .then(palette => { paletteColor = palette })
       .catch(err => { console.log(err) })
   } else {
@@ -124,10 +124,16 @@ export const extractionColor = async (
       .then(color => { mainColor = color })
       .catch(err => { console.log(err) })
     // 提取图片副色
-    await ColorThief.getPalette(file.path, 8)
+    await ColorThief.getPalette(file.path, 5)
       .then(palette => { paletteColor = palette })
       .catch(err => { console.log(err) })
   }
+
+  // 如果提取主色失败
+  if (!mainColor && paletteColor) {
+    mainColor = paletteColor[0]
+  }
+
 
   return { mainColor, paletteColor }
 }
