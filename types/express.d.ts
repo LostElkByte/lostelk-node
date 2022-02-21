@@ -5,7 +5,9 @@ declare global {
   namespace Express {
     export interface Request {
       user: TokenPayload
-      fileMetaData: { width?: number; height?: number; metadata?: {} }
+      fileMetaData: {
+        width?: number; height?: number; metadata?: {}, mainColor: any, paletteColor: any
+      }
       sort: string
       filter: GetPostsOptionsFilter
       pagination: GetPostsOptionsPagination
