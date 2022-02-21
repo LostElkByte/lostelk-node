@@ -1,6 +1,7 @@
-import path from 'path'
+import path, { resolve } from 'path'
 import fs from 'fs'
 import Jimp from 'jimp'
+import ColorThief from 'colorthief'
 import { connection } from '../app/database/mysql'
 import { FileModel } from './file.model'
 
@@ -85,6 +86,50 @@ export const imageResizer = async (
       .quality(20)
       .write(`${thumbnailFilePath}`)
   }
+}
+
+/**
+ * 提取图片颜色
+ */
+export const extractionColor = async (
+  image: Jimp, file: Express.Multer.File,
+) => {
+  // 图像尺寸
+  let width: number
+  if (image['_exif']) {
+    width = image['_exif'].imageSize.width
+  } else {
+    width = image['bitmap'].width
+  }
+
+  // 文件路径
+  const mediumFilePath = path.join(file.destination, 'resized', `medium-${file.filename}`)
+
+  let mainColor: any
+  let paletteColor: any
+  if (width > 320) {
+
+    // 提取图片主色
+    await ColorThief.getColor(mediumFilePath)
+      .then(color => { mainColor = color })
+      .catch(err => { console.log(err) })
+
+    // 提取图片副色
+    await ColorThief.getPalette(mediumFilePath, 5)
+      .then(palette => { paletteColor = palette })
+      .catch(err => { console.log(err) })
+  } else {
+    // 提取图片主色
+    await ColorThief.getColor(file.path)
+      .then(color => { mainColor = color })
+      .catch(err => { console.log(err) })
+    // 提取图片副色
+    await ColorThief.getPalette(file.path, 5)
+      .then(palette => { paletteColor = palette })
+      .catch(err => { console.log(err) })
+  }
+
+  return { mainColor, paletteColor }
 }
 
 /**

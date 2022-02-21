@@ -1,9 +1,8 @@
 import { Request, Response, NextFunction } from 'express'
 import multer, { FileFilterCallback } from 'multer'
-import ColorThief from 'colorthief'
 import Jimp from 'jimp'
-import path, { resolve } from 'path'
-import { findFileById, imageResizer } from './file.service'
+import path from 'path'
+import { extractionColor, findFileById, imageResizer } from './file.service'
 
 
 /**
@@ -66,23 +65,20 @@ export const fileProcessor = async (
 
   let image: Jimp;
 
-  // 提取图片主色
-  let mainColor: any
-  let paletteColor: any
-  ColorThief.getColor(path)
-    .then(color => { mainColor = color })
-    .catch(err => { console.log(err) })
-  // 提取图片副色
-  ColorThief.getPalette(path, 5)
-    .then(palette => { paletteColor = palette })
-    .catch(err => { console.log(err) })
-
   try {
     // 读取图像文件
     image = await Jimp.read(path)
   } catch (error) {
     return next(error)
   }
+
+  // 调整图像尺寸
+  await imageResizer(image, request.file)
+
+  // 提取图像颜色
+  const color = await extractionColor(image, request.file)
+
+  const { mainColor, paletteColor } = color
 
   if (image['_exif']) {
     // 准备文件数据
@@ -110,12 +106,10 @@ export const fileProcessor = async (
     }
   }
 
-  // 调整图像尺寸
-  imageResizer(image, request.file)
-
   // 下一步
   next();
 }
+
 
 /**
  * 文件下载守卫
