@@ -41,11 +41,8 @@ const storage = multer.diskStorage({
     cb(null, file.fieldname + '-' + uniqueSuffix + path.extname(file.originalname))
   },
 })
+
 const fileUpload = multer({ storage: storage, fileFilter: fileUploadFilter })
-// const fileUpload1 = multer({
-//   dest: 'uploads/files',
-//   fileFilter: fileUploadFilter
-// })
 
 /**
  * 文件拦截器
