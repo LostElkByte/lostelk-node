@@ -127,7 +127,7 @@ export const update = async (
 }
 
 /**
- * 找回密码 - 发送邮箱验证码
+ * 找回密码 - 发送邮件
  */
 export const sendRetrievePasswordVerifyKey = async (
   request: Request,
@@ -135,7 +135,9 @@ export const sendRetrievePasswordVerifyKey = async (
   next: NextFunction
 ) => {
   // 准备数据
-  const { email } = request.body
+  const { email, user } = request.body
+
+  const name = user.name
 
   // 创建用户
   try {
@@ -149,54 +151,14 @@ export const sendRetrievePasswordVerifyKey = async (
     await userService.setRetrievePasswordVerifyKey(email, retrieve_password_verify_key, launch_retrieval_password_time)
 
     // 发送校验邮箱
-    sendRetrievePasswordEmail({ email, retrieve_password_verify_key });
+    sendRetrievePasswordEmail({ email, name, retrieve_password_verify_key });
 
-    response.status(201).send({ isSucceed: 1, message: '验证码已发送到您的邮箱,请注意查收' })
+    response.status(201).send({ isSucceed: 1, message: '您将在几分钟内收到一个密码恢复链接在您的电子邮件中。' })
   } catch (error) {
     next(error)
   }
 }
 
-/**
- * 找回密码 - 验证码校验
- */
-export const retrievePasswordVerify = async (
-  request: Request,
-  response: Response,
-  next: NextFunction
-) => {
-  // 准备数据
-  const { email, retrieve_password_verify_key } = request.body
-  const launch_retrieval_password_time = dayjs().unix()
-
-  try {
-    // 通过邮箱查询校验码 与 校验码发送时间
-    const data = await userService.getRetrievePasswordVerifyKey(email as string)
-
-    // 验证码发送时间相较当前时间大于1分钟
-    if (launch_retrieval_password_time - data.launch_retrieval_password_time > 60) {
-      response.status(409).send({ isSucceed: 0, message: '验证码已过期,请重新获取' })
-      return
-    }
-
-    // 验证码错误
-    if (data.retrieve_password_verify_key != retrieve_password_verify_key) {
-      response.status(409).send({ isSucceed: 0, message: '验证码错误,请查验后输入' })
-      return
-    }
-
-    // 成功
-    if (data.retrieve_password_verify_key === retrieve_password_verify_key && launch_retrieval_password_time - data.launch_retrieval_password_time <= 60) {
-      // 清空 retrieve_password_verify_key、launch_retrieval_password_time
-      // await userService.deleteRetrievePasswordData(email as string)
-      response.status(201).send({ isSucceed: 1, message: `验证成功,请修改密码` })
-      return
-    }
-
-  } catch (error) {
-    next(error)
-  }
-}
 
 /**
 * 找回密码 - 修改密码
@@ -207,7 +169,7 @@ export const retrievePasswordPatch = async (
   next: NextFunction
 ) => {
   // 准备数据
-  const { email, password, retrieve_password_verify_key } = request.body
+  const { email, password, retrievePasswordVerifyKey } = request.body
   const launch_retrieval_password_time = dayjs().unix()
 
   try {
@@ -218,27 +180,27 @@ export const retrievePasswordPatch = async (
     const data = await userService.getRetrievePasswordVerifyKey(email as string)
 
 
-    // 验证码发送时间相较当前时间大于10分钟
-    if (launch_retrieval_password_time - data.launch_retrieval_password_time > 600) {
+    // 验证码发送时间相较当前时间大于30分钟
+    if (launch_retrieval_password_time - data.launch_retrieval_password_time > 1800) {
       response.status(409).send({ isSucceed: 0, message: '本次修改密码已超时,请重新进行忘记密码步骤' })
       return
     }
 
     // 验证码错误
-    if (data.retrieve_password_verify_key != retrieve_password_verify_key) {
+    if (data.retrieve_password_verify_key != retrievePasswordVerifyKey) {
       response.status(409).send({ isSucceed: 0, message: '当前状态不可修改密码,请重新进行忘记密码步骤' })
       return
     }
 
     // 成功
-    if (data.retrieve_password_verify_key === retrieve_password_verify_key && launch_retrieval_password_time - data.launch_retrieval_password_time <= 600) {
+    if (data.retrieve_password_verify_key === retrievePasswordVerifyKey && launch_retrieval_password_time - data.launch_retrieval_password_time <= 1800) {
       //  修改密码
       await userService.retrievePassword(email, hashPassword)
 
       // 清空 retrieve_password_verify_key、launch_retrieval_password_time
       await userService.deleteRetrievePasswordData(email as string)
 
-      response.status(201).send({ isSucceed: 1, message: `修改密码成功` })
+      response.status(201).send({ isSucceed: 1, message: `修改密码成功,可以使用新密码登录了` })
       return
     }
 

@@ -26,14 +26,9 @@ router.get('/users/:userId', userController.show)
 router.patch('/users', authGuard, validateUpdateUserData, userController.update)
 
 /**
- * 找回密码 - 发送验证码
+ * 找回密码 - 发送邮件
  */
 router.post('/send_retrieve_password_verify_key', emailWhetherRegistered, userController.sendRetrievePasswordVerifyKey)
-
-/**
- * 找回密码 - 校验验证码
- */
-router.post('/verify_retrieve_password_verify_key', userController.retrievePasswordVerify)
 
 /**
  * 找回密码 - 修改密码

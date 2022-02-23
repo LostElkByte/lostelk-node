@@ -68,15 +68,24 @@ export const sendActivateSuccess = ({ name, email }) => {
 
 
 /**
- * 找回密码时发送校验码
+ * 找回密码时发送邮件
  * @param {*} params
  */
-export const sendRetrievePasswordEmail = ({ email, retrieve_password_verify_key }) => {
+export const sendRetrievePasswordEmail = ({ email, name, retrieve_password_verify_key }) => {
+  const url = `${EMAIL_IP}/RetrievePassword?email=${email}&retrievePasswordVerifyKey=${retrieve_password_verify_key}`;
   const params = {
     from: 'lostElk<email.lostelk@qq.com>', // 收件人显示的发件人信息,xxxxxxx换成自己的qq
     to: email, // 目标邮箱号
     subject: '找回密码',
-    html: `邮箱验证码:${retrieve_password_verify_key}`,
+    html: `<p>嗨: ${name}</p>
+          <p>您现在可以重置您的密码。请在30分钟内使用下面的链接设置新密码</p>
+            <a style="color: #87CEFA" href="${url}">设置您的新密码</a>
+          </p>
+          <p>如果您没有请求，请忽略该邮件</p>
+          <p>您的密码不会改变,直到您访问上面的链接并设置新密码</p>
+
+          <p>— LostElk 团队</p>
+          `,
   };
   return sendMsg(params);
 };

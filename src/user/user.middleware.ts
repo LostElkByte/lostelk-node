@@ -167,6 +167,9 @@ export const emailWhetherRegistered = async (
     return next(new Error('USER_NOT_FOUND'))
   }
 
+  // 在请求主体里添加用户
+  request.body.user = user
+
   // 下一步
   next()
 }
