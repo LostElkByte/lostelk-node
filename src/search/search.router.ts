@@ -9,6 +9,11 @@ const router = express.Router()
 router.get('/search/tags', searchController.tags)
 
 /**
+ * 搜索用户
+ */
+router.get('/search/users', searchController.users)
+
+/**
  * 默认导出
  */
 export default router
