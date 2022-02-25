@@ -86,3 +86,42 @@ export const searchUsers = async (options: SearchUsersOptions) => {
   // 提供数据
   return data as any
 }
+
+/**
+ * 搜索相机
+ */
+interface SearchCamerasOptions {
+  makeModel?: string;
+}
+
+export const searchCameras = async (options: SearchCamerasOptions) => {
+  // 解构选项
+  const { makeModel } = options
+
+  // SQL 参数
+  const params: Array<any> = [`%${makeModel}%`]
+
+  // 品牌与型号
+  const makeModelField = `JSON_EXTRACT(file.metadata, "$.Make", "$.Model")`
+
+  // 准备查询
+  const statement = `
+    SELECT
+      ${makeModelField} as camera,
+      COUNT(${makeModelField}) as totalPosts
+    FROM
+      file
+    WHERE
+      ${makeModelField} LIKE ? COLLATE utf8mb4_unicode_ci
+    GROUP BY
+      ${makeModelField}
+    LIMIT
+     10
+  `
+
+  // 执行查询
+  const [data] = await connection.promise().query(statement, params)
+
+  // 提供数据
+  return data as any
+}
