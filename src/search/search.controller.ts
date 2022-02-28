@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express'
-import { searchCameras, searchTags, searchUsers } from './search.service'
+import { searchCameras, searchLens, searchTags, searchUsers } from './search.service'
 
 /**
 * 搜索标签
@@ -63,6 +63,28 @@ export const cameras = async (
 
     // 做出响应
     response.send(cameras)
+  } catch (error) {
+    next(error)
+  }
+}
+
+/**
+* 搜索相机
+*/
+export const lens = async (
+  request: Request,
+  response: Response,
+  next: NextFunction
+) => {
+  try {
+    // 准备关键词
+    const { makeModel } = request.query
+
+    // 查询
+    const lens = await searchLens({ makeModel: makeModel.toString() })
+
+    // 做出响应
+    response.send(lens)
   } catch (error) {
     next(error)
   }

@@ -19,6 +19,11 @@ router.get('/search/users', searchController.users)
 router.get('/search/cameras', searchController.cameras)
 
 /**
+ * 搜索镜头
+ */
+router.get('/search/lens', searchController.lens)
+
+/**
  * 默认导出
  */
 export default router
