@@ -1,4 +1,5 @@
 import { Request, Response, NextFunction } from 'express'
+import { partial } from 'lodash'
 
 /**
 * 排序方式
@@ -46,7 +47,7 @@ export const filter = async (
   next: NextFunction
 ) => {
   // 解构查询符
-  const { tag, user, action } = request.query
+  const { tag, user, action, cameraMake, cameraModel, lensMake, lensModel } = request.query
 
   // 设置默认的过滤
   request.filter = {
@@ -78,6 +79,24 @@ export const filter = async (
       name: 'userLiked',
       sql: 'user_like_post.userId = ?',
       param: user.toString()
+    }
+  }
+
+  // 过滤出用某种相机拍摄的内容
+  if (cameraMake && cameraModel) {
+    request.filter = {
+      name: 'camera',
+      sql: `file.metadata->'$.Make' = ? AND file.metadata->'$.Model' = ?`,
+      params: [cameraMake.toString(), cameraModel.toString()],
+    }
+  }
+
+  // 过滤出用某种镜头拍摄的内容
+  if (lensMake && lensModel) {
+    request.filter = {
+      name: 'lens',
+      sql: `file.metadata->'$.lensMake' = ? AND file.metadata->'$.lensModel' = ?`,
+      params: [lensMake.toString(), lensModel.toString()],
     }
   }
 

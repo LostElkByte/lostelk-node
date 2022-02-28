@@ -10,6 +10,7 @@ export interface GetPostsOptionsFilter {
   name: string;
   sql?: string;
   param?: string;
+  params?: Array<string>;
 }
 
 export interface GetPostsOptionsPagination {
@@ -34,6 +35,11 @@ export const getPosts = async (options: GetPostsOptions) => {
   if (filter.param) {
     params = [filter.param, ...params]
   }
+
+  if (filter.params) {
+    params = [...filter.params, ...params]
+  }
+
 
   // 当前用户
   const { id: userId } = currentUser
@@ -192,6 +198,10 @@ export const getPostsTotalCount = async (
 
   // SQL 参数
   let params = [filter.param]
+
+  if (filter.params) {
+    params = [...filter.params, ...params]
+  }
 
   // 准备查询
   const statement = `
