@@ -4,6 +4,11 @@ import Jimp from 'jimp'
 import ColorThief from 'colorthief'
 import { connection } from '../app/database/mysql'
 import { FileModel } from './file.model'
+import { colord, extend } from "colord";
+import namesPlugin from "colord/plugins/names";
+
+extend([namesPlugin]);
+
 
 /**
 * 存储文件信息
@@ -89,6 +94,19 @@ export const imageResizer = async (
 }
 
 /**
+ * 转换十六进制
+ * @param r 
+ * @param g 
+ * @param b 
+ * @returns 
+ */
+const rgbToHex = (r, g, b) => '#' + [r, g, b].map(x => {
+  const hex = x.toString(16)
+  return hex.length === 1 ? '0' + hex : hex
+}).join('')
+
+
+/**
  * 提取图片颜色
  */
 export const extractionColor = async (
@@ -108,7 +126,6 @@ export const extractionColor = async (
   let mainColor: any
   let paletteColor: any
   if (width > 320) {
-
     // 提取图片主色
     await ColorThief.getColor(mediumFilePath)
       .then(color => { mainColor = color })
@@ -124,7 +141,7 @@ export const extractionColor = async (
       .then(color => { mainColor = color })
       .catch(err => { console.log(err) })
     // 提取图片副色
-    await ColorThief.getPalette(file.path, 58)
+    await ColorThief.getPalette(file.path, 8)
       .then(palette => { paletteColor = palette })
       .catch(err => { console.log(err) })
   }
@@ -133,6 +150,12 @@ export const extractionColor = async (
   if (!mainColor && paletteColor) {
     mainColor = paletteColor[0]
   }
+
+  // mainColor = rgbToHex(mainColor[0], mainColor[1], mainColor[2])
+  console.log(mainColor);
+  const heXColor = rgbToHex(mainColor[0], mainColor[1], mainColor[2])
+  const colorName = colord(heXColor).toName({ closest: true })
+  console.log(colorName);
 
 
   return { mainColor, paletteColor }
