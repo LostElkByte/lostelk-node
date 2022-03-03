@@ -245,9 +245,6 @@ const colorNameTranslateChinese = (colorName) => {
       chineseColorName = ['浅蓝色', '淡青色', '浅青色', '淡蓝色']
       break;
     case 'lightgoldenrodyellow':
-      chineseColorName = ['浅金黄色', '淡金黄色']
-      break;
-    case 'lightgoldenrodyellow':
       chineseColorName = ['浅金黄色', '浅黄色', '淡黄色']
       break;
     case 'lightgray':
