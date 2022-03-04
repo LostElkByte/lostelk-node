@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express'
 import _ from 'lodash'
-import { getPosts, createPost, updatePost, deletePost, createPostTag, postHasTag, deletePostTag, getPostsTotalCount, getPostById, postHasColor, createPostColor } from './post.service'
+import { getPosts, createPost, updatePost, deletePost, createPostTag, postHasTag, deletePostTag, getPostsTotalCount, getPostById, postHasColor, createPostColor, deletePostColor } from './post.service'
 import { TagModel } from '../tag/tag.model'
 import { getTagByName, createTag } from '../tag/tag.service'
 import { deletePostFiles, getPostFiles } from '../file/file.service'
@@ -221,6 +221,28 @@ export const storePostColor = async (
     return next(error)
   }
 
+}
+
+
+/**
+* 移除颜色标签
+*/
+export const destroyPostColor = async (
+  request: Request,
+  response: Response,
+  next: NextFunction
+) => {
+  // 准备数据
+  const { postId } = request.params
+  const { colorId } = request.body
+
+  // 移除内容标签
+  try {
+    await deletePostColor(parseInt(postId, 10), colorId)
+    response.sendStatus(200)
+  } catch (error) {
+    return next(error)
+  }
 }
 
 /**
