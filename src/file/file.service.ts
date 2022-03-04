@@ -151,14 +151,12 @@ export const extractionColor = async (
     mainColor = paletteColor[0]
   }
 
-  // mainColor = rgbToHex(mainColor[0], mainColor[1], mainColor[2])
-  console.log(mainColor);
+  // 将主色RBG转为HEX
   const heXColor = rgbToHex(mainColor[0], mainColor[1], mainColor[2])
+  // 将HEX转为W3C颜色描述
   const colorName = colord(heXColor).toName({ closest: true })
-  console.log(colorName);
 
-
-  return { mainColor, paletteColor }
+  return { mainColor, paletteColor, colorName }
 }
 
 /**

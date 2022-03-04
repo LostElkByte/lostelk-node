@@ -271,3 +271,22 @@ export const getPostById = async (
   // 提供数据
   return data[0]
 }
+
+/**
+* 保存内容颜色
+*/
+export const createPostColor = async (
+  postId: number, colorId: number
+) => {
+  // 准备查询
+  const statement = `
+    INSERT INTO post_color (postId, colorId)
+    VALUES(?,?)
+  `;
+
+  // 执行查询
+  const [data] = await connection.promise().query(statement, [postId, colorId])
+
+  // 提供数据
+  return data
+}

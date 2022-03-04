@@ -6,7 +6,7 @@ declare global {
     export interface Request {
       user: TokenPayload
       fileMetaData: {
-        width?: number; height?: number; metadata?: {}, mainColor?: any, paletteColor?: any
+        width?: number; height?: number; metadata?: {}, mainColor?: any, paletteColor?: any, colorName?: string
       }
       sort: string
       filter: GetPostsOptionsFilter

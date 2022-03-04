@@ -362,7 +362,7 @@ const colorNameTranslateChinese = (colorName) => {
       chineseColorName = ['肉色', '桃色', '桃肉色']
       break;
     case 'peru':
-      chineseColorName = ['褐色', '秘鲁色', '巧克力色']
+      chineseColorName = ['褐色', '秘鲁色', '巧克力色', '金色']
       break;
     case 'pink':
       chineseColorName = ['粉色']
