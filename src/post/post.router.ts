@@ -39,6 +39,11 @@ router.post('/posts/:postId/tag', authGuard, accessControl({ possession: true })
 router.delete('/posts/:postId/tag', authGuard, accessControl({ possession: true }), postController.destroyPostTag)
 
 /**
+ * 添加颜色标签
+ */
+router.post('/posts/:postId/color', authGuard, accessControl({ possession: true }), postController.storePostColor)
+
+/**
  * 单个内容
  */
 router.get('/posts/:postId', postController.show)

@@ -1,9 +1,11 @@
 import { Request, Response, NextFunction } from 'express'
 import _ from 'lodash'
-import { getPosts, createPost, updatePost, deletePost, createPostTag, postHasTag, deletePostTag, getPostsTotalCount, getPostById } from './post.service'
+import { getPosts, createPost, updatePost, deletePost, createPostTag, postHasTag, deletePostTag, getPostsTotalCount, getPostById, postHasColor, createPostColor } from './post.service'
 import { TagModel } from '../tag/tag.model'
 import { getTagByName, createTag } from '../tag/tag.service'
 import { deletePostFiles, getPostFiles } from '../file/file.service'
+import { ColorModel } from '../color/color.model'
+import { createColor, getColorByName } from '../color/color.service'
 
 
 /**
@@ -169,6 +171,56 @@ export const destroyPostTag = async (
   } catch (error) {
     return next(error)
   }
+}
+
+/**
+* 添加内容颜色标签
+*/
+export const storePostColor = async (
+  request: Request,
+  response: Response,
+  next: NextFunction
+) => {
+  // 准备数据
+  const { postId } = request.params
+  const { name } = request.body
+
+  let color: ColorModel
+  // 查找颜色标签
+  try {
+    color = await getColorByName(name)
+  } catch (error) {
+    return next(error)
+  }
+
+  // 标签存在,验证内容标签
+  if (color) {
+    try {
+      const postColor = await postHasColor(parseInt(postId, 10), color.id)
+      if (postColor) return next(new Error('POST_ALREADY_HAS_THIS_COLOR'))
+    } catch (error) {
+      return next(error)
+    }
+  }
+
+  // 没找到颜色标签,创建这个颜色标签
+  if (!color) {
+    try {
+      const data = await createColor({ name })
+      color = { id: data.insertId }
+    } catch (error) {
+      return next(error)
+    }
+  }
+
+  // 给内容打上颜色标签
+  try {
+    await createPostColor(parseInt(postId, 10), color.id)
+    response.sendStatus(201)
+  } catch (error) {
+    return next(error)
+  }
+
 }
 
 /**
