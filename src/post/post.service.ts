@@ -189,6 +189,61 @@ export const deletePostTag = async (
 }
 
 /**
+ * 检查颜色标签
+ */
+export const postHasColor = async (postId: number, colorId: number) => {
+  // 准备查询
+  const statemnet = `
+    SELECT * FROM post_color
+    WHERE postId=? AND colorId=?
+  `;
+
+  // 执行查询
+  const [data] = await connection.promise().query(statemnet, [postId, colorId])
+
+  // 提供数据
+  return data[0] ? true : false
+}
+
+/**
+* 保存内容颜色标签
+*/
+export const createPostColor = async (
+  postId: number, colorId: number
+) => {
+  // 准备查询
+  const statement = `
+    INSERT INTO post_color (postId, colorId)
+    VALUES(?,?)
+  `;
+
+  // 执行查询
+  const [data] = await connection.promise().query(statement, [postId, colorId])
+
+  // 提供数据
+  return data
+}
+
+/**
+ * 移除内容颜色标签
+ */
+export const deletePostColor = async (
+  postId: number, colorId: number
+) => {
+  // 准备查询
+  const statement = `
+    DELETE FROM post_color
+    WHERE postId = ? AND colorId = ?
+  `;
+
+  // 执行查询
+  const [data] = await connection.promise().query(statement, [postId, colorId])
+
+  // 提供数据
+  return data
+}
+
+/**
 * 统计内容数量
 */
 export const getPostsTotalCount = async (
@@ -270,23 +325,4 @@ export const getPostById = async (
 
   // 提供数据
   return data[0]
-}
-
-/**
-* 保存内容颜色
-*/
-export const createPostColor = async (
-  postId: number, colorId: number
-) => {
-  // 准备查询
-  const statement = `
-    INSERT INTO post_color (postId, colorId)
-    VALUES(?,?)
-  `;
-
-  // 执行查询
-  const [data] = await connection.promise().query(statement, [postId, colorId])
-
-  // 提供数据
-  return data
 }

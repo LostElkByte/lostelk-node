@@ -152,9 +152,9 @@ export const extractionColor = async (
   }
 
   // 将主色RBG转为HEX
-  const heXColor = rgbToHex(mainColor[0], mainColor[1], mainColor[2])
+  const hexColor = rgbToHex(mainColor[0], mainColor[1], mainColor[2])
   // 将HEX转为W3C颜色描述
-  const colorName = colord(heXColor).toName({ closest: true })
+  const colorName = colord(hexColor).toName({ closest: true })
 
   return { mainColor, paletteColor, colorName }
 }
@@ -207,6 +207,4 @@ export const deletePostFiles = async (files: Array<FileModel>) => {
       })
     })
   })
-
-
 }

@@ -449,4 +449,7 @@ const colorNameTranslateChinese = (colorName) => {
       chineseColorName = ['未知色']
       break;
   }
+  return chineseColorName
 }
+
+export default colorNameTranslateChinese

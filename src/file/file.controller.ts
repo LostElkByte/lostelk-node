@@ -3,6 +3,10 @@ import fs from 'fs'
 import { Request, Response, NextFunction } from 'express'
 import _ from 'lodash'
 import { createFile, findFileById } from './file.service'
+import { ColorModel } from '../color/color.model'
+import { createPostColor, postHasColor } from '../post/post.service'
+import { getColorByName, createColor } from '../color/color.service'
+import colorNameTranslateChinese from './colorNameTranslateChinese'
 
 /**
 * 上传文件
@@ -17,6 +21,12 @@ export const store = async (
 
   // 所属内容
   const postId = parseInt(request.query.post as string, 10)
+
+  // HEX颜色
+  const colorName = request.fileMetaData.colorName
+
+  // HEX颜色转汉字颜色
+  const colorNameList = colorNameTranslateChinese(colorName) as Array<string>
 
   // 文件信息
   const fileInfo = _.pick(request.file, [
@@ -40,6 +50,47 @@ export const store = async (
   } catch (error) {
     next(error)
   }
+
+  // 储存颜色标签
+  for (const colorItem of colorNameList) {
+    let color: ColorModel
+    // 查找颜色标签
+    try {
+      color = await getColorByName(colorItem)
+    } catch (error) {
+      return next(error)
+    }
+
+    // 标签存在,验证内容标签
+    // if (color) {
+    //   try {
+    //     const postColor = await postHasColor(postId, color.id)
+    //     if (postColor) return next(new Error('POST_ALREADY_HAS_THIS_COLOR'))
+    //   } catch (error) {
+    //     return next(error)
+    //   }
+    // }
+
+    // 没找到颜色标签,创建这个颜色标签
+    if (!color) {
+      try {
+        const data = await createColor({ name: colorItem })
+        color = { id: data.insertId }
+      } catch (error) {
+        return next(error)
+      }
+    }
+
+    // 给内容打上颜色标签
+    try {
+      await createPostColor(postId, color.id)
+      // response.sendStatus(201)
+    } catch (error) {
+      return next(error)
+    }
+  }
+
+
 }
 
 /**
