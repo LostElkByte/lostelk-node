@@ -193,7 +193,7 @@ export const storePostColor = async (
     return next(error)
   }
 
-  // 标签存在,验证内容标签
+  // 标签存在,验证颜色标签
   if (color) {
     try {
       const postColor = await postHasColor(parseInt(postId, 10), color.id)
