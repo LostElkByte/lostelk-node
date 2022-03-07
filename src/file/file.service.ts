@@ -6,6 +6,7 @@ import { connection } from '../app/database/mysql'
 import { FileModel } from './file.model'
 import { colord, extend } from "colord";
 import namesPlugin from "colord/plugins/names";
+import _ from 'lodash'
 
 extend([namesPlugin]);
 
@@ -140,6 +141,7 @@ export const extractionColor = async (
     await ColorThief.getColor(file.path)
       .then(color => { mainColor = color })
       .catch(err => { console.log(err) })
+
     // 提取图片副色
     await ColorThief.getPalette(file.path, 8)
       .then(palette => { paletteColor = palette })
@@ -151,12 +153,30 @@ export const extractionColor = async (
     mainColor = paletteColor[0]
   }
 
-  // 将主色RBG转为HEX
-  const hexColor = rgbToHex(mainColor[0], mainColor[1], mainColor[2])
-  // 将HEX转为W3C颜色描述
-  const colorName = colord(hexColor).toName({ closest: true })
 
-  return { mainColor, paletteColor, colorName }
+  // 主色W3C颜色名
+  let mainColorName: string
+  // RBG转HEX
+  const mainHexColor = rgbToHex(mainColor[0], mainColor[1], mainColor[2])
+  // 将HEX转为W3C颜色名
+  mainColorName = colord(mainHexColor).toName({ closest: true })
+
+
+  // 调色板W3C颜色名集合
+  let paletteColorNameList = [] as Array<string>
+  // 将调色板RBG转为HEX
+  for (const itemColor of paletteColor) {
+    // RBG转HEX
+    const hexColor = rgbToHex(itemColor[0], itemColor[1], itemColor[2])
+    // 将HEX转为W3C颜色名
+    const palettColorName = colord(hexColor).toName({ closest: true })
+    // PUSH
+    paletteColorNameList.push(palettColorName)
+  }
+  // 调色板W3C颜色名List去重
+  paletteColorNameList = Array.from(new Set(paletteColorNameList))
+
+  return { mainColor, paletteColor, mainColorName, paletteColorNameList }
 }
 
 /**

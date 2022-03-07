@@ -5,5 +5,12 @@ export class FileModel {
   filename: string;
   size: number;
   userId: number;
-  postId?: number
+  postId?: number;
+  width?: number;
+  height?: number;
+  metadata?: any;
+  mainColor?: Array<number>;
+  paletteColor?: any;
+  mainColorName?: string;
+  paletteColorNameList?: any
 }

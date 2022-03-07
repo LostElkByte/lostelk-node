@@ -6,7 +6,7 @@ import { createFile, findFileById } from './file.service'
 import { ColorModel } from '../color/color.model'
 import { createPostColor, postHasColor } from '../post/post.service'
 import { getColorByName, createColor } from '../color/color.service'
-import colorNameTranslateChinese from './colorNameTranslateChinese'
+import colorNameTranslateChinese from '../color/colorNameTranslateChinese'
 
 /**
 * 上传文件
@@ -22,11 +22,20 @@ export const store = async (
   // 所属内容
   const postId = parseInt(request.query.post as string, 10)
 
-  // HEX颜色
-  const colorName = request.fileMetaData.colorName
+  // 调色板中文颜色名集合
+  let chineseColorNameList = [] as Array<string>
 
-  // HEX颜色转汉字颜色
-  const colorNameList = colorNameTranslateChinese(colorName) as Array<string>
+  // 调色板W3C颜色名列表
+  const paletteColorNameList = request.fileMetaData.paletteColorNameList
+
+  for (const itemColorName of paletteColorNameList) {
+    // W3C颜色名转中文颜色
+    const chinesecolorName = colorNameTranslateChinese(itemColorName) as Array<string>
+    chineseColorNameList = [...chineseColorNameList, ...chinesecolorName]
+  }
+
+  // 调色板中文颜色名集合去重
+  chineseColorNameList = Array.from(new Set(chineseColorNameList))
 
   // 文件信息
   const fileInfo = _.pick(request.file, [
@@ -42,7 +51,11 @@ export const store = async (
       ...fileInfo,
       userId,
       postId,
-      ...request.fileMetaData
+      width: request.fileMetaData.width,
+      height: request.fileMetaData.height,
+      metadata: request.fileMetaData.metadata,
+      mainColor: request.fileMetaData.mainColor,
+      paletteColor: request.fileMetaData.paletteColor
     })
 
     // 做出响应
@@ -52,7 +65,7 @@ export const store = async (
   }
 
   // 储存颜色标签
-  for (const colorItem of colorNameList) {
+  for (const colorItem of chineseColorNameList) {
     let color: ColorModel
     // 查找颜色标签
     try {
@@ -60,16 +73,6 @@ export const store = async (
     } catch (error) {
       return next(error)
     }
-
-    // 标签存在,验证内容标签
-    // if (color) {
-    //   try {
-    //     const postColor = await postHasColor(postId, color.id)
-    //     if (postColor) return next(new Error('POST_ALREADY_HAS_THIS_COLOR'))
-    //   } catch (error) {
-    //     return next(error)
-    //   }
-    // }
 
     // 没找到颜色标签,创建这个颜色标签
     if (!color) {
@@ -84,7 +87,6 @@ export const store = async (
     // 给内容打上颜色标签
     try {
       await createPostColor(postId, color.id)
-      // response.sendStatus(201)
     } catch (error) {
       return next(error)
     }
