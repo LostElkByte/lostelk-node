@@ -74,6 +74,7 @@ export const getPosts = async (options: GetPostsOptions) => {
     LIMIT ?
     OFFSET ?
   `;
+  console.log(params);
 
   const [data] = await connection.promise().query(statement, params)
 
@@ -268,6 +269,7 @@ export const getPostsTotalCount = async (
     ${sqlFragment.leftJoinUser}
     ${sqlFragment.innerJoinFile}
     ${sqlFragment.leftJoinTag}
+    ${sqlFragment.leftJoinColor}
     ${filter.name == 'userLiked' ? sqlFragment.innerJoinUserLikePost : ''}
     WHERE ${filter.sql}
   `;

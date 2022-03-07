@@ -115,7 +115,7 @@ export const sqlFragment = {
 				),
 				NULL
 			) AS JSON
-		) AS color
+		) AS colors
 	`,
 	totalLikes: `
 		(

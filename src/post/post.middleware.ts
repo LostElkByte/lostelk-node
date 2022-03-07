@@ -47,7 +47,7 @@ export const filter = async (
   next: NextFunction
 ) => {
   // 解构查询符
-  const { tag, user, action, cameraMake, cameraModel, lensMake, lensModel } = request.query
+  const { fuzzyTag, tag, color, user, action, cameraMake, cameraModel, lensMake, lensModel } = request.query
 
   // 设置默认的过滤
   request.filter = {
@@ -55,8 +55,8 @@ export const filter = async (
     sql: 'post.id IS NOT NULL',
   }
 
-  // 按照标签名过滤
-  if (tag && !user && !action) {
+  // 按照标签名过滤 - 精准
+  if (tag && !color && !user && !action) {
     request.filter = {
       name: 'tagName',
       sql: 'tag.name = ?',
@@ -64,8 +64,26 @@ export const filter = async (
     }
   }
 
+  // 按照标签名过滤 - 模糊
+  if (fuzzyTag && !tag && !color && !user && !action) {
+    request.filter = {
+      name: 'tagName',
+      sql: 'tag.name like ?',
+      param: `%${fuzzyTag.toString()}%`,
+    }
+  }
+
+  // 按照颜色名过滤
+  if (color && !tag && !user && !action) {
+    request.filter = {
+      name: 'colorName',
+      sql: 'color.name like ?',
+      param: `%${color.toString()}%`,
+    }
+  }
+
   // 过滤出用户发布的内容
-  if (user && action == 'published' && !tag) {
+  if (user && action == 'published' && !tag && !color) {
     request.filter = {
       name: 'userPublished',
       sql: 'user.id = ?',
@@ -74,7 +92,7 @@ export const filter = async (
   }
 
   // 过滤出用户赞过的内容
-  if (user && action == 'liked' && !tag) {
+  if (user && action == 'liked' && !tag && !color) {
     request.filter = {
       name: 'userLiked',
       sql: 'user_like_post.userId = ?',
