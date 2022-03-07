@@ -75,6 +75,12 @@ export const sqlFragment = {
 		LEFT JOIN
 			tag ON post_tag.tagId = tag.id
 	`,
+	leftJoinColor: `
+		LEFT JOIN
+			post_color ON post_color.postId = post.id
+		LEFT JOIN
+			color ON post_color.colorId = color.id
+	`,
 	tags: `
 		CAST(
 			IF(
@@ -92,6 +98,24 @@ export const sqlFragment = {
 				NULL
 			) AS JSON
 		) AS tags
+	`,
+	colors: `
+		CAST(
+			IF(
+				COUNT(color.id),
+				CONCAT(
+					'[',
+							GROUP_CONCAT(
+								DISTINCT JSON_OBJECT(
+									'id', color.id,
+									'name', color.name
+								)
+							),
+					']'
+				),
+				NULL
+			) AS JSON
+		) AS color
 	`,
 	totalLikes: `
 		(

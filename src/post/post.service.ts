@@ -53,6 +53,7 @@ export const getPosts = async (options: GetPostsOptions) => {
       ${sqlFragment.totalComments},
       ${sqlFragment.file},
       ${sqlFragment.tags},
+      ${sqlFragment.colors},
       ${sqlFragment.totalLikes},
       (
         SELECT COUNT(user_like_post.postId)
@@ -65,6 +66,7 @@ export const getPosts = async (options: GetPostsOptions) => {
     ${sqlFragment.leftJoinUser}
     ${sqlFragment.innerJoinOneFile}
     ${sqlFragment.leftJoinTag}
+    ${sqlFragment.leftJoinColor}
     ${filter.name == 'userLiked' ? sqlFragment.innerJoinUserLikePost : ''}
     WHERE ${filter.sql}
     GROUP BY post.id
@@ -300,6 +302,7 @@ export const getPostById = async (
       ${sqlFragment.totalComments},
       ${sqlFragment.file},
       ${sqlFragment.tags},
+      ${sqlFragment.colors},
       ${sqlFragment.totalLikes},
       (
         SELECT COUNT(user_like_post.postId)
@@ -312,6 +315,7 @@ export const getPostById = async (
     ${sqlFragment.leftJoinUser}
     ${sqlFragment.leftJoinOneFile}
     ${sqlFragment.leftJoinTag}
+    ${sqlFragment.leftJoinColor}
     WHERE post.id = ?
   `;
 
