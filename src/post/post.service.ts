@@ -74,7 +74,6 @@ export const getPosts = async (options: GetPostsOptions) => {
     LIMIT ?
     OFFSET ?
   `;
-  console.log(params);
 
   const [data] = await connection.promise().query(statement, params)
 
