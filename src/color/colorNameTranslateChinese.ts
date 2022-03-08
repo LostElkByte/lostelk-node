@@ -5,7 +5,7 @@ const colorNameTranslateChinese = (colorName) => {
       chineseColorName = ['黑色']
       break;
     case 'silver':
-      chineseColorName = ['银色', '灰色']
+      chineseColorName = ['灰色', '银色']
       break;
     case 'gray':
       chineseColorName = ['灰色']
@@ -89,10 +89,10 @@ const colorNameTranslateChinese = (colorName) => {
       chineseColorName = ['绿色', '黄绿色', '查特酒绿', '淡绿色', '黄绿色', '浅绿色']
       break;
     case 'chocolate':
-      chineseColorName = ['巧克力色', '褐色', '黄褐色', '浅棕色']
+      chineseColorName = ['褐色', '巧克力色', '黄褐色', '浅棕色']
       break;
     case 'coral':
-      chineseColorName = ['珊瑚色', '橘红色', '浅橘红色']
+      chineseColorName = ['橘红色', '珊瑚色', '浅橘红色']
       break;
     case 'cornflowerblue':
       chineseColorName = ['蓝色', '菊蓝色', '矢车菊蓝色', '浅蓝色', '矢车菊色']
@@ -104,7 +104,7 @@ const colorNameTranslateChinese = (colorName) => {
       chineseColorName = ['红色', '深红色']
       break;
     case 'cyan':
-      chineseColorName = ['蓝绿色', '青色']
+      chineseColorName = ['青色', '蓝绿色']
       break;
     case 'darkblue':
       chineseColorName = ['蓝色', '深蓝色', '暗蓝色']
@@ -221,7 +221,7 @@ const colorNameTranslateChinese = (colorName) => {
       chineseColorName = ['白色', '象牙白']
       break;
     case 'khaki':
-      chineseColorName = ['卡其色', '黄褐色', '浅黄褐色']
+      chineseColorName = ['黄色', '黄褐色', '卡其色', '浅黄褐色']
       break;
     case 'lavender':
       chineseColorName = ['薰衣草色', '淡紫色', '紫色']
@@ -242,13 +242,13 @@ const colorNameTranslateChinese = (colorName) => {
       chineseColorName = ['珊瑚色', '深粉色']
       break;
     case 'lightcyan':
-      chineseColorName = ['浅蓝色', '淡青色', '浅青色', '淡蓝色']
+      chineseColorName = ['淡青色', '浅蓝色', '浅青色', '淡蓝色']
       break;
     case 'lightgoldenrodyellow':
-      chineseColorName = ['浅金黄色', '浅黄色', '淡黄色']
+      chineseColorName = ['淡黄色', '浅金黄色', '浅黄色']
       break;
     case 'lightgray':
-      chineseColorName = ['浅灰色', '灰色']
+      chineseColorName = ['灰色', '浅灰色']
       break;
     case 'lightgreen':
       chineseColorName = ['绿色', '浅绿色', '淡绿色']
@@ -260,7 +260,7 @@ const colorNameTranslateChinese = (colorName) => {
       chineseColorName = ['粉色', '浅粉色', '淡粉色']
       break;
     case 'lightsalmon':
-      chineseColorName = ['浅肉色', '肉色', '浅橙色', '浅橘红色']
+      chineseColorName = ['肉色', '浅肉色', '浅橙色', '浅橘红色']
       break;
     case 'lightseagreen':
       chineseColorName = ['绿色', '浅绿色', '浅海洋绿']
@@ -314,13 +314,13 @@ const colorNameTranslateChinese = (colorName) => {
       chineseColorName = ['绿色', '浅海洋绿色', '宝石绿']
       break;
     case 'mediumvioletred':
-      chineseColorName = ['紫罗兰红色', '红紫色']
+      chineseColorName = ['红紫色', '紫罗兰红色']
       break;
     case 'midnightblue':
       chineseColorName = ['蓝色', '午夜蓝色']
       break;
     case 'mintcream':
-      chineseColorName = ['薄荷色', '浅绿色']
+      chineseColorName = ['浅绿色', '薄荷色']
       break;
     case 'mistyrose':
       chineseColorName = ['浅粉色', '浅玫瑰色']
@@ -353,10 +353,10 @@ const colorNameTranslateChinese = (colorName) => {
       chineseColorName = ['淡绿色', '宝石绿', '浅蓝色']
       break;
     case 'palevioletred':
-      chineseColorName = ['浅紫红色', '浅紫色']
+      chineseColorName = ['浅紫色', '浅紫红色']
       break;
     case 'papayawhip':
-      chineseColorName = ['木瓜色', '米色']
+      chineseColorName = ['米色', '木瓜色']
       break;
     case 'peachpuff':
       chineseColorName = ['肉色', '桃色', '桃肉色']
@@ -374,10 +374,10 @@ const colorNameTranslateChinese = (colorName) => {
       chineseColorName = ['粉蓝色', '浅蓝色']
       break;
     case 'rosybrown':
-      chineseColorName = ['玫瑰棕色', '棕色']
+      chineseColorName = ['棕色', '玫瑰棕色']
       break;
     case 'royalblue':
-      chineseColorName = ['皇家蓝色', '宝蓝色']
+      chineseColorName = ['宝蓝色', '皇家蓝色']
       break;
     case 'saddlebrown':
       chineseColorName = ['褐色', '深褐色']
@@ -392,10 +392,10 @@ const colorNameTranslateChinese = (colorName) => {
       chineseColorName = ['海绿色', '深绿色', '海藻绿色']
       break;
     case 'seashell':
-      chineseColorName = ['贝壳色', '浅粉色', '肉色']
+      chineseColorName = ['浅粉色', '肉色', '贝壳色']
       break;
     case 'sienna':
-      chineseColorName = ['赭色', '深棕色']
+      chineseColorName = ['深棕色', '赭色']
       break;
     case 'skyblue':
       chineseColorName = ['天蓝色', '蓝色']
@@ -419,13 +419,13 @@ const colorNameTranslateChinese = (colorName) => {
       chineseColorName = ['蓝色', '青色', '铁青色', '钢蓝色']
       break;
     case 'tan':
-      chineseColorName = ['深褐色', '棕色', '黄棕色']
+      chineseColorName = ['棕色', '深褐色', '黄棕色']
       break;
     case 'thistle':
       chineseColorName = ['紫色', '浅紫色', '苍紫色']
       break;
     case 'tomato':
-      chineseColorName = ['番茄色', '鲜红色']
+      chineseColorName = ['鲜红色', '番茄色']
       break;
     case 'turquoise':
       chineseColorName = ['蓝绿色', '浅绿色']
@@ -434,7 +434,7 @@ const colorNameTranslateChinese = (colorName) => {
       chineseColorName = ['紫色', '浅紫色', '紫罗兰色']
       break
     case 'wheat':
-      chineseColorName = ['小麦色', '浅黄色']
+      chineseColorName = ['浅黄色', '小麦色']
       break
     case 'whitesmoke':
       chineseColorName = ['烟白色', '白雾色']
