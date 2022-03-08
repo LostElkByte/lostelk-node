@@ -260,7 +260,7 @@ const colorNameTranslateChinese = (colorName) => {
       chineseColorName = ['粉色', '浅粉色', '淡粉色']
       break;
     case 'lightsalmon':
-      chineseColorName = ['肉色', '浅肉色', '浅橙色', '浅橘红色']
+      chineseColorName = ['浅橙色', '肉色', '浅肉色', '浅橘红色']
       break;
     case 'lightseagreen':
       chineseColorName = ['绿色', '浅绿色', '浅海洋绿']
@@ -383,7 +383,7 @@ const colorNameTranslateChinese = (colorName) => {
       chineseColorName = ['褐色', '深褐色']
       break;
     case 'salmon':
-      chineseColorName = ['粉红色', '浅橙色', '深粉色']
+      chineseColorName = ['浅橙色', '粉红色', '深粉色']
       break;
     case 'sandybrown':
       chineseColorName = ['沙棕色', '黄褐色', '杂褐色']
