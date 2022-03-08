@@ -1,4 +1,5 @@
 import { connection } from '../app/database/mysql'
+import { GetPostsOptionsPagination } from '../post/post.service';
 
 /**
  * 搜索标签
@@ -42,18 +43,60 @@ export const searchTags = async (options: SearchTagsOptions) => {
 }
 
 /**
- * 搜索用户
+ * 搜索颜色
  */
-interface SearchUsersOptions {
+interface SearchColorsOptions {
   name?: string;
 }
 
-export const searchUsers = async (options: SearchUsersOptions) => {
+export const searchColors = async (options: SearchColorsOptions) => {
   // 解构选项
   const { name } = options
 
   // SQL 参数
   const params: Array<any> = [`%${name}%`]
+
+  // 准备查询
+  const statement = `
+    SELECT
+      color.id,
+      color.name,
+      (
+        SELECT COUNT(post_color.colorId)
+        FROM post_color
+        WHERE color.id = post_color.colorId
+      ) AS totalPosts
+      FROM
+        color
+      WHERE
+        color.name LIKE ?
+      ORDER BY
+        totalPosts DESC
+      LIMIT
+        10
+  `
+
+  // 执行查询
+  const [data] = await connection.promise().query(statement, params)
+
+  // 提供数据
+  return data as any
+}
+
+/**
+ * 搜索用户
+ */
+interface SearchUsersOptions {
+  name?: string;
+  pagination?: GetPostsOptionsPagination;
+}
+
+export const searchUsers = async (options: SearchUsersOptions) => {
+  // 解构选项
+  const { name, pagination: { limit, offset } } = options
+
+  // SQL 参数
+  const params: Array<any> = [`%${name}%`, limit, offset]
 
   // 准备查询
   const statement = `
@@ -73,11 +116,11 @@ export const searchUsers = async (options: SearchUsersOptions) => {
     LEFT JOIN avatar
       ON avatar.userId = user.id
     WHERE
-      user.name LIKE ?
+      user.name LIKE ? AND user.status = 1
     GROUP BY
       user.id
-    LIMIT
-      10
+    LIMIT ?
+    OFFSET ?
   `
 
   // 执行查询

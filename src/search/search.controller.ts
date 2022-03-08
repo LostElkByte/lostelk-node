@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express'
-import { searchCameras, searchLens, searchTags, searchUsers } from './search.service'
+import { searchCameras, searchColors, searchLens, searchTags, searchUsers } from './search.service'
 
 /**
 * 搜索标签
@@ -23,6 +23,28 @@ export const tags = async (
   }
 }
 
+/**
+* 搜索标签
+*/
+export const colors = async (
+  request: Request,
+  response: Response,
+  next: NextFunction
+) => {
+  try {
+    // 准备关键词
+    const { name } = request.query
+
+    // 查询标签
+    const colors = await searchColors({ name: name.toString() })
+
+    // 做出响应
+    response.send(colors)
+  } catch (error) {
+    next(error)
+  }
+}
+
 
 /**
 * 搜索用户
@@ -37,7 +59,7 @@ export const users = async (
     const { name } = request.query
 
     // 查询用户
-    const users = await searchUsers({ name: name.toString() })
+    const users = await searchUsers({ name: name.toString(), pagination: request.pagination })
 
     // 做出响应
     response.send(users)

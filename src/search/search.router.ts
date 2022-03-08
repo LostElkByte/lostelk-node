@@ -1,4 +1,6 @@
 import express from 'express'
+import { POSTS_PER_PAGE } from '../app/app.config'
+import { paginate } from '../post/post.middleware'
 import * as searchController from './search.controller'
 
 const router = express.Router()
@@ -9,9 +11,15 @@ const router = express.Router()
 router.get('/search/tags', searchController.tags)
 
 /**
+ * 搜索颜色
+ */
+router.get('/search/colors', searchController.colors)
+
+
+/**
  * 搜索用户
  */
-router.get('/search/users', searchController.users)
+router.get('/search/users', paginate(POSTS_PER_PAGE), searchController.users)
 
 /**
  * 搜索相机
