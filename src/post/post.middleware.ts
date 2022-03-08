@@ -1,5 +1,8 @@
+import { colord } from 'colord'
+import { rgbToHex } from '../file/file.service'
 import { Request, Response, NextFunction } from 'express'
 import { partial } from 'lodash'
+import colorNameTranslateChinese from '../color/colorNameTranslateChinese'
 
 /**
 * 排序方式
@@ -47,7 +50,24 @@ export const filter = async (
   next: NextFunction
 ) => {
   // 解构查询符
-  const { fuzzyTag, tag, color, user, action, cameraMake, cameraModel, lensMake, lensModel } = request.query
+  let { fuzzyTag, tag, rgbColor, color, user, action, cameraMake, cameraModel, lensMake, lensModel } = request.query
+
+  // 如果是rgbColor, 转换为文字颜色
+  if (rgbColor) {
+    rgbColor = JSON.parse(rgbColor.toString())
+
+    // RBG转HEX
+    const hexColor = rgbToHex(rgbColor[0], rgbColor[1], rgbColor[2])
+
+    // 将HEX转为W3C颜色名
+    const colorName = colord(hexColor).toName({ closest: true })
+
+    // W3C颜色名转中文颜色
+    const chinesecolorName = colorNameTranslateChinese(colorName) as Array<string>
+
+    // 取第一个颜色
+    color = chinesecolorName[0]
+  }
 
   // 设置默认的过滤
   request.filter = {
