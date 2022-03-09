@@ -38,10 +38,11 @@ export const store = async (
   // chineseColorNameList = Array.from(new Set(chineseColorNameList))
 
   // 主色W3C颜色名
-  const mainColorName = request.fileMetaData.mainColor
+  const mainColorName = request.fileMetaData.mainColorName
 
   // W3C颜色名转中文颜色
   const chineseColorNameList = colorNameTranslateChinese(mainColorName) as Array<string>
+
 
   // 文件信息
   const fileInfo = _.pick(request.file, [
