@@ -22,20 +22,26 @@ export const store = async (
   // 所属内容
   const postId = parseInt(request.query.post as string, 10)
 
-  // 调色板中文颜色名集合
-  let chineseColorNameList = [] as Array<string>
+  // // 调色板中文颜色名集合
+  // let chineseColorNameList = [] as Array<string>
 
-  // 调色板W3C颜色名列表
-  const paletteColorNameList = request.fileMetaData.paletteColorNameList
+  // // 调色板W3C颜色名列表
+  // const paletteColorNameList = request.fileMetaData.paletteColorNameList
 
-  for (const itemColorName of paletteColorNameList) {
-    // W3C颜色名转中文颜色
-    const chinesecolorName = colorNameTranslateChinese(itemColorName) as Array<string>
-    chineseColorNameList = [...chineseColorNameList, ...chinesecolorName]
-  }
+  // for (const itemColorName of paletteColorNameList) {
+  //   // W3C颜色名转中文颜色
+  //   const chinesecolorName = colorNameTranslateChinese(itemColorName) as Array<string>
+  //   chineseColorNameList = [...chineseColorNameList, ...chinesecolorName]
+  // }
 
-  // 调色板中文颜色名集合去重
-  chineseColorNameList = Array.from(new Set(chineseColorNameList))
+  // // 调色板中文颜色名集合去重
+  // chineseColorNameList = Array.from(new Set(chineseColorNameList))
+
+  // 主色W3C颜色名
+  const mainColorName = request.fileMetaData.mainColor
+
+  // W3C颜色名转中文颜色
+  const chineseColorNameList = colorNameTranslateChinese(mainColorName) as Array<string>
 
   // 文件信息
   const fileInfo = _.pick(request.file, [
