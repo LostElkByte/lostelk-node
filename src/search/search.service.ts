@@ -208,3 +208,32 @@ export const searchLens = async (options: SearchlensOptions) => {
   // 提供数据
   return data as any
 }
+
+/**
+ * 按照用户名 搜索用户总数
+ */
+interface SearchUsersTotalOptions {
+  name?: string;
+}
+
+export const searchUserTotal = async (options: SearchUsersTotalOptions) => {
+  // 解构选项
+  const { name } = options
+
+  // SQL 参数
+  const params: Array<any> = [`%${name}%`]
+
+  // 准备查询
+  const statement = `
+    SELECT  
+	    COUNT(DISTINCT user.id) AS total
+    FROM user
+      WHERE user.name like ?
+  `
+
+  // 执行查询
+  const [data] = await connection.promise().query(statement, params)
+
+  // 提供数据
+  return data[0].total
+}

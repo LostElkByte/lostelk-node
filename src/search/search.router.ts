@@ -37,6 +37,11 @@ router.get('/search/lens', searchController.lens)
 router.get('/search/Total', filter, searchController.searchTotal)
 
 /**
+ * 搜索用户总数
+ */
+router.get('/search/user/Total', searchController.searchUserTotalByName)
+
+/**
  * 默认导出
  */
 export default router

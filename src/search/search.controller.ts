@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express'
-import { searchCameras, searchColors, searchLens, searchTags, searchUsers } from './search.service'
+import { searchCameras, searchColors, searchLens, searchTags, searchUsers, searchUserTotal } from './search.service'
 import { getPostsTotalCount } from '../post/post.service'
 
 /**
@@ -156,6 +156,26 @@ export const searchTotal = async (
     const totalCount = await getPostsTotalCount({ filter: request.filter })
     response.send({ name, totalCount })
 
+  } catch (error) {
+    next(error)
+  }
+}
+
+/**
+ * 搜索用户总数
+ */
+export const searchUserTotalByName = async (
+  request: Request,
+  response: Response,
+  next: NextFunction
+) => {
+  try {
+    // 结构查询符
+    const { name } = request.query
+    // 统计用户数量
+    const totalCount = await searchUserTotal({ name: name.toString() })
+
+    response.send({ name, totalCount })
   } catch (error) {
     next(error)
   }
