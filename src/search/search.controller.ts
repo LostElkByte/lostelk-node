@@ -114,7 +114,7 @@ export const lens = async (
 }
 
 /**
-* 搜索总数
+* 搜索帖子总数
 */
 export const searchTotal = async (
   request: Request,

@@ -32,7 +32,7 @@ router.get('/search/cameras', searchController.cameras)
 router.get('/search/lens', searchController.lens)
 
 /**
- * 搜索总数
+ * 搜索帖子总数
  */
 router.get('/search/Total', filter, searchController.searchTotal)
 
