@@ -59,6 +59,12 @@ export const users = async (
     // 准备关键词
     const { name } = request.query
 
+    // 统计用户数量
+    const totalCount = await searchUserTotal({ name: name.toString() })
+
+    // 设置响应头部
+    response.header('X-Total-Count', totalCount)
+
     // 查询用户
     const users = await searchUsers({ name: name.toString(), pagination: request.pagination })
 
@@ -170,8 +176,9 @@ export const searchUserTotalByName = async (
   next: NextFunction
 ) => {
   try {
-    // 结构查询符
+    // 解构查询符
     const { name } = request.query
+
     // 统计用户数量
     const totalCount = await searchUserTotal({ name: name.toString() })
 
