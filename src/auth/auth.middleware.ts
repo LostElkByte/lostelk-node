@@ -38,7 +38,7 @@ export const validateLoginData = async (
     const matched = await bcrypt.compare(password, user.password)
     if (!matched) return next(new Error('PASSWORD_DOES_NOT_MATCH'))
 
-    // 通过邮箱判断账号状态如果为 0 ,并且 距离创建时间 ＞ 1800秒, 则删除此未完成注册记录 并 提示
+    // 通过邮箱判断账号状态如果为 0 ,并且 距离创建时间 ＞ 1800秒, 则提示此账号激活超时,请重新注册
     if (user && user.status == 0 && create_time - user.create_time > 1800) return next(new Error('PLEASE_RE-REGISTER_BECAUSE_OF_TIMEOUT_ACTIVATION'))
 
     // 通过用户名判断账号状态如果为 0 并且 距离创建时间 < 1800秒 , 则提示用户进行激活
@@ -63,7 +63,7 @@ export const validateLoginData = async (
     const matched = await bcrypt.compare(password, user.password)
     if (!matched) return next(new Error('PASSWORD_DOES_NOT_MATCH'))
 
-    // 通过用户名判断账号状态如果为 0 并且 距离创建时间 ＞ 1800秒 ,则删除此未完成注册记录
+    // 通过用户名判断账号状态如果为 0 并且 距离创建时间 ＞ 1800秒 ,则提示此账号激活超时,请重新注册
     if (user && user.status == 0 && create_time - user.create_time > 1800) return next(new Error('PLEASE_RE-REGISTER_BECAUSE_OF_TIMEOUT_ACTIVATION'))
 
     // 通过用户名判断账号状态如果为 0 并且 距离创建时间 < 1800秒 , 则提示用户进行激活
