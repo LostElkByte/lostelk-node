@@ -21,7 +21,7 @@ router.get('/activat_email', userController.emailVerify)
 router.get('/users/:userId', userController.show)
 
 /**
- * 更新用户
+ * 更新用户 - 用户名/密码/个人简介
  */
 router.patch('/users', authGuard, validateUpdateUserData, userController.update)
 

@@ -105,20 +105,23 @@ export const validateUpdateUserData = async (
   const { id: userId } = request.user
 
   try {
-    // 检查用户是否提供了当前密码
-    if (!_.has(validate, 'password')) {
-      return next(new Error('PASSWORD_IS_REQUIRED'))
-    }
-
     // 调取用户数据
     const user = await userService.getUserById(userId, { needPassword: true })
 
-    // 验证用户密码是否匹配
-    const matched = await bcrypt.compare(validate.password, user.password)
+    if (update.name || update.password) {
+      // 检查用户是否提供了当前密码
+      if (!_.has(validate, 'password')) {
+        return next(new Error('PASSWORD_IS_REQUIRED'))
+      }
 
-    if (!matched) {
-      return next(new Error('PASSWORD_DOES_NOT_MATCH'))
+      // 验证用户密码是否匹配
+      const matched = await bcrypt.compare(validate.password, user.password)
+
+      if (!matched) {
+        return next(new Error('PASSWORD_DOES_NOT_MATCH'))
+      }
     }
+
 
     // 检查用户名是否被占用
     if (update.name) {
@@ -140,6 +143,8 @@ export const validateUpdateUserData = async (
       // HASH 用户更新密码
       request.body.update.password = await bcrypt.hash(update.password, 10)
     }
+
+    // 检查
   } catch (error) {
     return next(error)
   }

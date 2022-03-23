@@ -113,7 +113,7 @@ export const update = async (
 ) => {
   // 准备数据
   const { id } = request.user
-  const userData = _.pick(request.body.update, ['name', 'password'])
+  const userData = _.pick(request.body.update, ['name', 'password', 'synopsis'])
 
   // 更新用户
   try {
