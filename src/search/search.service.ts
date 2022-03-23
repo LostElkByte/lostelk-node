@@ -229,7 +229,7 @@ export const searchUserTotal = async (options: SearchUsersTotalOptions) => {
     SELECT  
 	    COUNT(DISTINCT user.id) AS total
     FROM user
-      WHERE user.name like ?
+      WHERE user.name like ? AND user.status = 1
   `
 
   // 执行查询
