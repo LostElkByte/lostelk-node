@@ -69,6 +69,7 @@ export const getUser = (condition: string) => {
       user.id,
       user.name,
       user.email,
+      user.synopsis,
       user.status, 
       user.create_time,
       IF (

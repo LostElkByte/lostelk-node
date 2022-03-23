@@ -34,6 +34,7 @@ export const validateLoginData = async (
     // 判断用户是否存在
     if (!user) return next(new Error('USER_DOES_NOT_EXIST'))
 
+    // 验证密码
     const matched = await bcrypt.compare(password, user.password)
     if (!matched) return next(new Error('PASSWORD_DOES_NOT_MATCH'))
 

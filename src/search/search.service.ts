@@ -103,6 +103,7 @@ export const searchUsers = async (options: SearchUsersOptions) => {
     SELECT
       user.id,
       user.name,
+      user.synopsis,
       IF(
         COUNT(avatar.id), 1, NULL
       ) AS avatar,
