@@ -124,59 +124,69 @@ export const extractionColor = async (
   // 文件路径
   const mediumFilePath = path.join(file.destination, 'resized', `medium-${file.filename}`)
 
+  // RGB主色
   let mainColor: any
+  // RGB调色板列表
   let paletteColor: any
+
   if (width > 320) {
-    // 提取图片主色
+    // 提取图片RGV主色
     await ColorThief.getColor(mediumFilePath)
       .then(color => { mainColor = color })
       .catch(err => { console.log(err) })
 
-    // 提取图片副色
+    // 提取图片RGB副色
     await ColorThief.getPalette(mediumFilePath, 8)
       .then(palette => { paletteColor = palette })
       .catch(err => { console.log(err) })
   } else {
-    // 提取图片主色
+    // 提取图片RGB主色
     await ColorThief.getColor(file.path)
       .then(color => { mainColor = color })
       .catch(err => { console.log(err) })
 
-    // 提取图片副色
+    // 提取图片RGB副色
     await ColorThief.getPalette(file.path, 8)
       .then(palette => { paletteColor = palette })
       .catch(err => { console.log(err) })
   }
 
-  // 如果提取主色失败
+  // 如果提取RGB主色失败
   if (!mainColor && paletteColor) {
     mainColor = paletteColor[0]
   }
 
-
+  // 主色HEX颜色
+  let mainHexColor: string
   // 主色W3C颜色名
   let mainColorName: string
+
+  // 调色板HEX颜色列表
+  let paletteColornHexList = [] as Array<string>
+  // 调色板W3C颜色名列表
+  let paletteColorNameList = [] as Array<string>
+
   // RBG转HEX
-  const mainHexColor = rgbToHex(mainColor[0], mainColor[1], mainColor[2])
+  mainHexColor = rgbToHex(mainColor[0], mainColor[1], mainColor[2])
   // 将HEX转为W3C颜色名
   mainColorName = colord(mainHexColor).toName({ closest: true })
 
 
-  // 调色板W3C颜色名集合
-  let paletteColorNameList = [] as Array<string>
   // 将调色板RBG转为HEX
   for (const itemColor of paletteColor) {
     // RBG转HEX
     const hexColor = rgbToHex(itemColor[0], itemColor[1], itemColor[2])
     // 将HEX转为W3C颜色名
     const palettColorName = colord(hexColor).toName({ closest: true })
-    // PUSH
+    // PUSH进调色板HEX颜色列表
+    paletteColornHexList.push(hexColor)
+    // PUSH进调色板W3C颜色名列表
     paletteColorNameList.push(palettColorName)
   }
   // 调色板W3C颜色名List去重
   paletteColorNameList = Array.from(new Set(paletteColorNameList))
 
-  return { mainColor, paletteColor, mainColorName, paletteColorNameList }
+  return { mainColor, paletteColor, mainColorName, paletteColorNameList, mainHexColor, paletteColornHexList, }
 }
 
 /**

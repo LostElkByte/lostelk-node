@@ -75,7 +75,7 @@ export const fileProcessor = async (
   // 提取图像颜色
   const color = await extractionColor(image, request.file)
 
-  const { mainColor, paletteColor, mainColorName, paletteColorNameList } = color
+  const { mainHexColor, paletteColornHexList, mainColorName, paletteColorNameList } = color
 
   if (image['_exif']) {
     // 准备文件数据
@@ -86,8 +86,8 @@ export const fileProcessor = async (
       width: imageSize.width,
       height: imageSize.height,
       metadata: JSON.stringify(tags),
-      mainColor: JSON.stringify(mainColor),
-      paletteColor: JSON.stringify(paletteColor),
+      mainColor: JSON.stringify(mainHexColor),
+      paletteColor: JSON.stringify(paletteColornHexList),
       mainColorName: mainColorName,
       paletteColorNameList: paletteColorNameList
     }
@@ -100,8 +100,8 @@ export const fileProcessor = async (
       width: width,
       height: height,
       metadata: JSON.stringify({}),
-      mainColor: JSON.stringify(mainColor),
-      paletteColor: JSON.stringify(paletteColor),
+      mainColor: JSON.stringify(mainHexColor),
+      paletteColor: JSON.stringify(paletteColornHexList),
       mainColorName: mainColorName,
       paletteColorNameList: paletteColorNameList
     }
