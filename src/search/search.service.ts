@@ -107,6 +107,19 @@ export const searchUsers = async (options: SearchUsersOptions) => {
       IF(
         COUNT(avatar.id), 1, NULL
       ) AS avatar,
+      CAST(
+      	IF(
+      	  COUNT(file.id),
+		      CONCAT(
+	      	  '[',
+	      	    GROUP_CONCAT(
+				        file.id
+				      ),
+	      	  ']'
+      	  ),
+		      NULL
+      	) AS JSON
+      ) AS files,
       (
         SELECT COUNT(post.id)
         FROM post
@@ -116,6 +129,8 @@ export const searchUsers = async (options: SearchUsersOptions) => {
       user
     LEFT JOIN avatar
       ON avatar.userId = user.id
+    LEFT JOIN file
+      ON file.userId = user.id
     WHERE
       user.name LIKE ? AND user.status = 1
     GROUP BY
@@ -130,6 +145,7 @@ export const searchUsers = async (options: SearchUsersOptions) => {
   // 提供数据
   return data as any
 }
+
 
 /**
  * 搜索相机

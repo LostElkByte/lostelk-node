@@ -68,8 +68,13 @@ export const users = async (
     // 查询用户
     const users = await searchUsers({ name: name.toString(), pagination: request.pagination })
 
+    let usersData = [] as Array<any>
+    for (const item of users) {
+      console.log(item);
+      usersData.push({ ...item, files: item.files ? item.files.slice(0, 3) : null })
+    }
     // 做出响应
-    response.send(users)
+    response.send(usersData)
   } catch (error) {
     next(error)
   }
