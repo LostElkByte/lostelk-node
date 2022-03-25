@@ -70,7 +70,6 @@ export const users = async (
 
     let usersData = [] as Array<any>
     for (const item of users) {
-      console.log(item);
       usersData.push({ ...item, files: item.files ? item.files.slice(0, 3) : null })
     }
     // 做出响应
