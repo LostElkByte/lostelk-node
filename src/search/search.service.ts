@@ -113,7 +113,10 @@ export const searchUsers = async (options: SearchUsersOptions) => {
 		      CONCAT(
 	      	  '[',
 	      	    GROUP_CONCAT(
-				        file.id
+                DISTINCT JSON_OBJECT(
+                  'id', file.id,
+                  'postId', file.postId
+                )
 				      ),
 	      	  ']'
       	  ),
