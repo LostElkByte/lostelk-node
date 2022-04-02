@@ -32,7 +32,7 @@ export const store = async (
     // 发送校验邮箱
     sendRegisterEmail({ name, email, registration_verify_key });
 
-    response.status(201).send({ isSucceed: 1, message: '注册成功! 激活链接已发送到您的邮箱,请在注册起30分钟内进行激活' })
+    response.status(201).send({ isSucceed: 1, message: 'Registration successful! The activation link has been sent to your email, please activate within 30 minutes after registration' }) // 注册成功! 激活链接已发送到您的邮箱,请在注册起30分钟内进行激活
   } catch (error) {
     next(error)
   }
@@ -55,12 +55,12 @@ export const emailVerify = async (
 
   try {
     if (create_time - data.create_time > 1800) {
-      response.status(409).send({ isSucceed: 0, message: '此激活链接已过期, 请重新注册' })
+      response.status(409).send({ isSucceed: 0, message: 'This activation link has expired, please register again' }) // 此激活链接已过期, 请重新注册
       return
     }
 
     if (data.registration_verify_key != registration_verify_key) {
-      response.status(409).send({ isSucceed: 0, message: '此激活链接校验失败' })
+      response.status(409).send({ isSucceed: 0, message: 'This activation link verification failed' }) // 此激活链接校验失败
       return
     }
 
@@ -68,7 +68,7 @@ export const emailVerify = async (
       userService.updateUserStatus(email as string, 1)
       userService.deleteVerift_key(email as string)
       sendActivateSuccess({ name, email })
-      response.status(201).send({ isSucceed: 1, message: `您的账户: ${email} 激活成功` })
+      response.status(201).send({ isSucceed: 1, message: `Your account: ${email} has been activated successfully` }) // 您的账号已经激活成功
       return
     }
 
@@ -153,7 +153,7 @@ export const sendRetrievePasswordVerifyKey = async (
     // 发送校验邮箱
     sendRetrievePasswordEmail({ email, name, retrieve_password_verify_key });
 
-    response.status(201).send({ isSucceed: 1, message: '您将在几分钟内收到一个密码恢复链接在您的电子邮件中。' })
+    response.status(201).send({ isSucceed: 1, message: 'You will receive a password recovery link in your email within minutes.' }) // 您将在几分钟内收到一个密码恢复链接在您的电子邮件中。
   } catch (error) {
     next(error)
   }
@@ -182,13 +182,13 @@ export const retrievePasswordPatch = async (
 
     // 验证码发送时间相较当前时间大于30分钟
     if (launch_retrieval_password_time - data.launch_retrieval_password_time > 1800) {
-      response.status(409).send({ isSucceed: 0, message: '本次修改密码已超时,请重新进行忘记密码步骤' })
+      response.status(409).send({ isSucceed: 0, message: 'This password change timed out. Please repeat the password forget step.' }) // 本次修改密码已超时,请重新进行忘记密码步骤
       return
     }
 
     // 验证码错误
     if (data.retrieve_password_verify_key != retrievePasswordVerifyKey) {
-      response.status(409).send({ isSucceed: 0, message: '当前状态不可修改密码,请重新进行忘记密码步骤' })
+      response.status(409).send({ isSucceed: 0, message: 'The password cannot be changed in the current state, Please repeat the step of forgetting the password.' }) // 当前状态不可修改密码,请重新进行忘记密码步骤
       return
     }
 
@@ -200,7 +200,7 @@ export const retrievePasswordPatch = async (
       // 清空 retrieve_password_verify_key、launch_retrieval_password_time
       await userService.deleteRetrievePasswordData(email as string)
 
-      response.status(201).send({ isSucceed: 1, message: `修改密码成功,可以使用新密码登录了` })
+      response.status(201).send({ isSucceed: 1, message: `The password is successfully changed. You can use the new password to log in` }) // 修改密码成功,可以使用新密码登录了
       return
     }
 
