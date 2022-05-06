@@ -1,7 +1,7 @@
 import express from 'express'
 import * as postController from './post.controller'
 import { authGuard, accessControl } from '../auth/auth.middleware'
-import { sort, filter, paginate, validatePostStatus } from './post.middleware'
+import { sort, filter, paginate, validatePostStatus, modeSwitcher } from './post.middleware'
 import { POSTS_PER_PAGE } from "../app/app.config";
 
 
@@ -11,7 +11,15 @@ const router = express.Router()
 /**
  * 内容列表
  */
-router.get('/posts', sort, filter, paginate(POSTS_PER_PAGE), validatePostStatus, postController.index)
+router.get(
+  '/posts',
+  sort,
+  filter,
+  paginate(POSTS_PER_PAGE),
+  validatePostStatus,
+  modeSwitcher,
+  postController.index
+)
 
 /**
  * 创建内容
