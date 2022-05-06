@@ -134,6 +134,10 @@ export const defaultErrorHandler = (
       statusCode = 404;
       message = 'The user was not found ~~ 🐹' // 没找到这个用户
       break;
+    case 'BAD_REQUEST':
+      statusCode = 400;
+      message = 'Unable to process your request ~~ 🐹' // 无法处理您的请求
+      break;
     default:
       statusCode = 500;
       message = "There was a temporary problem with the service ~~ 🐿" // 服务暂时出了点问题
