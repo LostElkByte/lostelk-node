@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express'
 import _ from 'lodash'
-import { getPosts, createPost, updatePost, deletePost, createPostTag, postHasTag, deletePostTag, getPostsTotalCount, getPostById, postHasColor, createPostColor, deletePostColor } from './post.service'
+import { getPosts, createPost, updatePost, deletePost, createPostTag, postHasTag, deletePostTag, getPostsTotalCount, getPostById, postHasColor, createPostColor, deletePostColor, PostStatus } from './post.service'
 import { TagModel } from '../tag/tag.model'
 import { getTagByName, createTag } from '../tag/tag.service'
 import { deletePostFiles, getPostFiles } from '../file/file.service'
@@ -16,9 +16,11 @@ export const index = async (
   response: Response,
   next: NextFunction
 ) => {
+  // 解构查询符
+  const { status = '' as any } = request.query
   try {
     // 统计内容数量
-    const totalCount = await getPostsTotalCount({ filter: request.filter })
+    const totalCount = await getPostsTotalCount({ filter: request.filter, status })
 
     // 设置响应头部
     response.header('X-Total-Count', totalCount)
@@ -27,7 +29,7 @@ export const index = async (
   }
 
   try {
-    const posts = await getPosts({ sort: request.sort, filter: request.filter, pagination: request.pagination, currentUser: request.user })
+    const posts = await getPosts({ sort: request.sort, filter: request.filter, pagination: request.pagination, currentUser: request.user, status })
     response.send(posts)
   } catch (error) {
     next(error)

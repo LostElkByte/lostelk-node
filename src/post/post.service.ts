@@ -18,15 +18,22 @@ export interface GetPostsOptionsPagination {
   offset: number;
 }
 
+export enum PostStatus {
+  published,
+  draft,
+  archived
+}
+
 interface GetPostsOptions {
   sort?: string;
   filter?: GetPostsOptionsFilter;
   pagination?: GetPostsOptionsPagination;
-  currentUser?: TokenPayload
+  currentUser?: TokenPayload;
+  status?: PostStatus;
 }
 
 export const getPosts = async (options: GetPostsOptions) => {
-  const { sort, filter, pagination: { limit, offset }, currentUser } = options
+  const { sort, filter, pagination: { limit, offset }, currentUser, status } = options
 
   // SQL 参数
   let params: Array<any> = [limit, offset]
@@ -40,15 +47,21 @@ export const getPosts = async (options: GetPostsOptions) => {
     params = [...filter.params, ...params]
   }
 
-
   // 当前用户
   const { id: userId } = currentUser
+
+  // 发布状态
+  const whereStatus = status
+    ? `post.status = '${status}'`
+    : `post.status IS NOT NULL`
+
 
   const statement = `
     SELECT 
       post.id,
       post.title,
       post.content,
+      post.status,
       ${sqlFragment.user},
       ${sqlFragment.totalComments},
       ${sqlFragment.file},
@@ -68,7 +81,7 @@ export const getPosts = async (options: GetPostsOptions) => {
     ${sqlFragment.leftJoinTag}
     ${sqlFragment.leftJoinColor}
     ${filter.name == 'userLiked' ? sqlFragment.innerJoinUserLikePost : ''}
-    WHERE ${filter.sql}
+    WHERE ${filter.sql} AND ${whereStatus}
     GROUP BY post.id
     ORDER BY ${sort}
     LIMIT ?
@@ -251,7 +264,7 @@ export const deletePostColor = async (
 export const getPostsTotalCount = async (
   options: GetPostsOptions
 ) => {
-  const { filter } = options
+  const { filter, status } = options
 
   // SQL 参数
   let params = [filter.param]
@@ -259,6 +272,11 @@ export const getPostsTotalCount = async (
   if (filter.params) {
     params = [...filter.params, ...params]
   }
+
+  // 发布状态
+  const whereStatus = status
+    ? `post.status = '${status}'`
+    : `post.status IS NOT NULL`
 
   // 准备查询
   const statement = `
@@ -270,7 +288,7 @@ export const getPostsTotalCount = async (
     ${sqlFragment.leftJoinTag}
     ${sqlFragment.leftJoinColor}
     ${filter.name == 'userLiked' ? sqlFragment.innerJoinUserLikePost : ''}
-    WHERE ${filter.sql}
+    WHERE ${filter.sql} AND ${whereStatus}
   `;
 
   // 执行查询
