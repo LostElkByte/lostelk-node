@@ -7,6 +7,8 @@ import { FileModel } from './file.model'
 import { colord, extend } from "colord";
 import namesPlugin from "colord/plugins/names";
 import _ from 'lodash'
+import { TokenPayload } from '../auth/auth.interface'
+import { getPostById, PostStatus } from '../post/post.service'
 
 extend([namesPlugin]);
 
@@ -237,4 +239,25 @@ export const deletePostFiles = async (files: Array<FileModel>) => {
       })
     })
   })
+}
+
+/**
+ * 检查文件权限
+ */
+interface FileAccessControlOptions {
+  file: FileModel;
+  currentUser: TokenPayload
+}
+
+export const fileAccessControl = async (options: FileAccessControlOptions) => {
+  const { file, currentUser } = options
+  const ownFile = file.userId === currentUser.id
+  const isAdmin = currentUser.id === 1
+  const parentPost = await getPostById(file.postId, { currentUser })
+  const isPublished = parentPost.status === PostStatus.published
+  const cannAccess = ownFile || isAdmin || isPublished
+
+  if (!cannAccess) {
+    throw new Error("FORBIDDEN");
+  }
 }

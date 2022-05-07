@@ -2,7 +2,7 @@ import path from 'path'
 import fs from 'fs'
 import { Request, Response, NextFunction } from 'express'
 import _ from 'lodash'
-import { createFile, findFileById } from './file.service'
+import { createFile, fileAccessControl, findFileById } from './file.service'
 import { ColorModel } from '../color/color.model'
 import { createPostColor, postHasColor } from '../post/post.service'
 import { getColorByName, createColor } from '../color/color.service'
@@ -116,9 +116,15 @@ export const serve = async (
   // 要提供的图像尺寸
   const { size } = request.query
 
+  // 当前用户
+  const { user: currentUser } = request
+
   try {
     // 查找文件信息
     const file = await findFileById(parseInt(fileId, 10))
+
+    // 检查权限
+    await fileAccessControl({ file, currentUser })
 
     // 文件名与目录
     let filename = file.filename
@@ -169,9 +175,14 @@ export const metadata = async (
   // 文件 ID
   const { fileId } = request.params;
 
+  // 当前用户
+  const { user: currentUser } = request
   try {
     // 查询文件数据
     const file = await findFileById(parseInt(fileId, 10))
+
+    // 检查权限
+    await fileAccessControl({ file, currentUser })
 
     // 准备相应数据
     const data = _.pick(file, ['id', 'isze', 'width', 'height', 'metadata', 'mainColor', 'paletteColor'])
