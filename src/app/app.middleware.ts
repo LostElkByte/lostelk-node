@@ -138,6 +138,10 @@ export const defaultErrorHandler = (
       statusCode = 400;
       message = 'Unable to process your request ~~ 🐹' // 无法处理您的请求
       break;
+    case 'FORBIDDEN':
+      statusCode = 403;
+      message = 'No viewing permission' // 没有权限访问
+      break;
     default:
       statusCode = 500;
       message = "There was a temporary problem with the service ~~ 🐿" // 服务暂时出了点问题

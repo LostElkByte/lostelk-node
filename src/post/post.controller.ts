@@ -265,12 +265,23 @@ export const show = async (
 ) => {
   // 准备数据
   const { postId } = request.params
+  const { user: currentUser } = request
 
   // 调取内容
   try {
     const post = await getPostById(parseInt(postId, 10), {
-      currentUser: request.user
+      currentUser
     })
+
+    // 检查权限
+    const ownPost = post.user.id === currentUser.id
+    const isAdmin = currentUser.id === 1
+    const isPublished = post.status === PostStatus.published
+    const cannAccess = isAdmin || ownPost || isPublished
+
+    if (!cannAccess) {
+      throw new Error("FORBIDDEN");
+    }
 
     // 做出响应
     response.send(post)
