@@ -6,6 +6,7 @@ import { getTagByName, createTag } from '../tag/tag.service'
 import { deletePostFiles, getPostFiles } from '../file/file.service'
 import { ColorModel } from '../color/color.model'
 import { createColor, getColorByName } from '../color/color.service'
+import { PostModel } from './post.model'
 
 
 /**
@@ -45,12 +46,19 @@ export const store = async (
   next: NextFunction
 ) => {
   // 准备数据
-  const { title, content } = request.body
+  const { title, content, status = PostStatus.draft } = request.body
   const { id: userId } = request.user
+
+  const post: PostModel = {
+    title,
+    content,
+    userId,
+    status
+  }
 
   // 创建内容
   try {
-    const data = await createPost({ title, content, userId })
+    const data = await createPost(post)
     response.status(201).send(data)
   } catch (error) {
     next(error)
@@ -73,7 +81,7 @@ export const update = async (
 
   // 更新
   try {
-    const data = await updatePost(parseInt(postId, 10), post)
+    const data = await updatePost(parseInt(postId, 10), { ...post, status: 'draft' as PostStatus })
     response.send(data)
   } catch (error) {
     next(error)
