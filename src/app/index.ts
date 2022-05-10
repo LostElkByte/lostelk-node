@@ -10,6 +10,7 @@ import avatarRouter from '../avatar/avatar.router'
 import likeRouter from '../like/like.router'
 import searchRouter from '../search/search.router'
 import colorRouter from '../color/color.router'
+import adminUserRouter from '../admin-user/admin-user.router'
 import { defaultErrorHandler } from './app.middleware'
 import { currentUser } from '../auth/auth.middleware'
 import { ALLOW_ORIGIN } from './app.config'
@@ -52,7 +53,8 @@ app.use(
   avatarRouter,
   likeRouter,
   searchRouter,
-  colorRouter
+  colorRouter,
+  adminUserRouter
 );
 
 /**
