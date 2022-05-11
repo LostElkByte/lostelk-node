@@ -20,10 +20,16 @@ export const createAdminUser = async (
 }
 
 /**
- * 获取用户
+ * 获取管理员用户
  */
+interface GetUserOptions {
+  needPassword?: boolean
+}
+
 export const getAdminUser = (condition: string) => {
-  return async (param: string | number) => {
+  return async (param: string | number, options: GetUserOptions = {}) => {
+    // 准备选项
+    const { needPassword } = options
 
     // 准备查询
     const statement = `
@@ -31,6 +37,7 @@ export const getAdminUser = (condition: string) => {
       admin_user.id,
       admin_user.name,
       admin_user.email
+      ${needPassword ? ', password' : ''}
       FROM admin_user
       WHERE
         ${condition} = ?

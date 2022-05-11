@@ -86,9 +86,6 @@ export const getUser = (condition: string) => {
     // 执行查询
     const [data] = await connection.promise().query(statement, param)
 
-    console.log(data);
-
-
     // 提供数据
     return data[0].id ? data[0] : null
   }
