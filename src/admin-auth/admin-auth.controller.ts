@@ -13,14 +13,16 @@ export const login = async (
   // 准备数据
   const { user: { id, name, email } } = request.body;
 
-  const payload = { id, name, email }
+  const isAdmin = true
+
+  const payload = { id, name, email, isAdmin }
 
   try {
     // 签发令牌
     const token = signToken({ payload })
 
     // 做出相应
-    response.send({ id, name, email, token });
+    response.send({ id, name, email, isAdmin, token });
   } catch (error) {
     next(error)
   }

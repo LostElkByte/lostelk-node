@@ -102,7 +102,14 @@ export const validateUpdateUserData = async (
   const { validate, update } = request.body
 
   // 当前用户
-  const { id: userId } = request.user
+  const { id: userId, isAdmin } = request.user
+
+
+  // 如果是管理员账户
+  if (isAdmin) {
+    return next(new Error('TOKEN_TYPE_ISADMIN_CANNOT_BE_USED_FOR_USER_REQUESTS'))
+  }
+
 
   try {
     // 调取用户数据

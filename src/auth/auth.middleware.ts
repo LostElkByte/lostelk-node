@@ -136,7 +136,7 @@ export const currentUser = (
 }
 
 /**
- * 访问控制
+ * 普通用户访问控制
  */
 interface AccessControlOptions {
   possession?: boolean;
@@ -150,7 +150,14 @@ export const accessControl = (options: AccessControlOptions) => {
     const { possession } = options
 
     // 当前用户 ID
-    const { id: userId } = request.user
+    const { id: userId, isAdmin } = request.user
+    console.log(isAdmin);
+
+    // 如果是管理员账户
+    if (isAdmin) {
+      return next(new Error('TOKEN_TYPE_ISADMIN_CANNOT_BE_USED_FOR_USER_REQUESTS'))
+    }
+
 
     // 放行管理员
     if (userId == 1) return next()

@@ -142,6 +142,10 @@ export const defaultErrorHandler = (
       statusCode = 403;
       message = 'No viewing permission' // 没有权限访问
       break;
+    case 'TOKEN_TYPE_ISADMIN_CANNOT_BE_USED_FOR_USER_REQUESTS':
+      statusCode = 403;
+      message = 'Your Token type is administrator and cannot be used for requests from ordinary users' // 您的Token类型为管理员,不能用于普通用户的请求
+      break;
     default:
       statusCode = 500;
       message = "There was a temporary problem with the service ~~ 🐿" // 服务暂时出了点问题
