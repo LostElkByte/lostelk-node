@@ -3,7 +3,7 @@ import bcrypt from 'bcrypt'
 import * as userService from '../admin-user/admin-user.service'
 
 /**
- * 验证用户登录
+ * 验证员工登录
  */
 export const validateLoginData = async (
   request: Request,
