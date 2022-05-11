@@ -151,13 +151,11 @@ export const accessControl = (options: AccessControlOptions) => {
 
     // 当前用户 ID
     const { id: userId, isAdmin } = request.user
-    console.log(isAdmin);
 
-    // 如果是管理员账户
+    // 如果是后台账号
     if (isAdmin) {
       return next(new Error('TOKEN_TYPE_ISADMIN_CANNOT_BE_USED_FOR_USER_REQUESTS'))
     }
-
 
     // 放行管理员
     if (userId == 1) return next()
