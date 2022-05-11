@@ -21,7 +21,7 @@ export const login = async (
     // 签发令牌
     const token = signToken({ payload })
 
-    // 做出相应
+    // 做出响应
     response.send({ id, name, email, isAdmin, token });
   } catch (error) {
     next(error)
