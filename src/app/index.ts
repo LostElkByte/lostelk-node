@@ -11,6 +11,7 @@ import likeRouter from '../like/like.router'
 import searchRouter from '../search/search.router'
 import colorRouter from '../color/color.router'
 import adminUserRouter from '../admin-user/admin-user.router'
+import adminAuthRouter from '../admin-auth/admin-auth.router'
 import { defaultErrorHandler } from './app.middleware'
 import { currentUser } from '../auth/auth.middleware'
 import { ALLOW_ORIGIN } from './app.config'
@@ -54,7 +55,8 @@ app.use(
   likeRouter,
   searchRouter,
   colorRouter,
-  adminUserRouter
+  adminUserRouter,
+  adminAuthRouter
 );
 
 /**
