@@ -1,6 +1,7 @@
 import express from 'express'
+import { authGuard } from '../auth/auth.middleware'
 import * as adminAuthController from './admin-auth.controller'
-import { validateLoginData } from './admin-auth.middleware'
+import { accessControl, validateLoginData } from './admin-auth.middleware'
 
 const router = express.Router()
 
@@ -10,9 +11,14 @@ const router = express.Router()
 router.post('/admin-login', validateLoginData, adminAuthController.login)
 
 /**
- * 设置员工角色
+ * 角色分配
  */
+router.post('/assign-roles', authGuard, accessControl({ possession: true }), adminAuthController.assignRoles)
 
+/**
+ * 权限分配
+ */
+router.post('/assign-jurisdiction', authGuard, accessControl({ possession: true }), adminAuthController.assignJurisdiction)
 
 /**
  * 导出路由

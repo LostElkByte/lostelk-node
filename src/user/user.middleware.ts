@@ -107,7 +107,7 @@ export const validateUpdateUserData = async (
 
   // 如果是后台账号
   if (isAdmin) {
-    return next(new Error('TOKEN_TYPE_ISADMIN_CANNOT_BE_USED_FOR_USER_REQUESTS'))
+    return next(new Error('TOKEN_TYPE_IS_ADMIN_CANNOT_BE_USED_FOR_USER_REQUESTS'))
   }
 
 

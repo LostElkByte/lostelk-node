@@ -56,3 +56,35 @@ export const validateLoginData = async (
   // 下一步
   next();
 }
+
+
+/**
+ * 后台访问控制
+ */
+interface AccessControlOptions {
+  possession?: boolean;
+  jurisdictionId?: number;
+}
+
+export const accessControl = (options: AccessControlOptions) => {
+  return async (request: Request, response: Response, next: NextFunction) => {
+    console.log('👮 后台访问控制');
+
+    // 解构选项
+    const { possession, jurisdictionId } = options
+
+    // 当前用户 ID
+    const { id: userId, isAdmin } = request.user
+
+    // 如果是前台账号
+    if (!isAdmin) {
+      return next(new Error('TOKEN_TYPE_IS_USER_CANNOT_BE_USED_FOR_ADMIN_REQUESTS'))
+    }
+
+    // 放行超级管理员
+    if (userId == 1) return next()
+
+    // 下一步
+    next()
+  }
+}
