@@ -70,7 +70,6 @@ export const assignJurisdiction = async (
   try {
     // 清空员工角色
     await deleteRoleJurisdiction(roleId)
-    console.log(1);
 
     // 给员工重新分配角色
     if (!jurisdictions || jurisdictions.length <= 0) return response.sendStatus(200)
