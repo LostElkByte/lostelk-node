@@ -83,6 +83,8 @@ export const selectUserRoleByUserId = async (userId: number) => {
     LEFT JOIN admin_role
       ON admin_user_role.adminRoleId = admin_role.id
     WHERE adminUserId = ?
+    ORDER BY 
+      adminRoleId asc
   `
 
   // 执行查询
@@ -106,10 +108,54 @@ export const selectRoleJurisdictionByRoleId = async (roleId: number) => {
     LEFT JOIN admin_jurisdiction
       ON admin_role_jurisdiction.adminJurisdictionId = admin_jurisdiction.id
     WHERE adminRoleId = ?
+    ORDER BY 
+      adminJurisdictionId asc
   `
 
   // 执行查询
   const [data] = await connection.promise().query(statement, roleId)
+
+  // 提供数据
+  return data
+}
+
+/**
+ * 查询所有角色
+ */
+export const selectAllRole = async () => {
+  // 准备查询
+  const statement = `
+    SELECT
+      id,
+      role
+    FROM
+      admin_role
+    ORDER BY 
+      id asc
+  `
+  // 执行查询
+  const [data] = await connection.promise().query(statement)
+
+  // 提供数据
+  return data
+}
+
+/**
+ * 查询所有权限
+ */
+export const selectAllJurisdiction = async () => {
+  // 准备查询
+  const statement = `
+    SELECT
+      id,
+      jurisdiction
+    FROM 
+      admin_jurisdiction
+    ORDER BY 
+      id asc
+  `
+  // 执行查询
+  const [data] = await connection.promise().query(statement)
 
   // 提供数据
   return data

@@ -31,6 +31,12 @@ router.get('/select-user-roles/:userId', adminAuthController.selectUserRole)
 router.get('/select-roles-jurisdiction/:roleId', adminAuthController.selectRoleJurisdiction)
 
 /**
+ * 查询所有角色
+ */
+router.get('/select-all-roles', adminAuthController.selectRole)
+
+
+/**
  * 导出路由
  */
 export default router
