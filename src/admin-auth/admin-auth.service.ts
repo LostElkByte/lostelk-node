@@ -77,11 +77,11 @@ export const selectUserRoleByUserId = async (userId: number) => {
   // 准备查询
   const statement = `
     SELECT 
-    adminRoleId,
-    admin_role.role
+      adminRoleId,
+      admin_role.role
     FROM admin_user_role
     LEFT JOIN admin_role
-    ON admin_user_role.adminRoleId = admin_role.id
+      ON admin_user_role.adminRoleId = admin_role.id
     WHERE adminUserId = ?
   `
 
@@ -99,9 +99,13 @@ export const selectUserRoleByUserId = async (userId: number) => {
 export const selectRoleJurisdictionByRoleId = async (roleId: number) => {
   // 准备查询
   const statement = `
-  SELECT adminJurisdictionId
-  FROM admin_role_jurisdiction
-  WHERE adminRoleId = ?
+    SELECT
+      adminJurisdictionId,
+      admin_jurisdiction.jurisdiction
+    FROM admin_role_jurisdiction
+    LEFT JOIN admin_jurisdiction
+      ON admin_role_jurisdiction.adminJurisdictionId = admin_jurisdiction.id
+    WHERE adminRoleId = ?
   `
 
   // 执行查询

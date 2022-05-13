@@ -26,6 +26,11 @@ router.post('/assign-jurisdiction', authGuard, accessControl({ possession: true 
 router.get('/select-user-roles/:userId', adminAuthController.selectUserRole)
 
 /**
+ * 查询角色权限
+ */
+router.get('/select-roles-jurisdiction/:roleId', adminAuthController.selectRoleJurisdiction)
+
+/**
  * 导出路由
  */
 export default router
