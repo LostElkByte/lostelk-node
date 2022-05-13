@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express'
 import { signToken } from '../auth/auth.service'
-import { deleteUserRole, addUserRole, deleteRoleJurisdiction, addRoleJurisdiction } from './admin-auth.service'
+import { deleteUserRole, addUserRole, deleteRoleJurisdiction, addRoleJurisdiction, selectUserRoleByUserId } from './admin-auth.service'
 /**
  * 管理员登录
  */
@@ -79,6 +79,27 @@ export const assignJurisdiction = async (
     }
 
     response.sendStatus(200)
+  } catch (error) {
+    next(error)
+  }
+}
+
+/**
+ * 查询用户角色
+ */
+export const selectUserRole = async (
+  request: Request,
+  response: Response,
+  next: NextFunction
+) => {
+  // 准备数据
+  const { userId } = request.params;
+
+  try {
+    // 查询用户角色
+    const roles = await selectUserRoleByUserId(parseInt(userId))
+
+    response.status(200).send(roles)
   } catch (error) {
     next(error)
   }
