@@ -13,12 +13,12 @@ router.post('/admin-login', validateLoginData, adminAuthController.login)
 /**
  * 角色分配
  */
-router.post('/assign-roles', authGuard, backgroundManagementAccessControl({ jurisdictionId: 1 }), adminAuthController.assignRoles)
+router.post('/assign-roles', authGuard, backgroundManagementAccessControl({ needPossession: true, jurisdictionId: 1, }), adminAuthController.assignRoles)
 
 /**
  * 权限分配
  */
-router.post('/assign-jurisdiction', authGuard, backgroundManagementAccessControl({ jurisdictionId: 9 }), adminAuthController.assignJurisdiction)
+router.post('/assign-jurisdiction', authGuard, backgroundManagementAccessControl({ needPossession: true, jurisdictionId: 9 }), adminAuthController.assignJurisdiction)
 
 /**
  * 查询用户角色
@@ -40,6 +40,10 @@ router.get('/select-all-roles', adminAuthController.selectRole)
  */
 router.get('/select-all-jurisdiction', adminAuthController.selectJurisdiction)
 
+/**
+ * 查询当前用户权限
+ */
+router.get('/select-user-jurisdiction', authGuard, backgroundManagementAccessControl({ needPossession: false }), adminAuthController.selectUserJurisdiction)
 
 /**
  * 导出路由

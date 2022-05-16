@@ -1,4 +1,5 @@
 import { Request, Response, NextFunction } from 'express'
+import _ from 'lodash';
 import { signToken } from '../auth/auth.service'
 import { deleteUserRole, addUserRole, deleteRoleJurisdiction, addRoleJurisdiction, selectUserRoleByUserId, selectRoleJurisdictionByRoleId, selectAllRole, selectAllJurisdiction } from './admin-auth.service'
 /**
@@ -159,6 +160,44 @@ export const selectJurisdiction = async (
     const roles = await selectAllJurisdiction()
 
     response.status(200).send(roles)
+  } catch (error) {
+    next(error)
+  }
+}
+
+/**
+ * 查询当前用户权限
+ */
+export const selectUserJurisdiction = async (
+  request: Request,
+  response: Response,
+  next: NextFunction
+) => {
+  // 当前用户 ID
+  const { id: userId } = request.user
+
+  try {
+    // 查询用户角色
+    const data = await selectUserRoleByUserId(userId)
+    const userRoles = Object.values(JSON.parse(JSON.stringify(data)))
+    // 权限集合
+    let jurisdictionList = []
+
+    // 查询权限
+    for (const role of userRoles) {
+      const { adminRoleId } = role as any
+      const data = await selectRoleJurisdictionByRoleId(adminRoleId)
+      const roleJurisdictions = Object.values(JSON.parse(JSON.stringify(data)))
+      for (const jurisdiction of roleJurisdictions) {
+        const { adminJurisdictionId } = jurisdiction as any
+        jurisdictionList.push(adminJurisdictionId)
+      }
+    }
+
+    // 权限集合去重
+    jurisdictionList = _.uniq(jurisdictionList)
+
+    response.status(200).send(jurisdictionList)
   } catch (error) {
     next(error)
   }

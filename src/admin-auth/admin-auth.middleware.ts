@@ -63,17 +63,17 @@ export const validateLoginData = async (
 /**
  * 后台访问控制
  */
-interface AccessControlOptions {
-  possession?: boolean;
+interface backgroundManagementAccessControlOptions {
+  needPossession?: boolean
   jurisdictionId?: number;
 }
 
-export const backgroundManagementAccessControl = (options: AccessControlOptions) => {
+export const backgroundManagementAccessControl = (options: backgroundManagementAccessControlOptions) => {
   return async (request: Request, response: Response, next: NextFunction) => {
     console.log('👮 后台访问控制');
 
     // 解构选项
-    const { jurisdictionId } = options
+    const { needPossession, jurisdictionId } = options
 
     // 当前用户 ID
     const { id: userId, isAdmin } = request.user
@@ -83,9 +83,11 @@ export const backgroundManagementAccessControl = (options: AccessControlOptions)
       return next(new Error('TOKEN_TYPE_IS_USER_CANNOT_BE_USED_FOR_ADMIN_REQUESTS'))
     }
 
-
     // 放行超级管理员
     if (userId == 1) return next()
+
+    // 放行无需权限控制接口
+    if (!needPossession) return next()
 
     // 查询用户角色
     const data = await selectUserRoleByUserId(userId)
