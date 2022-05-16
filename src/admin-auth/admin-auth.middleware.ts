@@ -1,6 +1,8 @@
 import { Request, Response, NextFunction } from 'express'
 import bcrypt from 'bcrypt'
 import * as userService from '../admin-user/admin-user.service'
+import { selectRoleJurisdictionByRoleId, selectUserRoleByUserId } from './admin-auth.service'
+import _ from 'lodash'
 
 /**
  * 验证员工登录
@@ -81,9 +83,39 @@ export const accessControl = (options: AccessControlOptions) => {
       return next(new Error('TOKEN_TYPE_IS_USER_CANNOT_BE_USED_FOR_ADMIN_REQUESTS'))
     }
 
+
     // 放行超级管理员
     if (userId == 1) return next()
 
+    // 查询用户角色
+    const res = await selectUserRoleByUserId(userId)
+
+    const userRoles = Object.values(JSON.parse(JSON.stringify(res)))
+
+    // 权限集合
+    let jurisdictionList = []
+
+    // 查询权限
+    for (const role of userRoles) {
+      const { adminRoleId } = role as any
+      const res = await selectRoleJurisdictionByRoleId(adminRoleId) as any
+      const roleJurisdictions = Object.values(JSON.parse(JSON.stringify(res)))
+      for (const jurisdiction of roleJurisdictions) {
+        const { adminJurisdictionId } = jurisdiction as any
+        jurisdictionList.push(adminJurisdictionId)
+      }
+    }
+
+    // 权限集合去重
+    jurisdictionList = _.uniq(jurisdictionList)
+
+    const isNext = jurisdictionList.includes(jurisdictionId)
+
+    if (isNext) {
+      return next()
+    } else {
+      return next(new Error('FORBIDDEN'))
+    }
     // 下一步
     next()
   }

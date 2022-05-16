@@ -13,12 +13,12 @@ router.post('/admin-login', validateLoginData, adminAuthController.login)
 /**
  * 角色分配
  */
-router.post('/assign-roles', authGuard, accessControl({ possession: true }), adminAuthController.assignRoles)
+router.post('/assign-roles', authGuard, accessControl({ possession: true, jurisdictionId: 1 }), adminAuthController.assignRoles)
 
 /**
  * 权限分配
  */
-router.post('/assign-jurisdiction', authGuard, accessControl({ possession: true }), adminAuthController.assignJurisdiction)
+router.post('/assign-jurisdiction', authGuard, accessControl({ possession: true, jurisdictionId: 9 }), adminAuthController.assignJurisdiction)
 
 /**
  * 查询用户角色

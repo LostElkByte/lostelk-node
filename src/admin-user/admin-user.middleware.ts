@@ -2,14 +2,14 @@ import { Request, Response, NextFunction } from 'express'
 import * as adminUserService from './admin-user.service'
 
 /**
- * 注册 - 验证管理员数据
+ * 注册 - 验证注册账号数据
  */
 export const validateAdminUserData = async (
   request: Request,
   response: Response,
   next: NextFunction
 ) => {
-  console.log('👮 验证管理员数据')
+  console.log('👮 验证管理员账号数据')
 
   // 准备数据
   const { name, password, email } = request.body
