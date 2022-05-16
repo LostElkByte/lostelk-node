@@ -88,9 +88,8 @@ export const accessControl = (options: AccessControlOptions) => {
     if (userId == 1) return next()
 
     // 查询用户角色
-    const res = await selectUserRoleByUserId(userId)
-
-    const userRoles = Object.values(JSON.parse(JSON.stringify(res)))
+    const data = await selectUserRoleByUserId(userId)
+    const userRoles = Object.values(JSON.parse(JSON.stringify(data)))
 
     // 权限集合
     let jurisdictionList = []
@@ -98,8 +97,8 @@ export const accessControl = (options: AccessControlOptions) => {
     // 查询权限
     for (const role of userRoles) {
       const { adminRoleId } = role as any
-      const res = await selectRoleJurisdictionByRoleId(adminRoleId) as any
-      const roleJurisdictions = Object.values(JSON.parse(JSON.stringify(res)))
+      const data = await selectRoleJurisdictionByRoleId(adminRoleId)
+      const roleJurisdictions = Object.values(JSON.parse(JSON.stringify(data)))
       for (const jurisdiction of roleJurisdictions) {
         const { adminJurisdictionId } = jurisdiction as any
         jurisdictionList.push(adminJurisdictionId)
