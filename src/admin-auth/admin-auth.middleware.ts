@@ -68,12 +68,12 @@ interface AccessControlOptions {
   jurisdictionId?: number;
 }
 
-export const accessControl = (options: AccessControlOptions) => {
+export const backgroundManagementAccessControl = (options: AccessControlOptions) => {
   return async (request: Request, response: Response, next: NextFunction) => {
     console.log('👮 后台访问控制');
 
     // 解构选项
-    const { possession, jurisdictionId } = options
+    const { jurisdictionId } = options
 
     // 当前用户 ID
     const { id: userId, isAdmin } = request.user
