@@ -35,6 +35,11 @@ router.get('/select-roles-jurisdiction/:roleId', adminAuthController.selectRoleJ
  */
 router.get('/select-all-roles', adminAuthController.selectRole)
 
+/**
+ * 查询所有权限
+ */
+router.get('/select-all-jurisdiction', adminAuthController.selectJurisdiction)
+
 
 /**
  * 导出路由
