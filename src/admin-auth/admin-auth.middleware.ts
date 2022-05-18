@@ -65,7 +65,7 @@ export const validateLoginData = async (
  */
 interface backgroundManagementAccessControlOptions {
   needPossession?: boolean
-  jurisdictionId?: number;
+  jurisdictionId?: number
 }
 
 export const backgroundManagementAccessControl = (options: backgroundManagementAccessControlOptions) => {
