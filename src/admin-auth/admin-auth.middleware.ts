@@ -1,7 +1,10 @@
 import { Request, Response, NextFunction } from 'express'
 import bcrypt from 'bcrypt'
 import * as userService from '../admin-user/admin-user.service'
-import { selectRoleJurisdictionByRoleId, selectUserRoleByUserId } from './admin-auth.service'
+import {
+  selectRoleJurisdictionByRoleId,
+  selectUserRoleByUserId,
+} from './admin-auth.service'
 import _ from 'lodash'
 
 /**
@@ -10,7 +13,7 @@ import _ from 'lodash'
 export const validateLoginData = async (
   request: Request,
   response: Response,
-  next: NextFunction
+  next: NextFunction,
 ) => {
   console.log('👮 验证管理员用户登陆数据')
 
@@ -25,7 +28,9 @@ export const validateLoginData = async (
    * 通过邮箱验证用户账号
    */
   if (email) {
-    const user = await userService.getAdminUserByEmail(email, { needPassword: true })
+    const user = await userService.getAdminUserByEmail(email, {
+      needPassword: true,
+    })
 
     // 判断用户是否存在
     if (!user) return next(new Error('USER_DOES_NOT_EXIST'))
@@ -42,7 +47,9 @@ export const validateLoginData = async (
    * 通过用户名验证用户账号
    */
   if (name) {
-    const user = await userService.getAdminUserByName(name, { needPassword: true })
+    const user = await userService.getAdminUserByName(name, {
+      needPassword: true,
+    })
 
     // 判断用户是否存在
     if (!user) return next(new Error('USER_DOES_NOT_EXIST'))
@@ -56,9 +63,8 @@ export const validateLoginData = async (
   }
 
   // 下一步
-  next();
+  next()
 }
-
 
 /**
  * 后台访问控制
@@ -68,9 +74,11 @@ interface backgroundManagementAccessControlOptions {
   jurisdictionId?: number
 }
 
-export const backgroundManagementAccessControl = (options: backgroundManagementAccessControlOptions) => {
+export const backgroundManagementAccessControl = (
+  options: backgroundManagementAccessControlOptions,
+) => {
   return async (request: Request, response: Response, next: NextFunction) => {
-    console.log('👮 后台访问控制');
+    console.log('👮 后台访问控制')
 
     // 解构选项
     const { needPossession, jurisdictionId } = options
@@ -80,7 +88,9 @@ export const backgroundManagementAccessControl = (options: backgroundManagementA
 
     // 如果是前台账号
     if (!isAdmin) {
-      return next(new Error('TOKEN_TYPE_IS_USER_CANNOT_BE_USED_FOR_ADMIN_REQUESTS'))
+      return next(
+        new Error('TOKEN_TYPE_IS_USER_CANNOT_BE_USED_FOR_ADMIN_REQUESTS'),
+      )
     }
 
     // 放行超级管理员
