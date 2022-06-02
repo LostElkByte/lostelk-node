@@ -10,7 +10,7 @@ export const deleteUserRole = async (userId: number) => {
   const statement = `
     DELETE FROM admin_user_role
     WHERE admin_user_role.adminUserId = ?
-  `;
+  `
 
   // 执行查询
   const [data] = await connection.promise().query(statement, userId)
@@ -27,7 +27,7 @@ export const addUserRole = async (userId: number, roleId: number) => {
   const statement = `
     INSERT INTO admin_user_role 
     SET adminUserId = ?,adminRoleId = ?
-  `;
+  `
 
   // 执行查询
   const [data] = await connection.promise().query(statement, [userId, roleId])
@@ -44,7 +44,7 @@ export const deleteRoleJurisdiction = async (roleId: number) => {
   const statement = `
     DELETE FROM admin_role_jurisdiction
     WHERE admin_role_jurisdiction.adminRoleId = ?
-  `;
+  `
 
   // 执行查询
   const [data] = await connection.promise().query(statement, roleId)
@@ -56,15 +56,20 @@ export const deleteRoleJurisdiction = async (roleId: number) => {
 /**
  * 新增角色权限
  */
-export const addRoleJurisdiction = async (roleId: number, jurisdictionId: number) => {
+export const addRoleJurisdiction = async (
+  roleId: number,
+  jurisdictionId: number,
+) => {
   // 准备查询
   const statement = `
     INSERT INTO admin_role_jurisdiction 
     SET adminRoleId = ?,adminJurisdictionId = ?
-  `;
+  `
 
   // 执行查询
-  const [data] = await connection.promise().query(statement, [roleId, jurisdictionId])
+  const [data] = await connection
+    .promise()
+    .query(statement, [roleId, jurisdictionId])
 
   // 提供数据
   return data
@@ -93,7 +98,6 @@ export const selectUserRoleByUserId = async (userId: number) => {
   // 提供数据
   return data
 }
-
 
 /**
  * 查询角色权限
@@ -159,4 +163,76 @@ export const selectAllJurisdiction = async () => {
 
   // 提供数据
   return data
+}
+
+/**
+ * 新建路由
+ */
+export const createRoute = async (route: string) => {
+  // 准备查询
+  const statement = `
+    INSERT INTO admin_route
+    SET route = ?
+  `
+
+  // 执行查询
+  const [data] = await connection.promise().query(statement, route)
+
+  // 提供数据
+  return data
+}
+
+/**
+ * 更新路由
+ */
+export const updateRoute = async (id: number, route: string) => {
+  // 准备查询
+  const statement = `
+    UPDATE admin_route
+      SET route = ?
+    WHERE
+      id = ?
+  `
+
+  // 执行查询
+  const [data] = await connection.promise().query(statement, [id, route])
+
+  // 提供数据
+  return data
+}
+
+/**
+ * 删除路由
+ */
+export const deleteRoute = async (id: number, route: string) => {
+  // 准备查询
+  const statement = `
+    DELETE admin_route
+      SET route = ?
+    WHERE
+      id = ?
+  `
+
+  // 执行查询
+  const [data] = await connection.promise().query(statement, [id, route])
+
+  // 提供数据
+  return data
+}
+
+/**
+ * 查询路由
+ */
+export const selectRoute = async (route: string) => {
+  // 准备查询
+  const statement = `
+    SELECT * FROM admin_route
+      WHERE route = ?
+  `
+
+  // 执行查询
+  const [data] = await connection.promise().query(statement, [route])
+
+  // 提供数据
+  return data[0] ? true : false
 }

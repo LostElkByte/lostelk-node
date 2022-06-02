@@ -155,6 +155,10 @@ export const defaultErrorHandler = (
       message =
         'Your Token is of type user and cannot be used for administrator requests' // 您的Token类型为用户,不能用于管理员的请求
       break
+    case 'ROUTE_ALREADY_EXISTS':
+      statusCode = 409
+      message = 'Route already exists' // 路由已存在
+      break
     default:
       statusCode = 500
       message = 'There was a temporary problem with the service ~~ 🐿' // 服务暂时出了点问题

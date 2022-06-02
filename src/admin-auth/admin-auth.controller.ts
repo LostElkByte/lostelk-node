@@ -10,6 +10,8 @@ import {
   selectRoleJurisdictionByRoleId,
   selectAllRole,
   selectAllJurisdiction,
+  createRoute,
+  selectRoute,
 } from './admin-auth.service'
 /**
  * 管理员登录
@@ -211,6 +213,31 @@ export const selectUserJurisdiction = async (
     jurisdictionList = _.uniq(jurisdictionList)
 
     response.status(200).send(jurisdictionList)
+  } catch (error) {
+    next(error)
+  }
+}
+
+/**
+ * 新增路由
+ */
+export const addRoute = async (
+  request: Request,
+  response: Response,
+  next: NextFunction,
+) => {
+  try {
+    // 准备数据
+    const { route } = request.body
+
+    const exist = await selectRoute(route)
+    if (exist) {
+      throw new Error('ROUTE_ALREADY_EXISTS')
+    }
+    await createRoute(route)
+    response
+      .status(200)
+      .send({ code: 200, message: 'Route Added Successfully' })
   } catch (error) {
     next(error)
   }
