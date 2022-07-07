@@ -89,6 +89,10 @@ export const defaultErrorHandler = (
       statusCode = 409;
       message = 'The account or password is incorrect'; // 账号或密码错误
       break;
+    case 'OLD_PASSWORD_DOES_NOT_MATCH':
+      statusCode = 409;
+      message = 'The old password is incorrect'; // 旧密码错误
+      break;
     case 'UNAUTHORIZED':
       statusCode = 401;
       message = 'Please login first'; // 请先登录
