@@ -232,10 +232,10 @@ const colorNameTranslateChinese = colorName => {
       chineseColorName = ['蓝色', '深板岩蓝', '暗灰蓝色', '蓝紫色'];
       break;
     case 'darkslategray':
-      chineseColorName = ['绿色', '深绿色', '墨绿色', '灰绿色'];
+      chineseColorName = ['绿色', '深绿色', '墨绿色', '绿'];
       break;
     case 'darkslategrey':
-      chineseColorName = ['绿色', '深绿色', '暗宝石绿色', '灰绿色'];
+      chineseColorName = ['绿色', '深绿色', '暗宝石绿色', '绿'];
       break;
     case 'darkturquoise':
       chineseColorName = [
