@@ -143,7 +143,7 @@ export const extractionColor = async (
 
   if (width > 320) {
     // 提取图片RGV主色
-    await ColorThief.getColor(mediumFilePath, 1)
+    await ColorThief.getColor(mediumFilePath, 10)
       .then(color => {
         mainColor = color;
       })
@@ -161,7 +161,7 @@ export const extractionColor = async (
       });
   } else {
     // 提取图片RGB主色
-    await ColorThief.getColor(file.path, 1)
+    await ColorThief.getColor(file.path, 10)
       .then(color => {
         mainColor = color;
       })
