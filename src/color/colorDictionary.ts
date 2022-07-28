@@ -4540,7 +4540,15 @@ export const colorDictionary = {
     'DarkYellow',
     'earthYellow',
   ],
-  'Silver Rust': ['#C9C0BB', '灰色', 'gray'],
+  'Silver Rust': [
+    '#C9C0BB',
+    '米色',
+    '卡其色',
+    '木色',
+    'khaki',
+    'Beige',
+    'timber',
+  ],
   Conch: ['#C9D9D2', '绿色', '灰绿色', 'green', 'greyishGreen'],
   Reef: [
     '#C9FFA2',
