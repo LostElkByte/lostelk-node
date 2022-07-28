@@ -1,56 +1,40 @@
-import path from 'path'
-import fs from 'fs'
-import { Request, Response, NextFunction } from 'express'
-import _ from 'lodash'
-import { createFile, findFileById } from './file.service'
-import { ColorModel } from '../color/color.model'
-import { createPostColor, postHasColor } from '../post/post.service'
-import { getColorByName, createColor } from '../color/color.service'
-import colorNameTranslateChinese from '../color/colorNameTranslateChinese'
+import path from 'path';
+import fs from 'fs';
+import { Request, Response, NextFunction } from 'express';
+import _ from 'lodash';
+import { createFile, findFileById } from './file.service';
+import { ColorModel } from '../color/color.model';
+import { createPostColor, postHasColor } from '../post/post.service';
+import { getColorByName, createColor } from '../color/color.service';
+import { colorDictionary } from '../color/colorDictionary';
 
 /**
-* 上传文件
-*/
+ * 上传文件
+ */
 export const store = async (
   request: Request,
   response: Response,
-  next: NextFunction
+  next: NextFunction,
 ) => {
   // 当前用户
-  const { id: userId } = request.user
+  const { id: userId } = request.user;
 
   // 所属内容
-  const postId = parseInt(request.query.post as string, 10)
+  const postId = parseInt(request.query.post as string, 10);
 
-  // // 调色板中文颜色名集合
-  // let chineseColorNameList = [] as Array<string>
+  // 主色颜色key
+  const mainColorName = request.fileMetaData.mainColorName;
 
-  // // 调色板W3C颜色名列表
-  // const paletteColorNameList = request.fileMetaData.paletteColorNameList
-
-  // for (const itemColorName of paletteColorNameList) {
-  //   // W3C颜色名转中文颜色
-  //   const chinesecolorName = colorNameTranslateChinese(itemColorName) as Array<string>
-  //   chineseColorNameList = [...chineseColorNameList, ...chinesecolorName]
-  // }
-
-  // // 调色板中文颜色名集合去重
-  // chineseColorNameList = Array.from(new Set(chineseColorNameList))
-
-  // 主色W3C颜色名
-  const mainColorName = request.fileMetaData.mainColorName
-
-  // W3C颜色名转中文颜色
-  const chineseColorNameList = colorNameTranslateChinese(mainColorName) as Array<string>
-
+  // 通过主色颜色key获取颜色名称列表
+  const chineseColorNameList = colorDictionary[mainColorName] as Array<string>;
 
   // 文件信息
   const fileInfo = _.pick(request.file, [
     'originalname',
     'mimetype',
     'filename',
-    'size'
-  ])
+    'size',
+  ]);
 
   try {
     // 保存文件信息
@@ -62,87 +46,85 @@ export const store = async (
       height: request.fileMetaData.height,
       metadata: request.fileMetaData.metadata,
       mainColor: request.fileMetaData.mainColor,
-      paletteColor: request.fileMetaData.paletteColor
-    })
+      paletteColor: request.fileMetaData.paletteColor,
+    });
 
     // 做出响应
-    response.status(201).send(data)
+    response.status(201).send(data);
   } catch (error) {
-    next(error)
+    next(error);
   }
 
   // 储存颜色标签
   for (const colorItem of chineseColorNameList) {
-    let color: ColorModel
+    let color: ColorModel;
     // 查找颜色标签
     try {
-      color = await getColorByName(colorItem)
+      color = await getColorByName(colorItem);
     } catch (error) {
-      return next(error)
+      return next(error);
     }
 
     // 没找到颜色标签,创建这个颜色标签
     if (!color) {
       try {
-        const data = await createColor({ name: colorItem })
-        color = { id: data.insertId }
+        const data = await createColor({ name: colorItem });
+        color = { id: data.insertId };
       } catch (error) {
-        return next(error)
+        return next(error);
       }
     }
 
     // 给内容打上颜色标签
     try {
-      await createPostColor(postId, color.id)
+      await createPostColor(postId, color.id);
     } catch (error) {
-      return next(error)
+      return next(error);
     }
   }
-
-
-}
+};
 
 /**
-* 文件服务
-*/
+ * 文件服务
+ */
 export const serve = async (
   request: Request,
   response: Response,
-  next: NextFunction
+  next: NextFunction,
 ) => {
   // 从地址参数里得到文件 ID
-  const { fileId } = request.params
+  const { fileId } = request.params;
 
   // 要提供的图像尺寸
-  const { size } = request.query
+  const { size } = request.query;
 
   try {
     // 查找文件信息
-    const file = await findFileById(parseInt(fileId, 10))
+    const file = await findFileById(parseInt(fileId, 10));
 
     // 文件名与目录
-    let filename = file.filename
-    let root = 'uploads/files'
-    let resized = 'resized'
+    let filename = file.filename;
+    let root = 'uploads/files';
+    let resized = 'resized';
 
     if (size) {
       // 可用的图像尺寸
-      const imageSizes = ['large', 'medium', 'thumbnail']
+      const imageSizes = ['large', 'medium', 'thumbnail'];
 
       // 检查文件尺寸是否可用
       if (!imageSizes.some(item => item == size)) {
-        throw new Error('FILE_NOT_FOUND')
+        throw new Error('FILE_NOT_FOUND');
       }
 
       // 检查文件是否存在
       const fileExist = fs.existsSync(
-        path.join(root, resized, `${size}-${filename}`)
-      )
+        path.join(root, resized, `${size}-${filename}`),
+      );
 
       // 设置文件名与目录
       if (fileExist) {
-        filename = `${size}-${filename}`
-        root = path.join(root, resized)
+        filename = `${size}-${filename}`;
+        root = path.join(root, resized);
       }
     }
 
@@ -150,38 +132,46 @@ export const serve = async (
     response.sendFile(filename, {
       root,
       headers: {
-        'Content-Type': file.mimetype
-      }
-    })
+        'Content-Type': file.mimetype,
+      },
+    });
   } catch (error) {
-    next(error)
+    next(error);
   }
-}
+};
 
 /**
-* 文件信息
-*/
+ * 文件信息
+ */
 export const metadata = async (
   request: Request,
   response: Response,
-  next: NextFunction
+  next: NextFunction,
 ) => {
   // 文件 ID
   const { fileId } = request.params;
 
   try {
     // 查询文件数据
-    const file = await findFileById(parseInt(fileId, 10))
+    const file = await findFileById(parseInt(fileId, 10));
 
     // 准备相应数据
-    const data = _.pick(file, ['id', 'isze', 'width', 'height', 'metadata', 'mainColor', 'paletteColor'])
+    const data = _.pick(file, [
+      'id',
+      'isze',
+      'width',
+      'height',
+      'metadata',
+      'mainColor',
+      'paletteColor',
+    ]);
 
     // 做出响应
-    response.send(data)
+    response.send(data);
   } catch (error) {
-    next(error)
+    next(error);
   }
-}
+};
 
 /**
  * 文件下载

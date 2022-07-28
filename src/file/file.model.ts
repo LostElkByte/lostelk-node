@@ -12,5 +12,5 @@ export class FileModel {
   mainColor?: Array<number>;
   paletteColor?: any;
   mainColorName?: string;
-  paletteColorNameList?: any
+  paletteColorNameList?: any;
 }
