@@ -1248,7 +1248,16 @@ export const colorDictionary = {
     'coffee',
   ],
   'Port Gore': ['#251F4F', '紫色', 'purple'],
-  Shark: ['#25272C', '石灰色', 'StoneGray'],
+  Shark: [
+    '#25272C',
+    '石灰色',
+    '深蓝色',
+    '暗蓝色',
+    '灰蓝色',
+    'darkBlue',
+    'dustyBlue',
+    'StoneGray',
+  ],
   'Green Kelp': [
     '#25311C',
     '绿色',
