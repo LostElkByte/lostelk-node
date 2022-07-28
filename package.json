@@ -15,6 +15,7 @@
   "description": "LostElk服务端应用",
   "dependencies": {
     "bcrypt": "^4.0.1",
+    "color-namer": "^1.4.0",
     "colord": "^2.9.2",
     "colorthief": "^2.3.2",
     "cors": "^2.8.5",
