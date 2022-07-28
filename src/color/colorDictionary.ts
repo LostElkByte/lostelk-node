@@ -4521,7 +4521,15 @@ export const colorDictionary = {
   Piper: ['#C96323', '橙色', '橘色', '橘黄色', '桔色', '桔黄色', 'orange'],
   Pizza: ['#C99415', '深秋色', '深黄色', 'DeepAutumn', 'darkYellow'],
   'Light Wisteria': ['#C9A0DC', '紫色', 'purple'],
-  'Rodeo Dust': ['#C9B29B', '卡其色', '米色', 'khaki', 'Beige'],
+  'Rodeo Dust': [
+    '#C9B29B',
+    '卡其色',
+    '米色',
+    '肉色',
+    'khaki',
+    'Beige',
+    'FleshColor',
+  ],
   Sundance: [
     '#C9B35B',
     '黄色',
@@ -4638,7 +4646,7 @@ export const colorDictionary = {
     'orange',
     'chocolate',
   ],
-  Puce: ['#CC8899', '粉色', 'pink'],
+  Puce: ['#CC8899', '粉红色', '粉色', '桃红色', 'pink', 'peach'],
   'Thistle Green': ['#CCCAA8', '黄色', '浅黄色', 'yellow', 'LightYellow'],
   Periwinkle: ['#CCCCFF', '紫色', 'purple'],
   'Electric Lime': [
