@@ -7551,4 +7551,5 @@ export const colorDictionary = {
     'DarkGreen',
     'blackishGreen',
   ],
+  huise: ['#b6b3b0', '灰色', 'gray'],
 };

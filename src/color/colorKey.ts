@@ -1574,4 +1574,5 @@ export const colorKey = {
   QianZongSe: '#948d85',
   huiLv: '#abb0ad',
   shenLv: '#252826',
+  huise: '#b6b3b0',
 };
