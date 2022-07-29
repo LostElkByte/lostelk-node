@@ -805,7 +805,16 @@ export const colorDictionary = {
     'darkGreen',
     'black',
   ],
-  'Gordons Green': ['#0B1107', '黑色', 'black'],
+  'Gordons Green': [
+    '#0B1107',
+    '绿色',
+    '墨绿色',
+    '暗绿色',
+    '深绿色',
+    'green',
+    'blackishGreen',
+    'darkGreen',
+  ],
   'Black Forest': [
     '#0B1304',
     '绿色',
