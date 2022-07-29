@@ -1575,4 +1575,5 @@ export const colorKey = {
   huiLv: '#abb0ad',
   shenLv: '#252826',
   huise: '#b6b3b0',
+  zongse: '#aa7b65',
 };

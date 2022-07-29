@@ -7554,4 +7554,13 @@ export const colorDictionary = {
     'blackishGreen',
   ],
   huise: ['#b6b3b0', '灰色', 'gray'],
+  zongse: [
+    '#aa7b65',
+    '棕色',
+    '褐色',
+    '巧克力色',
+    'brown',
+    'brownness',
+    'chocolate',
+  ],
 };
