@@ -1573,4 +1573,5 @@ export const colorKey = {
   HelvSe: '#a7a77f',
   QianZongSe: '#948d85',
   huiLv: '#abb0ad',
+  shenLv: '#252826',
 };

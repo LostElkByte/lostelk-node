@@ -7542,4 +7542,13 @@ export const colorDictionary = {
     'lightBrown',
   ],
   huiLv: ['#abb0ad', '绿色', '灰绿色', 'green', 'greyishGreen'],
+  shenLv: [
+    '#252826',
+    '绿色',
+    '深绿色',
+    '墨绿色',
+    'green',
+    'DarkGreen',
+    'blackishGreen',
+  ],
 };
