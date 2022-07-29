@@ -7533,4 +7533,5 @@ export const colorDictionary = {
     'brownness',
     'lightBrown',
   ],
+  huiLv: ['#abb0ad', '绿色', '灰绿色', 'green', 'greyishGreen'],
 };
