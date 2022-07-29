@@ -1403,7 +1403,15 @@ export const colorDictionary = {
   'Bleached Cedar': ['#2C2133', '紫色', '浅紫色', 'purple', 'lilac'],
   Lochinvar: ['#2C8C84', '青色', 'cyan'],
   Mikado: ['#2D2510', '褐色', '土褐色', 'brownness', 'tan'],
-  'Outer Space': ['#2D383A', '蓝色', '浅灰蓝色', 'blue', 'powderBlue'],
+  'Outer Space': [
+    '#2D383A',
+    '青色',
+    '绿色',
+    '墨绿色',
+    'cyan',
+    'green',
+    'blackishGreen',
+  ],
   'St Tropaz': ['#2D569B', '蓝色', '天蓝色', 'blue', 'skyBlue'],
   Jacaranda: ['#2E0329', '紫色', 'purple'],
   'Jacko Bean': [
