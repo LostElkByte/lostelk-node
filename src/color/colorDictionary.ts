@@ -7524,4 +7524,13 @@ export const colorDictionary = {
     'yellowGreen',
     'darkGreen',
   ],
+  QianZongSe: [
+    '#948d85',
+    '棕色',
+    '褐色',
+    '浅棕色',
+    'brown',
+    'brownness',
+    'lightBrown',
+  ],
 };
