@@ -2303,8 +2303,8 @@ export const colorDictionary = {
   'Pale Sky': [
     '#6E7783',
     '蓝色',
-    '蓝灰色',
-    '亮蓝灰色',
+    '灰蓝色',
+    '亮灰蓝色',
     'blue',
     'lightslategrey',
   ],
