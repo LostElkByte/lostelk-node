@@ -1570,4 +1570,5 @@ export const colorKey = {
   ShenHui: '#414045',
   chengqiangse: '#49413e',
   huibaise: '#cfd3da',
+  HelvSe: '#a7a77f',
 };

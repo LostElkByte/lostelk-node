@@ -7515,4 +7515,13 @@ export const colorDictionary = {
     'tan',
   ],
   huibaise: ['#cfd3da', '灰色', '灰白色', '蓝灰色', 'grayWhite', 'gray'],
+  HelvSe: [
+    '#a7a77f',
+    '绿色',
+    '褐绿色',
+    '黄绿色',
+    'green',
+    'yellowGreen',
+    'darkGreen',
+  ],
 };
