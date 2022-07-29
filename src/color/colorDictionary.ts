@@ -7493,4 +7493,13 @@ export const colorDictionary = {
     'darkGrey',
     'Dimgray',
   ],
+  chengqiangse: [
+    '#49413e',
+    '棕色',
+    '褐色',
+    '土褐色',
+    'brown',
+    'brownness',
+    'tan',
+  ],
 };

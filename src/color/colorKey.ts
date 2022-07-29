@@ -1568,4 +1568,5 @@ export const colorKey = {
   'Grey light green': '#dce1dc',
   QianLan: '#8d96b4',
   ShenHui: '#414045',
+  chengqiangse: '#49413e',
 };
