@@ -1746,7 +1746,7 @@ export const colorDictionary = {
     'ochre',
   ],
   Mako: ['#444954', '蓝色', '蓝灰色', 'blue', 'blueGray'],
-  Kelp: ['#454936', '绿色', '黄绿色', 'green', 'YellowGreen'],
+  Kelp: ['#454936', '绿色', '褐绿色', 'green', 'BrownishGreen'],
   'San Marino': ['#456CAC', '蓝色', '天蓝色', 'blue', 'skyBlue'],
   'Picton Blue': [
     '#45B1E8',
