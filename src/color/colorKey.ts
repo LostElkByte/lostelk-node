@@ -1566,4 +1566,5 @@ export const colorKey = {
   White: '#FFFFFF',
   'Cyan white': '#d0d9d9',
   'Grey light green': '#dce1dc',
+  'QianLavender': '#8d96b4'
 };

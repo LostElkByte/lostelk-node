@@ -7473,4 +7473,5 @@ export const colorDictionary = {
     'LightGreen',
     'GrayishGreen',
   ],
+  QianLavender: ['紫色', '浅紫色', '淡紫色', 'purple', 'lilac'],
 };
