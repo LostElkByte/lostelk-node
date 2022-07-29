@@ -4936,7 +4936,7 @@ export const colorDictionary = {
   ],
   Vanilla: ['#D1BEA8', '橘色', '浅橘色', 'orange', 'LightOrange'],
   'Soft Amber': ['#D1C6B4', '卡其色', '米色', 'khaki', 'Beige'],
-  Celeste: ['#D1D2CA', '灰色', 'gray'],
+  Celeste: ['#D1D2CA', '灰色', '灰白色', 'grayWhite', 'gray'],
   Mischka: ['#D1D2DD', '灰色', '蓝灰色', 'gray', 'blueGray'],
   Pear: ['#D1E231', '绿色', '黄绿色', 'green', 'YellowGreen'],
   'Hot Cinnamon': [
