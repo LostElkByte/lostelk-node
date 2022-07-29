@@ -7498,6 +7498,7 @@ export const colorDictionary = {
     '棕色',
     '褐色',
     '土褐色',
+    '深棕色',
     'brown',
     'brownness',
     'tan',
