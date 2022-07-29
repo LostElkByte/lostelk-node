@@ -7514,5 +7514,5 @@ export const colorDictionary = {
     'brownness',
     'tan',
   ],
-  huibaise: ['#cfd3da', '灰色', '灰白色', 'grayWhite', 'gray'],
+  huibaise: ['#cfd3da', '灰色', '灰白色', '蓝灰色', 'grayWhite', 'gray'],
 };
