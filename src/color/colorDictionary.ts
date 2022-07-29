@@ -2921,7 +2921,15 @@ export const colorDictionary = {
     'orchid',
     'mediumorchid',
   ],
-  'Clay Creek': ['#8A8360', '褐色', '土褐色', 'brownness', 'tan'],
+  'Clay Creek': [
+    '#8A8360',
+    '褐色',
+    '土褐色',
+    '黄褐色',
+    'brownness',
+    'tan',
+    'Tawny',
+  ],
   Monsoon: ['#8A8389', '粉色', '灰粉色', 'pink', 'grayPink'],
   Stack: ['#8A8F8A', '绿色', '灰绿色', 'green', 'greenGray'],
   'Jordy Blue': [
@@ -4629,7 +4637,7 @@ export const colorDictionary = {
   Contessa: ['#C6726B', '粉红色', '珊瑚色', 'pink', 'coral'],
   'Oriental Pink': ['#C69191', '粉色', 'pink'],
   Roti: ['#C6A84B', '黄色', '金色', '金黄色', 'yellow', 'golden'],
-  Ash: ['#C6C3B5', '卡其色', 'khaki'],
+  Ash: ['#C6C3B5', '卡其色', '灰色', 'gray', 'khaki'],
   Kangaroo: ['#C6C8BD', '绿色', '灰绿色', '灰色', 'green', 'grayGreen', 'gray'],
   'Las Palmas': [
     '#C6E610',
@@ -4644,7 +4652,7 @@ export const colorDictionary = {
   'Red Violet': ['#C71585', '粉色', '玫红色', 'pink', 'roseRed'],
   'Coral Reef': ['#C7BCA2', '卡其色', '米色', 'khaki', 'Beige'],
   Melrose: ['#C7C1FF', '紫色', 'purple'],
-  Cloud: ['#C7C4BF', '绿色', '灰绿色', '灰色', 'green', 'grayGreen', 'gray'],
+  Cloud: ['#C7C4BF', '灰色', '米色', 'gray', 'Beige'],
   Ghost: ['#C7C9D5', '紫色', '灰紫色', 'grayPurple', 'purple'],
   'Pine Glade': ['#C7CD90', '绿色', 'green'],
   Botticelli: [
