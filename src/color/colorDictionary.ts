@@ -1483,7 +1483,7 @@ export const colorDictionary = {
   Tuna: ['#353542', '蓝色', '灰蓝色', 'blue', 'blueGrey'],
   Chambray: ['#354E8C', '蓝色', '中蓝色', 'blue', 'mediumBlue'],
   Martinique: ['#363050', '紫色', 'purple'],
-  Tuatara: ['#363534', '灰色', '深灰色', 'gray', 'darkGrey'],
+  Tuatara: ['#363534', '灰色', '深灰色', '黑色', 'black', 'gray', 'darkGrey'],
   Waiouru: ['#363C0D', '绿色', '黄绿色', 'green', 'YellowGreen'],
   Ming: [
     '#36747D',
