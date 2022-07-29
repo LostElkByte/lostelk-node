@@ -1,7 +1,9 @@
 import colorNamer from 'color-namer';
 import { rgbToHex } from '../file/file.service';
 import { Request, Response, NextFunction } from 'express';
-import { colorDictionary } from '../color/colorDictionary';
+import { colorKey } from '../color/colorKey';
+// 导入提取主色包
+const nearestColor = require('nearest-color').from(colorKey);
 
 /**
  * 排序方式
@@ -71,7 +73,7 @@ export const filter = async (
     const hexColor = rgbToHex(rgbColor[0], rgbColor[1], rgbColor[2]);
 
     // 获取主色的色号
-    const mainColorNameKey = colorNamer(hexColor, { pick: ['ntc'] }).ntc[0].hex;
+    const mainColorNameKey = nearestColor(hexColor).value;
 
     // 颜色字典色号
     color = mainColorNameKey;
@@ -80,8 +82,7 @@ export const filter = async (
   // 如果是hexColor, 转换为文字颜色
   if (hexColor) {
     // 获取主色的色号
-    const mainColorNameKey = colorNamer(`#${hexColor}`, { pick: ['ntc'] })
-      .ntc[0].hex;
+    const mainColorNameKey = nearestColor(hexColor).value;
 
     // 颜色字典色号
     color = mainColorNameKey;

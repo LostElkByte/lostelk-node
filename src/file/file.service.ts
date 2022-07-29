@@ -5,7 +5,9 @@ import ColorThief from 'colorthief';
 import { connection } from '../app/database/mysql';
 import { FileModel } from './file.model';
 import _ from 'lodash';
-import colorNamer from 'color-namer';
+import { colorKey } from '../color/colorKey';
+// 导入提取主色包
+const nearestColor = require('nearest-color').from(colorKey);
 
 /**
  * 存储文件信息
@@ -188,7 +190,7 @@ export const extractionColor = async (
   // 主色名称的Key
   let mainColorNameKey: string;
   // 获取主色名称的key
-  mainColorNameKey = colorNamer(mainHexColor, { pick: ['ntc'] }).ntc[0].name;
+  mainColorNameKey = nearestColor(mainHexColor).name;
 
   // 调色板HEX颜色列表
   let paletteColornHexList = [] as Array<string>;
