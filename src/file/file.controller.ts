@@ -25,8 +25,10 @@ export const store = async (
   // 主色颜色key
   const mainColorName = request.fileMetaData.mainColorName;
 
-  // 通过主色颜色key获取颜色名称列表
-  const chineseColorNameList = colorDictionary[mainColorName] as Array<string>;
+  // 通过主色颜色key获取颜色名称列表(除了第一个色号元素)
+  const chineseColorNameList = colorDictionary[mainColorName].slice(1) as Array<
+    string
+  >;
 
   // 文件信息
   const fileInfo = _.pick(request.file, [

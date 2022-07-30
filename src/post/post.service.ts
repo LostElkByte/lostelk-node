@@ -1,5 +1,5 @@
 import { Cipher } from 'crypto';
-import { connection } from '../app/database/mysql'
+import { connection } from '../app/database/mysql';
 import { TokenPayload } from '../auth/auth.interface';
 import { PostModel } from './post.model';
 import { sqlFragment } from './post.provider';
@@ -9,7 +9,7 @@ import { sqlFragment } from './post.provider';
 export interface GetPostsOptionsFilter {
   name: string;
   sql?: string;
-  param?: string;
+  param?: string | Array<any>;
   params?: Array<string>;
 }
 
@@ -22,27 +22,31 @@ interface GetPostsOptions {
   sort?: string;
   filter?: GetPostsOptionsFilter;
   pagination?: GetPostsOptionsPagination;
-  currentUser?: TokenPayload
+  currentUser?: TokenPayload;
 }
 
 export const getPosts = async (options: GetPostsOptions) => {
-  const { sort, filter, pagination: { limit, offset }, currentUser } = options
+  const {
+    sort,
+    filter,
+    pagination: { limit, offset },
+    currentUser,
+  } = options;
 
   // SQL 参数
-  let params: Array<any> = [limit, offset]
+  let params: Array<any> = [limit, offset];
 
   // 设置 SQL 参数
   if (filter.param) {
-    params = [filter.param, ...params]
+    params = [filter.param, ...params];
   }
 
   if (filter.params) {
-    params = [...filter.params, ...params]
+    params = [...filter.params, ...params];
   }
 
-
   // 当前用户
-  const { id: userId } = currentUser
+  const { id: userId } = currentUser;
 
   const statement = `
     SELECT 
@@ -75,10 +79,10 @@ export const getPosts = async (options: GetPostsOptions) => {
     OFFSET ?
   `;
 
-  const [data] = await connection.promise().query(statement, params)
+  const [data] = await connection.promise().query(statement, params);
 
-  return data
-}
+  return data;
+};
 
 /**
  * 创建内容
@@ -97,13 +101,12 @@ export const createPost = async (post: PostModel) => {
 
   // 提供数据
   return data;
-}
+};
 
 /**
  * 更新内容
  */
 export const updatePost = async (postId: number, post: PostModel) => {
-
   // 准备查询
   const statement = `
     UPDATE post SET ?
@@ -111,12 +114,11 @@ export const updatePost = async (postId: number, post: PostModel) => {
   `;
 
   // 执行查询
-  const [data] = await connection.promise().query(statement, [post, postId])
+  const [data] = await connection.promise().query(statement, [post, postId]);
 
   // 提供数据
-  return data
-}
-
+  return data;
+};
 
 /**
  * 删除内容
@@ -129,18 +131,16 @@ export const deletePost = async (postId: number) => {
   `;
 
   // 执行查询
-  const [data] = await connection.promise().query(statement, postId)
+  const [data] = await connection.promise().query(statement, postId);
 
   // 提供数据
-  return data
-}
+  return data;
+};
 
 /**
-* 保存内容标签
-*/
-export const createPostTag = async (
-  postId: number, tagId: number
-) => {
+ * 保存内容标签
+ */
+export const createPostTag = async (postId: number, tagId: number) => {
   // 准备查询
   const statement = `
     INSERT INTO post_tag (postId, tagId)
@@ -148,11 +148,11 @@ export const createPostTag = async (
   `;
 
   // 执行查询
-  const [data] = await connection.promise().query(statement, [postId, tagId])
+  const [data] = await connection.promise().query(statement, [postId, tagId]);
 
   // 提供数据
-  return data
-}
+  return data;
+};
 
 /**
  * 检查内容标签
@@ -165,18 +165,16 @@ export const postHasTag = async (postId: number, tagId: number) => {
   `;
 
   // 执行查询
-  const [data] = await connection.promise().query(statemnet, [postId, tagId])
+  const [data] = await connection.promise().query(statemnet, [postId, tagId]);
 
   // 提供数据
-  return data[0] ? true : false
-}
+  return data[0] ? true : false;
+};
 
 /**
  * 移除内容标签
  */
-export const deletePostTag = async (
-  postId: number, tagId: number
-) => {
+export const deletePostTag = async (postId: number, tagId: number) => {
   // 准备查询
   const statement = `
     DELETE FROM post_tag
@@ -184,11 +182,11 @@ export const deletePostTag = async (
   `;
 
   // 执行查询
-  const [data] = await connection.promise().query(statement, [postId, tagId])
+  const [data] = await connection.promise().query(statement, [postId, tagId]);
 
   // 提供数据
-  return data
-}
+  return data;
+};
 
 /**
  * 检查颜色标签
@@ -201,18 +199,16 @@ export const postHasColor = async (postId: number, colorId: number) => {
   `;
 
   // 执行查询
-  const [data] = await connection.promise().query(statemnet, [postId, colorId])
+  const [data] = await connection.promise().query(statemnet, [postId, colorId]);
 
   // 提供数据
-  return data[0] ? true : false
-}
+  return data[0] ? true : false;
+};
 
 /**
-* 保存内容颜色标签
-*/
-export const createPostColor = async (
-  postId: number, colorId: number
-) => {
+ * 保存内容颜色标签
+ */
+export const createPostColor = async (postId: number, colorId: number) => {
   // 准备查询
   const statement = `
     INSERT INTO post_color (postId, colorId)
@@ -220,18 +216,16 @@ export const createPostColor = async (
   `;
 
   // 执行查询
-  const [data] = await connection.promise().query(statement, [postId, colorId])
+  const [data] = await connection.promise().query(statement, [postId, colorId]);
 
   // 提供数据
-  return data
-}
+  return data;
+};
 
 /**
  * 移除内容颜色标签
  */
-export const deletePostColor = async (
-  postId: number, colorId: number
-) => {
+export const deletePostColor = async (postId: number, colorId: number) => {
   // 准备查询
   const statement = `
     DELETE FROM post_color
@@ -239,25 +233,23 @@ export const deletePostColor = async (
   `;
 
   // 执行查询
-  const [data] = await connection.promise().query(statement, [postId, colorId])
+  const [data] = await connection.promise().query(statement, [postId, colorId]);
 
   // 提供数据
-  return data
-}
+  return data;
+};
 
 /**
-* 统计内容数量
-*/
-export const getPostsTotalCount = async (
-  options: GetPostsOptions
-) => {
-  const { filter } = options
+ * 统计内容数量
+ */
+export const getPostsTotalCount = async (options: GetPostsOptions) => {
+  const { filter } = options;
 
   // SQL 参数
-  let params = [filter.param]
+  let params = [filter.param];
 
   if (filter.params) {
-    params = [...filter.params, ...params]
+    params = [...filter.params, ...params];
   }
 
   // 准备查询
@@ -274,24 +266,26 @@ export const getPostsTotalCount = async (
   `;
 
   // 执行查询
-  const [data] = await connection.promise().query(statement, params)
+  const [data] = await connection.promise().query(statement, params);
 
   // 提供结果
-  return data[0].total
-}
+  return data[0].total;
+};
 
 /**
-* 按 ID 调取内容
-*/
+ * 按 ID 调取内容
+ */
 export interface GetPostByIdOptions {
-  currentUser?: TokenPayload
+  currentUser?: TokenPayload;
 }
 
 export const getPostById = async (
   postId: number,
-  options: GetPostsOptions = {}
+  options: GetPostsOptions = {},
 ) => {
-  const { currentUser: { id: userId } } = options
+  const {
+    currentUser: { id: userId },
+  } = options;
 
   // 准备查询
   const statement = `
@@ -321,13 +315,13 @@ export const getPostById = async (
   `;
 
   // 执行查询
-  const [data] = await connection.promise().query(statement, postId)
+  const [data] = await connection.promise().query(statement, postId);
 
   // 没有找到内容
   if (!data[0].id) {
-    throw new Error('NOT_FOUND')
+    throw new Error('NOT_FOUND');
   }
 
   // 提供数据
-  return data[0]
-}
+  return data[0];
+};

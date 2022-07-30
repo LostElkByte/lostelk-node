@@ -1,7 +1,7 @@
-import colorNamer from 'color-namer';
 import { rgbToHex } from '../file/file.service';
 import { Request, Response, NextFunction } from 'express';
 import { colorKey } from '../color/colorKey';
+import { colorDictionary } from '../color/colorDictionary';
 // 导入提取主色包
 const nearestColor = require('nearest-color').from(colorKey);
 
@@ -64,28 +64,30 @@ export const filter = async (
     lensMake,
     lensModel,
   } = request.query;
+  // 颜色名称列表
+  let colorNameList: Array<string>;
 
   // 如果是rgbColor, 转换为文字颜色
   if (rgbColor) {
     rgbColor = JSON.parse(rgbColor.toString());
 
     // RBG转HEX
-    const hexColor = rgbToHex(rgbColor[0], rgbColor[1], rgbColor[2]);
+    const toHexColor = rgbToHex(rgbColor[0], rgbColor[1], rgbColor[2]);
 
-    // 获取主色的色号
-    const mainColorNameKey = nearestColor(hexColor).value;
+    // 获取主色的key
+    const mainColorNameKey = nearestColor(toHexColor).name;
 
-    // 颜色字典色号
-    color = mainColorNameKey;
+    // 通过主色颜色key获取颜色名称列表(除了第一个色号元素)
+    colorNameList = colorDictionary[mainColorNameKey].slice(1);
   }
 
   // 如果是hexColor, 转换为文字颜色
   if (hexColor) {
     // 获取主色的色号
-    const mainColorNameKey = nearestColor(hexColor).value;
+    const mainColorNameKey = nearestColor(hexColor).name;
 
-    // 颜色字典色号
-    color = mainColorNameKey;
+    // 通过主色颜色key获取颜色名称列表(除了第一个色号元素)
+    colorNameList = colorDictionary[mainColorNameKey].slice(1);
   }
 
   // 设置默认的过滤
@@ -118,6 +120,15 @@ export const filter = async (
       name: 'colorName',
       sql: 'color.name like ?',
       param: `%${color.toString()}%`,
+    };
+  }
+
+  // 按照RGB/HEX颜色过滤
+  if ((rgbColor || hexColor) && !tag && !user && !action) {
+    request.filter = {
+      name: 'colorName',
+      sql: 'color.name in (?)',
+      param: colorNameList,
     };
   }
 
