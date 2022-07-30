@@ -6858,15 +6858,7 @@ export const colorDictionary = {
     'pink',
     'deepPink',
   ],
-  'Magenta / Fuchsia': [
-    '#FF00FF',
-    '桃红色',
-    '粉色',
-    '深粉色',
-    'peach',
-    'pink',
-    'deepPink',
-  ],
+  'Magenta / Fuchsia': ['#FF00FF', '紫色', 'purple'],
   Scarlet: ['#FF2400', '红色', 'red'],
   'Wild Strawberry': [
     '#FF3399',
