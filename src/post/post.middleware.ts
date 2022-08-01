@@ -118,8 +118,8 @@ export const filter = async (
   if (color && !tag && !user && !action) {
     request.filter = {
       name: 'colorName',
-      sql: 'color.name like ?',
-      param: `%${color.toString()}%`,
+      sql: 'color.name = ?',
+      param: color.toString(),
     };
   }
 
