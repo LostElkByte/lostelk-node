@@ -1,6 +1,6 @@
 export const colorDictionary = {
-  Black: ['#000000', '黑', '黑色', 'black'],
-  'Navy Blue': [
+  colorKey1: ['#000000', '黑', '黑色', 'black'],
+  colorKey2: [
     '#000080',
     '暗蓝',
     '海军蓝',
@@ -18,17 +18,9 @@ export const colorDictionary = {
     'navyBlue',
     'faintBlue',
   ],
-  'Dark Blue': [
-    '#0000C8',
-    '中蓝',
-    '蓝',
-    '蓝色',
-    '中蓝色',
-    'blue',
-    'mediumBlue',
-  ],
-  Blue: ['#0000FF', '纯蓝', '蓝', '蓝色', '纯蓝色', 'blue', 'PureBlue'],
-  Stratos: [
+  colorKey3: ['#0000C8', '中蓝', '蓝', '蓝色', '中蓝色', 'blue', 'mediumBlue'],
+  colorKey4: ['#0000FF', '纯蓝', '蓝', '蓝色', '纯蓝色', 'blue', 'PureBlue'],
+  colorKey5: [
     '#000741',
     '深蓝',
     '蓝',
@@ -39,7 +31,7 @@ export const colorDictionary = {
     'darkBlue',
     'midnightBlue',
   ],
-  Swamp: [
+  colorKey6: [
     '#001B1C',
     '墨绿',
     '深绿',
@@ -51,7 +43,7 @@ export const colorDictionary = {
     'DarkGreen',
     'blackishGreen',
   ],
-  'Resolution Blue': [
+  colorKey7: [
     '#002387',
     '海军蓝',
     '暗蓝',
@@ -63,7 +55,7 @@ export const colorDictionary = {
     'faintBlue',
     'navyBlue',
   ],
-  'Deep Fir': [
+  colorKey8: [
     '#002900',
     '深橄榄绿',
     '暗橄榄绿',
@@ -75,7 +67,7 @@ export const colorDictionary = {
     'darkOliveGreen',
     'Dark0liveGreen',
   ],
-  Burnham: [
+  colorKey9: [
     '#002E20',
     '暗绿',
     '深绿',
@@ -87,7 +79,7 @@ export const colorDictionary = {
     'DarkGreen',
     'darkGreen',
   ],
-  'International Klein Blue': [
+  colorKey10: [
     '#002FA7',
     '克莱因蓝',
     '中蓝',
@@ -99,25 +91,9 @@ export const colorDictionary = {
     'mediumBlue',
     'KleinBlue',
   ],
-  'Prussian Blue': [
-    '#003153',
-    '钢蓝',
-    '蓝',
-    '蓝色',
-    '钢蓝色',
-    'blue',
-    'SteelBlue',
-  ],
-  'Midnight Blue': [
-    '#003366',
-    '深蓝',
-    '蓝',
-    '蓝色',
-    '深蓝色',
-    'blue',
-    'darkBlue',
-  ],
-  Smalt: [
+  colorKey11: ['#003153', '钢蓝', '蓝', '蓝色', '钢蓝色', 'blue', 'SteelBlue'],
+  colorKey12: ['#003366', '深蓝', '蓝', '蓝色', '深蓝色', 'blue', 'darkBlue'],
+  colorKey13: [
     '#003399',
     '钢蓝',
     '深蓝',
@@ -129,7 +105,7 @@ export const colorDictionary = {
     'darkBlue',
     'SteelBlue',
   ],
-  'Deep Teal': [
+  colorKey14: [
     '#003532',
     '海藻绿',
     '墨绿',
@@ -147,7 +123,7 @@ export const colorDictionary = {
     'blackishGreen',
     'GreenSeaweed',
   ],
-  Cyprus: [
+  colorKey15: [
     '#003E40',
     '海藻绿',
     '墨绿',
@@ -162,7 +138,7 @@ export const colorDictionary = {
     'blackishGreen',
     'GreenSeaweed',
   ],
-  'Kaitoke Green': [
+  colorKey16: [
     '#004620',
     '暗绿',
     '橄榄绿',
@@ -180,7 +156,7 @@ export const colorDictionary = {
     'oliveGreen',
     'darkGreen',
   ],
-  Cobalt: [
+  colorKey17: [
     '#0047AB',
     '宝蓝',
     '钴蓝',
@@ -192,8 +168,8 @@ export const colorDictionary = {
     'cobaltBlue',
     'royalBlue',
   ],
-  Crusoe: ['#014816', '暗绿', '绿', '绿色', '暗绿色', 'green', 'darkGreen'],
-  'Sherpa Blue': [
+  colorKey18: ['#014816', '暗绿', '绿', '绿色', '暗绿色', 'green', 'darkGreen'],
+  colorKey19: [
     '#004950',
     '水鸭',
     '湖蓝',
@@ -208,8 +184,8 @@ export const colorDictionary = {
     'LakeBlue',
     'teal',
   ],
-  Endeavour: ['#0056A7', '中蓝', '蓝', '蓝色', '中蓝色', 'blue', 'mediumBlue'],
-  Camarone: [
+  colorKey20: ['#0056A7', '中蓝', '蓝', '蓝色', '中蓝色', 'blue', 'mediumBlue'],
+  colorKey21: [
     '#00581A',
     '深绿',
     '墨绿',
@@ -221,7 +197,7 @@ export const colorDictionary = {
     'blackishGreen',
     'DarkGreen',
   ],
-  'Science Blue': [
+  colorKey22: [
     '#0066CC',
     '闪蓝',
     '天蓝',
@@ -233,7 +209,7 @@ export const colorDictionary = {
     'skyBlue',
     'dodgerblue',
   ],
-  'Blue Ribbon': [
+  colorKey23: [
     '#0066FF',
     '闪蓝',
     '天蓝',
@@ -245,7 +221,7 @@ export const colorDictionary = {
     'skyBlue',
     'dodgerblue',
   ],
-  'Tropical Rain Forest': [
+  colorKey24: [
     '#00755E',
     '森林绿',
     '青绿',
@@ -257,7 +233,7 @@ export const colorDictionary = {
     'turquoise',
     'forestGreen',
   ],
-  Allports: [
+  colorKey25: [
     '#0076A3',
     '淡蓝',
     '天蓝',
@@ -272,7 +248,7 @@ export const colorDictionary = {
     'skyBlue',
     'babyBlue',
   ],
-  'Deep Cerulean': [
+  colorKey26: [
     '#007BA7',
     '钢蓝',
     '淡蓝',
@@ -290,7 +266,7 @@ export const colorDictionary = {
     'babyBlue',
     'SteelBlue',
   ],
-  Lochmara: [
+  colorKey27: [
     '#007EC7',
     '浅蓝',
     '淡蓝',
@@ -302,7 +278,7 @@ export const colorDictionary = {
     'babyBlue',
     'wathetBlue',
   ],
-  'Azure Radiance': [
+  colorKey28: [
     '#007FFF',
     '亮蓝',
     '闪蓝',
@@ -314,7 +290,7 @@ export const colorDictionary = {
     'dodgerblue',
     'BrillantBlue',
   ],
-  Teal: [
+  colorKey29: [
     '#008080',
     '浅海洋绿',
     '水鸭绿',
@@ -329,7 +305,7 @@ export const colorDictionary = {
     'tealGreen',
     'LightOceanGreen',
   ],
-  'Bondi Blue': [
+  colorKey30: [
     '#0095B6',
     '暗绿宝石',
     '薄荷蓝',
@@ -344,7 +320,7 @@ export const colorDictionary = {
     'MintBlue',
     'DarkEmeraldColor',
   ],
-  'Pacific Blue': [
+  colorKey31: [
     '#009DC4',
     '深天蓝',
     '青',
@@ -356,7 +332,7 @@ export const colorDictionary = {
     'cyan',
     'deepskyblue',
   ],
-  'Persian Green': [
+  colorKey32: [
     '#00A693',
     '浅海洋绿',
     '波士绿',
@@ -368,7 +344,7 @@ export const colorDictionary = {
     'BossGreen',
     'LightOceanGreen',
   ],
-  Jade: [
+  colorKey33: [
     '#00A86B',
     '中海洋绿',
     '玉绿',
@@ -383,7 +359,7 @@ export const colorDictionary = {
     'JadeGreen',
     'MediumOceanGreen',
   ],
-  'Caribbean Green': [
+  colorKey34: [
     '#00CC99',
     '嫩绿',
     '中春绿',
@@ -401,7 +377,7 @@ export const colorDictionary = {
     'MediumSpringGreen',
     'peakGreen',
   ],
-  "Robin's Egg Blue": [
+  colorKey35: [
     '#00CCCC',
     '蓝绿',
     '深粉蓝',
@@ -422,8 +398,8 @@ export const colorDictionary = {
     'DeepPowderBlue',
     'blueGreen',
   ],
-  Green: ['#00FF00', '绿', '绿色', 'green'],
-  'Spring Green': [
+  colorKey36: ['#00FF00', '绿', '绿色', 'green'],
+  colorKey37: [
     '#00FF7F',
     '草坪绿',
     '亮绿',
@@ -441,7 +417,7 @@ export const colorDictionary = {
     'brightGreen',
     'meadowGreen',
   ],
-  'Cyan / Aqua': [
+  colorKey38: [
     '#00FFFF',
     '薄荷蓝',
     '蓝绿',
@@ -456,7 +432,7 @@ export const colorDictionary = {
     'blueGreen',
     'MintBlue',
   ],
-  'Blue Charcoal': [
+  colorKey39: [
     '#010D1A',
     '墨蓝',
     '深蓝',
@@ -471,7 +447,7 @@ export const colorDictionary = {
     'darkBlue',
     'darkBlue',
   ],
-  Midnight: [
+  colorKey40: [
     '#011635',
     '藏蓝',
     '幽蓝',
@@ -489,7 +465,7 @@ export const colorDictionary = {
     'DeepAndRemoteBlue',
     'purplishBlue',
   ],
-  Holly: [
+  colorKey41: [
     '#011D13',
     '海藻绿',
     '幽绿',
@@ -507,7 +483,7 @@ export const colorDictionary = {
     'DeepGreen',
     'GreenSeaweed',
   ],
-  Daintree: [
+  colorKey42: [
     '#012731',
     '深青',
     '军蓝',
@@ -528,7 +504,7 @@ export const colorDictionary = {
     'cadetBlue',
     'darkCyan',
   ],
-  'Cardin Green': [
+  colorKey43: [
     '#01361C',
     '卡丹绿',
     '苔藓绿',
@@ -546,7 +522,7 @@ export const colorDictionary = {
     'MossGreen',
     'ErOfGreen',
   ],
-  'County Green': [
+  colorKey44: [
     '#01371A',
     '卡丹绿',
     '苔藓绿',
@@ -564,7 +540,7 @@ export const colorDictionary = {
     'MossGreen',
     'ErOfGreen',
   ],
-  'Astronaut Blue': [
+  colorKey45: [
     '#013E62',
     '钢蓝',
     '中蓝',
@@ -576,7 +552,7 @@ export const colorDictionary = {
     'mediumBlue',
     'SteelBlue',
   ],
-  'Regal Blue': [
+  colorKey46: [
     '#013F6A',
     '中蓝',
     '钢蓝',
@@ -588,7 +564,7 @@ export const colorDictionary = {
     'SteelBlue',
     'mediumBlue',
   ],
-  'Aqua Deep': [
+  colorKey47: [
     '#014B43',
     '深绿',
     '暗绿',
@@ -600,7 +576,7 @@ export const colorDictionary = {
     'darkGreen',
     'DarkGreen',
   ],
-  Orient: [
+  colorKey48: [
     '#015E85',
     '钢蓝',
     '湖蓝',
@@ -612,7 +588,7 @@ export const colorDictionary = {
     'LakeBlue',
     'SteelBlue',
   ],
-  'Blue Stone': [
+  colorKey49: [
     '#016162',
     '水鸭',
     '暗青',
@@ -624,7 +600,7 @@ export const colorDictionary = {
     'DarkCyan',
     'teal',
   ],
-  'Fun Green': [
+  colorKey50: [
     '#016D39',
     '森林绿',
     '海洋绿',
@@ -636,7 +612,7 @@ export const colorDictionary = {
     'SeaGreen',
     'forestGreen',
   ],
-  'Pine Green': [
+  colorKey51: [
     '#01796F',
     '浅海洋绿',
     '暗青',
@@ -651,7 +627,7 @@ export const colorDictionary = {
     'DarkCyan',
     'LightOceanGreen',
   ],
-  'Blue Lagoon': [
+  colorKey52: [
     '#017987',
     '浅海洋绿',
     '暗青',
@@ -666,7 +642,7 @@ export const colorDictionary = {
     'DarkCyan',
     'LightOceanGreen',
   ],
-  'Deep Sea': [
+  colorKey53: [
     '#01826B',
     '中海洋绿',
     '海洋绿',
@@ -681,7 +657,7 @@ export const colorDictionary = {
     'SeaGreen',
     'MediumOceanGreen',
   ],
-  'Green Haze': [
+  colorKey54: [
     '#01A368',
     '中海洋绿',
     '中绿',
@@ -693,7 +669,7 @@ export const colorDictionary = {
     'MediumGreen',
     'MediumOceanGreen',
   ],
-  'English Holly': [
+  colorKey55: [
     '#022D15',
     '绿',
     '暗绿',
@@ -707,7 +683,7 @@ export const colorDictionary = {
     'DarkGreen',
     'darkGreen',
   ],
-  'Sherwood Green': [
+  colorKey56: [
     '#02402C',
     '绿',
     '暗绿',
@@ -721,7 +697,7 @@ export const colorDictionary = {
     'DarkGreen',
     'darkGreen',
   ],
-  'Congress Blue': [
+  colorKey57: [
     '#02478E',
     '海蓝',
     '宝石蓝',
@@ -733,7 +709,7 @@ export const colorDictionary = {
     'royalblue',
     'OceanBlue',
   ],
-  'Evening Sea': [
+  colorKey58: [
     '#024E46',
     '暗绿',
     '深绿',
@@ -748,7 +724,7 @@ export const colorDictionary = {
     'DarkGreen',
     'darkGreen',
   ],
-  'Bahama Blue': [
+  colorKey59: [
     '#026395',
     '钢蓝',
     '蔚蓝',
@@ -763,7 +739,7 @@ export const colorDictionary = {
     'cerulean',
     'SteelBlue',
   ],
-  Observatory: [
+  colorKey60: [
     '#02866F',
     '水鸭绿',
     '薄荷绿',
@@ -775,7 +751,7 @@ export const colorDictionary = {
     'MintGreen',
     'tealGreen',
   ],
-  Cerulean: [
+  colorKey61: [
     '#02A4D3',
     '蔚蓝',
     '天蓝',
@@ -790,7 +766,7 @@ export const colorDictionary = {
     'skyBlue',
     'cerulean',
   ],
-  Tangaroa: [
+  colorKey62: [
     '#03163C',
     '深蓝',
     '海军蓝',
@@ -799,7 +775,7 @@ export const colorDictionary = {
     'navyBlue',
     'darkBlue',
   ],
-  'Green Vogue': [
+  colorKey63: [
     '#032B52',
     '暗蓝',
     '深蓝',
@@ -811,7 +787,7 @@ export const colorDictionary = {
     'darkBlue',
     'faintBlue',
   ],
-  Mosque: [
+  colorKey64: [
     '#036A6E',
     '水鸭',
     '绿',
@@ -823,8 +799,8 @@ export const colorDictionary = {
     'green',
     'teal',
   ],
-  'Midnight Moss': ['#041004', '黑', '黑色', 'black'],
-  'Black Pearl': [
+  colorKey65: ['#041004', '黑', '黑色', 'black'],
+  colorKey66: [
     '#041322',
     '深蓝',
     '暗蓝',
@@ -836,7 +812,7 @@ export const colorDictionary = {
     'faintBlue',
     'darkBlue',
   ],
-  'Blue Whale': [
+  colorKey67: [
     '#042E4C',
     '暗蓝',
     '深蓝',
@@ -848,7 +824,7 @@ export const colorDictionary = {
     'darkBlue',
     'faintBlue',
   ],
-  Zuccini: [
+  colorKey68: [
     '#044022',
     '暗绿',
     '深绿',
@@ -863,7 +839,7 @@ export const colorDictionary = {
     'DarkGreen',
     'darkGreen',
   ],
-  'Teal Blue': [
+  colorKey69: [
     '#044259',
     '青',
     '水鸭蓝',
@@ -875,7 +851,7 @@ export const colorDictionary = {
     'TealBlue',
     'cyan',
   ],
-  'Deep Cove': [
+  colorKey70: [
     '#051040',
     '深蓝',
     '蓝',
@@ -886,7 +862,7 @@ export const colorDictionary = {
     'darkBlue',
     'midnightBlue',
   ],
-  'Gulf Blue': [
+  colorKey71: [
     '#051657',
     '深蓝',
     '蓝',
@@ -897,7 +873,7 @@ export const colorDictionary = {
     'darkBlue',
     'midnightBlue',
   ],
-  'Venice Blue': [
+  colorKey72: [
     '#055989',
     '钢蓝',
     '天蓝',
@@ -909,7 +885,7 @@ export const colorDictionary = {
     'skyBlue',
     'SteelBlue',
   ],
-  Watercourse: [
+  colorKey73: [
     '#056F57',
     '春绿',
     '绿',
@@ -918,16 +894,8 @@ export const colorDictionary = {
     'green',
     'springgreen',
   ],
-  'Catalina Blue': [
-    '#062A78',
-    '深蓝',
-    '蓝',
-    '蓝色',
-    '深蓝色',
-    'blue',
-    'darkBlue',
-  ],
-  Tiber: [
+  colorKey74: ['#062A78', '深蓝', '蓝', '蓝色', '深蓝色', 'blue', 'darkBlue'],
+  colorKey75: [
     '#063537',
     '暗绿',
     '墨绿',
@@ -939,7 +907,7 @@ export const colorDictionary = {
     'blackishGreen',
     'darkGreen',
   ],
-  Gossamer: [
+  colorKey76: [
     '#069B81',
     '浅海洋绿',
     '亮绿',
@@ -954,7 +922,7 @@ export const colorDictionary = {
     'brightGreen',
     'LightOceanGreen',
   ],
-  Niagara: [
+  colorKey77: [
     '#06A189',
     '浅海洋绿',
     '亮绿',
@@ -969,7 +937,7 @@ export const colorDictionary = {
     'brightGreen',
     'LightOceanGreen',
   ],
-  Tarawera: [
+  colorKey78: [
     '#073A50',
     '钢蓝',
     '深蓝',
@@ -981,8 +949,8 @@ export const colorDictionary = {
     'darkBlue',
     'SteelBlue',
   ],
-  Jaguar: ['#080110', '黑', '黑色', 'black'],
-  'Black Bean': [
+  colorKey79: ['#080110', '黑', '黑色', 'black'],
+  colorKey80: [
     '#081910',
     '深绿',
     '暗绿',
@@ -997,7 +965,7 @@ export const colorDictionary = {
     'darkGreen',
     'DarkGreen',
   ],
-  'Deep Sapphire': [
+  colorKey81: [
     '#082567',
     '暗蓝',
     '海军蓝',
@@ -1014,7 +982,7 @@ export const colorDictionary = {
     'faintBlue',
     'midnightBlue',
   ],
-  'Elf Green': [
+  colorKey82: [
     '#088370',
     '水鸭',
     '薄荷绿',
@@ -1026,7 +994,7 @@ export const colorDictionary = {
     'MintGreen',
     'teal',
   ],
-  'Bright Turquoise': [
+  colorKey83: [
     '#08E8DE',
     '水绿',
     '浅绿',
@@ -1041,7 +1009,7 @@ export const colorDictionary = {
     'LightGreen',
     'aqua',
   ],
-  Downriver: [
+  colorKey84: [
     '#092256',
     '暗蓝',
     '深蓝',
@@ -1053,7 +1021,7 @@ export const colorDictionary = {
     'darkBlue',
     'faintBlue',
   ],
-  'Palm Green': [
+  colorKey85: [
     '#09230F',
     '深橄榄绿',
     '暗绿',
@@ -1071,7 +1039,7 @@ export const colorDictionary = {
     'darkGreen',
     'Dark0liveGreen',
   ],
-  Madison: [
+  colorKey86: [
     '#09255D',
     '中蓝',
     '宝石蓝',
@@ -1083,7 +1051,7 @@ export const colorDictionary = {
     'royalblue',
     'mediumBlue',
   ],
-  'Bottle Green': [
+  colorKey87: [
     '#093624',
     '森林绿',
     '中绿',
@@ -1095,7 +1063,7 @@ export const colorDictionary = {
     'MediumGreen',
     'forestGreen',
   ],
-  'Deep Sea Green': [
+  colorKey88: [
     '#095859',
     '水鸭',
     '绿',
@@ -1107,7 +1075,7 @@ export const colorDictionary = {
     'green',
     'teal',
   ],
-  Salem: [
+  colorKey89: [
     '#097F4B',
     '亮绿',
     '淡绿',
@@ -1119,8 +1087,8 @@ export const colorDictionary = {
     'paleGreen',
     'brightGreen',
   ],
-  'Black Russian': ['#0A001C', '黑', '黑色', 'black'],
-  'Dark Fern': [
+  colorKey90: ['#0A001C', '黑', '黑色', 'black'],
+  colorKey91: [
     '#0A480D',
     '森林绿',
     '绿',
@@ -1129,7 +1097,7 @@ export const colorDictionary = {
     'green',
     'forestGreen',
   ],
-  'Japanese Laurel': [
+  colorKey92: [
     '#0A6906',
     '森林绿',
     '绿',
@@ -1138,7 +1106,7 @@ export const colorDictionary = {
     'green',
     'forestGreen',
   ],
-  Atoll: [
+  colorKey93: [
     '#0A6F75',
     '暗青',
     '水鸭',
@@ -1150,8 +1118,8 @@ export const colorDictionary = {
     'teal',
     'DarkCyan',
   ],
-  'Cod Gray': ['#0B0B0B', '黑', '黑色', 'black'],
-  Marshland: [
+  colorKey94: ['#0B0B0B', '黑', '黑色', 'black'],
+  colorKey95: [
     '#0B0F08',
     '绿',
     '暗绿',
@@ -1167,7 +1135,7 @@ export const colorDictionary = {
     'darkGreen',
     'black',
   ],
-  'Gordons Green': [
+  colorKey96: [
     '#0B1107',
     '深绿',
     '暗绿',
@@ -1181,7 +1149,7 @@ export const colorDictionary = {
     'blackishGreen',
     'darkGreen',
   ],
-  'Black Forest': [
+  colorKey97: [
     '#0B1304',
     '黑',
     '暗绿',
@@ -1196,7 +1164,7 @@ export const colorDictionary = {
     'darkGreen',
     'black',
   ],
-  'San Felix': [
+  colorKey98: [
     '#0B6207',
     '深绿',
     '暗绿',
@@ -1205,7 +1173,7 @@ export const colorDictionary = {
     'darkGreen',
     'DarkGreen',
   ],
-  Malachite: [
+  colorKey99: [
     '#0BDA51',
     '草绿',
     '黄绿',
@@ -1223,7 +1191,7 @@ export const colorDictionary = {
     'YellowGreen',
     'GrassGreet ',
   ],
-  Ebony: [
+  colorKey100: [
     '#0C0B1D',
     '午夜蓝',
     '暗蓝',
@@ -1238,8 +1206,8 @@ export const colorDictionary = {
     'faintBlue',
     'MidnightBlue',
   ],
-  Woodsmoke: ['#0C0D0F', '黑', '黑色', 'black'],
-  'Racing Green': [
+  colorKey101: ['#0C0D0F', '黑', '黑色', 'black'],
+  colorKey102: [
     '#0C1911',
     '褐绿',
     '墨绿',
@@ -1254,7 +1222,7 @@ export const colorDictionary = {
     'blackishGreen',
     'breen',
   ],
-  'Surfie Green': [
+  colorKey103: [
     '#0C7A79',
     '水鸭',
     '浅绿',
@@ -1269,7 +1237,7 @@ export const colorDictionary = {
     'LightGreen',
     'teal',
   ],
-  'Blue Chill': [
+  colorKey104: [
     '#0C8990',
     '深青',
     '水鸭',
@@ -1284,9 +1252,9 @@ export const colorDictionary = {
     'teal',
     'darkCyan',
   ],
-  'Black Rock': ['#0D0332', '深蓝', '蓝', '蓝色', '深蓝色', 'blue', 'darkBlue'],
-  Bunker: ['#0D1117', '黑', '黑色', 'black'],
-  Aztec: [
+  colorKey105: ['#0D0332', '深蓝', '蓝', '蓝色', '深蓝色', 'blue', 'darkBlue'],
+  colorKey106: ['#0D1117', '黑', '黑色', 'black'],
+  colorKey107: [
     '#0D1C19',
     '墨绿',
     '深绿',
@@ -1298,7 +1266,7 @@ export const colorDictionary = {
     'DarkGreen',
     'blackishGreen',
   ],
-  Bush: [
+  colorKey108: [
     '#0D2E1C',
     '墨绿',
     '深绿',
@@ -1310,8 +1278,8 @@ export const colorDictionary = {
     'DarkGreen',
     'blackishGreen',
   ],
-  Cinder: ['#0E0E18', '暗蓝', '暗蓝色', 'faintBlue'],
-  Firefly: [
+  colorKey109: ['#0E0E18', '暗蓝', '暗蓝色', 'faintBlue'],
+  colorKey110: [
     '#0E2A30',
     '石板青',
     '墨绿',
@@ -1323,7 +1291,7 @@ export const colorDictionary = {
     'blackishGreen',
     'slateCyan',
   ],
-  'Torea Bay': [
+  colorKey111: [
     '#0F2D9E',
     '中蓝',
     '蓝',
@@ -1332,17 +1300,9 @@ export const colorDictionary = {
     'blue',
     'mediumBlue',
   ],
-  Vulcan: ['#10121D', '暗蓝', '蓝', '蓝色', '暗蓝色', 'blue', 'faintBlue'],
-  'Green Waterloo': [
-    '#101405',
-    '褐绿',
-    '绿',
-    '绿色',
-    '褐绿色',
-    'green',
-    'breen',
-  ],
-  Eden: [
+  colorKey112: ['#10121D', '暗蓝', '蓝', '蓝色', '暗蓝色', 'blue', 'faintBlue'],
+  colorKey113: ['#101405', '褐绿', '绿', '绿色', '褐绿色', 'green', 'breen'],
+  colorKey114: [
     '#105852',
     '水鸭',
     '青',
@@ -1354,13 +1314,21 @@ export const colorDictionary = {
     'cyan',
     'teal',
   ],
-  Arapawa: ['#110C6C', '深蓝', '蓝', '蓝色', '深蓝色', 'blue', 'darkBlue'],
-  Ultramarine: ['#120A8F', '深蓝', '蓝', '蓝色', '深蓝色', 'blue', 'darkBlue'],
-  Elephant: ['#123447', '藏蓝', '蓝', '蓝色', '藏蓝色', 'blue', 'purplishBlue'],
-  Jewel: ['#126B40', '绿', '绿色', 'green'],
-  Diesel: ['#130000', '黑', '黑色', 'black'],
-  Asphalt: ['#130A06', '黑', '黑色', 'black'],
-  'Blue Zodiac': [
+  colorKey115: ['#110C6C', '深蓝', '蓝', '蓝色', '深蓝色', 'blue', 'darkBlue'],
+  colorKey116: ['#120A8F', '深蓝', '蓝', '蓝色', '深蓝色', 'blue', 'darkBlue'],
+  colorKey117: [
+    '#123447',
+    '藏蓝',
+    '蓝',
+    '蓝色',
+    '藏蓝色',
+    'blue',
+    'purplishBlue',
+  ],
+  colorKey118: ['#126B40', '绿', '绿色', 'green'],
+  colorKey119: ['#130000', '黑', '黑色', 'black'],
+  colorKey120: ['#130A06', '黑', '黑色', 'black'],
+  colorKey121: [
     '#13264D',
     '海军蓝',
     '蓝',
@@ -1371,7 +1339,7 @@ export const colorDictionary = {
     'midnightBlue',
     'navyBlue',
   ],
-  Parsley: [
+  colorKey122: [
     '#134F19',
     '深绿',
     '暗绿',
@@ -1383,9 +1351,9 @@ export const colorDictionary = {
     'darkGreen',
     'DarkGreen',
   ],
-  Nero: ['#140600', '黑', '黑色', 'black'],
-  'Tory Blue': ['#1450AA', '蓝', '蓝色', 'blue'],
-  Bunting: [
+  colorKey123: ['#140600', '黑', '黑色', 'black'],
+  colorKey124: ['#1450AA', '蓝', '蓝色', 'blue'],
+  colorKey125: [
     '#151F4C',
     '午夜蓝',
     '深蓝',
@@ -1397,8 +1365,8 @@ export const colorDictionary = {
     'darkBlue',
     'MidnightBlue',
   ],
-  Denim: ['#1560BD', '天蓝', '蓝', '蓝色', '天蓝色', 'blue', 'skyBlue'],
-  Genoa: [
+  colorKey126: ['#1560BD', '天蓝', '蓝', '蓝色', '天蓝色', 'blue', 'skyBlue'],
+  colorKey127: [
     '#15736B',
     '水鸭',
     '青',
@@ -1410,7 +1378,7 @@ export const colorDictionary = {
     'cyan',
     'teal',
   ],
-  Mirage: [
+  colorKey128: [
     '#161928',
     '午夜蓝',
     '深蓝',
@@ -1422,7 +1390,7 @@ export const colorDictionary = {
     'darkBlue',
     'MidnightBlue',
   ],
-  'Hunter Green': [
+  colorKey129: [
     '#161D10',
     '深橄榄绿',
     '墨绿',
@@ -1434,7 +1402,7 @@ export const colorDictionary = {
     'blackishGreen',
     'Dark0liveGreen',
   ],
-  'Big Stone': [
+  colorKey130: [
     '#162A40',
     '钢蓝',
     '深蓝',
@@ -1446,7 +1414,7 @@ export const colorDictionary = {
     'darkBlue',
     'SteelBlue',
   ],
-  Celtic: [
+  colorKey131: [
     '#163222',
     '森林绿',
     '墨绿',
@@ -1461,7 +1429,7 @@ export const colorDictionary = {
     'blackishGreen',
     'forestGreen',
   ],
-  'Timber Green': [
+  colorKey132: [
     '#16322C',
     '深绿',
     '绿',
@@ -1470,7 +1438,7 @@ export const colorDictionary = {
     'green',
     'DarkGreen',
   ],
-  'Gable Green': [
+  colorKey133: [
     '#163531',
     '墨绿',
     '绿',
@@ -1479,7 +1447,7 @@ export const colorDictionary = {
     'green',
     'blackishGreen',
   ],
-  'Pine Tree': [
+  colorKey134: [
     '#171F04',
     '深橄榄绿',
     '绿',
@@ -1488,16 +1456,8 @@ export const colorDictionary = {
     'green',
     'Dark0liveGreen',
   ],
-  'Chathams Blue': [
-    '#175579',
-    '钢蓝',
-    '蓝',
-    '蓝色',
-    '钢蓝色',
-    'blue',
-    'SteelBlue',
-  ],
-  'Deep Forest Green': [
+  colorKey135: ['#175579', '钢蓝', '蓝', '蓝色', '钢蓝色', 'blue', 'SteelBlue'],
+  colorKey136: [
     '#182D09',
     '橄榄绿',
     '深绿',
@@ -1509,8 +1469,8 @@ export const colorDictionary = {
     'DarkGreen',
     'oliveGreen',
   ],
-  Blumine: ['#18587A', '钢蓝', '蓝', '蓝色', '钢蓝色', 'blue', 'SteelBlue'],
-  'Palm Leaf': [
+  colorKey137: ['#18587A', '钢蓝', '蓝', '蓝色', '钢蓝色', 'blue', 'SteelBlue'],
+  colorKey138: [
     '#19330E',
     '深绿',
     '绿',
@@ -1519,7 +1479,7 @@ export const colorDictionary = {
     'green',
     'DarkGreen',
   ],
-  'Nile Blue': [
+  colorKey139: [
     '#193751',
     '钢蓝',
     '深蓝',
@@ -1531,8 +1491,8 @@ export const colorDictionary = {
     'darkBlue',
     'SteelBlue',
   ],
-  'Fun Blue': ['#1959A8', '天蓝', '蓝', '蓝色', '天蓝色', 'blue', 'skyBlue'],
-  'Lucky Point': [
+  colorKey140: ['#1959A8', '天蓝', '蓝', '蓝色', '天蓝色', 'blue', 'skyBlue'],
+  colorKey141: [
     '#1A1A68',
     '中蓝',
     '蓝',
@@ -1541,7 +1501,7 @@ export const colorDictionary = {
     'blue',
     'mediumBlue',
   ],
-  'Mountain Meadow': [
+  colorKey142: [
     '#1AB385',
     '碧绿',
     '间绿',
@@ -1553,9 +1513,9 @@ export const colorDictionary = {
     'mediumaquamarine',
     'aquamarine',
   ],
-  Tolopea: ['#1B0245', '蓝', '蓝色', 'blue'],
-  Haiti: ['#1B1035', '蓝', '蓝色', 'blue'],
-  'Deep Koamaru': [
+  colorKey143: ['#1B0245', '蓝', '蓝色', 'blue'],
+  colorKey144: ['#1B1035', '蓝', '蓝色', 'blue'],
+  colorKey145: [
     '#1B127B',
     '靛蓝',
     '蓝',
@@ -1564,8 +1524,8 @@ export const colorDictionary = {
     'blue',
     'indigoBlue',
   ],
-  Acadia: ['#1B1404', '黑', '黑色', 'black'],
-  Seaweed: [
+  colorKey146: ['#1B1404', '黑', '黑色', 'black'],
+  colorKey147: [
     '#1B2F11',
     '橄榄',
     '橄榄绿',
@@ -1577,8 +1537,16 @@ export const colorDictionary = {
     'oliveGreen',
     'olive',
   ],
-  Biscay: ['#1B3162', '中蓝', '蓝', '蓝色', '中蓝色', 'blue', 'mediumBlue'],
-  Matisse: [
+  colorKey148: [
+    '#1B3162',
+    '中蓝',
+    '蓝',
+    '蓝色',
+    '中蓝色',
+    'blue',
+    'mediumBlue',
+  ],
+  colorKey149: [
     '#1B659D',
     '天蓝',
     '浅蓝',
@@ -1590,7 +1558,7 @@ export const colorDictionary = {
     'wathetBlue',
     'skyBlue',
   ],
-  Crowshead: [
+  colorKey150: [
     '#1C1208',
     '深棕',
     '深褐',
@@ -1614,8 +1582,8 @@ export const colorDictionary = {
     'sealBrown',
     'darkBrown',
   ],
-  'Rangoon Green': ['#1C1E13', '绿', '绿色', 'green'],
-  'Persian Blue': [
+  colorKey151: ['#1C1E13', '绿', '绿色', 'green'],
+  colorKey152: [
     '#1C39BB',
     '钴蓝',
     '蓝',
@@ -1624,7 +1592,7 @@ export const colorDictionary = {
     'blue',
     'cobaltBlue',
   ],
-  Everglade: [
+  colorKey153: [
     '#1C402E',
     '墨绿',
     '深绿',
@@ -1636,7 +1604,7 @@ export const colorDictionary = {
     'DarkGreen',
     'blackishGreen',
   ],
-  Elm: [
+  colorKey154: [
     '#1C7C7D',
     '薄荷绿',
     '深青',
@@ -1648,7 +1616,7 @@ export const colorDictionary = {
     'darkCyan',
     'MintGreen',
   ],
-  'Green Pea': [
+  colorKey155: [
     '#1D6142',
     '森林绿',
     '绿',
@@ -1657,7 +1625,7 @@ export const colorDictionary = {
     'green',
     'forestGreen',
   ],
-  Creole: [
+  colorKey156: [
     '#1E0F04',
     '咖啡',
     '赭',
@@ -1675,7 +1643,7 @@ export const colorDictionary = {
     'ochre',
     'coffee',
   ],
-  Karaka: [
+  colorKey157: [
     '#1E1609',
     '咖啡',
     '赭',
@@ -1693,7 +1661,7 @@ export const colorDictionary = {
     'ochre',
     'coffee',
   ],
-  'El Paso': [
+  colorKey158: [
     '#1E1708',
     '咖啡',
     '赭',
@@ -1711,9 +1679,9 @@ export const colorDictionary = {
     'ochre',
     'coffee',
   ],
-  Cello: ['#1E385B', '钢蓝', '蓝', '蓝色', '钢蓝色', 'blue', 'SteelBlue'],
-  'Te Papa Green': ['#1E433C', '绿', '绿色', '海藻绿', 'green'],
-  'Dodger Blue': [
+  colorKey159: ['#1E385B', '钢蓝', '蓝', '蓝色', '钢蓝色', 'blue', 'SteelBlue'],
+  colorKey160: ['#1E433C', '绿', '绿色', '海藻绿', 'green'],
+  colorKey161: [
     '#1E90FF',
     '天蓝',
     '浅蓝',
@@ -1725,7 +1693,7 @@ export const colorDictionary = {
     'wathetBlue',
     'skyBlue',
   ],
-  'Eastern Blue': [
+  colorKey162: [
     '#1E9AB0',
     '薄荷蓝',
     '薄荷绿',
@@ -1743,7 +1711,7 @@ export const colorDictionary = {
     'MintGreen',
     'MintBlue',
   ],
-  'Night Rider': [
+  colorKey163: [
     '#1F120F',
     '重褐',
     '咖啡',
@@ -1764,7 +1732,7 @@ export const colorDictionary = {
     'coffee',
     'saddlebrown',
   ],
-  Java: [
+  colorKey164: [
     '#1FC2C2',
     '薄荷蓝',
     '薄荷绿',
@@ -1776,25 +1744,9 @@ export const colorDictionary = {
     'MintGreen',
     'MintBlue',
   ],
-  'Jacksons Purple': [
-    '#20208D',
-    '深蓝',
-    '蓝',
-    '蓝色',
-    '深蓝色',
-    'blue',
-    'darkBlue',
-  ],
-  'Cloud Burst': [
-    '#202E54',
-    '深蓝',
-    '蓝',
-    '蓝色',
-    '深蓝色',
-    'blue',
-    'darkBlue',
-  ],
-  'Blue Dianne': [
+  colorKey165: ['#20208D', '深蓝', '蓝', '蓝色', '深蓝色', 'blue', 'darkBlue'],
+  colorKey166: ['#202E54', '深蓝', '蓝', '蓝色', '深蓝色', 'blue', 'darkBlue'],
+  colorKey167: [
     '#204852',
     '藏蓝',
     '蓝',
@@ -1803,7 +1755,7 @@ export const colorDictionary = {
     'blue',
     'purplishBlue',
   ],
-  Eternity: [
+  colorKey168: [
     '#211A0E',
     '咖啡',
     '赭',
@@ -1821,7 +1773,7 @@ export const colorDictionary = {
     'ochre',
     'coffee',
   ],
-  'Deep Blue': [
+  colorKey169: [
     '#220878',
     '宝石蓝',
     '深蓝',
@@ -1833,8 +1785,8 @@ export const colorDictionary = {
     'darkBlue',
     'royalblue',
   ],
-  'Forest Green': ['#228B22', '绿', '绿色', 'green'],
-  Mallard: [
+  colorKey170: ['#228B22', '绿', '绿色', 'green'],
+  colorKey171: [
     '#233418',
     '深绿',
     '橄榄绿',
@@ -1843,8 +1795,16 @@ export const colorDictionary = {
     'oliveGreen',
     'DarkGreen',
   ],
-  Violet: ['#240A40', '中紫', '紫', '紫色', '中紫色', 'purple', 'mediumorchid'],
-  Kilamanjaro: [
+  colorKey172: [
+    '#240A40',
+    '中紫',
+    '紫',
+    '紫色',
+    '中紫色',
+    'purple',
+    'mediumorchid',
+  ],
+  colorKey173: [
     '#240C02',
     '栗',
     '褐红',
@@ -1856,7 +1816,7 @@ export const colorDictionary = {
     'maroon',
     'chestnutColour',
   ],
-  'Log Cabin': [
+  colorKey174: [
     '#242A1D',
     '深绿',
     '橄榄绿',
@@ -1871,7 +1831,7 @@ export const colorDictionary = {
     'oliveGreen',
     'DarkGreen',
   ],
-  'Black Olive': [
+  colorKey175: [
     '#242E16',
     '深绿',
     '橄榄绿',
@@ -1886,7 +1846,7 @@ export const colorDictionary = {
     'oliveGreen',
     'DarkGreen',
   ],
-  'Green House': [
+  colorKey176: [
     '#24500F',
     '森林绿',
     '绿',
@@ -1895,7 +1855,7 @@ export const colorDictionary = {
     'green',
     'forestGreen',
   ],
-  Graphite: [
+  colorKey177: [
     '#251607',
     '暗红',
     '红棕',
@@ -1919,7 +1879,7 @@ export const colorDictionary = {
     'reddishBrown',
     'darkRed',
   ],
-  'Cannon Black': [
+  colorKey178: [
     '#251706',
     '咖啡',
     '赭',
@@ -1937,8 +1897,8 @@ export const colorDictionary = {
     'ochre',
     'coffee',
   ],
-  'Port Gore': ['#251F4F', '紫', '紫色', 'purple'],
-  Shark: [
+  colorKey179: ['#251F4F', '紫', '紫色', 'purple'],
+  colorKey180: [
     '#25272C',
     '暗蓝',
     '深蓝',
@@ -1949,7 +1909,7 @@ export const colorDictionary = {
     'darkBlue',
     'dustyBlue',
   ],
-  'Green Kelp': [
+  colorKey181: [
     '#25311C',
     '墨绿',
     '深橄榄绿',
@@ -1964,7 +1924,7 @@ export const colorDictionary = {
     'Dark0liveGreen',
     'blackishGreen',
   ],
-  'Curious Blue': [
+  colorKey182: [
     '#2596D1',
     '浅蓝',
     '海蓝',
@@ -1982,8 +1942,16 @@ export const colorDictionary = {
     'OceanBlue',
     'wathetBlue',
   ],
-  Paua: ['#260368', '靛蓝', '紫', '紫色', '靛蓝色', 'purple', 'indigoBlue'],
-  'Paris M': [
+  colorKey183: [
+    '#260368',
+    '靛蓝',
+    '紫',
+    '紫色',
+    '靛蓝色',
+    'purple',
+    'indigoBlue',
+  ],
+  colorKey184: [
     '#26056A',
     '靛蓝',
     '紫',
@@ -1992,7 +1960,7 @@ export const colorDictionary = {
     'purple',
     'indigoBlue',
   ],
-  'Wood Bark': [
+  colorKey185: [
     '#261105',
     '深棕',
     '咖啡',
@@ -2013,36 +1981,20 @@ export const colorDictionary = {
     'coffee',
     'darkBrown',
   ],
-  Gondola: ['#261414', '暗红', '红', '红色', '暗红色', 'red', 'darkRed'],
-  'Steel Gray': [
-    '#262335',
-    '灰蓝',
-    '蓝',
-    '蓝色',
-    '灰蓝色',
-    'blue',
-    'dustyBlue',
+  colorKey186: ['#261414', '暗红', '红', '红色', '暗红色', 'red', 'darkRed'],
+  colorKey187: ['#262335', '灰蓝', '蓝', '蓝色', '灰蓝色', 'blue', 'dustyBlue'],
+  colorKey188: ['#26283B', '灰蓝', '蓝', '蓝色', '灰蓝色', 'blue', 'dustyBlue'],
+  colorKey189: ['#273A81', '宝蓝', '蓝', '蓝色', '宝蓝色', 'blue', 'royalBlue'],
+  colorKey190: [
+    '#27504B',
+    '暗绿',
+    '绿',
+    '绿色',
+    '暗绿色',
+    'green',
+    'darkGreen',
   ],
-  'Ebony Clay': [
-    '#26283B',
-    '灰蓝',
-    '蓝',
-    '蓝色',
-    '灰蓝色',
-    'blue',
-    'dustyBlue',
-  ],
-  'Bay of Many': [
-    '#273A81',
-    '宝蓝',
-    '蓝',
-    '蓝色',
-    '宝蓝色',
-    'blue',
-    'royalBlue',
-  ],
-  Plantation: ['#27504B', '暗绿', '绿', '绿色', '暗绿色', 'green', 'darkGreen'],
-  Eucalyptus: [
+  colorKey191: [
     '#278A5B',
     '海洋绿',
     '绿',
@@ -2051,7 +2003,7 @@ export const colorDictionary = {
     'green',
     'SeaGreen',
   ],
-  Oil: [
+  colorKey192: [
     '#281E15',
     '咖啡',
     '赭',
@@ -2069,9 +2021,17 @@ export const colorDictionary = {
     'ochre',
     'coffee',
   ],
-  Astronaut: ['#283A77', '中蓝', '蓝', '蓝色', '中蓝色', 'blue', 'mediumBlue'],
-  Mariner: ['#286ACD', '宝蓝', '蓝', '蓝色', '宝蓝色', 'blue', 'royalBlue'],
-  'Violent Violet': [
+  colorKey193: [
+    '#283A77',
+    '中蓝',
+    '蓝',
+    '蓝色',
+    '中蓝色',
+    'blue',
+    'mediumBlue',
+  ],
+  colorKey194: ['#286ACD', '宝蓝', '蓝', '蓝色', '宝蓝色', 'blue', 'royalBlue'],
+  colorKey195: [
     '#290C5E',
     '紫罗兰',
     '紫',
@@ -2080,8 +2040,16 @@ export const colorDictionary = {
     'purple',
     'violet',
   ],
-  Bastille: ['#292130', '深紫', '紫', '紫色', '深紫色', 'purple', 'darkViolet'],
-  Zeus: [
+  colorKey196: [
+    '#292130',
+    '深紫',
+    '紫',
+    '紫色',
+    '深紫色',
+    'purple',
+    'darkViolet',
+  ],
+  colorKey197: [
     '#292319',
     '咖啡',
     '赭',
@@ -2099,9 +2067,9 @@ export const colorDictionary = {
     'ochre',
     'coffee',
   ],
-  Charade: ['#292937', '蓝灰', '蓝', '蓝色', '蓝灰色', 'blue', 'blueGrey'],
-  'Jelly Bean': ['#297B9A', '暗青', '暗青色', 'DarkCyan'],
-  'Jungle Green': [
+  colorKey198: ['#292937', '蓝灰', '蓝', '蓝色', '蓝灰色', 'blue', 'blueGrey'],
+  colorKey199: ['#297B9A', '暗青', '暗青色', 'DarkCyan'],
+  colorKey200: [
     '#29AB87',
     '亮绿',
     '浅绿',
@@ -2113,7 +2081,7 @@ export const colorDictionary = {
     'LightGreen',
     'brightGreen',
   ],
-  'Cherry Pie': [
+  colorKey201: [
     '#2A0359',
     '紫罗兰',
     '紫',
@@ -2122,7 +2090,7 @@ export const colorDictionary = {
     'purple',
     'violet',
   ],
-  'Coffee Bean': [
+  colorKey202: [
     '#2A140E',
     '重褐',
     '红棕',
@@ -2134,7 +2102,7 @@ export const colorDictionary = {
     'reddishBrown',
     'saddlebrown',
   ],
-  'Baltic Sea': [
+  colorKey203: [
     '#2A2630',
     '暗紫',
     '深紫',
@@ -2145,7 +2113,7 @@ export const colorDictionary = {
     'purple',
     'DarkPurple',
   ],
-  'Turtle Green': [
+  colorKey204: [
     '#2A380B',
     '橄榄',
     '橄榄绿',
@@ -2157,7 +2125,7 @@ export const colorDictionary = {
     'oliveGreen',
     'olive',
   ],
-  'Cerulean Blue': [
+  colorKey205: [
     '#2A52BE',
     '天蓝',
     '碧蓝',
@@ -2169,7 +2137,7 @@ export const colorDictionary = {
     'darkBlue',
     'skyBlue',
   ],
-  'Sepia Black': [
+  colorKey206: [
     '#2B0202',
     '暗红',
     '深红',
@@ -2181,8 +2149,16 @@ export const colorDictionary = {
     'crimson',
     'darkRed',
   ],
-  Valhalla: ['#2B194F', '紫罗兰', '紫', '紫色', '紫罗兰色', 'purple', 'violet'],
-  'Heavy Metal': [
+  colorKey207: [
+    '#2B194F',
+    '紫罗兰',
+    '紫',
+    '紫色',
+    '紫罗兰色',
+    'purple',
+    'violet',
+  ],
+  colorKey208: [
     '#2B3228',
     '暗橄榄绿',
     '暗绿',
@@ -2197,20 +2173,20 @@ export const colorDictionary = {
     'darkGreen',
     'darkOliveGreen',
   ],
-  'Blue Gem': ['#2C0E8C', '靛蓝', '蓝', '蓝色', '靛蓝色', 'blue', 'indigoBlue'],
-  Revolver: ['#2C1632', '紫', '紫色', 'purple'],
-  'Bleached Cedar': [
-    '#2C2133',
-    '浅紫',
-    '紫',
-    '紫色',
-    '浅紫色',
-    'purple',
-    'lilac',
+  colorKey209: [
+    '#2C0E8C',
+    '靛蓝',
+    '蓝',
+    '蓝色',
+    '靛蓝色',
+    'blue',
+    'indigoBlue',
   ],
-  Lochinvar: ['#2C8C84', '青', '青色', 'cyan'],
-  Mikado: ['#2D2510', '土褐', '褐', '褐色', '土褐色', 'brownness', 'tan'],
-  'Outer Space': [
+  colorKey210: ['#2C1632', '紫', '紫色', 'purple'],
+  colorKey211: ['#2C2133', '浅紫', '紫', '紫色', '浅紫色', 'purple', 'lilac'],
+  colorKey212: ['#2C8C84', '青', '青色', 'cyan'],
+  colorKey213: ['#2D2510', '土褐', '褐', '褐色', '土褐色', 'brownness', 'tan'],
+  colorKey214: [
     '#2D383A',
     '墨绿',
     '绿',
@@ -2222,9 +2198,9 @@ export const colorDictionary = {
     'green',
     'blackishGreen',
   ],
-  'St Tropaz': ['#2D569B', '天蓝', '蓝', '蓝色', '天蓝色', 'blue', 'skyBlue'],
-  Jacaranda: ['#2E0329', '紫', '紫色', 'purple'],
-  'Jacko Bean': [
+  colorKey215: ['#2D569B', '天蓝', '蓝', '蓝色', '天蓝色', 'blue', 'skyBlue'],
+  colorKey216: ['#2E0329', '紫', '紫色', 'purple'],
+  colorKey217: [
     '#2E1905',
     '咖啡',
     '赭',
@@ -2239,7 +2215,7 @@ export const colorDictionary = {
     'ochre',
     'coffee',
   ],
-  Rangitoto: [
+  colorKey218: [
     '#2E3222',
     '灰绿',
     '绿',
@@ -2248,13 +2224,13 @@ export const colorDictionary = {
     'green',
     'greyishGreen',
   ],
-  Rhino: ['#2E3F62', '灰蓝', '蓝', '蓝色', '灰蓝色', 'blue', 'dustyBlue'],
-  'Sea Green': ['#2E8B57', '绿', '绿色', 'green'],
-  Scooter: ['#2EBFD4', '青', '青色', 'cyan'],
-  Onion: ['#2F270E', '土褐', '褐', '褐色', '土褐色', 'brownness', 'tan'],
-  'Governor Bay': ['#2F3CB3', '蓝', '蓝色', 'blue'],
-  Sapphire: ['#2F519E', '蓝', '蓝色', 'blue'],
-  Spectra: [
+  colorKey219: ['#2E3F62', '灰蓝', '蓝', '蓝色', '灰蓝色', 'blue', 'dustyBlue'],
+  colorKey220: ['#2E8B57', '绿', '绿色', 'green'],
+  colorKey221: ['#2EBFD4', '青', '青色', 'cyan'],
+  colorKey222: ['#2F270E', '土褐', '褐', '褐色', '土褐色', 'brownness', 'tan'],
+  colorKey223: ['#2F3CB3', '蓝', '蓝色', 'blue'],
+  colorKey224: ['#2F519E', '蓝', '蓝色', 'blue'],
+  colorKey225: [
     '#2F5A57',
     '薄荷绿',
     '绿',
@@ -2263,9 +2239,9 @@ export const colorDictionary = {
     'green',
     'MintGreen',
   ],
-  Casal: ['#2F6168', '深青', '青', '青色', '深青色', 'cyan', 'darkCyan'],
-  Melanzane: ['#300529', '紫红', '紫', '紫色', '紫红色', 'purple', 'fuchsia'],
-  'Cocoa Brown': [
+  colorKey226: ['#2F6168', '深青', '青', '青色', '深青色', 'cyan', 'darkCyan'],
+  colorKey227: ['#300529', '紫红', '紫', '紫色', '紫红色', 'purple', 'fuchsia'],
+  colorKey228: [
     '#301F1E',
     '红棕',
     '棕',
@@ -2274,10 +2250,18 @@ export const colorDictionary = {
     'brown',
     'reddishBrown',
   ],
-  Woodrush: ['#302A0F', '黄褐', '褐', '褐色', '黄褐色', 'brownness', 'tawny'],
-  'San Juan': ['#304B6A', '淡蓝', '蓝', '蓝色', '淡蓝色', 'blue', 'babyBlue'],
-  Turquoise: ['#30D5C8', '青', '青色', 'cyan'],
-  Eclipse: [
+  colorKey229: [
+    '#302A0F',
+    '黄褐',
+    '褐',
+    '褐色',
+    '黄褐色',
+    'brownness',
+    'tawny',
+  ],
+  colorKey230: ['#304B6A', '淡蓝', '蓝', '蓝色', '淡蓝色', 'blue', 'babyBlue'],
+  colorKey231: ['#30D5C8', '青', '青色', 'cyan'],
+  colorKey232: [
     '#311C17',
     '褐',
     '棕',
@@ -2289,12 +2273,20 @@ export const colorDictionary = {
     'brown',
     'brownness',
   ],
-  'Pickled Bluewood': ['#314459', '蓝', '蓝色', 'blue'],
-  Azure: ['#315BA1', '天蓝', '蓝', '蓝色', '天蓝色', 'blue', 'skyBlue'],
-  Calypso: ['#31728D', '浅蓝', '蓝', '蓝色', '浅蓝色', 'blue', 'wathetBlue'],
-  Paradiso: ['#317D82', '青', '青色', 'cyan'],
-  'Persian Indigo': ['#32127A', '紫', '紫色', 'purple'],
-  Blackcurrant: [
+  colorKey233: ['#314459', '蓝', '蓝色', 'blue'],
+  colorKey234: ['#315BA1', '天蓝', '蓝', '蓝色', '天蓝色', 'blue', 'skyBlue'],
+  colorKey235: [
+    '#31728D',
+    '浅蓝',
+    '蓝',
+    '蓝色',
+    '浅蓝色',
+    'blue',
+    'wathetBlue',
+  ],
+  colorKey236: ['#317D82', '青', '青色', 'cyan'],
+  colorKey237: ['#32127A', '紫', '紫色', 'purple'],
+  colorKey238: [
     '#32293A',
     '灰紫',
     '紫',
@@ -2303,7 +2295,7 @@ export const colorDictionary = {
     'purple',
     'greyPurple',
   ],
-  'Mine Shaft': [
+  colorKey239: [
     '#323232',
     '暗灰',
     '深灰',
@@ -2315,7 +2307,7 @@ export const colorDictionary = {
     'darkGrey',
     'Dimgray',
   ],
-  Stromboli: [
+  colorKey240: [
     '#325D52',
     '薄荷绿',
     '绿',
@@ -2324,7 +2316,7 @@ export const colorDictionary = {
     'green',
     'MintGreen',
   ],
-  Bilbao: [
+  colorKey241: [
     '#327C14',
     '翠绿',
     '亮绿',
@@ -2336,9 +2328,9 @@ export const colorDictionary = {
     'brightGreen',
     'emerald',
   ],
-  Astral: ['#327DA0', '天蓝', '蓝', '蓝色', '天蓝色', 'blue', 'skyBlue'],
-  Christalle: ['#33036B', '紫', '紫色', 'purple'],
-  Thunder: [
+  colorKey242: ['#327DA0', '天蓝', '蓝', '蓝色', '天蓝色', 'blue', 'skyBlue'],
+  colorKey243: ['#33036B', '紫', '紫色', 'purple'],
+  colorKey244: [
     '#33292F',
     '紫红',
     '洋红',
@@ -2353,7 +2345,7 @@ export const colorDictionary = {
     'Magenta',
     'Fuchsia',
   ],
-  Shamrock: [
+  colorKey245: [
     '#33CC99',
     '薄荷绿',
     '绿',
@@ -2362,7 +2354,7 @@ export const colorDictionary = {
     'green',
     'MintGreen',
   ],
-  Tamarind: [
+  colorKey246: [
     '#341515',
     '暗红',
     '深红',
@@ -2374,21 +2366,21 @@ export const colorDictionary = {
     'crimson',
     'darkRed',
   ],
-  'Mardi Gras': [
-    '#350036',
-    '紫红',
-    '紫',
-    '紫色',
-    '紫红色',
-    'purple',
-    'fuchsia',
+  colorKey247: ['#350036', '紫红', '紫', '紫色', '紫红色', 'purple', 'fuchsia'],
+  colorKey248: ['#350E42', '紫', '紫色', 'purple'],
+  colorKey249: ['#350E57', '紫', '紫色', 'purple'],
+  colorKey250: ['#353542', '灰蓝', '蓝', '蓝色', '灰蓝色', 'blue', 'blueGrey'],
+  colorKey251: [
+    '#354E8C',
+    '中蓝',
+    '蓝',
+    '蓝色',
+    '中蓝色',
+    'blue',
+    'mediumBlue',
   ],
-  Valentino: ['#350E42', '紫', '紫色', 'purple'],
-  Jagger: ['#350E57', '紫', '紫色', 'purple'],
-  Tuna: ['#353542', '灰蓝', '蓝', '蓝色', '灰蓝色', 'blue', 'blueGrey'],
-  Chambray: ['#354E8C', '中蓝', '蓝', '蓝色', '中蓝色', 'blue', 'mediumBlue'],
-  Martinique: ['#363050', '紫', '紫色', 'purple'],
-  Tuatara: [
+  colorKey252: ['#363050', '紫', '紫色', 'purple'],
+  colorKey253: [
     '#363534',
     '黑',
     '深灰',
@@ -2400,8 +2392,16 @@ export const colorDictionary = {
     'gray',
     'darkGrey',
   ],
-  Waiouru: ['#363C0D', '黄绿', '绿', '绿色', '黄绿色', 'green', 'YellowGreen'],
-  Ming: [
+  colorKey254: [
+    '#363C0D',
+    '黄绿',
+    '绿',
+    '绿色',
+    '黄绿色',
+    'green',
+    'YellowGreen',
+  ],
+  colorKey255: [
     '#36747D',
     '淡蓝',
     '浅蓝',
@@ -2413,8 +2413,8 @@ export const colorDictionary = {
     'wathetBlue',
     'babyBlue',
   ],
-  'La Palma': ['#368716', '绿', '绿色', 'green'],
-  Chocolate: [
+  colorKey256: ['#368716', '绿', '绿色', 'green'],
+  colorKey257: [
     '#370202',
     '大红',
     '深红',
@@ -2426,21 +2426,29 @@ export const colorDictionary = {
     'crimson',
     'BigRed',
   ],
-  Clinker: ['#371D09', '棕', '褐', '褐色', '棕色', 'brownness', 'brown'],
-  'Brown Tumbleweed': [
-    '#37290E',
-    '棕',
+  colorKey258: ['#371D09', '棕', '褐', '褐色', '棕色', 'brownness', 'brown'],
+  colorKey259: ['#37290E', '棕', '褐', '褐色', '棕色', 'brownness', 'brown'],
+  colorKey260: [
+    '#373021',
+    '浅褐',
     '褐',
     '褐色',
-    '棕色',
+    '浅褐色',
     'brownness',
-    'brown',
+    'lightBrown',
   ],
-  Birch: ['#373021', '浅褐', '褐', '褐色', '浅褐色', 'brownness', 'lightBrown'],
-  Oracle: ['#377475', '薄荷绿', '绿', '绿色', '薄荷绿色', 'green', 'MintGreen'],
-  'Blue Diamond': ['#380474', '紫', '紫色', 'purple'],
-  Grape: ['#381A51', '紫', '紫色', 'purple'],
-  Dune: [
+  colorKey261: [
+    '#377475',
+    '薄荷绿',
+    '绿',
+    '绿色',
+    '薄荷绿色',
+    'green',
+    'MintGreen',
+  ],
+  colorKey262: ['#380474', '紫', '紫色', 'purple'],
+  colorKey263: ['#381A51', '紫', '紫色', 'purple'],
+  colorKey264: [
     '#383533',
     '暗灰',
     '深灰',
@@ -2452,28 +2460,28 @@ export const colorDictionary = {
     'darkGrey',
     'Dimgray',
   ],
-  'Oxford Blue': [
-    '#384555',
-    '暗蓝',
-    '蓝',
-    '蓝色',
-    '暗蓝色',
-    'blue',
-    'faintBlue',
+  colorKey265: ['#384555', '暗蓝', '蓝', '蓝色', '暗蓝色', 'blue', 'faintBlue'],
+  colorKey266: [
+    '#384910',
+    '黄绿',
+    '绿',
+    '绿色',
+    '黄绿色',
+    'green',
+    'YellowGreen',
   ],
-  Clover: ['#384910', '黄绿', '绿', '绿色', '黄绿色', 'green', 'YellowGreen'],
-  'Limed Spruce': [
-    '#394851',
-    '暗蓝',
-    '蓝',
-    '蓝色',
-    '暗蓝色',
-    'blue',
-    'faintBlue',
+  colorKey267: ['#394851', '暗蓝', '蓝', '蓝色', '暗蓝色', 'blue', 'faintBlue'],
+  colorKey268: [
+    '#396413',
+    '草绿',
+    '绿',
+    '绿色',
+    '草绿色',
+    'green',
+    'GrassGreet ',
   ],
-  Dell: ['#396413', '草绿', '绿', '绿色', '草绿色', 'green', 'GrassGreet '],
-  Toledo: ['#3A0020', '紫红', '紫', '紫色', '紫红色', 'purple', 'fuchsia'],
-  Sambuca: [
+  colorKey269: ['#3A0020', '紫红', '紫', '紫色', '紫红色', 'purple', 'fuchsia'],
+  colorKey270: [
     '#3A2010',
     '茶',
     '咖啡',
@@ -2491,14 +2499,22 @@ export const colorDictionary = {
     'coffee',
     'tawny',
   ],
-  Jacarta: ['#3A2A6A', '紫', '紫色', 'purple'],
-  William: ['#3A686C', '青', '青色', '薄荷绿', 'cyan'],
-  Killarney: ['#3A6A47', '浅绿', '绿', '绿色', '浅绿色', 'green', 'LightGreen'],
-  Keppel: ['#3AB09E', '绿', '绿色', '薄荷绿', 'green'],
-  Temptress: ['#3B000B', '深红', '红', '红色', '深红色', 'red', 'crimson'],
-  Aubergine: ['#3B0910', '红', '红色', 'red'],
-  Jon: ['#3B1F1F', '淡红', '红', '红色', '淡红色', 'red', 'LightRed'],
-  Treehouse: [
+  colorKey271: ['#3A2A6A', '紫', '紫色', 'purple'],
+  colorKey272: ['#3A686C', '青', '青色', '薄荷绿', 'cyan'],
+  colorKey273: [
+    '#3A6A47',
+    '浅绿',
+    '绿',
+    '绿色',
+    '浅绿色',
+    'green',
+    'LightGreen',
+  ],
+  colorKey274: ['#3AB09E', '绿', '绿色', '薄荷绿', 'green'],
+  colorKey275: ['#3B000B', '深红', '红', '红色', '深红色', 'red', 'crimson'],
+  colorKey276: ['#3B0910', '红', '红色', 'red'],
+  colorKey277: ['#3B1F1F', '淡红', '红', '红色', '淡红色', 'red', 'LightRed'],
+  colorKey278: [
     '#3B2820',
     '茶',
     '咖啡',
@@ -2516,8 +2532,16 @@ export const colorDictionary = {
     'coffee',
     'tawny',
   ],
-  Amazon: ['#3B7A57', '浅绿', '绿', '绿色', '浅绿色', 'green', 'LightGreen'],
-  'Boston Blue': [
+  colorKey279: [
+    '#3B7A57',
+    '浅绿',
+    '绿',
+    '绿色',
+    '浅绿色',
+    'green',
+    'LightGreen',
+  ],
+  colorKey280: [
     '#3B91B4',
     '浅蓝',
     '天蓝',
@@ -2529,11 +2553,11 @@ export const colorDictionary = {
     'skyBlue',
     'wathetBlue',
   ],
-  Windsor: ['#3C0878', '紫', '紫色', 'purple'],
-  Rebel: ['#3C1206', '深红', '红', '红色', '深红色', 'red', 'crimson'],
-  Meteorite: ['#3C1F76', '紫', '紫色', 'purple'],
-  'Dark Ebony': ['#3C2005', '褐', '棕', '棕色', '褐色', 'brown', 'brownness'],
-  Camouflage: [
+  colorKey281: ['#3C0878', '紫', '紫色', 'purple'],
+  colorKey282: ['#3C1206', '深红', '红', '红色', '深红色', 'red', 'crimson'],
+  colorKey283: ['#3C1F76', '紫', '紫色', 'purple'],
+  colorKey284: ['#3C2005', '褐', '棕', '棕色', '褐色', 'brown', 'brownness'],
+  colorKey285: [
     '#3C3910',
     '茶',
     '咖啡',
@@ -2551,16 +2575,8 @@ export const colorDictionary = {
     'coffee',
     'tawny',
   ],
-  'Bright Gray': [
-    '#3C4151',
-    '灰蓝',
-    '蓝',
-    '蓝色',
-    '灰蓝色',
-    'blue',
-    'dustyBlue',
-  ],
-  'Cape Cod': [
+  colorKey286: ['#3C4151', '灰蓝', '蓝', '蓝色', '灰蓝色', 'blue', 'dustyBlue'],
+  colorKey287: [
     '#3C4443',
     '绿灰',
     '灰绿',
@@ -2573,8 +2589,8 @@ export const colorDictionary = {
     'cyan',
     'slateCyan',
   ],
-  'Lunar Green': ['#3C493A', '绿', '绿色', 'green'],
-  'Bean  ': [
+  colorKey288: ['#3C493A', '绿', '绿色', 'green'],
+  colorKey289: [
     '#3D0C02',
     '大红',
     '深红',
@@ -2586,7 +2602,7 @@ export const colorDictionary = {
     'crimson',
     'BigRed',
   ],
-  Bistre: [
+  colorKey290: [
     '#3D2B1F',
     '茶',
     '咖啡',
@@ -2604,9 +2620,9 @@ export const colorDictionary = {
     'coffee',
     'tawny',
   ],
-  Goblin: ['#3D7D52', '绿', '绿色', '薄荷绿', 'green'],
-  'Kingfisher Daisy': ['#3E0480', '紫', '紫色', 'purple'],
-  Cedar: [
+  colorKey291: ['#3D7D52', '绿', '绿色', '薄荷绿', 'green'],
+  colorKey292: ['#3E0480', '紫', '紫色', 'purple'],
+  colorKey293: [
     '#3E1C14',
     '茶',
     '咖啡',
@@ -2624,7 +2640,7 @@ export const colorDictionary = {
     'coffee',
     'tawny',
   ],
-  'English Walnut': [
+  colorKey294: [
     '#3E2B23',
     '茶',
     '咖啡',
@@ -2642,7 +2658,7 @@ export const colorDictionary = {
     'coffee',
     'tawny',
   ],
-  'Black Marlin': [
+  colorKey295: [
     '#3E2C1C',
     '茶',
     '咖啡',
@@ -2660,7 +2676,7 @@ export const colorDictionary = {
     'coffee',
     'tawny',
   ],
-  'Ship Gray': [
+  colorKey296: [
     '#3E3A44',
     '暗紫',
     '紫',
@@ -2669,7 +2685,7 @@ export const colorDictionary = {
     'purple',
     'darkPurple',
   ],
-  Pelorous: [
+  colorKey297: [
     '#3EABBF',
     '薄荷绿',
     '青',
@@ -2678,7 +2694,7 @@ export const colorDictionary = {
     'cyan',
     'MintGreen',
   ],
-  Bronze: [
+  colorKey298: [
     '#3F2109',
     '茶',
     '咖啡',
@@ -2696,7 +2712,7 @@ export const colorDictionary = {
     'coffee',
     'tawny',
   ],
-  Cola: [
+  colorKey299: [
     '#3F2500',
     '茶',
     '咖啡',
@@ -2714,7 +2730,7 @@ export const colorDictionary = {
     'coffee',
     'tawny',
   ],
-  Madras: [
+  colorKey300: [
     '#3F3002',
     '土褐',
     '黄褐',
@@ -2726,11 +2742,11 @@ export const colorDictionary = {
     'tawny',
     'tan',
   ],
-  Minsk: ['#3F307F', '紫', '紫色', 'purple'],
-  'Cabbage Pont': ['#3F4C3A', '绿', '绿色', 'green'],
-  'Tom Thumb': ['#3F583B', '绿', '绿色', 'green'],
-  'Mineral Green': ['#3F5D53', '绿', '绿色', '薄荷绿', 'green'],
-  'Puerto Rico': [
+  colorKey301: ['#3F307F', '紫', '紫色', 'purple'],
+  colorKey302: ['#3F4C3A', '绿', '绿色', 'green'],
+  colorKey303: ['#3F583B', '绿', '绿色', 'green'],
+  colorKey304: ['#3F5D53', '绿', '绿色', '薄荷绿', 'green'],
+  colorKey305: [
     '#3FC1AA',
     '青',
     '绿',
@@ -2740,7 +2756,7 @@ export const colorDictionary = {
     'green',
     'cyan',
   ],
-  Harlequin: [
+  colorKey306: [
     '#3FFF00',
     '亮绿',
     '绿',
@@ -2749,7 +2765,7 @@ export const colorDictionary = {
     'green',
     'brightGreen',
   ],
-  'Brown Pod': [
+  colorKey307: [
     '#401801',
     '赭',
     '棕',
@@ -2761,7 +2777,7 @@ export const colorDictionary = {
     'brown',
     'ochre',
   ],
-  Cork: [
+  colorKey308: [
     '#40291D',
     '赭',
     '棕',
@@ -2773,7 +2789,7 @@ export const colorDictionary = {
     'brown',
     'ochre',
   ],
-  Masala: [
+  colorKey309: [
     '#403B38',
     '赭',
     '棕',
@@ -2785,7 +2801,7 @@ export const colorDictionary = {
     'brown',
     'ochre',
   ],
-  'Thatch Green': [
+  colorKey310: [
     '#403D19',
     '黄褐',
     '褐',
@@ -2794,9 +2810,17 @@ export const colorDictionary = {
     'brownness',
     'tawny',
   ],
-  Fiord: ['#405169', '雾蓝', '蓝', '蓝色', '雾蓝色', 'blue', 'MistBlue'],
-  Viridian: ['#40826D', '浅绿', '绿', '绿色', '浅绿色', 'green', 'LightGreen'],
-  'Chateau Green': [
+  colorKey311: ['#405169', '雾蓝', '蓝', '蓝色', '雾蓝色', 'blue', 'MistBlue'],
+  colorKey312: [
+    '#40826D',
+    '浅绿',
+    '绿',
+    '绿色',
+    '浅绿色',
+    'green',
+    'LightGreen',
+  ],
+  colorKey313: [
     '#40A860',
     '亮绿',
     '绿',
@@ -2805,8 +2829,8 @@ export const colorDictionary = {
     'green',
     'brightGreen',
   ],
-  'Ripe Plum': ['#410056', '紫', '紫色', 'purple'],
-  Paco: [
+  colorKey314: ['#410056', '紫', '紫色', 'purple'],
+  colorKey315: [
     '#411F10',
     '浅棕',
     '褐',
@@ -2818,7 +2842,7 @@ export const colorDictionary = {
     'brownness',
     'lightBrown',
   ],
-  'Deep Oak': [
+  colorKey316: [
     '#412010',
     '浅棕',
     '褐',
@@ -2830,7 +2854,7 @@ export const colorDictionary = {
     'brownness',
     'lightBrown',
   ],
-  Merlin: [
+  colorKey317: [
     '#413C37',
     '赭',
     '棕',
@@ -2842,21 +2866,13 @@ export const colorDictionary = {
     'brown',
     'ochre',
   ],
-  'Gun Powder': [
-    '#414257',
-    '灰蓝',
-    '蓝',
-    '蓝色',
-    '灰蓝色',
-    'blue',
-    'dustyBlue',
-  ],
-  'East Bay': ['#414C7D', '淡蓝', '蓝', '蓝色', '淡蓝色', 'blue', 'babyBlue'],
-  'Royal Blue': ['#4169E1', '天蓝', '蓝', '蓝色', '天蓝色', 'blue', 'skyBlue'],
-  'Ocean Green': ['#41AA78', '绿', '绿色', 'green'],
-  'Burnt Maroon': ['#420303', '深红', '红', '红色', '深红色', 'red', 'crimson'],
-  'Lisbon Brown': ['#423921', '棕', '褐', '褐色', '棕色', 'brownness', 'brown'],
-  'Faded Jade': [
+  colorKey318: ['#414257', '灰蓝', '蓝', '蓝色', '灰蓝色', 'blue', 'dustyBlue'],
+  colorKey319: ['#414C7D', '淡蓝', '蓝', '蓝色', '淡蓝色', 'blue', 'babyBlue'],
+  colorKey320: ['#4169E1', '天蓝', '蓝', '蓝色', '天蓝色', 'blue', 'skyBlue'],
+  colorKey321: ['#41AA78', '绿', '绿色', 'green'],
+  colorKey322: ['#420303', '深红', '红', '红色', '深红色', 'red', 'crimson'],
+  colorKey323: ['#423921', '棕', '褐', '褐色', '棕色', 'brownness', 'brown'],
+  colorKey324: [
     '#427977',
     '薄荷绿',
     '绿',
@@ -2865,8 +2881,8 @@ export const colorDictionary = {
     'green',
     'MintGreen',
   ],
-  'Scarlet Gum': ['#431560', '紫', '紫色', 'purple'],
-  Iroko: [
+  colorKey325: ['#431560', '紫', '紫色', 'purple'],
+  colorKey326: [
     '#433120',
     '赭',
     '棕',
@@ -2878,7 +2894,7 @@ export const colorDictionary = {
     'brown',
     'ochre',
   ],
-  Armadillo: [
+  colorKey327: [
     '#433E37',
     '赭',
     '棕',
@@ -2890,10 +2906,10 @@ export const colorDictionary = {
     'brown',
     'ochre',
   ],
-  'River Bed': ['#434C59', '灰蓝', '蓝', '蓝色', '灰蓝色', 'blue', 'dustyBlue'],
-  'Green Leaf': ['#436A0D', '绿', '绿色', 'green'],
-  Barossa: ['#44012D', '紫红', '紫', '紫色', '紫红色', 'purple', 'fuchsia'],
-  'Morocco Brown': [
+  colorKey328: ['#434C59', '灰蓝', '蓝', '蓝色', '灰蓝色', 'blue', 'dustyBlue'],
+  colorKey329: ['#436A0D', '绿', '绿色', 'green'],
+  colorKey330: ['#44012D', '紫红', '紫', '紫色', '紫红色', 'purple', 'fuchsia'],
+  colorKey331: [
     '#441D00',
     '赭',
     '棕',
@@ -2905,10 +2921,18 @@ export const colorDictionary = {
     'brown',
     'ochre',
   ],
-  Mako: ['#444954', '蓝灰', '蓝', '蓝色', '蓝灰色', 'blue', 'blueGray'],
-  Kelp: ['#454936', '褐绿', '绿', '绿色', '褐绿色', 'green', 'BrownishGreen'],
-  'San Marino': ['#456CAC', '天蓝', '蓝', '蓝色', '天蓝色', 'blue', 'skyBlue'],
-  'Picton Blue': [
+  colorKey332: ['#444954', '蓝灰', '蓝', '蓝色', '蓝灰色', 'blue', 'blueGray'],
+  colorKey333: [
+    '#454936',
+    '褐绿',
+    '绿',
+    '绿色',
+    '褐绿色',
+    'green',
+    'BrownishGreen',
+  ],
+  colorKey334: ['#456CAC', '天蓝', '蓝', '蓝色', '天蓝色', 'blue', 'skyBlue'],
+  colorKey335: [
     '#45B1E8',
     '天蓝',
     '浅蓝',
@@ -2920,9 +2944,9 @@ export const colorDictionary = {
     'wathetBlue',
     'skyBlue',
   ],
-  Loulou: ['#460B41', '紫', '紫色', 'purple'],
-  'Crater Brown': ['#462425', '暗红', '红', '红色', '暗红色', 'red', 'darkRed'],
-  'Gray Asparagus': [
+  colorKey336: ['#460B41', '紫', '紫色', 'purple'],
+  colorKey337: ['#462425', '暗红', '红', '红色', '暗红色', 'red', 'darkRed'],
+  colorKey338: [
     '#465945',
     '暗绿',
     '绿',
@@ -2931,16 +2955,8 @@ export const colorDictionary = {
     'green',
     'darkGreen',
   ],
-  'Steel Blue': [
-    '#4682B4',
-    '钢蓝',
-    '蓝',
-    '蓝色',
-    '钢蓝色',
-    'blue',
-    'SteelBlue',
-  ],
-  'Rustic Red': [
+  colorKey339: ['#4682B4', '钢蓝', '蓝', '蓝色', '钢蓝色', 'blue', 'SteelBlue'],
+  colorKey340: [
     '#480404',
     '暗红',
     '深红',
@@ -2952,9 +2968,9 @@ export const colorDictionary = {
     'crimson',
     'darkRed',
   ],
-  'Bulgarian Rose': ['#480607', '红', '红色', 'red'],
-  Clairvoyant: ['#480656', '紫', '紫色', 'purple'],
-  'Cocoa Bean': [
+  colorKey341: ['#480607', '红', '红色', 'red'],
+  colorKey342: ['#480656', '紫', '紫色', 'purple'],
+  colorKey343: [
     '#481C1C',
     '红棕',
     '褐',
@@ -2966,7 +2982,7 @@ export const colorDictionary = {
     'brownness',
     'reddishBrown',
   ],
-  'Woody Brown': [
+  colorKey344: [
     '#483131',
     '赭',
     '棕',
@@ -2978,7 +2994,7 @@ export const colorDictionary = {
     'brown',
     'ochre',
   ],
-  Taupe: [
+  colorKey345: [
     '#483C32',
     '土褐',
     '棕',
@@ -2990,8 +3006,8 @@ export const colorDictionary = {
     'brown',
     'tan',
   ],
-  'Van Cleef': ['#49170C', '红', '红色', 'red'],
-  'Brown Derby': [
+  colorKey346: ['#49170C', '红', '红色', 'red'],
+  colorKey347: [
     '#492615',
     '赭',
     '棕',
@@ -3003,7 +3019,7 @@ export const colorDictionary = {
     'brown',
     'ochre',
   ],
-  'Metallic Bronze': [
+  colorKey348: [
     '#49371B',
     '土褐',
     '棕',
@@ -3015,25 +3031,9 @@ export const colorDictionary = {
     'brown',
     'tan',
   ],
-  'Verdun Green': [
-    '#495400',
-    '翠绿',
-    '绿',
-    '绿色',
-    '翠绿色',
-    'green',
-    'emerald',
-  ],
-  'Blue Bayoux': [
-    '#496679',
-    '淡蓝',
-    '蓝',
-    '蓝色',
-    '淡蓝色',
-    'blue',
-    'babyBlue',
-  ],
-  Bismark: [
+  colorKey349: ['#495400', '翠绿', '绿', '绿色', '翠绿色', 'green', 'emerald'],
+  colorKey350: ['#496679', '淡蓝', '蓝', '蓝色', '淡蓝色', 'blue', 'babyBlue'],
+  colorKey351: [
     '#497183',
     '钢蓝',
     '蓝青',
@@ -3048,7 +3048,7 @@ export const colorDictionary = {
     'blueCyan',
     'SteelBlue',
   ],
-  Bracken: [
+  colorKey352: [
     '#4A2A04',
     '赭',
     '棕',
@@ -3060,7 +3060,7 @@ export const colorDictionary = {
     'brown',
     'ochre',
   ],
-  'Deep Bronze': [
+  colorKey353: [
     '#4A3004',
     '赭',
     '棕',
@@ -3072,7 +3072,7 @@ export const colorDictionary = {
     'brown',
     'ochre',
   ],
-  Mondo: [
+  colorKey354: [
     '#4A3C30',
     '赭',
     '棕',
@@ -3084,7 +3084,7 @@ export const colorDictionary = {
     'brown',
     'ochre',
   ],
-  Tundora: [
+  colorKey355: [
     '#4A4244',
     '暗红',
     '酒红',
@@ -3096,11 +3096,19 @@ export const colorDictionary = {
     'wineRed',
     'darkRed',
   ],
-  Gravel: ['#4A444B', '暗紫', '紫', '紫色', '暗紫色', 'purple', 'DarkPurple'],
-  Trout: ['#4A4E5A', '蓝灰', '蓝', '蓝色', '蓝灰色', 'blue', 'blueGrey'],
-  'Pigment Indigo': ['#4B0082', '紫', '紫色', 'purple'],
-  Nandor: ['#4B5D52', '绿', '绿色', 'green'],
-  Saddle: [
+  colorKey356: [
+    '#4A444B',
+    '暗紫',
+    '紫',
+    '紫色',
+    '暗紫色',
+    'purple',
+    'DarkPurple',
+  ],
+  colorKey357: ['#4A4E5A', '蓝灰', '蓝', '蓝色', '蓝灰色', 'blue', 'blueGrey'],
+  colorKey358: ['#4B0082', '紫', '紫色', 'purple'],
+  colorKey359: ['#4B5D52', '绿', '绿色', 'green'],
+  colorKey360: [
     '#4C3024',
     '赭',
     '棕',
@@ -3112,8 +3120,8 @@ export const colorDictionary = {
     'brown',
     'ochre',
   ],
-  Abbey: ['#4C4F56', '灰', '灰色', 'gray'],
-  Blackberry: [
+  colorKey361: ['#4C4F56', '灰', '灰色', 'gray'],
+  colorKey362: [
     '#4D0135',
     '玫瑰',
     '玫红',
@@ -3122,7 +3130,7 @@ export const colorDictionary = {
     'roseRed',
     'rose',
   ],
-  'Cab Sav': [
+  colorKey363: [
     '#4D0A18',
     '褐',
     '棕',
@@ -3140,7 +3148,7 @@ export const colorDictionary = {
     'brown',
     'brownness',
   ],
-  'Indian Tan': [
+  colorKey364: [
     '#4D1E01',
     '棕褐',
     '赭',
@@ -3155,7 +3163,7 @@ export const colorDictionary = {
     'ochre',
     'sepia',
   ],
-  Cowboy: [
+  colorKey365: [
     '#4D282D',
     '褐',
     '棕',
@@ -3173,7 +3181,7 @@ export const colorDictionary = {
     'brown',
     'brownness',
   ],
-  'Livid Brown': [
+  colorKey366: [
     '#4D282E',
     '棕',
     '棕红',
@@ -3188,7 +3196,7 @@ export const colorDictionary = {
     'BrownRed',
     'brown',
   ],
-  Rock: [
+  colorKey367: [
     '#4D3833',
     '棕褐',
     '赭',
@@ -3203,7 +3211,7 @@ export const colorDictionary = {
     'ochre',
     'sepia',
   ],
-  Punga: [
+  colorKey368: [
     '#4D3D14',
     '土褐',
     '赭',
@@ -3218,7 +3226,7 @@ export const colorDictionary = {
     'ochre',
     'tan',
   ],
-  Bronzetone: [
+  colorKey369: [
     '#4D400F',
     '土褐',
     '赭',
@@ -3233,11 +3241,19 @@ export const colorDictionary = {
     'ochre',
     'tan',
   ],
-  Woodland: ['#4D5328', '黄绿', '绿', '绿色', '黄绿色', 'green', 'YellowGreen'],
-  Mahogany: ['#4E0606', '深红', '红', '红色', '深红色', 'red', 'crimson'],
-  Bossanova: ['#4E2A5A', '浅紫', '紫', '紫色', '浅紫色', 'purple', 'lilac'],
-  Matterhorn: ['#4E3B41', '暗红', '红', '红色', '暗红色', 'red', 'darkRed'],
-  'Bronze Olive': [
+  colorKey370: [
+    '#4D5328',
+    '黄绿',
+    '绿',
+    '绿色',
+    '黄绿色',
+    'green',
+    'YellowGreen',
+  ],
+  colorKey371: ['#4E0606', '深红', '红', '红色', '深红色', 'red', 'crimson'],
+  colorKey372: ['#4E2A5A', '浅紫', '紫', '紫色', '浅紫色', 'purple', 'lilac'],
+  colorKey373: ['#4E3B41', '暗红', '红', '红色', '暗红色', 'red', 'darkRed'],
+  colorKey374: [
     '#4E420C',
     '土褐',
     '赭',
@@ -3252,10 +3268,18 @@ export const colorDictionary = {
     'ochre',
     'tan',
   ],
-  'Mulled Wine': ['#4E4562', '紫', '紫色', 'purple'],
-  Axolotl: ['#4E6649', '草绿', '绿', '绿色', '草绿色', 'green', 'GrassGreet '],
-  Wedgewood: ['#4E7F9E', '天蓝', '蓝', '蓝色', '天蓝色', 'blue', 'skyBlue'],
-  Shakespeare: [
+  colorKey375: ['#4E4562', '紫', '紫色', 'purple'],
+  colorKey376: [
+    '#4E6649',
+    '草绿',
+    '绿',
+    '绿色',
+    '草绿色',
+    'green',
+    'GrassGreet ',
+  ],
+  colorKey377: ['#4E7F9E', '天蓝', '蓝', '蓝色', '天蓝色', 'blue', 'skyBlue'],
+  colorKey378: [
     '#4EABD1',
     '浅蓝',
     '亮蓝',
@@ -3270,10 +3294,10 @@ export const colorDictionary = {
     'BrillantBlue',
     'wathetBlue',
   ],
-  'Honey Flower': ['#4F1C70', '紫', '紫色', 'purple'],
-  'Daisy Bush': ['#4F2398', '紫', '紫色', 'purple'],
-  Indigo: ['#4F69C6', '蓝', '蓝色', 'blue'],
-  'Fern Green': [
+  colorKey379: ['#4F1C70', '紫', '紫色', 'purple'],
+  colorKey380: ['#4F2398', '紫', '紫色', 'purple'],
+  colorKey381: ['#4F69C6', '蓝', '蓝色', 'blue'],
+  colorKey382: [
     '#4F7942',
     '蕨绿',
     '翠绿',
@@ -3285,21 +3309,13 @@ export const colorDictionary = {
     'emerald',
     'FernGreen',
   ],
-  'Fruit Salad': [
-    '#4F9D5D',
-    '翠绿',
-    '绿',
-    '绿色',
-    '翠绿色',
-    'green',
-    'emerald',
-  ],
-  Apple: ['#4FA83D', '绿', '绿色', 'green'],
-  Mortar: ['#504351', '紫', '紫色', 'purple'],
-  'Kashmir Blue': ['#507096', '蓝', '蓝色', 'blue'],
-  'Cutty Sark': ['#507672', '青', '青色', 'cyan'],
-  Emerald: ['#50C878', '绿', '绿色', 'green'],
-  Emperor: [
+  colorKey383: ['#4F9D5D', '翠绿', '绿', '绿色', '翠绿色', 'green', 'emerald'],
+  colorKey384: ['#4FA83D', '绿', '绿色', 'green'],
+  colorKey385: ['#504351', '紫', '紫色', 'purple'],
+  colorKey386: ['#507096', '蓝', '蓝色', 'blue'],
+  colorKey387: ['#507672', '青', '青色', 'cyan'],
+  colorKey388: ['#50C878', '绿', '绿色', 'green'],
+  colorKey389: [
     '#514649',
     '暗红',
     '酒红',
@@ -3311,7 +3327,7 @@ export const colorDictionary = {
     'claret',
     'DarkRed',
   ],
-  'Chalet Green': [
+  colorKey390: [
     '#516E3D',
     '钴绿',
     '水绿',
@@ -3323,7 +3339,7 @@ export const colorDictionary = {
     'aqua',
     'CobaltGreen',
   ],
-  Como: [
+  colorKey391: [
     '#517C66',
     '钴绿',
     '水绿',
@@ -3335,16 +3351,8 @@ export const colorDictionary = {
     'aqua',
     'CobaltGreen',
   ],
-  'Smalt Blue': [
-    '#51808F',
-    '暗蓝',
-    '蓝',
-    '蓝色',
-    '暗蓝色',
-    'blue',
-    'faintBlue',
-  ],
-  Castro: [
+  colorKey392: ['#51808F', '暗蓝', '蓝', '蓝色', '暗蓝色', 'blue', 'faintBlue'],
+  colorKey393: [
     '#52001F',
     '棕',
     '棕红',
@@ -3356,7 +3364,7 @@ export const colorDictionary = {
     'BrownRed',
     'brown',
   ],
-  'Maroon Oak': [
+  colorKey394: [
     '#520C17',
     '棕',
     '棕红',
@@ -3368,11 +3376,11 @@ export const colorDictionary = {
     'BrownRed',
     'brown',
   ],
-  Gigas: ['#523C94', '紫', '紫色', 'purple'],
-  Voodoo: ['#533455', '紫', '紫色', 'purple'],
-  Victoria: ['#534491', '紫', '紫色', 'purple'],
-  'Hippie Green': ['#53824B', '绿', '绿色', 'green'],
-  Heath: [
+  colorKey395: ['#523C94', '紫', '紫色', 'purple'],
+  colorKey396: ['#533455', '紫', '紫色', 'purple'],
+  colorKey397: ['#534491', '紫', '紫色', 'purple'],
+  colorKey398: ['#53824B', '绿', '绿色', 'green'],
+  colorKey399: [
     '#541012',
     '棕',
     '棕红',
@@ -3384,7 +3392,7 @@ export const colorDictionary = {
     'BrownRed',
     'brown',
   ],
-  'Judge Gray': [
+  colorKey400: [
     '#544333',
     '土褐',
     '赭',
@@ -3399,8 +3407,8 @@ export const colorDictionary = {
     'ochre',
     'tan',
   ],
-  'Fuscous Gray': ['#54534D', '灰褐', '灰', '灰色', '灰褐色', 'gray', 'Taupe'],
-  'Vida Loca': [
+  colorKey401: ['#54534D', '灰褐', '灰', '灰色', '灰褐色', 'gray', 'Taupe'],
+  colorKey402: [
     '#549019',
     '亮绿',
     '绿',
@@ -3409,7 +3417,7 @@ export const colorDictionary = {
     'green',
     'brightGreen',
   ],
-  Cioccolato: [
+  colorKey403: [
     '#55280C',
     '赭',
     '棕',
@@ -3421,8 +3429,16 @@ export const colorDictionary = {
     'brown',
     'ochre',
   ],
-  Saratoga: ['#555B10', '褐绿', '橄榄', '橄榄色', '褐绿色', 'olive', 'breen'],
-  Finlandia: [
+  colorKey404: [
+    '#555B10',
+    '褐绿',
+    '橄榄',
+    '橄榄色',
+    '褐绿色',
+    'olive',
+    'breen',
+  ],
+  colorKey405: [
     '#556D56',
     '黄绿',
     '绿',
@@ -3431,7 +3447,7 @@ export const colorDictionary = {
     'green',
     'YellowGreen',
   ],
-  'Havelock Blue': [
+  colorKey406: [
     '#5590D9',
     '浅蓝',
     '水蓝',
@@ -3446,8 +3462,8 @@ export const colorDictionary = {
     'waterBlue',
     'wathetBlue',
   ],
-  'Fountain Blue': ['#56B4BE', '青', '青色', '薄荷绿', 'cyan'],
-  'Spring Leaves': [
+  colorKey407: ['#56B4BE', '青', '青色', '薄荷绿', 'cyan'],
+  colorKey408: [
     '#578363',
     '嫩绿',
     '绿',
@@ -3456,7 +3472,7 @@ export const colorDictionary = {
     'green',
     'peakGreen',
   ],
-  'Saddle Brown': [
+  colorKey409: [
     '#583401',
     '赭',
     '棕',
@@ -3468,7 +3484,7 @@ export const colorDictionary = {
     'brown',
     'ochre',
   ],
-  'Scarpa Flow': [
+  colorKey410: [
     '#585562',
     '紫灰',
     '紫',
@@ -3477,18 +3493,10 @@ export const colorDictionary = {
     'purple',
     'purpleGrey',
   ],
-  Cactus: ['#587156', '绿', '绿色', '薄荷绿', 'green'],
-  'Hippie Blue': [
-    '#589AAF',
-    '水蓝',
-    '蓝',
-    '蓝色',
-    '水蓝色',
-    'blue',
-    'waterBlue',
-  ],
-  'Wine Berry': ['#591D35', '桃红', '红', '红色', '桃红色', 'red', 'peach'],
-  'Brown Bramble': [
+  colorKey411: ['#587156', '绿', '绿色', '薄荷绿', 'green'],
+  colorKey412: ['#589AAF', '水蓝', '蓝', '蓝色', '水蓝色', 'blue', 'waterBlue'],
+  colorKey413: ['#591D35', '桃红', '红', '红色', '桃红色', 'red', 'peach'],
+  colorKey414: [
     '#592804',
     '赭',
     '棕',
@@ -3500,7 +3508,7 @@ export const colorDictionary = {
     'brown',
     'ochre',
   ],
-  'Congo Brown': [
+  colorKey415: [
     '#593737',
     '红棕',
     '棕',
@@ -3509,7 +3517,7 @@ export const colorDictionary = {
     'brown',
     'reddishBrown',
   ],
-  Millbrook: [
+  colorKey416: [
     '#594433',
     '土褐',
     '棕',
@@ -3521,7 +3529,7 @@ export const colorDictionary = {
     'brown',
     'tan',
   ],
-  'Waikawa Gray': [
+  colorKey417: [
     '#5A6E9C',
     '浅蓝',
     '蓝',
@@ -3530,7 +3538,7 @@ export const colorDictionary = {
     'blue',
     'wathetBlue',
   ],
-  Horizon: [
+  colorKey418: [
     '#5A87A0',
     '水蓝',
     '浅蓝',
@@ -3542,7 +3550,7 @@ export const colorDictionary = {
     'wathetBlue',
     'waterBlue',
   ],
-  Jambalaya: [
+  colorKey419: [
     '#5B3013',
     '赭',
     '棕',
@@ -3554,9 +3562,9 @@ export const colorDictionary = {
     'brown',
     'ochre',
   ],
-  Bordeaux: ['#5C0120', '桃红', '红', '红色', '桃红色', 'red', 'peach'],
-  'Mulberry Wood': ['#5C0536', '桃红', '红', '红色', '桃红色', 'red', 'peach'],
-  'Carnaby Tan': [
+  colorKey420: ['#5C0120', '桃红', '红', '红色', '桃红色', 'red', 'peach'],
+  colorKey421: ['#5C0536', '桃红', '红', '红色', '桃红色', 'red', 'peach'],
+  colorKey422: [
     '#5C2E01',
     '赭',
     '棕',
@@ -3568,11 +3576,27 @@ export const colorDictionary = {
     'brown',
     'ochre',
   ],
-  Comet: ['#5C5D75', '灰蓝', '蓝', '蓝色', '灰蓝色', 'blue', 'dustyBlue'],
-  Redwood: ['#5D1E0F', '红棕', '棕', '棕色', '红棕色', 'brown', 'reddishBrown'],
-  'Don Juan': ['#5D4C51', '暗棕', '棕', '棕色', '暗棕色', 'brown', 'darkBrown'],
-  Chicago: ['#5D5C58', '灰褐', '灰', '灰色', '灰褐色', 'gray', 'Taupe'],
-  Verdigris: [
+  colorKey423: ['#5C5D75', '灰蓝', '蓝', '蓝色', '灰蓝色', 'blue', 'dustyBlue'],
+  colorKey424: [
+    '#5D1E0F',
+    '红棕',
+    '棕',
+    '棕色',
+    '红棕色',
+    'brown',
+    'reddishBrown',
+  ],
+  colorKey425: [
+    '#5D4C51',
+    '暗棕',
+    '棕',
+    '棕色',
+    '暗棕色',
+    'brown',
+    'darkBrown',
+  ],
+  colorKey426: ['#5D5C58', '灰褐', '灰', '灰色', '灰褐色', 'gray', 'Taupe'],
+  colorKey427: [
     '#5D5E37',
     '黄绿',
     '绿',
@@ -3581,8 +3605,16 @@ export const colorDictionary = {
     'green',
     'YellowGreen',
   ],
-  Dingley: ['#5D7747', '浅绿', '绿', '绿色', '浅绿色', 'green', 'LightGreen'],
-  'Breaker Bay': [
+  colorKey428: [
+    '#5D7747',
+    '浅绿',
+    '绿',
+    '绿色',
+    '浅绿色',
+    'green',
+    'LightGreen',
+  ],
+  colorKey429: [
     '#5DA19F',
     '薄荷绿',
     '绿',
@@ -3594,7 +3626,7 @@ export const colorDictionary = {
     'green',
     'MintGreen',
   ],
-  Kabul: [
+  colorKey430: [
     '#5E483E',
     '赭',
     '棕',
@@ -3606,8 +3638,16 @@ export const colorDictionary = {
     'brown',
     'ochre',
   ],
-  Hemlock: ['#5E5D3B', '黄褐', '褐', '褐色', '黄褐色', 'brownness', 'tawny'],
-  'Irish Coffee': [
+  colorKey431: [
+    '#5E5D3B',
+    '黄褐',
+    '褐',
+    '褐色',
+    '黄褐色',
+    'brownness',
+    'tawny',
+  ],
+  colorKey432: [
     '#5F3D26',
     '赭',
     '棕',
@@ -3619,7 +3659,7 @@ export const colorDictionary = {
     'brown',
     'ochre',
   ],
-  'Mid Gray': [
+  colorKey433: [
     '#5F5F6E',
     '紫灰',
     '紫',
@@ -3628,16 +3668,8 @@ export const colorDictionary = {
     'purple',
     'purpleGrey',
   ],
-  'Shuttle Gray': [
-    '#5F6672',
-    '灰蓝',
-    '蓝',
-    '蓝色',
-    '灰蓝色',
-    'blue',
-    'blueGrey',
-  ],
-  'Aqua Forest': [
+  colorKey434: ['#5F6672', '灰蓝', '蓝', '蓝色', '灰蓝色', 'blue', 'blueGrey'],
+  colorKey435: [
     '#5FA777',
     '浅绿',
     '绿',
@@ -3646,8 +3678,17 @@ export const colorDictionary = {
     'green',
     'LightGreen',
   ],
-  Tradewind: ['#5FB3AC', '绿', '青', '青色', '绿色', '薄荷绿', 'cyan', 'green'],
-  'Horses Neck': [
+  colorKey436: [
+    '#5FB3AC',
+    '绿',
+    '青',
+    '青色',
+    '绿色',
+    '薄荷绿',
+    'cyan',
+    'green',
+  ],
+  colorKey437: [
     '#604913',
     '赭',
     '棕',
@@ -3659,8 +3700,16 @@ export const colorDictionary = {
     'brown',
     'ochre',
   ],
-  Smoky: ['#605B73', '黄褐', '褐', '褐色', '黄褐色', 'brownness', 'tawny'],
-  Corduroy: [
+  colorKey438: [
+    '#605B73',
+    '黄褐',
+    '褐',
+    '褐色',
+    '黄褐色',
+    'brownness',
+    'tawny',
+  ],
+  colorKey439: [
     '#606E68',
     '灰绿',
     '绿',
@@ -3669,7 +3718,7 @@ export const colorDictionary = {
     'green',
     'greyishGreen',
   ],
-  Danube: [
+  colorKey440: [
     '#6093D1',
     '淡蓝',
     '浅蓝',
@@ -3684,7 +3733,7 @@ export const colorDictionary = {
     'wathetBlue',
     'babyBlue',
   ],
-  Espresso: [
+  colorKey441: [
     '#612718',
     '红棕',
     '棕',
@@ -3693,8 +3742,8 @@ export const colorDictionary = {
     'brown',
     'reddishBrown',
   ],
-  Eggplant: ['#614051', '酒红', '红', '红色', '酒红色', 'red', 'wineRed'],
-  'Costa Del Sol': [
+  colorKey442: ['#614051', '酒红', '红', '红色', '酒红色', 'red', 'wineRed'],
+  colorKey443: [
     '#615D30',
     '黄褐',
     '褐',
@@ -3703,7 +3752,7 @@ export const colorDictionary = {
     'brownness',
     'tawny',
   ],
-  'Glade Green': [
+  colorKey444: [
     '#61845F',
     '草绿',
     '绿',
@@ -3712,8 +3761,8 @@ export const colorDictionary = {
     'green',
     'GrassGreet ',
   ],
-  Buccaneer: ['#622F30', '红', '红色', 'red'],
-  Quincy: [
+  colorKey445: ['#622F30', '红', '红色', 'red'],
+  colorKey446: [
     '#623F2D',
     '赭',
     '棕',
@@ -3725,8 +3774,8 @@ export const colorDictionary = {
     'brown',
     'ochre',
   ],
-  'Butterfly Bush': ['#624E9A', '紫', '紫色', 'purple'],
-  'West Coast': [
+  colorKey447: ['#624E9A', '紫', '紫色', 'purple'],
+  colorKey448: [
     '#625119',
     '赭',
     '棕',
@@ -3738,10 +3787,35 @@ export const colorDictionary = {
     'brown',
     'ochre',
   ],
-  Finch: ['#626649', '黄绿', '绿', '绿色', '黄绿色', 'green', 'YellowGreen'],
-  Patina: ['#639A8F', '绿', '青', '青色', '绿色', '薄荷绿', 'cyan', 'green'],
-  Fern: ['#63B76C', '浅绿', '绿', '绿色', '浅绿色', 'green', 'LightGreen'],
-  'Blue Violet': [
+  colorKey449: [
+    '#626649',
+    '黄绿',
+    '绿',
+    '绿色',
+    '黄绿色',
+    'green',
+    'YellowGreen',
+  ],
+  colorKey450: [
+    '#639A8F',
+    '绿',
+    '青',
+    '青色',
+    '绿色',
+    '薄荷绿',
+    'cyan',
+    'green',
+  ],
+  colorKey451: [
+    '#63B76C',
+    '浅绿',
+    '绿',
+    '绿色',
+    '浅绿色',
+    'green',
+    'LightGreen',
+  ],
+  colorKey452: [
     '#6456B7',
     '紫罗兰',
     '紫',
@@ -3750,11 +3824,19 @@ export const colorDictionary = {
     'purple',
     'violet',
   ],
-  Dolphin: ['#646077', '灰蓝', '蓝', '蓝色', '灰蓝色', 'blue', 'dustyBlue'],
-  'Storm Dust': ['#646463', '灰', '灰色', 'gray'],
-  Siam: ['#646A54', '灰绿', '绿', '绿色', '灰绿色', 'green', 'greyishGreen'],
-  Nevada: ['#646E75', '灰蓝', '蓝', '蓝色', '灰蓝色', 'blue', 'dustyBlue'],
-  'Cornflower Blue': [
+  colorKey453: ['#646077', '灰蓝', '蓝', '蓝色', '灰蓝色', 'blue', 'dustyBlue'],
+  colorKey454: ['#646463', '灰', '灰色', 'gray'],
+  colorKey455: [
+    '#646A54',
+    '灰绿',
+    '绿',
+    '绿色',
+    '灰绿色',
+    'green',
+    'greyishGreen',
+  ],
+  colorKey456: ['#646E75', '灰蓝', '蓝', '蓝色', '灰蓝色', 'blue', 'dustyBlue'],
+  colorKey457: [
     '#6495ED',
     '矢菊花蓝',
     '浅蓝',
@@ -3766,7 +3848,7 @@ export const colorDictionary = {
     'wathetBlue',
     'SagittalChrysanthemumBlue',
   ],
-  Viking: [
+  colorKey458: [
     '#64CCDB',
     '蓝',
     '薄荷蓝',
@@ -3778,10 +3860,10 @@ export const colorDictionary = {
     'MintBlue',
     'blue',
   ],
-  Rosewood: ['#65000B', '红', '红色', 'red'],
-  Cherrywood: ['#651A14', '红', '红色', 'red'],
-  'Purple Heart': ['#652DC1', '紫', '紫色', 'purple'],
-  'Fern Frond': [
+  colorKey459: ['#65000B', '红', '红色', 'red'],
+  colorKey460: ['#651A14', '红', '红色', 'red'],
+  colorKey461: ['#652DC1', '紫', '紫色', 'purple'],
+  colorKey462: [
     '#657220',
     '黄绿',
     '绿',
@@ -3790,7 +3872,7 @@ export const colorDictionary = {
     'green',
     'YellowGreen',
   ],
-  'Willow Grove': [
+  colorKey463: [
     '#65745D',
     '淡绿',
     '绿',
@@ -3799,10 +3881,18 @@ export const colorDictionary = {
     'green',
     'paleGreen',
   ],
-  Hoki: ['#65869F', '蓝', '蓝色', 'blue'],
-  Pompadour: ['#660045', '玫瑰', '玫红', '玫红色', '玫瑰色', 'roseRed', 'rose'],
-  Purple: ['#660099', '紫', '紫色', 'purple'],
-  'Tyrian Purple': [
+  colorKey464: ['#65869F', '蓝', '蓝色', 'blue'],
+  colorKey465: [
+    '#660045',
+    '玫瑰',
+    '玫红',
+    '玫红色',
+    '玫瑰色',
+    'roseRed',
+    'rose',
+  ],
+  colorKey466: ['#660099', '紫', '紫色', 'purple'],
+  colorKey467: [
     '#66023C',
     '玫瑰',
     '玫红',
@@ -3811,9 +3901,9 @@ export const colorDictionary = {
     'roseRed',
     'rose',
   ],
-  'Dark Tan': ['#661010', '红', '红色', 'red'],
-  'Silver Tree': ['#66B58F', '绿', '绿色', 'green'],
-  'Bright Green': [
+  colorKey468: ['#661010', '红', '红色', 'red'],
+  colorKey469: ['#66B58F', '绿', '绿色', 'green'],
+  colorKey470: [
     '#66FF00',
     '亮绿',
     '绿',
@@ -3822,7 +3912,7 @@ export const colorDictionary = {
     'green',
     'brightGreen',
   ],
-  "Screamin' Green": [
+  colorKey471: [
     '#66FF66',
     '亮绿',
     '绿',
@@ -3831,7 +3921,7 @@ export const colorDictionary = {
     'green',
     'brightGreen',
   ],
-  'Black Rose': [
+  colorKey472: [
     '#67032D',
     '玫瑰',
     '桃红',
@@ -3846,22 +3936,14 @@ export const colorDictionary = {
     'peach',
     'rose',
   ],
-  Scampi: ['#675FA6', '淡紫', '紫', '紫色', '淡紫色', 'purple', 'orchid'],
-  'Ironside Gray': ['#676662', '灰', '灰色', 'gray'],
-  'Viridian Green': ['#678975', '绿', '绿色', 'green'],
-  Christi: ['#67A712', '绿', '绿色', 'green'],
-  'Nutmeg Wood Finish': [
-    '#683600',
-    '褐',
-    '棕',
-    '棕色',
-    '褐色',
-    'brown',
-    'brownness',
-  ],
-  Zambezi: ['#685558', '暗粉', '粉', '粉色', '暗粉色', 'pink', 'DarkPink'],
-  'Salt Box': ['#685E6E', '淡紫', '紫', '紫色', '淡紫色', 'purple', 'orchid'],
-  'Tawny Port': [
+  colorKey473: ['#675FA6', '淡紫', '紫', '紫色', '淡紫色', 'purple', 'orchid'],
+  colorKey474: ['#676662', '灰', '灰色', 'gray'],
+  colorKey475: ['#678975', '绿', '绿色', 'green'],
+  colorKey476: ['#67A712', '绿', '绿色', 'green'],
+  colorKey477: ['#683600', '褐', '棕', '棕色', '褐色', 'brown', 'brownness'],
+  colorKey478: ['#685558', '暗粉', '粉', '粉色', '暗粉色', 'pink', 'DarkPink'],
+  colorKey479: ['#685E6E', '淡紫', '紫', '紫色', '淡紫色', 'purple', 'orchid'],
+  colorKey480: [
     '#692545',
     '玫瑰',
     '艳紫粉',
@@ -3878,7 +3960,7 @@ export const colorDictionary = {
     'rose',
     'BrilliantPurplePink',
   ],
-  Finn: [
+  colorKey481: [
     '#692D54',
     '玫瑰',
     '艳紫粉',
@@ -3893,10 +3975,18 @@ export const colorDictionary = {
     'BrilliantPurplePink',
     'rose',
   ],
-  Scorpion: ['#695F62', '灰粉', '粉', '粉色', '灰粉色', 'pink', 'GrayPink'],
-  Spice: ['#6A442E', '褐', '棕', '棕色', '褐色', 'brown', 'brownness'],
-  Himalaya: ['#6A5D1B', '黄褐', '褐', '褐色', '黄褐色', 'brownness', 'tawny'],
-  'Soya Bean': [
+  colorKey482: ['#695F62', '灰粉', '粉', '粉色', '灰粉色', 'pink', 'GrayPink'],
+  colorKey483: ['#6A442E', '褐', '棕', '棕色', '褐色', 'brown', 'brownness'],
+  colorKey484: [
+    '#6A5D1B',
+    '黄褐',
+    '褐',
+    '褐色',
+    '黄褐色',
+    'brownness',
+    'tawny',
+  ],
+  colorKey485: [
     '#6A6051',
     '灰褐',
     '褐',
@@ -3905,7 +3995,7 @@ export const colorDictionary = {
     'brownness',
     'taupe',
   ],
-  'Hairy Heath': [
+  colorKey486: [
     '#6B2A14',
     '棕',
     '橘红',
@@ -3917,8 +4007,8 @@ export const colorDictionary = {
     'tangerine',
     'brown',
   ],
-  'Royal Purple': ['#6B3FA0', '紫', '紫色', 'purple'],
-  'Shingle Fawn': [
+  colorKey487: ['#6B3FA0', '紫', '紫色', 'purple'],
+  colorKey488: [
     '#6B4E31',
     '棕',
     '土褐',
@@ -3930,19 +4020,11 @@ export const colorDictionary = {
     'tan',
     'brown',
   ],
-  Dorado: ['#6B5755', '灰粉', '粉', '粉色', '灰粉色', 'pink', 'GreyPink'],
-  'Bermuda Gray': [
-    '#6B8BA2',
-    '灰蓝',
-    '蓝',
-    '蓝色',
-    '灰蓝色',
-    'blue',
-    'dustyBlue',
-  ],
-  'Olive Drab': ['#6B8E23', '绿', '绿色', 'green'],
-  Eminence: ['#6C3082', '紫', '紫色', 'purple'],
-  'Turquoise Blue': [
+  colorKey489: ['#6B5755', '灰粉', '粉', '粉色', '灰粉色', 'pink', 'GreyPink'],
+  colorKey490: ['#6B8BA2', '灰蓝', '蓝', '蓝色', '灰蓝色', 'blue', 'dustyBlue'],
+  colorKey491: ['#6B8E23', '绿', '绿色', 'green'],
+  colorKey492: ['#6C3082', '紫', '紫色', 'purple'],
+  colorKey493: [
     '#6CDAE7',
     '薄荷蓝',
     '蓝',
@@ -3954,8 +4036,8 @@ export const colorDictionary = {
     'blue',
     'MintBlue',
   ],
-  Lonestar: ['#6D0101', '红', '红色', 'red'],
-  'Pine Cone': [
+  colorKey494: ['#6D0101', '红', '红色', 'red'],
+  colorKey495: [
     '#6D5E54',
     '灰褐',
     '褐',
@@ -3964,12 +4046,12 @@ export const colorDictionary = {
     'brownness',
     'taupe',
   ],
-  'Dove Gray': ['#6D6C6C', '灰', '灰色', 'gray'],
-  Juniper: ['#6D9292', '水鸭', '水鸭色', 'teal'],
-  Gothic: ['#6D92A1', '灰蓝', '蓝', '蓝色', '灰蓝色', 'blue', 'dustyBlue'],
-  'Red Oxide': ['#6E0902', '红', '红色', 'red'],
-  Moccaccino: ['#6E1D14', '红', '红色', 'red'],
-  'Pickled Bean': [
+  colorKey496: ['#6D6C6C', '灰', '灰色', 'gray'],
+  colorKey497: ['#6D9292', '水鸭', '水鸭色', 'teal'],
+  colorKey498: ['#6D92A1', '灰蓝', '蓝', '蓝色', '灰蓝色', 'blue', 'dustyBlue'],
+  colorKey499: ['#6E0902', '红', '红色', 'red'],
+  colorKey500: ['#6E1D14', '红', '红色', 'red'],
+  colorKey501: [
     '#6E4826',
     '褐',
     '浅棕',
@@ -3981,7 +4063,7 @@ export const colorDictionary = {
     'lightBrown',
     'brownness',
   ],
-  Dallas: [
+  colorKey502: [
     '#6E4B26',
     '褐',
     '浅棕',
@@ -3993,7 +4075,7 @@ export const colorDictionary = {
     'lightBrown',
     'brownness',
   ],
-  Kokoda: [
+  colorKey503: [
     '#6E6D57',
     '土棕褐',
     '土褐',
@@ -4008,7 +4090,7 @@ export const colorDictionary = {
     'tan',
     'ClayBrown ',
   ],
-  'Pale Sky': [
+  colorKey504: [
     '#6E7783',
     '亮灰蓝',
     '灰蓝',
@@ -4019,8 +4101,8 @@ export const colorDictionary = {
     'blue',
     'lightslategrey',
   ],
-  'Cafe Royale': ['#6F440C', '褐', '棕', '棕色', '褐色', 'brown', 'brownness'],
-  Flint: [
+  colorKey505: ['#6F440C', '褐', '棕', '棕色', '褐色', 'brown', 'brownness'],
+  colorKey506: [
     '#6F6A61',
     '土棕褐',
     '土褐',
@@ -4036,25 +4118,25 @@ export const colorDictionary = {
     'ClayBrown ',
     'gray',
   ],
-  Highland: ['#6F8E63', '绿', '绿色', 'green'],
-  Limeade: ['#6F9D02', '绿', '绿色', 'green'],
-  Downy: ['#6FD0C5', '薄荷绿', '青', '青色', '薄荷绿色', 'cyan', 'MintGreen'],
-  'Persian Plum': ['#701C1C', '红', '红色', 'red'],
-  Sepia: ['#704214', '褐', '棕', '棕色', '褐色', 'brown', 'brownness'],
-  'Antique Bronze': [
-    '#704A07',
-    '褐',
-    '棕',
-    '棕色',
-    '褐色',
-    'brown',
-    'brownness',
+  colorKey507: ['#6F8E63', '绿', '绿色', 'green'],
+  colorKey508: ['#6F9D02', '绿', '绿色', 'green'],
+  colorKey509: [
+    '#6FD0C5',
+    '薄荷绿',
+    '青',
+    '青色',
+    '薄荷绿色',
+    'cyan',
+    'MintGreen',
   ],
-  Ferra: ['#704F50', '棕', '褐', '褐色', '棕色', 'brownness', 'brown'],
-  Coffee: ['#706555', '土褐', '褐', '褐色', '土褐色', 'brownness', 'tan'],
-  'Slate Gray': ['#708090', '蓝灰', '蓝', '蓝色', '蓝灰色', 'blue', 'blueGrey'],
-  'Cedar Wood Finish': ['#711A00', '红', '红色', 'red'],
-  'Metallic Copper': [
+  colorKey510: ['#701C1C', '红', '红色', 'red'],
+  colorKey511: ['#704214', '褐', '棕', '棕色', '褐色', 'brown', 'brownness'],
+  colorKey512: ['#704A07', '褐', '棕', '棕色', '褐色', 'brown', 'brownness'],
+  colorKey513: ['#704F50', '棕', '褐', '褐色', '棕色', 'brownness', 'brown'],
+  colorKey514: ['#706555', '土褐', '褐', '褐色', '土褐色', 'brownness', 'tan'],
+  colorKey515: ['#708090', '蓝灰', '蓝', '蓝色', '蓝灰色', 'blue', 'blueGrey'],
+  colorKey516: ['#711A00', '红', '红色', 'red'],
+  colorKey517: [
     '#71291D',
     '橘红',
     '橘',
@@ -4066,9 +4148,9 @@ export const colorDictionary = {
     'orange',
     'tangerine',
   ],
-  Affair: ['#714693', '紫', '紫色', 'purple'],
-  Studio: ['#714AB2', '紫', '紫色', 'purple'],
-  'Tobacco Brown': [
+  colorKey518: ['#714693', '紫', '紫色', 'purple'],
+  colorKey519: ['#714AB2', '紫', '紫色', 'purple'],
+  colorKey520: [
     '#715D47',
     '棕',
     '土褐',
@@ -4080,7 +4162,7 @@ export const colorDictionary = {
     'tan',
     'brown',
   ],
-  'Yellow Metal': [
+  colorKey521: [
     '#716338',
     '黄褐',
     '褐',
@@ -4089,11 +4171,35 @@ export const colorDictionary = {
     'brownness',
     'tawny',
   ],
-  Peat: ['#716B56', '黄褐', '褐', '褐色', '黄褐色', 'brownness', 'tawny'],
-  Olivetone: ['#716E10', '黄褐', '褐', '褐色', '黄褐色', 'brownness', 'tawny'],
-  'Storm Gray': ['#717486', '蓝灰', '蓝', '蓝色', '蓝灰色', 'blue', 'blueGrey'],
-  Sirocco: ['#718080', '青灰', '青', '青色', '青灰色', 'cyan', 'steelGray '],
-  'Aquamarine Blue': [
+  colorKey522: [
+    '#716B56',
+    '黄褐',
+    '褐',
+    '褐色',
+    '黄褐色',
+    'brownness',
+    'tawny',
+  ],
+  colorKey523: [
+    '#716E10',
+    '黄褐',
+    '褐',
+    '褐色',
+    '黄褐色',
+    'brownness',
+    'tawny',
+  ],
+  colorKey524: ['#717486', '蓝灰', '蓝', '蓝色', '蓝灰色', 'blue', 'blueGrey'],
+  colorKey525: [
+    '#718080',
+    '青灰',
+    '青',
+    '青色',
+    '青灰色',
+    'cyan',
+    'steelGray ',
+  ],
+  colorKey526: [
     '#71D9E2',
     '青',
     '薄荷蓝',
@@ -4105,17 +4211,25 @@ export const colorDictionary = {
     'MintBlue',
     'cyan',
   ],
-  'Venetian Red': ['#72010F', '红', '红色', 'red'],
-  'Old Copper': ['#724A2F', '褐', '棕', '棕色', '褐色', 'brown', 'brownness'],
-  'Go Ben': ['#726D4E', '土褐', '褐', '褐色', '土褐色', 'brownness', 'tan'],
-  Raven: ['#727B89', '蓝灰', '蓝', '蓝色', '蓝灰色', 'blue', 'blueGrey'],
-  Seance: ['#731E8F', '深紫', '紫', '紫色', '深紫色', 'purple', 'darkViolet'],
-  'Raw Umber': ['#734A12', '褐', '棕', '棕色', '褐色', 'brown', 'brownness'],
-  Kimberly: ['#736C9F', '浅紫', '紫', '紫色', '浅紫色', 'purple', 'lilac'],
-  Crocodile: ['#736D58', '土褐', '褐', '褐色', '土褐色', 'brownness', 'tan'],
-  Crete: ['#737829', '绿', '绿色', 'green'],
-  Xanadu: ['#738678', '绿', '绿色', 'green'],
-  'Spicy Mustard': [
+  colorKey527: ['#72010F', '红', '红色', 'red'],
+  colorKey528: ['#724A2F', '褐', '棕', '棕色', '褐色', 'brown', 'brownness'],
+  colorKey529: ['#726D4E', '土褐', '褐', '褐色', '土褐色', 'brownness', 'tan'],
+  colorKey530: ['#727B89', '蓝灰', '蓝', '蓝色', '蓝灰色', 'blue', 'blueGrey'],
+  colorKey531: [
+    '#731E8F',
+    '深紫',
+    '紫',
+    '紫色',
+    '深紫色',
+    'purple',
+    'darkViolet',
+  ],
+  colorKey532: ['#734A12', '褐', '棕', '棕色', '褐色', 'brown', 'brownness'],
+  colorKey533: ['#736C9F', '浅紫', '紫', '紫色', '浅紫色', 'purple', 'lilac'],
+  colorKey534: ['#736D58', '土褐', '褐', '褐色', '土褐色', 'brownness', 'tan'],
+  colorKey535: ['#737829', '绿', '绿色', 'green'],
+  colorKey536: ['#738678', '绿', '绿色', 'green'],
+  colorKey537: [
     '#74640D',
     '土褐',
     '棕',
@@ -4127,17 +4241,9 @@ export const colorDictionary = {
     'brown',
     'tan',
   ],
-  'Limed Ash': ['#747D63', '绿', '绿色', 'green'],
-  'Rolling Stone': [
-    '#747D83',
-    '灰蓝',
-    '蓝',
-    '蓝色',
-    '灰蓝色',
-    'blue',
-    'dustyBlue',
-  ],
-  'Blue Smoke': [
+  colorKey538: ['#747D63', '绿', '绿色', 'green'],
+  colorKey539: ['#747D83', '灰蓝', '蓝', '蓝色', '灰蓝色', 'blue', 'dustyBlue'],
+  colorKey540: [
     '#748881',
     '灰绿',
     '绿',
@@ -4146,11 +4252,11 @@ export const colorDictionary = {
     'green',
     'greyishGreen',
   ],
-  Laurel: ['#749378', '绿', '绿色', 'green'],
-  Mantis: ['#74C365', '绿', '绿色', 'green'],
-  Russett: ['#755A57', '珊瑚', '珊瑚色', 'coral'],
-  Deluge: ['#7563A8', '紫', '紫色', 'purple'],
-  Cosmic: [
+  colorKey541: ['#749378', '绿', '绿色', 'green'],
+  colorKey542: ['#74C365', '绿', '绿色', 'green'],
+  colorKey543: ['#755A57', '珊瑚', '珊瑚色', 'coral'],
+  colorKey544: ['#7563A8', '紫', '紫色', 'purple'],
+  colorKey545: [
     '#76395D',
     '玫瑰',
     '玫红',
@@ -4162,9 +4268,9 @@ export const colorDictionary = {
     'roseRed',
     'rose',
   ],
-  'Blue Marguerite': ['#7666C6', '紫', '紫色', 'purple'],
-  Lima: ['#76BD17', '绿', '绿色', 'green'],
-  'Sky Blue': [
+  colorKey546: ['#7666C6', '紫', '紫色', 'purple'],
+  colorKey547: ['#76BD17', '绿', '绿色', 'green'],
+  colorKey548: [
     '#76D7EA',
     '浅蓝',
     '薄荷蓝',
@@ -4176,9 +4282,9 @@ export const colorDictionary = {
     'MintBlue',
     'wathetBlue',
   ],
-  'Dark Burgundy': ['#770F05', '红', '红色', 'red'],
-  'Crown of Thorns': ['#771F1F', '红', '红色', 'red'],
-  Walnut: [
+  colorKey549: ['#770F05', '红', '红色', 'red'],
+  colorKey550: ['#771F1F', '红', '红色', 'red'],
+  colorKey551: [
     '#773F1A',
     '爱马仕橙',
     '核桃',
@@ -4193,7 +4299,7 @@ export const colorDictionary = {
     'walnut',
     'HermesOrange',
   ],
-  Pablo: [
+  colorKey552: [
     '#776F61',
     '土褐',
     '褐',
@@ -4205,9 +4311,25 @@ export const colorDictionary = {
     'brownness',
     'tan',
   ],
-  Pacifika: ['#778120', '黄绿', '绿', '绿色', '黄绿色', 'green', 'YellowGreen'],
-  Oxley: ['#779E86', '淡绿', '绿', '绿色', '淡绿色', 'green', 'paleGreen'],
-  'Pastel Green': [
+  colorKey553: [
+    '#778120',
+    '黄绿',
+    '绿',
+    '绿色',
+    '黄绿色',
+    'green',
+    'YellowGreen',
+  ],
+  colorKey554: [
+    '#779E86',
+    '淡绿',
+    '绿',
+    '绿色',
+    '淡绿色',
+    'green',
+    'paleGreen',
+  ],
+  colorKey555: [
     '#77DD77',
     '亮绿',
     '绿',
@@ -4216,8 +4338,8 @@ export const colorDictionary = {
     'green',
     'brightGreen',
   ],
-  'Japanese Maple': ['#780109', '红', '红色', 'red'],
-  Mocha: [
+  colorKey556: ['#780109', '红', '红色', 'red'],
+  colorKey557: [
     '#782D19',
     '棕红',
     '红棕',
@@ -4226,7 +4348,7 @@ export const colorDictionary = {
     'reddishBrown',
     'BrownRed',
   ],
-  Peanut: [
+  colorKey558: [
     '#782F16',
     '棕红',
     '红棕',
@@ -4235,7 +4357,7 @@ export const colorDictionary = {
     'reddishBrown',
     'BrownRed',
   ],
-  'Camouflage Green': [
+  colorKey559: [
     '#78866B',
     '灰绿',
     '绿',
@@ -4244,11 +4366,19 @@ export const colorDictionary = {
     'green',
     'greyishGreen',
   ],
-  Wasabi: ['#788A25', '黄绿', '绿', '绿色', '黄绿色', 'green', 'YellowGreen'],
-  'Ship Cove': ['#788BBA', '蓝', '蓝色', 'blue'],
-  'Sea Nymph': ['#78A39C', '水绿', '绿', '绿色', '水绿色', 'green', 'aqua'],
-  'Roman Coffee': ['#795D4C', '褐', '棕', '棕色', '褐色', 'brown', 'brownness'],
-  'Old Lavender': [
+  colorKey560: [
+    '#788A25',
+    '黄绿',
+    '绿',
+    '绿色',
+    '黄绿色',
+    'green',
+    'YellowGreen',
+  ],
+  colorKey561: ['#788BBA', '蓝', '蓝色', 'blue'],
+  colorKey562: ['#78A39C', '水绿', '绿', '绿色', '水绿色', 'green', 'aqua'],
+  colorKey563: ['#795D4C', '褐', '棕', '棕色', '褐色', 'brown', 'brownness'],
+  colorKey564: [
     '#796878',
     '灰紫',
     '紫',
@@ -4257,9 +4387,17 @@ export const colorDictionary = {
     'purple',
     'greyPurple',
   ],
-  Rum: ['#796989', '紫', '紫色', 'purple'],
-  Fedora: ['#796A78', '灰紫', '紫', '紫色', '灰紫色', 'purple', 'greyPurple'],
-  Sandstone: [
+  colorKey565: ['#796989', '紫', '紫色', 'purple'],
+  colorKey566: [
+    '#796A78',
+    '灰紫',
+    '紫',
+    '紫色',
+    '灰紫色',
+    'purple',
+    'greyPurple',
+  ],
+  colorKey567: [
     '#796D62',
     '淡褐',
     '土褐',
@@ -4271,8 +4409,16 @@ export const colorDictionary = {
     'tan',
     'hazel',
   ],
-  Spray: ['#79DEEC', '薄荷蓝', '青', '青色', '薄荷蓝色', 'cyan', 'MintBlue'],
-  Siren: [
+  colorKey568: [
+    '#79DEEC',
+    '薄荷蓝',
+    '青',
+    '青色',
+    '薄荷蓝色',
+    'cyan',
+    'MintBlue',
+  ],
+  colorKey569: [
     '#7A013A',
     '玫瑰',
     '玫红',
@@ -4284,24 +4430,16 @@ export const colorDictionary = {
     'roseRed',
     'rose',
   ],
-  'Fuchsia Blue': ['#7A58C1', '紫', '紫色', 'purple'],
-  Boulder: ['#7A7A7A', '灰', '灰色', 'gray'],
-  'Wild Blue Yonder': [
-    '#7A89B8',
-    '淡蓝',
-    '蓝',
-    '蓝色',
-    '淡蓝色',
-    'blue',
-    'babyBlue',
-  ],
-  'De York': ['#7AC488', '水绿', '绿', '绿色', '水绿色', 'green', 'aqua'],
-  'Red Beech': ['#7B3801', '褐', '棕', '棕色', '褐色', 'brown', 'brownness'],
-  Cinnamon: ['#7B3F00', '褐', '棕', '棕色', '褐色', 'brown', 'brownness'],
-  'Yukon Gold': ['#7B6608', '土褐', '褐', '褐色', '土褐色', 'brownness', 'tan'],
-  Tapa: ['#7B7874', '灰', '灰色', 'gray'],
-  'Waterloo ': ['#7B7C94', '淡紫', '紫', '紫色', '淡紫色', 'purple', 'orchid'],
-  'Flax Smoke': [
+  colorKey570: ['#7A58C1', '紫', '紫色', 'purple'],
+  colorKey571: ['#7A7A7A', '灰', '灰色', 'gray'],
+  colorKey572: ['#7A89B8', '淡蓝', '蓝', '蓝色', '淡蓝色', 'blue', 'babyBlue'],
+  colorKey573: ['#7AC488', '水绿', '绿', '绿色', '水绿色', 'green', 'aqua'],
+  colorKey574: ['#7B3801', '褐', '棕', '棕色', '褐色', 'brown', 'brownness'],
+  colorKey575: ['#7B3F00', '褐', '棕', '棕色', '褐色', 'brown', 'brownness'],
+  colorKey576: ['#7B6608', '土褐', '褐', '褐色', '土褐色', 'brownness', 'tan'],
+  colorKey577: ['#7B7874', '灰', '灰色', 'gray'],
+  colorKey578: ['#7B7C94', '淡紫', '紫', '紫色', '淡紫色', 'purple', 'orchid'],
+  colorKey579: [
     '#7B8265',
     '灰绿',
     '绿',
@@ -4310,15 +4448,39 @@ export const colorDictionary = {
     'green',
     'greyishGreen',
   ],
-  Amulet: ['#7B9F80', '灰绿', '绿', '绿色', '灰绿色', 'green', 'greyishGreen'],
-  Asparagus: ['#7BA05B', '绿', '绿色', 'green'],
-  'Kenyan Copper': ['#7C1C05', '红', '红色', 'red'],
-  Pesto: ['#7C7631', '黄褐', '褐', '褐色', '黄褐色', 'brownness', 'tawny'],
-  Topaz: ['#7C778A', '淡紫', '紫', '紫色', '淡紫色', 'purple', 'orchid'],
-  Concord: ['#7C7B7A', '灰', '灰色', 'gray'],
-  Jumbo: ['#7C7B82', '灰', '青灰', '青灰色', '灰色', 'lightslategray', 'gray'],
-  'Trendy Green': ['#7C881A', '橄榄绿', '橄榄绿色', 'oliveGreen'],
-  Gumbo: [
+  colorKey580: [
+    '#7B9F80',
+    '灰绿',
+    '绿',
+    '绿色',
+    '灰绿色',
+    'green',
+    'greyishGreen',
+  ],
+  colorKey581: ['#7BA05B', '绿', '绿色', 'green'],
+  colorKey582: ['#7C1C05', '红', '红色', 'red'],
+  colorKey583: [
+    '#7C7631',
+    '黄褐',
+    '褐',
+    '褐色',
+    '黄褐色',
+    'brownness',
+    'tawny',
+  ],
+  colorKey584: ['#7C778A', '淡紫', '紫', '紫色', '淡紫色', 'purple', 'orchid'],
+  colorKey585: ['#7C7B7A', '灰', '灰色', 'gray'],
+  colorKey586: [
+    '#7C7B82',
+    '灰',
+    '青灰',
+    '青灰色',
+    '灰色',
+    'lightslategray',
+    'gray',
+  ],
+  colorKey587: ['#7C881A', '橄榄绿', '橄榄绿色', 'oliveGreen'],
+  colorKey588: [
     '#7CA1A6',
     '浅绿',
     '军蓝',
@@ -4333,7 +4495,7 @@ export const colorDictionary = {
     'cadetBlue',
     'LightGreen',
   ],
-  Acapulco: [
+  colorKey589: [
     '#7CB0A1',
     '薄荷绿',
     '淡绿',
@@ -4354,7 +4516,7 @@ export const colorDictionary = {
     'paleGreen',
     'MintGreen',
   ],
-  Neptune: [
+  colorKey590: [
     '#7CB7BB',
     '薄荷蓝',
     '浅蓝',
@@ -4366,8 +4528,8 @@ export const colorDictionary = {
     'wathetBlue',
     'MintBlue',
   ],
-  Pueblo: ['#7D2C14', '棕红', '棕', '棕色', '棕红色', 'brown', 'BrownRed'],
-  'Bay Leaf': [
+  colorKey591: ['#7D2C14', '棕红', '棕', '棕色', '棕红色', 'brown', 'BrownRed'],
+  colorKey592: [
     '#7DA98D',
     '浅绿',
     '淡绿',
@@ -4379,7 +4541,7 @@ export const colorDictionary = {
     'paleGreen',
     'LightGreen',
   ],
-  Malibu: [
+  colorKey593: [
     '#7DC8F7',
     '淡蓝',
     '浅天蓝',
@@ -4394,7 +4556,7 @@ export const colorDictionary = {
     'lightskyblue',
     'babyBlue',
   ],
-  Bermuda: [
+  colorKey594: [
     '#7DD8C6',
     '薄荷绿',
     '浅绿',
@@ -4406,7 +4568,7 @@ export const colorDictionary = {
     'LightGreen',
     'MintGreen',
   ],
-  'Copper Canyon': [
+  colorKey595: [
     '#7E3A15',
     '深棕',
     '棕',
@@ -4421,7 +4583,7 @@ export const colorDictionary = {
     'brown',
     'darkBrown',
   ],
-  Claret: [
+  colorKey596: [
     '#7F1734',
     '玫瑰',
     '玫红',
@@ -4436,7 +4598,7 @@ export const colorDictionary = {
     'roseRed',
     'rose',
   ],
-  'Peru Tan': [
+  colorKey597: [
     '#7F3A02',
     '棕',
     '褐',
@@ -4448,8 +4610,8 @@ export const colorDictionary = {
     'brownness',
     'brown',
   ],
-  Falcon: ['#7F626D', '灰粉', '粉', '粉色', '灰粉色', 'pink', 'GreyPink'],
-  Mobster: [
+  colorKey598: ['#7F626D', '灰粉', '粉', '粉色', '灰粉色', 'pink', 'GreyPink'],
+  colorKey599: [
     '#7F7589',
     '苍紫',
     '紫',
@@ -4461,7 +4623,7 @@ export const colorDictionary = {
     'purple',
     'PalePurple',
   ],
-  'Moody Blue': [
+  colorKey600: [
     '#7F76D3',
     '中紫',
     '紫',
@@ -4470,7 +4632,7 @@ export const colorDictionary = {
     'purple',
     'mediumorchid',
   ],
-  Chartreuse: [
+  colorKey601: [
     '#7FFF00',
     '黄绿',
     '草坪绿',
@@ -4491,7 +4653,7 @@ export const colorDictionary = {
     'meadowGreen',
     'YellowGreen',
   ],
-  Aquamarine: [
+  colorKey602: [
     '#7FFFD4',
     '薄荷绿',
     '浅绿',
@@ -4506,8 +4668,8 @@ export const colorDictionary = {
     'LightGreen',
     'MintGreen',
   ],
-  Maroon: ['#800000', '暗红', '红', '红色', '暗红色', 'red', 'darkRed'],
-  'Rose Bud Cherry': [
+  colorKey603: ['#800000', '暗红', '红', '红色', '暗红色', 'red', 'darkRed'],
+  colorKey604: [
     '#800B47',
     '紫红',
     '洋红',
@@ -4522,7 +4684,7 @@ export const colorDictionary = {
     'carmine',
     'fuchsia',
   ],
-  'Falu Red': [
+  colorKey605: [
     '#801818',
     '栗',
     '褐红',
@@ -4543,7 +4705,7 @@ export const colorDictionary = {
     'maroon',
     'chestnutColour',
   ],
-  'Red Robin': [
+  colorKey606: [
     '#80341F',
     '红褐',
     '红棕',
@@ -4558,7 +4720,7 @@ export const colorDictionary = {
     'reddishBrown',
     'Mahogany',
   ],
-  'Vivid Violet': [
+  colorKey607: [
     '#803790',
     '暗兰花紫',
     '紫',
@@ -4567,7 +4729,7 @@ export const colorDictionary = {
     'purple',
     'DarkOrchidPurple',
   ],
-  Russet: [
+  colorKey608: [
     '#80461B',
     '黄土赭',
     '土褐',
@@ -4582,10 +4744,10 @@ export const colorDictionary = {
     'tan',
     'loessOchre',
   ],
-  'Friar Gray': ['#807E79', '灰', '灰色', 'gray'],
-  Olive: ['#808000', '橄榄', '橄榄色', 'olive'],
-  Gray: ['#808080', '灰', '灰色', 'gray'],
-  'Gulf Stream': [
+  colorKey609: ['#807E79', '灰', '灰色', 'gray'],
+  colorKey610: ['#808000', '橄榄', '橄榄色', 'olive'],
+  colorKey611: ['#808080', '灰', '灰色', 'gray'],
+  colorKey612: [
     '#80B3AE',
     '浅绿',
     '薄荷绿',
@@ -4600,7 +4762,7 @@ export const colorDictionary = {
     'MintGreen',
     'LightGreen',
   ],
-  Glacier: [
+  colorKey613: [
     '#80B3C4',
     '天蓝',
     '淡蓝',
@@ -4615,7 +4777,7 @@ export const colorDictionary = {
     'babyBlue',
     'skyBlue',
   ],
-  Seagull: [
+  colorKey614: [
     '#80CCEA',
     '天蓝',
     '淡蓝',
@@ -4630,7 +4792,7 @@ export const colorDictionary = {
     'babyBlue',
     'skyBlue',
   ],
-  Nutmeg: [
+  colorKey615: [
     '#81422C',
     '深褐',
     '深棕',
@@ -4645,7 +4807,7 @@ export const colorDictionary = {
     'darkBrown',
     'sealBrown',
   ],
-  'Spicy Pink': [
+  colorKey616: [
     '#816E71',
     '灰粉',
     '玫瑰棕',
@@ -4657,7 +4819,7 @@ export const colorDictionary = {
     'RoseBrown',
     'GreyPink',
   ],
-  Empress: [
+  colorKey617: [
     '#817377',
     '玫瑰棕',
     '棕',
@@ -4666,7 +4828,7 @@ export const colorDictionary = {
     'brown',
     'RoseBrown',
   ],
-  'Spanish Green': [
+  colorKey618: [
     '#819885',
     '暗海洋绿',
     '灰绿',
@@ -4678,7 +4840,7 @@ export const colorDictionary = {
     'greyishGreen',
     'DarkOceanGreen',
   ],
-  'Sand Dune': [
+  colorKey619: [
     '#826F65',
     '茶',
     '浅褐',
@@ -4696,8 +4858,8 @@ export const colorDictionary = {
     'lightBrown',
     'tawny',
   ],
-  Gunsmoke: ['#828685', '深灰', '灰', '灰色', '深灰色', 'gray', 'darkGrey'],
-  'Battleship Gray': [
+  colorKey620: ['#828685', '深灰', '灰', '灰色', '深灰色', 'gray', 'darkGrey'],
+  colorKey621: [
     '#828F72',
     '橄榄',
     '褐',
@@ -4709,8 +4871,8 @@ export const colorDictionary = {
     'brownness',
     'olive',
   ],
-  Merlot: ['#831923', '深红', '红', '红色', '深红色', 'red', 'crimson'],
-  Shadow: [
+  colorKey622: ['#831923', '深红', '红', '红色', '深红色', 'red', 'crimson'],
+  colorKey623: [
     '#837050',
     '茶',
     '褐',
@@ -4722,7 +4884,7 @@ export const colorDictionary = {
     'brownness',
     'tawny',
   ],
-  'Chelsea Cucumber': [
+  colorKey624: [
     '#83AA5D',
     '黄绿',
     '绿',
@@ -4731,7 +4893,7 @@ export const colorDictionary = {
     'green',
     'YellowGreen',
   ],
-  'Monte Carlo': [
+  colorKey625: [
     '#83D0C6',
     '薄荷蓝',
     '青',
@@ -4749,7 +4911,7 @@ export const colorDictionary = {
     'cyan',
     'MintBlue',
   ],
-  Plum: [
+  colorKey626: [
     '#843179',
     '深洋红',
     '紫',
@@ -4758,16 +4920,8 @@ export const colorDictionary = {
     'purple',
     'darkMagenta',
   ],
-  'Granny Smith': [
-    '#84A0A0',
-    '灰蓝',
-    '蓝',
-    '蓝色',
-    '灰蓝色',
-    'blue',
-    'dustyBlue',
-  ],
-  'Chetwode Blue': [
+  colorKey627: ['#84A0A0', '灰蓝', '蓝', '蓝色', '灰蓝色', 'blue', 'dustyBlue'],
+  colorKey628: [
     '#8581D9',
     '淡紫',
     '浅紫',
@@ -4779,7 +4933,7 @@ export const colorDictionary = {
     'lilac',
     'orchid',
   ],
-  Bandicoot: [
+  colorKey629: [
     '#858470',
     '暗黄褐',
     '褐',
@@ -4788,8 +4942,8 @@ export const colorDictionary = {
     'brownness',
     'DarkBrown',
   ],
-  'Bali Hai': ['#859FAF', '灰蓝', '蓝', '蓝色', '灰蓝色', 'blue', 'dustyBlue'],
-  'Half Baked': [
+  colorKey630: ['#859FAF', '灰蓝', '蓝', '蓝色', '灰蓝色', 'blue', 'dustyBlue'],
+  colorKey631: [
     '#85C4CC',
     '淡蓝',
     '浅蓝',
@@ -4807,7 +4961,7 @@ export const colorDictionary = {
     'wathetBlue',
     'babyBlue',
   ],
-  'Red Devil': [
+  colorKey632: [
     '#860111',
     '栗',
     '深红',
@@ -4819,7 +4973,7 @@ export const colorDictionary = {
     'crimson',
     'chestnutColour',
   ],
-  Lotus: [
+  colorKey633: [
     '#863C3C',
     '栗',
     '深红',
@@ -4834,8 +4988,8 @@ export const colorDictionary = {
     'crimson',
     'chestnutColour',
   ],
-  Ironstone: ['#86483C', '褐', '棕', '棕色', '褐色', 'brown', 'brownness'],
-  'Bull Shot': [
+  colorKey634: ['#86483C', '褐', '棕', '棕色', '褐色', 'brown', 'brownness'],
+  colorKey635: [
     '#864D1E',
     '秘鲁',
     '褐',
@@ -4847,8 +5001,8 @@ export const colorDictionary = {
     'brownness',
     'peru',
   ],
-  'Rusty Nail': ['#86560A', '褐', '棕', '棕色', '褐色', 'brown', 'brownness'],
-  Bitter: [
+  colorKey636: ['#86560A', '褐', '棕', '棕色', '褐色', 'brown', 'brownness'],
+  colorKey637: [
     '#868974',
     '橄榄',
     '褐',
@@ -4860,7 +5014,7 @@ export const colorDictionary = {
     'brownness',
     'olive',
   ],
-  'Regent Gray': [
+  colorKey638: [
     '#86949F',
     '钢蓝',
     '蓝',
@@ -4869,8 +5023,16 @@ export const colorDictionary = {
     'lightsteelblue',
     'blue',
   ],
-  Disco: ['#871550', '玫瑰', '玫红', '玫红色', '玫瑰色', 'roseRed', 'rose'],
-  Americano: [
+  colorKey639: [
+    '#871550',
+    '玫瑰',
+    '玫红',
+    '玫红色',
+    '玫瑰色',
+    'roseRed',
+    'rose',
+  ],
+  colorKey640: [
     '#87756E',
     '茶',
     '浅褐',
@@ -4882,7 +5044,7 @@ export const colorDictionary = {
     'lightBrown',
     'tawny',
   ],
-  Hurricane: [
+  colorKey641: [
     '#877C7B',
     '玫瑰棕',
     '浅棕',
@@ -4894,7 +5056,7 @@ export const colorDictionary = {
     'lightBrown',
     'RoseBrown',
   ],
-  'Oslo Gray': [
+  colorKey642: [
     '#878D91',
     '青灰',
     '灰',
@@ -4906,8 +5068,16 @@ export const colorDictionary = {
     'lightslategray',
     'Cyan',
   ],
-  Sushi: ['#87AB39', '黄绿', '绿', '绿色', '黄绿色', 'green', 'YellowGreen'],
-  'Spicy Mix': [
+  colorKey643: [
+    '#87AB39',
+    '黄绿',
+    '绿',
+    '绿色',
+    '黄绿色',
+    'green',
+    'YellowGreen',
+  ],
+  colorKey644: [
     '#885342',
     '赭',
     '褐',
@@ -4919,7 +5089,7 @@ export const colorDictionary = {
     'brownness',
     'ochre',
   ],
-  Kumera: [
+  colorKey645: [
     '#886221',
     '暗金菊黄',
     '茶',
@@ -4934,9 +5104,9 @@ export const colorDictionary = {
     'tawny',
     'DarkGoldenChrysanthemumYellow',
   ],
-  'Suva Gray': ['#888387', '灰', '灰色', 'gray'],
-  Avocado: ['#888D65', '橄榄', '橄榄色', 'olive'],
-  Camelot: [
+  colorKey646: ['#888387', '灰', '灰色', 'gray'],
+  colorKey647: ['#888D65', '橄榄', '橄榄色', 'olive'],
+  colorKey648: [
     '#893456',
     '玫红',
     '紫红',
@@ -4948,7 +5118,7 @@ export const colorDictionary = {
     'fuchsia',
     'roseRed',
   ],
-  'Solid Pink': [
+  colorKey649: [
     '#893843',
     '深珊瑚',
     '浅红',
@@ -4963,7 +5133,7 @@ export const colorDictionary = {
     'lightRed',
     'DeepCoral',
   ],
-  'Cannon Pink': [
+  colorKey650: [
     '#894367',
     '玫红',
     '紫红',
@@ -4975,7 +5145,7 @@ export const colorDictionary = {
     'fuchsia',
     'roseRed',
   ],
-  Makara: [
+  colorKey651: [
     '#897D6D',
     '茶',
     '棕',
@@ -4990,7 +5160,7 @@ export const colorDictionary = {
     'brown',
     'tawny',
   ],
-  'Burnt Umber': [
+  colorKey652: [
     '#8A3324',
     '棕红',
     '火砖',
@@ -5002,7 +5172,7 @@ export const colorDictionary = {
     'firebrick',
     'BrownRed',
   ],
-  'True V': [
+  colorKey653: [
     '#8A73D6',
     '中紫',
     '淡紫',
@@ -5014,7 +5184,7 @@ export const colorDictionary = {
     'orchid',
     'mediumorchid',
   ],
-  'Clay Creek': [
+  colorKey654: [
     '#8A8360',
     '黄褐',
     '土褐',
@@ -5026,9 +5196,17 @@ export const colorDictionary = {
     'tan',
     'Tawny',
   ],
-  Monsoon: ['#8A8389', '灰粉', '粉', '粉色', '灰粉色', 'pink', 'grayPink'],
-  Stack: ['#8A8F8A', '灰绿', '绿', '绿色', '灰绿色', 'green', 'greenGray'],
-  'Jordy Blue': [
+  colorKey655: ['#8A8389', '灰粉', '粉', '粉色', '灰粉色', 'pink', 'grayPink'],
+  colorKey656: [
+    '#8A8F8A',
+    '灰绿',
+    '绿',
+    '绿色',
+    '灰绿色',
+    'green',
+    'greenGray',
+  ],
+  colorKey657: [
     '#8AB9F1',
     '闪蓝',
     '天蓝',
@@ -5043,7 +5221,7 @@ export const colorDictionary = {
     'skyBlue',
     'dodgerblue',
   ],
-  'Electric Violet': [
+  colorKey658: [
     '#8B00FF',
     '紫罗兰',
     '暗紫',
@@ -5055,7 +5233,7 @@ export const colorDictionary = {
     'darkorchid',
     'violet',
   ],
-  Monarch: [
+  colorKey659: [
     '#8B0723',
     '栗',
     '深红',
@@ -5067,7 +5245,7 @@ export const colorDictionary = {
     'crimson',
     'chestnutColour',
   ],
-  'Corn Harvest': [
+  colorKey660: [
     '#8B6B0B',
     '棕',
     '土褐',
@@ -5079,7 +5257,7 @@ export const colorDictionary = {
     'tan',
     'brown',
   ],
-  'Olive Haze': [
+  colorKey661: [
     '#8B8470',
     '深黄褐',
     '暗褐',
@@ -5094,7 +5272,7 @@ export const colorDictionary = {
     'crineous',
     'DarkFawn',
   ],
-  Schooner: [
+  colorKey662: [
     '#8B847E',
     '棕',
     '土棕',
@@ -5108,7 +5286,7 @@ export const colorDictionary = {
     'brownness',
     'crineous',
   ],
-  'Natural Gray': [
+  colorKey663: [
     '#8B8680',
     '棕',
     '土棕',
@@ -5122,8 +5300,8 @@ export const colorDictionary = {
     'brownness',
     'crineous',
   ],
-  Mantle: ['#8B9C90', '暗青', '青', '青色', '暗青色', 'cyan', 'DarkCyan'],
-  Portage: [
+  colorKey664: ['#8B9C90', '暗青', '青', '青色', '暗青色', 'cyan', 'DarkCyan'],
+  colorKey665: [
     '#8B9FEE',
     '淡紫',
     '浅紫',
@@ -5135,7 +5313,7 @@ export const colorDictionary = {
     'lilac',
     'orchid',
   ],
-  Envy: [
+  colorKey666: [
     '#8BA690',
     '灰绿',
     '暗绿',
@@ -5150,7 +5328,7 @@ export const colorDictionary = {
     'darkGreen',
     'greyishGreen',
   ],
-  Cascade: [
+  colorKey667: [
     '#8BA9A5',
     '灰绿',
     '暗绿',
@@ -5165,7 +5343,7 @@ export const colorDictionary = {
     'darkGreen',
     'greyishGreen',
   ],
-  Riptide: [
+  colorKey668: [
     '#8BE6D8',
     '宝石绿',
     '浅绿',
@@ -5183,7 +5361,7 @@ export const colorDictionary = {
     'LightGreen',
     'GemGreen',
   ],
-  'Cardinal Pink': [
+  colorKey669: [
     '#8C055E',
     '深紫红',
     '酒红',
@@ -5198,7 +5376,7 @@ export const colorDictionary = {
     'wineRed',
     'royalPurple',
   ],
-  'Mule Fawn': [
+  colorKey670: [
     '#8C472F',
     '赭',
     '褐',
@@ -5210,7 +5388,7 @@ export const colorDictionary = {
     'brownness',
     'ochre',
   ],
-  'Potters Clay': [
+  colorKey671: [
     '#8C5738',
     '赭',
     '褐',
@@ -5222,8 +5400,8 @@ export const colorDictionary = {
     'brownness',
     'ochre',
   ],
-  'Trendy Pink': ['#8C6495', '紫', '紫色', 'purple'],
-  Paprika: [
+  colorKey672: ['#8C6495', '紫', '紫色', 'purple'],
+  colorKey673: [
     '#8D0226',
     '栗',
     '深红',
@@ -5235,7 +5413,7 @@ export const colorDictionary = {
     'crimson',
     'chestnutColour',
   ],
-  'Sanguine Brown': [
+  colorKey674: [
     '#8D3D38',
     '褐',
     '红棕',
@@ -5247,7 +5425,7 @@ export const colorDictionary = {
     'reddishBrown',
     'brownness',
   ],
-  Tosca: [
+  colorKey675: [
     '#8D3F3F',
     '褐',
     '红棕',
@@ -5259,7 +5437,7 @@ export const colorDictionary = {
     'reddishBrown',
     'brownness',
   ],
-  Cement: [
+  colorKey676: [
     '#8D7662',
     '茶',
     '褐',
@@ -5271,7 +5449,7 @@ export const colorDictionary = {
     'brownness',
     'tawny',
   ],
-  'Granite Green': [
+  colorKey677: [
     '#8D8974',
     '橄榄绿',
     '深黄褐',
@@ -5283,7 +5461,7 @@ export const colorDictionary = {
     'DarkFawn',
     'oliveGreen',
   ],
-  Manatee: [
+  colorKey678: [
     '#8D90A1',
     '紫灰',
     '紫',
@@ -5292,7 +5470,7 @@ export const colorDictionary = {
     'purple',
     'LightpurpleGrey',
   ],
-  'Polo Blue': [
+  colorKey679: [
     '#8DA8CC',
     '浅蓝',
     '淡蓝',
@@ -5304,7 +5482,7 @@ export const colorDictionary = {
     'babyBlue',
     'wathetBlue',
   ],
-  'Red Berry': [
+  colorKey680: [
     '#8E0000',
     '深红',
     '暗红',
@@ -5316,7 +5494,7 @@ export const colorDictionary = {
     'darkRed',
     'crimson',
   ],
-  Rope: [
+  colorKey681: [
     '#8E4D1E',
     '茶',
     '褐',
@@ -5328,7 +5506,7 @@ export const colorDictionary = {
     'brownness',
     'tawny',
   ],
-  Opium: [
+  colorKey682: [
     '#8E6F70',
     '玫瑰棕',
     '褐',
@@ -5340,7 +5518,7 @@ export const colorDictionary = {
     'brownness',
     'RoseBrown',
   ],
-  Domino: [
+  colorKey683: [
     '#8E775E',
     '茶',
     '褐',
@@ -5352,8 +5530,16 @@ export const colorDictionary = {
     'brownness',
     'tawny',
   ],
-  Mamba: ['#8E8190', '灰紫', '紫', '紫色', '灰紫色', 'purple', 'greyPurple'],
-  Nepal: [
+  colorKey684: [
+    '#8E8190',
+    '灰紫',
+    '紫',
+    '紫色',
+    '灰紫色',
+    'purple',
+    'greyPurple',
+  ],
+  colorKey685: [
     '#8EABC1',
     '淡蓝',
     '浅蓝',
@@ -5368,7 +5554,7 @@ export const colorDictionary = {
     'wathetBlue',
     'babyBlue',
   ],
-  Pohutukawa: [
+  colorKey686: [
     '#8F021C',
     '栗',
     '红',
@@ -5380,7 +5566,7 @@ export const colorDictionary = {
     'red',
     'chestnutColour',
   ],
-  'El Salva': [
+  colorKey687: [
     '#8F3E33',
     '赭',
     '褐',
@@ -5392,7 +5578,7 @@ export const colorDictionary = {
     'brownness',
     'ochre',
   ],
-  Korma: [
+  colorKey688: [
     '#8F4B0E',
     '赭',
     '褐',
@@ -5404,8 +5590,8 @@ export const colorDictionary = {
     'brownness',
     'ochre',
   ],
-  Squirrel: ['#8F8176', '褐', '茶', '茶色', '褐色', 'tawny', 'brownness'],
-  'Vista Blue': [
+  colorKey689: ['#8F8176', '褐', '茶', '茶色', '褐色', 'tawny', 'brownness'],
+  colorKey690: [
     '#8FD6B4',
     '碧绿',
     '绿',
@@ -5417,8 +5603,8 @@ export const colorDictionary = {
     'green',
     'aquamarine',
   ],
-  Burgundy: ['#900020', '深红', '红', '红色', '深红色', 'red', 'crimson'],
-  'Old Brick': [
+  colorKey691: ['#900020', '深红', '红', '红色', '深红色', 'red', 'crimson'],
+  colorKey692: [
     '#901E1E',
     '棕红',
     '深红',
@@ -5430,7 +5616,7 @@ export const colorDictionary = {
     'crimson',
     'BrownRed',
   ],
-  Hemp: [
+  colorKey693: [
     '#907874',
     '玫瑰棕',
     '褐',
@@ -5442,7 +5628,7 @@ export const colorDictionary = {
     'brownness',
     'RoseBrown',
   ],
-  'Almond Frost': [
+  colorKey694: [
     '#907B71',
     '茶',
     '褐',
@@ -5454,7 +5640,7 @@ export const colorDictionary = {
     'brownness',
     'tawny',
   ],
-  Sycamore: [
+  colorKey695: [
     '#908D39',
     '褐',
     '深绿褐',
@@ -5466,7 +5652,7 @@ export const colorDictionary = {
     'DarkGreenBrown',
     'brownness',
   ],
-  Sangria: [
+  colorKey696: [
     '#92000A',
     '棕红',
     '深红',
@@ -5478,9 +5664,9 @@ export const colorDictionary = {
     'crimson',
     'BrownRed',
   ],
-  Cumin: ['#924321', '褐', '棕', '棕色', '褐色', 'brown', 'brownness'],
-  Beaver: ['#926F5B', '褐', '棕', '棕色', '褐色', 'brown', 'brownness'],
-  Stonewall: [
+  colorKey697: ['#924321', '褐', '棕', '棕色', '褐色', 'brown', 'brownness'],
+  colorKey698: ['#926F5B', '褐', '棕', '棕色', '褐色', 'brown', 'brownness'],
+  colorKey699: [
     '#928573',
     '木',
     '茶',
@@ -5495,8 +5681,16 @@ export const colorDictionary = {
     'tawny',
     'timber',
   ],
-  Venus: ['#928590', '灰紫', '紫', '紫色', '灰紫色', 'purple', 'purpleGrey'],
-  'Medium Purple': [
+  colorKey700: [
+    '#928590',
+    '灰紫',
+    '紫',
+    '紫色',
+    '灰紫色',
+    'purple',
+    'purpleGrey',
+  ],
+  colorKey701: [
     '#9370DB',
     '中紫',
     '紫',
@@ -5505,8 +5699,8 @@ export const colorDictionary = {
     'purple',
     'mediumorchid',
   ],
-  Cornflower: ['#93CCEA', '天蓝', '蓝', '蓝色', '天蓝色', 'blue', 'skyBlue'],
-  'Algae Green': [
+  colorKey702: ['#93CCEA', '天蓝', '蓝', '蓝色', '天蓝色', 'blue', 'skyBlue'],
+  colorKey703: [
     '#93DFB8',
     '淡绿',
     '浅绿',
@@ -5521,7 +5715,7 @@ export const colorDictionary = {
     'LightGreen',
     'paleGreen',
   ],
-  'Copper Rust': [
+  colorKey704: [
     '#944747',
     '棕红',
     '褐',
@@ -5539,7 +5733,7 @@ export const colorDictionary = {
     'brownness',
     'BrownRed',
   ],
-  Arrowtown: [
+  colorKey705: [
     '#948771',
     '棕',
     '咖啡',
@@ -5551,8 +5745,8 @@ export const colorDictionary = {
     'coffee',
     'brown',
   ],
-  Scarlett: ['#950015', '深红', '红', '红色', '深红色', 'red', 'crimson'],
-  Strikemaster: [
+  colorKey706: ['#950015', '深红', '红', '红色', '深红色', 'red', 'crimson'],
+  colorKey707: [
     '#956387',
     '浅紫',
     '淡紫',
@@ -5564,9 +5758,9 @@ export const colorDictionary = {
     'orchid',
     'lilac',
   ],
-  'Mountain Mist': ['#959396', '灰', '灰色', 'gray'],
-  Carmine: ['#960018', '深红', '红', '红色', '深红色', 'red', 'crimson'],
-  Brown: [
+  colorKey708: ['#959396', '灰', '灰色', 'gray'],
+  colorKey709: ['#960018', '深红', '红', '红色', '深红色', 'red', 'crimson'],
+  colorKey710: [
     '#964B00',
     '秘鲁',
     '咖啡',
@@ -5581,7 +5775,7 @@ export const colorDictionary = {
     'coffee',
     'peru',
   ],
-  Leather: [
+  colorKey711: [
     '#967059',
     '咖啡',
     '褐',
@@ -5593,7 +5787,7 @@ export const colorDictionary = {
     'brownness',
     'coffee',
   ],
-  "Purple Mountain's Majesty": [
+  colorKey712: [
     '#9678B6',
     '紫罗兰',
     '紫',
@@ -5602,7 +5796,7 @@ export const colorDictionary = {
     'purple',
     'violet',
   ],
-  'Lavender Purple': [
+  colorKey713: [
     '#967BB6',
     '紫罗兰',
     '紫',
@@ -5611,7 +5805,7 @@ export const colorDictionary = {
     'purple',
     'violet',
   ],
-  Pewter: [
+  colorKey714: [
     '#96A8A1',
     '灰绿',
     '青',
@@ -5623,8 +5817,8 @@ export const colorDictionary = {
     'cyan',
     'greyishGreen',
   ],
-  'Summer Green': ['#96BBAB', '青', '绿', '绿色', '青色', 'green', 'cyan'],
-  'Au Chico': [
+  colorKey715: ['#96BBAB', '青', '绿', '绿色', '青色', 'green', 'cyan'],
+  colorKey716: [
     '#97605D',
     '咖啡',
     '褐',
@@ -5636,10 +5830,26 @@ export const colorDictionary = {
     'brownness',
     'coffee',
   ],
-  Wisteria: ['#9771B5', '紫罗兰', '紫', '紫色', '紫罗兰色', 'purple', 'violet'],
-  Atlantis: ['#97CD2D', '黄绿', '绿', '绿色', '黄绿色', 'green', 'YellowGreen'],
-  'Vin Rouge': ['#983D61', '玫红', '粉', '粉色', '玫红色', 'pink', 'roseRed'],
-  'Lilac Bush': [
+  colorKey717: [
+    '#9771B5',
+    '紫罗兰',
+    '紫',
+    '紫色',
+    '紫罗兰色',
+    'purple',
+    'violet',
+  ],
+  colorKey718: [
+    '#97CD2D',
+    '黄绿',
+    '绿',
+    '绿色',
+    '黄绿色',
+    'green',
+    'YellowGreen',
+  ],
+  colorKey719: ['#983D61', '玫红', '粉', '粉色', '玫红色', 'pink', 'roseRed'],
+  colorKey720: [
     '#9874D3',
     '中紫',
     '紫',
@@ -5648,7 +5858,7 @@ export const colorDictionary = {
     'purple',
     'mediumorchid',
   ],
-  Bazaar: [
+  colorKey721: [
     '#98777B',
     '玫瑰棕',
     '褐',
@@ -5660,9 +5870,17 @@ export const colorDictionary = {
     'brownness',
     'RoseBrown',
   ],
-  Hacienda: ['#98811B', '黄褐', '褐', '褐色', '黄褐色', 'brownness', 'tawny'],
-  'Pale Oyster': ['#988D77', '茶', '褐', '褐色', '茶色', 'brownness', 'tawny'],
-  'Mint Green': [
+  colorKey722: [
+    '#98811B',
+    '黄褐',
+    '褐',
+    '褐色',
+    '黄褐色',
+    'brownness',
+    'tawny',
+  ],
+  colorKey723: ['#988D77', '茶', '褐', '褐色', '茶色', 'brownness', 'tawny'],
+  colorKey724: [
     '#98FF98',
     '弱绿',
     '淡绿',
@@ -5686,7 +5904,7 @@ export const colorDictionary = {
     'paleGreen',
     'PaleGreen',
   ],
-  'Fresh Eggplant': [
+  colorKey725: [
     '#990066',
     '粉红',
     '玫红',
@@ -5695,19 +5913,11 @@ export const colorDictionary = {
     'roseRed',
     'pink',
   ],
-  'Violet Eggplant': ['#991199', '紫', '紫色', 'purple'],
-  Tamarillo: ['#991613', '红', '红色', 'red'],
-  'Totem Pole': ['#991B07', '红', '红色', 'red'],
-  'Copper Rose': [
-    '#996666',
-    '灰粉',
-    '粉',
-    '粉色',
-    '灰粉色',
-    'pink',
-    'GreyPink',
-  ],
-  Amethyst: [
+  colorKey726: ['#991199', '紫', '紫色', 'purple'],
+  colorKey727: ['#991613', '红', '红色', 'red'],
+  colorKey728: ['#991B07', '红', '红色', 'red'],
+  colorKey729: ['#996666', '灰粉', '粉', '粉色', '灰粉色', 'pink', 'GreyPink'],
+  colorKey730: [
     '#9966CC',
     '间紫罗兰',
     '紫',
@@ -5716,17 +5926,9 @@ export const colorDictionary = {
     'purple',
     'mediumvioletred',
   ],
-  'Mountbatten Pink': [
-    '#997A8D',
-    '灰粉',
-    '粉',
-    '粉色',
-    '灰粉色',
-    'pink',
-    'GreyPink',
-  ],
-  'Blue Bell': ['#9999CC', '中暗蓝', '中暗蓝色', 'mediumslateblue'],
-  'Prairie Sand': [
+  colorKey731: ['#997A8D', '灰粉', '粉', '粉色', '灰粉色', 'pink', 'GreyPink'],
+  colorKey732: ['#9999CC', '中暗蓝', '中暗蓝色', 'mediumslateblue'],
+  colorKey733: [
     '#9A3820',
     '红棕',
     '褐',
@@ -5738,8 +5940,8 @@ export const colorDictionary = {
     'brownness',
     'reddishBrown',
   ],
-  Toast: ['#9A6E61', '褐', '棕', '棕色', '褐色', 'brown', 'brownness'],
-  Gurkha: [
+  colorKey734: ['#9A6E61', '褐', '棕', '棕色', '褐色', 'brown', 'brownness'],
+  colorKey735: [
     '#9A9577',
     '暗黄褐',
     '褐',
@@ -5748,8 +5950,16 @@ export const colorDictionary = {
     'brownness',
     'DarkBrown',
   ],
-  Olivine: ['#9AB973', '黄绿', '绿', '绿色', '黄绿色', 'green', 'YellowGreen'],
-  'Shadow Green': [
+  colorKey736: [
+    '#9AB973',
+    '黄绿',
+    '绿',
+    '绿色',
+    '黄绿色',
+    'green',
+    'YellowGreen',
+  ],
+  colorKey737: [
     '#9AC2B8',
     '浅蓝',
     '粉蓝',
@@ -5768,17 +5978,9 @@ export const colorDictionary = {
     'powderblue',
     'wathetBlue',
   ],
-  Oregon: ['#9B4703', '褐', '棕', '棕色', '褐色', 'brown', 'brownness'],
-  'Lemon Grass': [
-    '#9B9E8F',
-    '土褐',
-    '褐',
-    '褐色',
-    '土褐色',
-    'brownness',
-    'tan',
-  ],
-  Stiletto: [
+  colorKey738: ['#9B4703', '褐', '棕', '棕色', '褐色', 'brown', 'brownness'],
+  colorKey739: ['#9B9E8F', '土褐', '褐', '褐色', '土褐色', 'brownness', 'tan'],
+  colorKey740: [
     '#9C3336',
     '深红',
     '红',
@@ -5796,7 +5998,7 @@ export const colorDictionary = {
     'red',
     'crimson',
   ],
-  'Hawaiian Tan': [
+  colorKey741: [
     '#9D5616',
     '秘鲁',
     '褐',
@@ -5808,7 +6010,7 @@ export const colorDictionary = {
     'brownness',
     'peru',
   ],
-  'Gull Gray': [
+  colorKey742: [
     '#9DACB7',
     '浅钢蓝',
     '蓝',
@@ -5820,7 +6022,7 @@ export const colorDictionary = {
     'blue',
     'lightsteelblue',
   ],
-  Pistachio: [
+  colorKey743: [
     '#9DC209',
     '黄绿',
     '绿',
@@ -5829,7 +6031,7 @@ export const colorDictionary = {
     'green',
     'YellowGreen',
   ],
-  'Granny Smith Apple': [
+  colorKey744: [
     '#9DE093',
     '黄绿',
     '淡绿',
@@ -5847,7 +6049,7 @@ export const colorDictionary = {
     'paleGreen',
     'YellowGreen',
   ],
-  Anakiwa: [
+  colorKey745: [
     '#9DE5FF',
     '天蓝',
     '淡蓝',
@@ -5862,9 +6064,9 @@ export const colorDictionary = {
     'babyBlue',
     'skyBlue',
   ],
-  'Chelsea Gem': ['#9E5302', '褐', '棕', '棕色', '褐色', 'brown', 'brownness'],
-  'Sepia Skin': ['#9E5B40', '褐', '棕', '棕色', '褐色', 'brown', 'brownness'],
-  Sage: [
+  colorKey746: ['#9E5302', '褐', '棕', '棕色', '褐色', 'brown', 'brownness'],
+  colorKey747: ['#9E5B40', '褐', '棕', '棕色', '褐色', 'brown', 'brownness'],
+  colorKey748: [
     '#9EA587',
     '橄榄绿',
     '褐',
@@ -5876,7 +6078,7 @@ export const colorDictionary = {
     'brownness',
     'oliveGreen',
   ],
-  Citron: [
+  colorKey749: [
     '#9EA91F',
     '黄绿',
     '橄榄',
@@ -5885,7 +6087,7 @@ export const colorDictionary = {
     'olive',
     'YellowGreen',
   ],
-  'Rock Blue': [
+  colorKey750: [
     '#9EB1CD',
     '浅钢蓝',
     '蓝',
@@ -5894,7 +6096,7 @@ export const colorDictionary = {
     'blue',
     'lightsteelblue',
   ],
-  'Morning Glory': [
+  colorKey751: [
     '#9EDEE0',
     '薄荷蓝',
     '浅蓝',
@@ -5915,7 +6117,7 @@ export const colorDictionary = {
     'wathetBlue',
     'MintBlue',
   ],
-  Cognac: [
+  colorKey752: [
     '#9F381D',
     '红',
     '红棕',
@@ -5930,7 +6132,7 @@ export const colorDictionary = {
     'reddishBrown',
     'red',
   ],
-  'Reef Gold': [
+  colorKey753: [
     '#9F821C',
     '黄褐',
     '褐',
@@ -5942,8 +6144,8 @@ export const colorDictionary = {
     'brownness',
     'tawny',
   ],
-  'Star Dust': ['#9F9F9C', '深灰', '灰', '灰色', '深灰色', 'gray', 'darkGrey'],
-  'Santas Gray': [
+  colorKey754: ['#9F9F9C', '深灰', '灰', '灰色', '深灰色', 'gray', 'darkGrey'],
+  colorKey755: [
     '#9FA0B1',
     '灰紫',
     '淡紫',
@@ -5955,7 +6157,7 @@ export const colorDictionary = {
     'purple',
     'lavender',
   ],
-  Sinbad: [
+  colorKey756: [
     '#9FD7D3',
     '粉蓝',
     '蓝',
@@ -5970,7 +6172,7 @@ export const colorDictionary = {
     'blue',
     'powderblue',
   ],
-  Feijoa: [
+  colorKey757: [
     '#9FDD8C',
     '弱绿',
     '淡绿',
@@ -5994,8 +6196,8 @@ export const colorDictionary = {
     'paleGreen',
     'PaleGreen',
   ],
-  Tabasco: ['#A02712', '红', '红色', 'red'],
-  'Buttered Rum': [
+  colorKey758: ['#A02712', '红', '红色', 'red'],
+  colorKey759: [
     '#A1750D',
     '土褐',
     '褐',
@@ -6007,7 +6209,7 @@ export const colorDictionary = {
     'brownness',
     'tan',
   ],
-  'Hit Gray': [
+  colorKey760: [
     '#A1ADB5',
     '蓝灰',
     '灰蓝',
@@ -6018,8 +6220,8 @@ export const colorDictionary = {
     'blueGray',
     'blue',
   ],
-  Citrus: ['#A1C50A', '绿', '绿色', 'green'],
-  'Aqua Island': [
+  colorKey761: ['#A1C50A', '绿', '绿色', 'green'],
+  colorKey762: [
     '#A1DAD7',
     '绿',
     '浅绿',
@@ -6034,7 +6236,7 @@ export const colorDictionary = {
     'LightGreen',
     'green',
   ],
-  'Water Leaf': [
+  colorKey763: [
     '#A1E9DE',
     '绿',
     '浅绿',
@@ -6049,18 +6251,10 @@ export const colorDictionary = {
     'LightGreen',
     'green',
   ],
-  Flirt: ['#A2006D', '玫红', '粉', '粉色', '玫红色', 'pink', 'roseRed'],
-  Rouge: ['#A23B6C', '玫红', '粉', '粉色', '玫红色', 'pink', 'roseRed'],
-  'Cape Palliser': [
-    '#A26645',
-    '褐',
-    '棕',
-    '棕色',
-    '褐色',
-    'brown',
-    'brownness',
-  ],
-  'Gray Chateau': [
+  colorKey764: ['#A2006D', '玫红', '粉', '粉色', '玫红色', 'pink', 'roseRed'],
+  colorKey765: ['#A23B6C', '玫红', '粉', '粉色', '玫红色', 'pink', 'roseRed'],
+  colorKey766: ['#A26645', '褐', '棕', '棕色', '褐色', 'brown', 'brownness'],
+  colorKey767: [
     '#A2AAB3',
     '青',
     '灰绿',
@@ -6072,8 +6266,8 @@ export const colorDictionary = {
     'Green',
     'grayGreen',
   ],
-  Edward: ['#A2AEAB', '浅灰', '灰', '灰色', '浅灰色', 'gray', 'LightGray'],
-  Pharlap: [
+  colorKey768: ['#A2AEAB', '浅灰', '灰', '灰色', '浅灰色', 'gray', 'LightGray'],
+  colorKey769: [
     '#A3807B',
     '玫瑰棕',
     '浅棕',
@@ -6088,11 +6282,11 @@ export const colorDictionary = {
     'lightBrown',
     'RoseBrown',
   ],
-  'Amethyst Smoke': ['#A397B4'],
-  'Blizzard Blue': ['#A3E3ED'],
-  Delta: ['#A4A49D'],
-  Wistful: ['#A4A6D3', '浅紫', '紫', '紫色', '浅紫色', 'purple', 'lilac'],
-  'Green Smoke': [
+  colorKey770: ['#A397B4'],
+  colorKey771: ['#A3E3ED'],
+  colorKey772: ['#A4A49D'],
+  colorKey773: ['#A4A6D3', '浅紫', '紫', '紫色', '浅紫色', 'purple', 'lilac'],
+  colorKey774: [
     '#A4AF6E',
     '橄榄绿',
     '黄绿',
@@ -6104,16 +6298,8 @@ export const colorDictionary = {
     'YellowGreen',
     'oliveGreen',
   ],
-  'Jazzberry Jam': [
-    '#A50B5E',
-    '粉',
-    '玫红',
-    '玫红色',
-    '粉色',
-    'roseRed',
-    'pink',
-  ],
-  Zorba: [
+  colorKey775: ['#A50B5E', '粉', '玫红', '玫红色', '粉色', 'roseRed', 'pink'],
+  colorKey776: [
     '#A59B91',
     '茶',
     '褐',
@@ -6128,7 +6314,7 @@ export const colorDictionary = {
     'brownness',
     'tawny',
   ],
-  Bahia: [
+  colorKey777: [
     '#A5CB0C',
     '橄榄绿',
     '黄绿',
@@ -6140,7 +6326,7 @@ export const colorDictionary = {
     'YellowGreen',
     'oliveGreen',
   ],
-  'Roof Terracotta': [
+  colorKey778: [
     '#A62F20',
     '红棕',
     '棕',
@@ -6152,9 +6338,9 @@ export const colorDictionary = {
     'brown',
     'reddishBrown',
   ],
-  Paarl: ['#A65529', '褐', '棕', '棕色', '褐色', 'brown', 'brownness'],
-  'Barley Corn': ['#A68B5B', '褐', '棕', '棕色', '褐色', 'brown', 'brownness'],
-  'Donkey Brown': [
+  colorKey779: ['#A65529', '褐', '棕', '棕色', '褐色', 'brown', 'brownness'],
+  colorKey780: ['#A68B5B', '褐', '棕', '棕色', '褐色', 'brown', 'brownness'],
+  colorKey781: [
     '#A69279',
     '茶',
     '褐',
@@ -6166,9 +6352,9 @@ export const colorDictionary = {
     'brownness',
     'tawny',
   ],
-  Dawn: ['#A6A29A', '灰褐', '灰', '灰色', '灰褐色', 'Taupe', 'gray'],
-  'Mexican Red': ['#A72525'],
-  'Luxor Gold': [
+  colorKey782: ['#A6A29A', '灰褐', '灰', '灰色', '灰褐色', 'Taupe', 'gray'],
+  colorKey783: ['#A72525'],
+  colorKey784: [
     '#A7882C',
     '硬木',
     '茶',
@@ -6183,7 +6369,7 @@ export const colorDictionary = {
     'tawny',
     'HardWood',
   ],
-  'Rich Gold': [
+  colorKey785: [
     '#A85307',
     '巧克力',
     '褐',
@@ -6195,7 +6381,7 @@ export const colorDictionary = {
     'brownness',
     'chocolate',
   ],
-  'Reno Sand': [
+  colorKey786: [
     '#A86515',
     '茶',
     '褐',
@@ -6207,7 +6393,7 @@ export const colorDictionary = {
     'brownness',
     'tawny',
   ],
-  'Coral Tree': [
+  colorKey787: [
     '#A86B6B',
     '粉',
     '粉红',
@@ -6218,7 +6404,7 @@ export const colorDictionary = {
     'PaleCoral',
     'pink',
   ],
-  'Dusty Gray': [
+  colorKey788: [
     '#A8989B',
     '灰紫',
     '暗紫',
@@ -6230,8 +6416,8 @@ export const colorDictionary = {
     'purple',
     'DarkPurple',
   ],
-  'Dull Lavender': ['#A899E6', '紫', '紫色', 'purple'],
-  Tallow: [
+  colorKey789: ['#A899E6', '紫', '紫色', 'purple'],
+  colorKey790: [
     '#A8A589',
     '橄榄',
     '黄褐',
@@ -6243,10 +6429,26 @@ export const colorDictionary = {
     'tawny',
     'olive',
   ],
-  Bud: ['#A8AE9C'],
-  Locust: ['#A8AF8E', '暗绿', '绿', '绿色', '暗绿色', 'green', 'darkGreen'],
-  Norway: ['#A8BD9F', '暗绿', '绿', '绿色', '暗绿色', 'green', 'darkGreen'],
-  Chinook: [
+  colorKey791: ['#A8AE9C'],
+  colorKey792: [
+    '#A8AF8E',
+    '暗绿',
+    '绿',
+    '绿色',
+    '暗绿色',
+    'green',
+    'darkGreen',
+  ],
+  colorKey793: [
+    '#A8BD9F',
+    '暗绿',
+    '绿',
+    '绿色',
+    '暗绿色',
+    'green',
+    'darkGreen',
+  ],
+  colorKey794: [
     '#A8E3BD',
     '浅绿',
     '淡绿',
@@ -6258,7 +6460,7 @@ export const colorDictionary = {
     'paleGreen',
     'LightGreen',
   ],
-  'Gray Olive': [
+  colorKey795: [
     '#A9A491',
     '暗褐',
     '褐',
@@ -6267,8 +6469,16 @@ export const colorDictionary = {
     'brownness',
     'crineous',
   ],
-  Aluminium: ['#A9ACB6', '青灰', '灰', '灰色', '青灰色', 'gray', 'steelGray '],
-  'Cadet Blue': [
+  colorKey796: [
+    '#A9ACB6',
+    '青灰',
+    '灰',
+    '灰色',
+    '青灰色',
+    'gray',
+    'steelGray ',
+  ],
+  colorKey797: [
     '#A9B2C3',
     '亮钢蓝',
     '蓝',
@@ -6277,17 +6487,17 @@ export const colorDictionary = {
     'blue',
     'LightSteelBlue',
   ],
-  Schist: ['#A9B497', '暗绿', '绿', '绿色', '暗绿色', 'green', 'darkGreen'],
-  'Tower Gray': [
-    '#A9BDBF',
-    '灰蓝',
-    '蓝',
-    '蓝色',
-    '灰蓝色',
-    'blue',
-    'dustyBlue',
+  colorKey798: [
+    '#A9B497',
+    '暗绿',
+    '绿',
+    '绿色',
+    '暗绿色',
+    'green',
+    'darkGreen',
   ],
-  Perano: [
+  colorKey799: ['#A9BDBF', '灰蓝', '蓝', '蓝色', '灰蓝色', 'blue', 'dustyBlue'],
+  colorKey800: [
     '#A9BEF2',
     '浅紫',
     '淡紫',
@@ -6299,7 +6509,7 @@ export const colorDictionary = {
     'orchid',
     'lilac',
   ],
-  Opal: [
+  colorKey801: [
     '#A9C6C2',
     '青',
     '粉蓝',
@@ -6311,8 +6521,8 @@ export const colorDictionary = {
     'powderblue',
     'cyan',
   ],
-  'Night Shadz': ['#AA375A', '粉', '粉色', 'pink'],
-  Fire: [
+  colorKey802: ['#AA375A', '粉', '粉色', 'pink'],
+  colorKey803: [
     '#AA4203',
     '深橘',
     '橘',
@@ -6327,7 +6537,7 @@ export const colorDictionary = {
     'orange',
     'DeepOrange',
   ],
-  Muesli: [
+  colorKey804: [
     '#AA8B5B',
     '硬木',
     '茶',
@@ -6342,7 +6552,7 @@ export const colorDictionary = {
     'tawny',
     'HardWood',
   ],
-  Sandal: [
+  colorKey805: [
     '#AA8D6F',
     '硬木',
     '茶',
@@ -6357,7 +6567,7 @@ export const colorDictionary = {
     'tawny',
     'HardWood',
   ],
-  'Shady Lady': [
+  colorKey806: [
     '#AAA5A9',
     '粉灰',
     '浅灰',
@@ -6369,8 +6579,8 @@ export const colorDictionary = {
     'gray',
     'LightGray',
   ],
-  Logan: ['#AAA9CD', '淡紫', '紫', '紫色', '淡紫色', 'purple', 'orchid'],
-  'Spun Pearl': [
+  colorKey807: ['#AAA9CD', '淡紫', '紫', '紫色', '淡紫色', 'purple', 'orchid'],
+  colorKey808: [
     '#AAABB7',
     '蓝灰',
     '蓝',
@@ -6379,7 +6589,7 @@ export const colorDictionary = {
     'lightslategray',
     'gray',
   ],
-  'Regent St Blue': [
+  colorKey809: [
     '#AAD6E6',
     '粉蓝',
     '天蓝',
@@ -6394,7 +6604,7 @@ export const colorDictionary = {
     'skyBlue',
     'powderblue',
   ],
-  'Magic Mint': [
+  colorKey810: [
     '#AAF0D1',
     '淡绿',
     '浅绿',
@@ -6407,7 +6617,7 @@ export const colorDictionary = {
     'LightGreen',
     'paleGreen',
   ],
-  Lipstick: [
+  colorKey811: [
     '#AB0563',
     '深粉',
     '粉',
@@ -6422,8 +6632,8 @@ export const colorDictionary = {
     'pink',
     'deepPink',
   ],
-  'Royal Heath': ['#AB3472', '玫红', '粉', '粉色', '玫红色', 'pink', 'roseRed'],
-  Sandrift: [
+  colorKey812: ['#AB3472', '玫红', '粉', '粉色', '玫红色', 'pink', 'roseRed'],
+  colorKey813: [
     '#AB917A',
     '硬木',
     '茶',
@@ -6438,7 +6648,7 @@ export const colorDictionary = {
     'tawny',
     'HardWood',
   ],
-  'Cold Purple': [
+  colorKey814: [
     '#ABA0D9',
     '李子紫',
     '浅紫',
@@ -6450,7 +6660,7 @@ export const colorDictionary = {
     'lilac',
     'PlumPurple',
   ],
-  Bronco: [
+  colorKey815: [
     '#ABA196',
     '茶',
     '浅褐',
@@ -6463,7 +6673,7 @@ export const colorDictionary = {
     'brownness',
     'tawny',
   ],
-  'Limed Oak': [
+  colorKey816: [
     '#AC8A56',
     '硬木',
     '茶',
@@ -6478,8 +6688,8 @@ export const colorDictionary = {
     'tawny',
     'HardWood',
   ],
-  'East Side': ['#AC91CE', '紫', '紫色', 'purple'],
-  'Lemon Ginger': [
+  colorKey817: ['#AC91CE', '紫', '紫色', 'purple'],
+  colorKey818: [
     '#AC9E22',
     '黄褐',
     '橄榄',
@@ -6488,7 +6698,7 @@ export const colorDictionary = {
     'olive',
     'tawny',
   ],
-  Napa: [
+  colorKey819: [
     '#ACA494',
     '硬木',
     '茶',
@@ -6502,7 +6712,7 @@ export const colorDictionary = {
     'LightBrown',
     'HardWood',
   ],
-  Hillary: [
+  colorKey820: [
     '#ACA586',
     '硬木',
     '茶',
@@ -6516,7 +6726,7 @@ export const colorDictionary = {
     'tawny',
     'HardWood',
   ],
-  Cloudy: [
+  colorKey821: [
     '#ACA59F',
     '茶',
     '浅褐',
@@ -6533,8 +6743,8 @@ export const colorDictionary = {
     'khaki',
     'BeigeGray',
   ],
-  'Silver Chalice': ['#ACACAC', '灰', '灰色', 'gray'],
-  'Swamp Green': [
+  colorKey822: ['#ACACAC', '灰', '灰色', 'gray'],
+  colorKey823: [
     '#ACB78E',
     '黄绿',
     '绿',
@@ -6543,7 +6753,7 @@ export const colorDictionary = {
     'green',
     'YellowGreen',
   ],
-  'Spring Rain': [
+  colorKey824: [
     '#ACCBB1',
     '淡绿',
     '浅绿',
@@ -6555,7 +6765,7 @@ export const colorDictionary = {
     'LightGreen',
     'paleGreen',
   ],
-  Conifer: [
+  colorKey825: [
     '#ACDD4D',
     '亮绿',
     '黄绿',
@@ -6567,7 +6777,7 @@ export const colorDictionary = {
     'YellowGreen',
     'brightGreen',
   ],
-  Celadon: [
+  colorKey826: [
     '#ACE1AF',
     '淡绿',
     '浅绿',
@@ -6579,9 +6789,9 @@ export const colorDictionary = {
     'LightGreen',
     'paleGreen',
   ],
-  Mandalay: ['#AD781B', '褐', '棕', '棕色', '褐色', 'brown', 'brownness'],
-  Casper: ['#ADBED1'],
-  'Moss Green': [
+  colorKey827: ['#AD781B', '褐', '棕', '棕色', '褐色', 'brown', 'brownness'],
+  colorKey828: ['#ADBED1'],
+  colorKey829: [
     '#ADDFAD',
     '薄荷绿',
     '淡绿',
@@ -6596,7 +6806,7 @@ export const colorDictionary = {
     'paleGreen',
     'MintGreen',
   ],
-  Padua: [
+  colorKey830: [
     '#ADE6C4',
     '薄荷绿',
     '淡绿',
@@ -6611,10 +6821,10 @@ export const colorDictionary = {
     'paleGreen',
     'MintGreen',
   ],
-  'Green Yellow': ['#ADFF2F', '绿黄', '绿黄色', 'greenYellow'],
-  'Hippie Pink': ['#AE4560', '粉红', '粉', '粉色', '粉红色', 'pink'],
-  Desert: ['#AE6020', '褐', '棕', '棕色', '褐色', 'brown', 'brownness'],
-  Bouquet: [
+  colorKey831: ['#ADFF2F', '绿黄', '绿黄色', 'greenYellow'],
+  colorKey832: ['#AE4560', '粉红', '粉', '粉色', '粉红色', 'pink'],
+  colorKey833: ['#AE6020', '褐', '棕', '棕色', '褐色', 'brown', 'brownness'],
+  colorKey834: [
     '#AE809E',
     '淡紫',
     '浅紫',
@@ -6625,7 +6835,7 @@ export const colorDictionary = {
     'purple',
     'LightPSurple',
   ],
-  'Medium Carmine': [
+  colorKey835: [
     '#AF4035',
     '浅红',
     '淡红',
@@ -6643,7 +6853,7 @@ export const colorDictionary = {
     'LightRed',
     'lightRed',
   ],
-  'Apple Blossom': [
+  colorKey836: [
     '#AF4D43',
     '浅红',
     '淡红',
@@ -6661,8 +6871,8 @@ export const colorDictionary = {
     'LightRed',
     'lightRed',
   ],
-  'Brown Rust': ['#AF593E'],
-  Driftwood: [
+  colorKey837: ['#AF593E'],
+  colorKey838: [
     '#AF8751',
     '落叶黄',
     '棕黄',
@@ -6677,7 +6887,7 @@ export const colorDictionary = {
     'brownness',
     'DeciduousYellow',
   ],
-  Alpine: [
+  colorKey839: [
     '#AF8F2C',
     '落叶黄',
     '深黄',
@@ -6695,7 +6905,7 @@ export const colorDictionary = {
     'darkYellow',
     'DeciduousYellow',
   ],
-  Lucky: [
+  colorKey840: [
     '#AF9F1C',
     '屎黄',
     '黄褐',
@@ -6707,9 +6917,9 @@ export const colorDictionary = {
     'tawny',
     'FaecyYellow',
   ],
-  Martini: ['#AFA09E', '灰粉', '粉', '粉色', '灰粉色', 'GreyPink', 'pink'],
-  Bombay: ['#AFB1B8', '蓝灰', '灰', '灰色', '蓝灰色', 'blueGray', 'gray'],
-  'Pigeon Post': [
+  colorKey841: ['#AFA09E', '灰粉', '粉', '粉色', '灰粉色', 'GreyPink', 'pink'],
+  colorKey842: ['#AFB1B8', '蓝灰', '灰', '灰色', '蓝灰色', 'blueGray', 'gray'],
+  colorKey843: [
     '#AFBDD9',
     '亮钢蓝',
     '浅蓝',
@@ -6721,7 +6931,7 @@ export const colorDictionary = {
     'wathetBlue',
     'LightSteelBlue',
   ],
-  Cadillac: [
+  colorKey844: [
     '#B04C6A',
     '芭比粉',
     '粉',
@@ -6730,7 +6940,7 @@ export const colorDictionary = {
     'pink',
     'BarbiePink',
   ],
-  Matrix: [
+  colorKey845: [
     '#B05D54',
     '橘红',
     '印度红',
@@ -6742,7 +6952,7 @@ export const colorDictionary = {
     'IndiaRed',
     'tangerine',
   ],
-  Tapestry: [
+  colorKey846: [
     '#B05E81',
     '豆沙粉',
     '粉',
@@ -6751,7 +6961,7 @@ export const colorDictionary = {
     'pink',
     'BeanPastePink',
   ],
-  'Mai Tai': [
+  colorKey847: [
     '#B06608',
     '浅褐',
     '浅棕',
@@ -6769,8 +6979,8 @@ export const colorDictionary = {
     'lightBrown',
     'lightBrown',
   ],
-  'Del Rio': ['#B09A95', '灰粉', '粉', '粉色', '灰粉色', 'GreyPink', 'pink'],
-  'Powder Blue': [
+  colorKey848: ['#B09A95', '灰粉', '粉', '粉色', '灰粉色', 'GreyPink', 'pink'],
+  colorKey849: [
     '#B0E0E6',
     '淡蓝',
     '天蓝',
@@ -6785,7 +6995,7 @@ export const colorDictionary = {
     'skyBlue',
     'babyBlue',
   ],
-  'Inch Worm': [
+  colorKey850: [
     '#B0E313',
     '黄绿',
     '绿',
@@ -6797,8 +7007,8 @@ export const colorDictionary = {
     'green',
     'YellowGreen',
   ],
-  'Bright Red': ['#B10000', '深红', '红', '红色', '深红色', 'red', 'crimson'],
-  Vesuvius: [
+  colorKey851: ['#B10000', '深红', '红', '红色', '深红色', 'red', 'crimson'],
+  colorKey852: [
     '#B14A0B',
     '巧克力',
     '深橘',
@@ -6812,7 +7022,7 @@ export const colorDictionary = {
     'DeepOrange',
     'chocolate',
   ],
-  'Pumpkin Skin': [
+  colorKey853: [
     '#B1610B',
     '巧克力',
     '褐',
@@ -6824,7 +7034,7 @@ export const colorDictionary = {
     'brownness',
     'chocolate',
   ],
-  'Santa Fe': [
+  colorKey854: [
     '#B16D52',
     '巧克力',
     '褐',
@@ -6839,8 +7049,8 @@ export const colorDictionary = {
     'brownness',
     'chocolate',
   ],
-  Teak: ['#B19461', '土褐', '褐', '褐色', '土褐色', 'brownness', 'tan'],
-  'Fringy Flower': [
+  colorKey855: ['#B19461', '土褐', '褐', '褐色', '土褐色', 'brownness', 'tan'],
+  colorKey856: [
     '#B1E2C1',
     '嫩绿',
     '中春绿',
@@ -6858,7 +7068,7 @@ export const colorDictionary = {
     'MediumSpringGreen',
     'peakGreen',
   ],
-  'Ice Cold': [
+  colorKey857: [
     '#B1F4E7',
     '薄荷蓝',
     '蓝绿',
@@ -6873,9 +7083,9 @@ export const colorDictionary = {
     'blueGreen',
     'MintBlue',
   ],
-  Shiraz: ['#B20931', '红', '红色', 'red'],
-  'Biloba Flower': ['#B2A1EA', '紫', '紫色', 'purple'],
-  'Tall Poppy': [
+  colorKey858: ['#B20931', '红', '红色', 'red'],
+  colorKey859: ['#B2A1EA', '紫', '紫色', 'purple'],
+  colorKey860: [
     '#B32D29',
     '棕红',
     '棕',
@@ -6890,7 +7100,7 @@ export const colorDictionary = {
     'brown',
     'BrownRed',
   ],
-  'Fiery Orange': [
+  colorKey861: [
     '#B35213',
     '巧克力',
     '褐',
@@ -6902,7 +7112,7 @@ export const colorDictionary = {
     'brownness',
     'chocolate',
   ],
-  'Hot Toddy': [
+  colorKey862: [
     '#B38007',
     '金菊黄',
     '黄',
@@ -6911,7 +7121,7 @@ export const colorDictionary = {
     'yellow',
     'GoldenChrysanthemumYellow',
   ],
-  'Taupe Gray': [
+  colorKey863: [
     '#B3AF95',
     '黄褐',
     '土褐',
@@ -6923,7 +7133,7 @@ export const colorDictionary = {
     'Tawny',
     'khaki',
   ],
-  'La Rioja': [
+  colorKey864: [
     '#B3C110',
     '绿',
     '黄绿',
@@ -6935,9 +7145,9 @@ export const colorDictionary = {
     'YellowGreen',
     'green',
   ],
-  'Well Read': ['#B43332', '火砖', '红', '红色', '火砖色', 'red', 'firebrick'],
-  Blush: ['#B44668', '粉', '粉色', 'pink'],
-  'Jungle Mist': [
+  colorKey865: ['#B43332', '火砖', '红', '红色', '火砖色', 'red', 'firebrick'],
+  colorKey866: ['#B44668', '粉', '粉色', 'pink'],
+  colorKey867: [
     '#B4CFD3',
     '天蓝',
     '浅蓝',
@@ -6949,10 +7159,10 @@ export const colorDictionary = {
     'wathetBlue',
     'skyBlue',
   ],
-  'Turkish Rose': ['#B57281', '粉', '粉色', 'pink'],
-  Lavender: ['#B57EDC', '紫', '紫色', 'purple'],
-  Mongoose: ['#B5A27F', '茶', '褐', '褐色', '茶色', 'brownness', 'tawny'],
-  'Olive Green': [
+  colorKey868: ['#B57281', '粉', '粉色', 'pink'],
+  colorKey869: ['#B57EDC', '紫', '紫色', 'purple'],
+  colorKey870: ['#B5A27F', '茶', '褐', '褐色', '茶色', 'brownness', 'tawny'],
+  colorKey871: [
     '#B5B35C',
     '橄榄绿',
     '橄榄',
@@ -6964,7 +7174,7 @@ export const colorDictionary = {
     'olive',
     'oliveGreen',
   ],
-  'Jet Stream': [
+  colorKey872: [
     '#B5D2CE',
     '薄荷蓝',
     '浅蓝',
@@ -6979,9 +7189,17 @@ export const colorDictionary = {
     'wathetBlue',
     'MintBlue',
   ],
-  Cruise: ['#B5ECDF', '宝石绿', '青', '青色', '宝石绿色', 'cyan', 'GemGreen'],
-  Hibiscus: ['#B6316C', '桃红', '粉', '粉色', '桃红色', 'pink', 'peach'],
-  Thatch: [
+  colorKey873: [
+    '#B5ECDF',
+    '宝石绿',
+    '青',
+    '青色',
+    '宝石绿色',
+    'cyan',
+    'GemGreen',
+  ],
+  colorKey874: ['#B6316C', '桃红', '粉', '粉色', '桃红色', 'pink', 'peach'],
+  colorKey875: [
     '#B69D98',
     '玫瑰棕',
     '棕',
@@ -6993,16 +7211,8 @@ export const colorDictionary = {
     'brown',
     'RoseBrown',
   ],
-  'Heathered Gray': [
-    '#B6B095',
-    '土褐',
-    '褐',
-    '褐色',
-    '土褐色',
-    'brownness',
-    'tan',
-  ],
-  Eagle: [
+  colorKey876: ['#B6B095', '土褐', '褐', '褐色', '土褐色', 'brownness', 'tan'],
+  colorKey877: [
     '#B6BAA4',
     '暗绿',
     '褐绿',
@@ -7014,7 +7224,7 @@ export const colorDictionary = {
     'breen',
     'darkGreen',
   ],
-  Spindle: [
+  colorKey878: [
     '#B6D1EA',
     '浅蓝',
     '天蓝',
@@ -7026,7 +7236,7 @@ export const colorDictionary = {
     'skyBlue',
     'wathetBlue',
   ],
-  'Gum Leaf': [
+  colorKey879: [
     '#B6D3BF',
     '浅绿',
     '淡绿',
@@ -7038,8 +7248,8 @@ export const colorDictionary = {
     'paleGreen',
     'LightGreen',
   ],
-  Rust: ['#B7410E', '橙红', '橙红色', 'OrangeRed'],
-  'Muddy Waters': [
+  colorKey880: ['#B7410E', '橙红', '橙红色', 'OrangeRed'],
+  colorKey881: [
     '#B78E5C',
     '秘鲁',
     '金菊黄',
@@ -7051,9 +7261,9 @@ export const colorDictionary = {
     'GoldenChrysanthemumYellow',
     'peru',
   ],
-  Sahara: ['#B7A214', '黄褐', '黄褐色', 'tawny'],
-  Husk: ['#B7A458', '黄褐', '黄褐色', 'tawny'],
-  Nobel: [
+  colorKey882: ['#B7A214', '黄褐', '黄褐色', 'tawny'],
+  colorKey883: ['#B7A458', '黄褐', '黄褐色', 'tawny'],
+  colorKey884: [
     '#B7B1B1',
     '粉灰',
     '灰粉',
@@ -7064,7 +7274,7 @@ export const colorDictionary = {
     'pinkGray',
     'pink',
   ],
-  Heather: [
+  colorKey885: [
     '#B7C3D0',
     '亮钢蓝',
     '蓝',
@@ -7073,7 +7283,7 @@ export const colorDictionary = {
     'blue',
     'LightSteelBlue',
   ],
-  Madang: [
+  colorKey886: [
     '#B7F0BE',
     '薄荷绿',
     '淡绿',
@@ -7088,9 +7298,9 @@ export const colorDictionary = {
     'paleGreen',
     'MintGreen',
   ],
-  'Milano Red': ['#B81104', '火砖', '红', '红色', '火砖色', 'red', 'firebrick'],
-  Copper: ['#B87333', '褐', '棕', '棕色', '褐色', 'brown', 'brownness'],
-  Gimblet: [
+  colorKey887: ['#B81104', '火砖', '红', '红色', '火砖色', 'red', 'firebrick'],
+  colorKey888: ['#B87333', '褐', '棕', '棕色', '褐色', 'brown', 'brownness'],
+  colorKey889: [
     '#B8B56A',
     '暗黄褐',
     '褐',
@@ -7099,8 +7309,8 @@ export const colorDictionary = {
     'brownness',
     'DarkBrown',
   ],
-  'Green Spring': ['#B8C1B1'],
-  Celery: [
+  colorKey890: ['#B8C1B1'],
+  colorKey891: [
     '#B8C25D',
     '暗黄褐',
     '褐',
@@ -7109,7 +7319,7 @@ export const colorDictionary = {
     'brownness',
     'DarkBrown',
   ],
-  Sail: [
+  colorKey892: [
     '#B8E0F9',
     '天蓝',
     '浅蓝',
@@ -7121,7 +7331,7 @@ export const colorDictionary = {
     'wathetBlue',
     'skyBlue',
   ],
-  Chestnut: [
+  colorKey893: [
     '#B94E48',
     '红',
     '印度红',
@@ -7139,7 +7349,7 @@ export const colorDictionary = {
     'IndiaRed',
     'red',
   ],
-  Crail: [
+  colorKey894: [
     '#B95140',
     '红',
     '印度红',
@@ -7157,7 +7367,7 @@ export const colorDictionary = {
     'IndiaRed',
     'red',
   ],
-  Marigold: [
+  colorKey895: [
     '#B98D28',
     '棕黄',
     '黄褐',
@@ -7169,7 +7379,7 @@ export const colorDictionary = {
     'tawny',
     'paleBrown',
   ],
-  'Wild Willow': [
+  colorKey896: [
     '#B9C46A',
     '橄榄绿',
     '橄榄',
@@ -7178,7 +7388,7 @@ export const colorDictionary = {
     'olive',
     'oliveGreen',
   ],
-  Rainee: [
+  colorKey897: [
     '#B9C8AC',
     '浅绿',
     '灰绿',
@@ -7190,8 +7400,8 @@ export const colorDictionary = {
     'greyishGreen',
     'LightGreen',
   ],
-  'Guardsman Red': ['#BA0101', '红', '红色', 'red'],
-  'Rock Spray': [
+  colorKey898: ['#BA0101', '红', '红色', 'red'],
+  colorKey899: [
     '#BA450C',
     '巧克力',
     '深橙',
@@ -7210,7 +7420,7 @@ export const colorDictionary = {
     'DarkOrange',
     'chocolate',
   ],
-  Bourbon: [
+  colorKey900: [
     '#BA6F1E',
     '秘鲁',
     '金菊黄',
@@ -7222,7 +7432,7 @@ export const colorDictionary = {
     'GoldenChrysanthemumYellow',
     'peru',
   ],
-  'Pirate Gold': [
+  colorKey901: [
     '#BA7F03',
     '金菊黄',
     '黄',
@@ -7231,7 +7441,7 @@ export const colorDictionary = {
     'yellow',
     'GoldenChrysanthemumYellow',
   ],
-  Nomad: [
+  colorKey902: [
     '#BAB1A2',
     '杏',
     '米黄',
@@ -7244,7 +7454,7 @@ export const colorDictionary = {
     'Beige',
     'gray',
   ],
-  Submarine: [
+  colorKey903: [
     '#BAC7C9',
     '亮钢蓝',
     '蓝',
@@ -7253,7 +7463,7 @@ export const colorDictionary = {
     'blue',
     'LightSteelBlue',
   ],
-  Charlotte: [
+  colorKey904: [
     '#BAEEF9',
     '天蓝',
     '浅蓝',
@@ -7265,17 +7475,9 @@ export const colorDictionary = {
     'wathetBlue',
     'skyBlue',
   ],
-  'Medium Red Violet': [
-    '#BB3385',
-    '粉',
-    '玫红',
-    '玫红色',
-    '粉色',
-    'roseRed',
-    'pink',
-  ],
-  'Brandy Rose': ['#BB8983', '粉', '玫瑰棕', '玫瑰棕色', '粉色', 'RoseBrown'],
-  'Rio Grande': [
+  colorKey905: ['#BB3385', '粉', '玫红', '玫红色', '粉色', 'roseRed', 'pink'],
+  colorKey906: ['#BB8983', '粉', '玫瑰棕', '玫瑰棕色', '粉色', 'RoseBrown'],
+  colorKey907: [
     '#BBD009',
     '绿黄',
     '黄',
@@ -7284,8 +7486,16 @@ export const colorDictionary = {
     'yellow',
     'greenYellow',
   ],
-  Surf: ['#BBD7C1', '浅绿', '绿', '绿色', '浅绿色', 'green', 'LightGreen'],
-  'Powder Ash': [
+  colorKey908: [
+    '#BBD7C1',
+    '浅绿',
+    '绿',
+    '绿色',
+    '浅绿色',
+    'green',
+    'LightGreen',
+  ],
+  colorKey909: [
     '#BCC9C2',
     '灰绿',
     '绿',
@@ -7294,7 +7504,7 @@ export const colorDictionary = {
     'green',
     'greyishGreen',
   ],
-  Tuscany: [
+  colorKey910: [
     '#BD5E2E',
     '橙黄',
     '橘黄',
@@ -7311,8 +7521,8 @@ export const colorDictionary = {
     'orange',
     'OrangeYellow',
   ],
-  Quicksand: ['#BD978E', '暗粉', '粉', '粉色', '暗粉色', 'pink', 'DarkPink'],
-  Silk: [
+  colorKey911: ['#BD978E', '暗粉', '粉', '粉色', '暗粉色', 'pink', 'DarkPink'],
+  colorKey912: [
     '#BDB1A8',
     '米',
     '浅卡其',
@@ -7324,8 +7534,8 @@ export const colorDictionary = {
     'lightKhaki',
     'Beige',
   ],
-  Malta: ['#BDB2A1', '米', '卡其', '卡其色', '米色', 'khaki', 'Beige'],
-  Chatelle: [
+  colorKey913: ['#BDB2A1', '米', '卡其', '卡其色', '米色', 'khaki', 'Beige'],
+  colorKey914: [
     '#BDB3C7',
     '浅紫',
     '淡紫',
@@ -7337,7 +7547,7 @@ export const colorDictionary = {
     'orchid',
     'lilac',
   ],
-  'Lavender Gray': [
+  colorKey915: [
     '#BDBBD7',
     '浅紫',
     '淡紫',
@@ -7349,16 +7559,8 @@ export const colorDictionary = {
     'orchid',
     'lilac',
   ],
-  'French Gray': [
-    '#BDBDC6',
-    '蓝灰',
-    '灰',
-    '灰色',
-    '蓝灰色',
-    'blueGray',
-    'Gray',
-  ],
-  'Clay Ash': [
+  colorKey916: ['#BDBDC6', '蓝灰', '灰', '灰色', '蓝灰色', 'blueGray', 'Gray'],
+  colorKey917: [
     '#BDC8B3',
     '淡绿',
     '浅绿',
@@ -7370,7 +7572,7 @@ export const colorDictionary = {
     'LightGreen',
     'paleGreen',
   ],
-  Loblolly: [
+  colorKey918: [
     '#BDC9CE',
     '青',
     '亮钢蓝',
@@ -7382,7 +7584,7 @@ export const colorDictionary = {
     'blue',
     'LightSteelBlue',
   ],
-  'French Pass': [
+  colorKey919: [
     '#BDEDFD',
     '淡蓝',
     '浅天蓝',
@@ -7397,10 +7599,18 @@ export const colorDictionary = {
     'lightskyblue',
     'babyBlue',
   ],
-  'London Hue': ['#BEA6C3', '粉', '粉色', 'pink'],
-  'Pink Swan': ['#BEB5B7', '灰粉', '粉', '粉色', '灰粉色', 'grayPink', 'pink'],
-  Fuego: ['#BEDE0D', '黄绿', '绿', '绿色', '黄绿色', 'green', 'YellowGreen'],
-  'Rose of Sharon': [
+  colorKey920: ['#BEA6C3', '粉', '粉色', 'pink'],
+  colorKey921: ['#BEB5B7', '灰粉', '粉', '粉色', '灰粉色', 'grayPink', 'pink'],
+  colorKey922: [
+    '#BEDE0D',
+    '黄绿',
+    '绿',
+    '绿色',
+    '黄绿色',
+    'green',
+    'YellowGreen',
+  ],
+  colorKey923: [
     '#BF5500',
     '巧克力',
     '深橙',
@@ -7420,8 +7630,8 @@ export const colorDictionary = {
     'DarkOrange',
     'chocolate',
   ],
-  Tide: ['#BFB8B0', '米', '卡其', '卡其色', '米色', 'khaki', 'Beige'],
-  'Blue Haze': [
+  colorKey924: ['#BFB8B0', '米', '卡其', '卡其色', '米色', 'khaki', 'Beige'],
+  colorKey925: [
     '#BFBED8',
     '浅紫',
     '淡紫',
@@ -7433,8 +7643,8 @@ export const colorDictionary = {
     'orchid',
     'lilac',
   ],
-  'Silver Sand': ['#BFC1C2', '灰', '灰色', 'gray'],
-  'Key Lime Pie': [
+  colorKey926: ['#BFC1C2', '灰', '灰色', 'gray'],
+  colorKey927: [
     '#BFC921',
     '黄绿',
     '黄',
@@ -7443,7 +7653,7 @@ export const colorDictionary = {
     'yellow',
     'YellowGreen',
   ],
-  Ziggurat: [
+  colorKey928: [
     '#BFDBE2',
     '天蓝',
     '浅蓝',
@@ -7455,7 +7665,7 @@ export const colorDictionary = {
     'wathetBlue',
     'skyBlue',
   ],
-  Lime: [
+  colorKey929: [
     '#BFFF00',
     '黄绿',
     '亮绿',
@@ -7470,9 +7680,17 @@ export const colorDictionary = {
     'brightGreen',
     'YellowGreen',
   ],
-  Thunderbird: ['#C02B18', '火砖', '红', '红色', '火砖色', 'red', 'firebrick'],
-  Mojo: ['#C04737', '印度红', '红', '红色', '印度红色', 'red', 'IndiaRed'],
-  'Old Rose': [
+  colorKey930: ['#C02B18', '火砖', '红', '红色', '火砖色', 'red', 'firebrick'],
+  colorKey931: [
+    '#C04737',
+    '印度红',
+    '红',
+    '红色',
+    '印度红色',
+    'red',
+    'IndiaRed',
+  ],
+  colorKey932: [
     '#C08081',
     '淡珊瑚',
     '粉',
@@ -7483,8 +7701,8 @@ export const colorDictionary = {
     'pink',
     'PaleCoral',
   ],
-  Silver: ['#C0C0C0', '灰', '灰色', 'gray'],
-  'Pale Leaf': [
+  colorKey933: ['#C0C0C0', '灰', '灰色', 'gray'],
+  colorKey934: [
     '#C0D3B9',
     '灰绿',
     '绿',
@@ -7493,7 +7711,7 @@ export const colorDictionary = {
     'green',
     'greyishGreen',
   ],
-  'Pixie Green': [
+  colorKey935: [
     '#C0D8B6',
     '灰绿',
     '绿',
@@ -7502,7 +7720,7 @@ export const colorDictionary = {
     'green',
     'greyishGreen',
   ],
-  'Tia Maria': [
+  colorKey936: [
     '#C1440E',
     '桔黄',
     '橘黄',
@@ -7519,7 +7737,7 @@ export const colorDictionary = {
     'OrangeYellow',
     'orange',
   ],
-  'Fuchsia Pink': [
+  colorKey937: [
     '#C154C1',
     '芭比粉',
     '玫红',
@@ -7531,7 +7749,7 @@ export const colorDictionary = {
     'roseRed',
     'BarbiePink',
   ],
-  'Buddha Gold': [
+  colorKey938: [
     '#C1A004',
     '金菊黄',
     '黄',
@@ -7540,7 +7758,7 @@ export const colorDictionary = {
     'yellow',
     'GoldenChrysanthemumYellow',
   ],
-  'Bison Hide': [
+  colorKey939: [
     '#C1B7A4',
     '米黄',
     '杏',
@@ -7559,7 +7777,7 @@ export const colorDictionary = {
     'timber',
     'tawny',
   ],
-  Tea: [
+  colorKey940: [
     '#C1BAB0',
     '米黄',
     '杏',
@@ -7571,9 +7789,17 @@ export const colorDictionary = {
     'Apricot',
     'Beige',
   ],
-  'Gray Suit': ['#C1BECD', '淡紫', '紫', '紫色', '淡紫色', 'purple', 'orchid'],
-  Sprout: ['#C1D7B0', '灰绿', '绿', '绿色', '灰绿色', 'green', 'greyishGreen'],
-  Sulu: [
+  colorKey941: ['#C1BECD', '淡紫', '紫', '紫色', '淡紫色', 'purple', 'orchid'],
+  colorKey942: [
+    '#C1D7B0',
+    '灰绿',
+    '绿',
+    '绿色',
+    '灰绿色',
+    'green',
+    'greyishGreen',
+  ],
+  colorKey943: [
     '#C1F07C',
     '黄绿',
     '亮绿',
@@ -7588,7 +7814,7 @@ export const colorDictionary = {
     'brightGreen',
     'YellowGreen',
   ],
-  Indochine: [
+  colorKey944: [
     '#C26B03',
     '秘鲁',
     '桔',
@@ -7602,7 +7828,7 @@ export const colorDictionary = {
     'DarkOrange',
     'peru',
   ],
-  Twine: [
+  colorKey945: [
     '#C2955D',
     '木',
     '茶',
@@ -7619,7 +7845,7 @@ export const colorDictionary = {
     'tawny',
     'timber',
   ],
-  'Cotton Seed': [
+  colorKey946: [
     '#C2BDB6',
     '米灰',
     '米',
@@ -7628,7 +7854,7 @@ export const colorDictionary = {
     'Beige',
     'BeigeGray',
   ],
-  Pumice: [
+  colorKey947: [
     '#C2CAC4',
     '灰',
     '灰绿',
@@ -7640,7 +7866,7 @@ export const colorDictionary = {
     'grayGreen',
     'gray',
   ],
-  'Jagged Ice': [
+  colorKey948: [
     '#C2E8E5',
     '粉蓝',
     '浅蓝',
@@ -7655,8 +7881,8 @@ export const colorDictionary = {
     'wathetBlue',
     'powderblue',
   ],
-  'Maroon Flush': ['#C32148', '深红', '红', '红色', '深红色', 'red', 'crimson'],
-  'Indian Khaki': [
+  colorKey949: ['#C32148', '深红', '红', '红色', '深红色', 'red', 'crimson'],
+  colorKey950: [
     '#C3B091',
     '褐',
     '棕褐',
@@ -7668,8 +7894,8 @@ export const colorDictionary = {
     'sepia',
     'brownness',
   ],
-  'Pale Slate': ['#C3BFC1', '灰', '灰色', 'gray'],
-  'Gray Nickel': [
+  colorKey951: ['#C3BFC1', '灰', '灰色', 'gray'],
+  colorKey952: [
     '#C3C3BD',
     '银灰',
     '灰',
@@ -7678,7 +7904,7 @@ export const colorDictionary = {
     'gray',
     'silverGray',
   ],
-  'Periwinkle Gray': [
+  colorKey953: [
     '#C3CDE6',
     '淡蓝',
     '浅天蓝',
@@ -7693,7 +7919,7 @@ export const colorDictionary = {
     'lightskyblue',
     'babyBlue',
   ],
-  Tiara: [
+  colorKey954: [
     '#C3D1D1',
     '青',
     '灰蓝',
@@ -7705,7 +7931,7 @@ export const colorDictionary = {
     'dustyBlue',
     'cyan',
   ],
-  'Tropical Blue': [
+  colorKey955: [
     '#C3DDF9',
     '天蓝',
     '浅蓝',
@@ -7717,8 +7943,8 @@ export const colorDictionary = {
     'wathetBlue',
     'skyBlue',
   ],
-  Cardinal: ['#C41E3A', '红', '红色', 'red'],
-  'Fuzzy Wuzzy Brown': [
+  colorKey956: ['#C41E3A', '红', '红色', 'red'],
+  colorKey957: [
     '#C45655',
     '棕红',
     '印度红',
@@ -7730,7 +7956,7 @@ export const colorDictionary = {
     'IndiaRed',
     'BrownRed',
   ],
-  'Orange Roughy': [
+  colorKey958: [
     '#C45719',
     '巧克力',
     '桔黄',
@@ -7747,7 +7973,7 @@ export const colorDictionary = {
     'orange',
     'chocolate',
   ],
-  'Mist Gray': [
+  colorKey959: [
     '#C4C4BC',
     '银灰',
     '灰',
@@ -7756,7 +7982,7 @@ export const colorDictionary = {
     'gray',
     'silverGray',
   ],
-  Coriander: [
+  colorKey960: [
     '#C4D0B0',
     '灰绿',
     '绿',
@@ -7765,7 +7991,7 @@ export const colorDictionary = {
     'green',
     'greyishGreen',
   ],
-  'Mint Tulip': [
+  colorKey961: [
     '#C4F4EB',
     '薄荷绿',
     '青',
@@ -7774,8 +8000,8 @@ export const colorDictionary = {
     'cyan',
     'MintGreen',
   ],
-  Mulberry: ['#C54B8C', '洋红', '粉', '粉色', '洋红色', 'pink', 'carmine'],
-  Nugget: [
+  colorKey962: ['#C54B8C', '洋红', '粉', '粉色', '洋红色', 'pink', 'carmine'],
+  colorKey963: [
     '#C59922',
     '深黄',
     '深秋',
@@ -7787,7 +8013,7 @@ export const colorDictionary = {
     'DeepAutumn',
     'darkYellow',
   ],
-  Tussock: [
+  colorKey964: [
     '#C5994B',
     '深黄',
     '深秋',
@@ -7799,7 +8025,7 @@ export const colorDictionary = {
     'DeepAutumn',
     'darkYellow',
   ],
-  'Sea Mist': [
+  colorKey965: [
     '#C5DBCA',
     '薄荷绿',
     '浅绿',
@@ -7811,7 +8037,7 @@ export const colorDictionary = {
     'LightGreen',
     'MintGreen',
   ],
-  'Yellow Green': [
+  colorKey966: [
     '#C5E17A',
     '黄绿',
     '浅绿',
@@ -7823,10 +8049,10 @@ export const colorDictionary = {
     'LightGreen',
     'YellowGreen',
   ],
-  'Brick Red': ['#C62D42', '红', '红色', 'red'],
-  Contessa: ['#C6726B', '珊瑚', '粉红', '粉红色', '珊瑚色', 'pink', 'coral'],
-  'Oriental Pink': ['#C69191', '粉', '粉色', 'pink'],
-  Roti: [
+  colorKey967: ['#C62D42', '红', '红色', 'red'],
+  colorKey968: ['#C6726B', '珊瑚', '粉红', '粉红色', '珊瑚色', 'pink', 'coral'],
+  colorKey969: ['#C69191', '粉', '粉色', 'pink'],
+  colorKey970: [
     '#C6A84B',
     '金黄',
     '金',
@@ -7837,8 +8063,8 @@ export const colorDictionary = {
     'yellow',
     'golden',
   ],
-  Ash: ['#C6C3B5', '灰', '卡其', '卡其色', '灰色', 'gray', 'khaki'],
-  Kangaroo: [
+  colorKey971: ['#C6C3B5', '灰', '卡其', '卡其色', '灰色', 'gray', 'khaki'],
+  colorKey972: [
     '#C6C8BD',
     '灰',
     '灰绿',
@@ -7850,7 +8076,7 @@ export const colorDictionary = {
     'grayGreen',
     'gray',
   ],
-  'Las Palmas': [
+  colorKey973: [
     '#C6E610',
     '黄绿',
     '浅绿',
@@ -7862,14 +8088,22 @@ export const colorDictionary = {
     'LightGreen',
     'YellowGreen',
   ],
-  Monza: ['#C7031E', '红', '红色', 'red'],
-  'Red Violet': ['#C71585', '玫红', '粉', '粉色', '玫红色', 'pink', 'roseRed'],
-  'Coral Reef': ['#C7BCA2', '米', '卡其', '卡其色', '米色', 'khaki', 'Beige'],
-  Melrose: ['#C7C1FF', '紫', '紫色', 'purple'],
-  Cloud: ['#C7C4BF', '米', '灰', '灰色', '米色', 'gray', 'Beige'],
-  Ghost: ['#C7C9D5', '灰紫', '紫', '紫色', '灰紫色', 'grayPurple', 'purple'],
-  'Pine Glade': ['#C7CD90', '绿', '绿色', 'green'],
-  Botticelli: [
+  colorKey974: ['#C7031E', '红', '红色', 'red'],
+  colorKey975: ['#C71585', '玫红', '粉', '粉色', '玫红色', 'pink', 'roseRed'],
+  colorKey976: ['#C7BCA2', '米', '卡其', '卡其色', '米色', 'khaki', 'Beige'],
+  colorKey977: ['#C7C1FF', '紫', '紫色', 'purple'],
+  colorKey978: ['#C7C4BF', '米', '灰', '灰色', '米色', 'gray', 'Beige'],
+  colorKey979: [
+    '#C7C9D5',
+    '灰紫',
+    '紫',
+    '紫色',
+    '灰紫色',
+    'grayPurple',
+    'purple',
+  ],
+  colorKey980: ['#C7CD90', '绿', '绿色', 'green'],
+  colorKey981: [
     '#C7DDE5',
     '天蓝',
     '浅蓝',
@@ -7881,7 +8115,7 @@ export const colorDictionary = {
     'wathetBlue',
     'skyBlue',
   ],
-  'Antique Brass': [
+  colorKey982: [
     '#C88A65',
     '黄棕',
     '褐',
@@ -7893,7 +8127,7 @@ export const colorDictionary = {
     'brownness',
     'YellowishBrown',
   ],
-  Lilac: [
+  colorKey983: [
     '#C8A2C8',
     '紫',
     '粉紫',
@@ -7905,7 +8139,7 @@ export const colorDictionary = {
     'purple',
     'pinkPurple',
   ],
-  'Hokey Pokey': [
+  colorKey984: [
     '#C8A528',
     '金黄',
     '金',
@@ -7916,7 +8150,7 @@ export const colorDictionary = {
     'yellow',
     'golden',
   ],
-  Lily: [
+  colorKey985: [
     '#C8AABF',
     '紫',
     '粉紫',
@@ -7930,8 +8164,16 @@ export const colorDictionary = {
     'pinkPurple',
     'pink',
   ],
-  Laser: ['#C8B568', '暗黄', '黄', '黄色', '暗黄色', 'yellow', 'DarkYellow'],
-  Edgewater: [
+  colorKey986: [
+    '#C8B568',
+    '暗黄',
+    '黄',
+    '黄色',
+    '暗黄色',
+    'yellow',
+    'DarkYellow',
+  ],
+  colorKey987: [
     '#C8E3D7',
     '绿',
     '薄荷绿',
@@ -7943,7 +8185,7 @@ export const colorDictionary = {
     'cyan',
     'MintGreen',
   ],
-  Piper: [
+  colorKey988: [
     '#C96323',
     '桔黄',
     '桔',
@@ -7957,7 +8199,7 @@ export const colorDictionary = {
     '桔黄色',
     'orange',
   ],
-  Pizza: [
+  colorKey989: [
     '#C99415',
     '黄',
     '深黄',
@@ -7969,8 +8211,8 @@ export const colorDictionary = {
     'DeepAutumn',
     'darkYellow',
   ],
-  'Light Wisteria': ['#C9A0DC', '紫', '紫色', 'purple'],
-  'Rodeo Dust': [
+  colorKey990: ['#C9A0DC', '紫', '紫色', 'purple'],
+  colorKey991: [
     '#C9B29B',
     '肉',
     '米',
@@ -7982,7 +8224,7 @@ export const colorDictionary = {
     'Beige',
     'FleshColor',
   ],
-  Sundance: [
+  colorKey992: [
     '#C9B35B',
     '土黄',
     '暗黄',
@@ -7994,7 +8236,7 @@ export const colorDictionary = {
     'DarkYellow',
     'earthYellow',
   ],
-  'Earls Green': [
+  colorKey993: [
     '#C9B93B',
     '土黄',
     '暗黄',
@@ -8006,7 +8248,7 @@ export const colorDictionary = {
     'DarkYellow',
     'earthYellow',
   ],
-  'Silver Rust': [
+  colorKey994: [
     '#C9C0BB',
     '木',
     '卡其',
@@ -8018,7 +8260,7 @@ export const colorDictionary = {
     'Beige',
     'timber',
   ],
-  Conch: [
+  colorKey995: [
     '#C9D9D2',
     '淡绿',
     '浅绿',
@@ -8032,7 +8274,7 @@ export const colorDictionary = {
     'LightGreen',
     'greyishGreen',
   ],
-  Reef: [
+  colorKey996: [
     '#C9FFA2',
     '黄绿',
     '亮绿',
@@ -8047,7 +8289,7 @@ export const colorDictionary = {
     'brightGreen',
     'YellowGreen',
   ],
-  'Aero Blue': [
+  colorKey997: [
     '#C9FFE5',
     '青',
     '浅绿',
@@ -8059,9 +8301,9 @@ export const colorDictionary = {
     'LightGreen',
     'cyan',
   ],
-  'Flush Mahogany': ['#CA3435', '红', '红色', 'red'],
-  Turmeric: ['#CABB48', '黄褐', '黄', '黄色', '黄褐色', 'yellow', 'tawny'],
-  'Paris White': [
+  colorKey998: ['#CA3435', '红', '红色', 'red'],
+  colorKey999: ['#CABB48', '黄褐', '黄', '黄色', '黄褐色', 'yellow', 'tawny'],
+  colorKey1000: [
     '#CADCD4',
     '绿',
     '灰绿',
@@ -8073,7 +8315,7 @@ export const colorDictionary = {
     'greyishGreen',
     'green',
   ],
-  'Bitter Lemon': [
+  colorKey1001: [
     '#CAE00D',
     '黄绿',
     '黄',
@@ -8082,7 +8324,7 @@ export const colorDictionary = {
     'yellow',
     'YellowGreen',
   ],
-  Skeptic: [
+  colorKey1002: [
     '#CAE6DA',
     '薄荷绿',
     '灰绿',
@@ -8097,8 +8339,8 @@ export const colorDictionary = {
     'greyishGreen',
     'MintGreen',
   ],
-  Viola: ['#CB8FA9', '粉', '粉色', 'pink'],
-  'Foggy Gray': [
+  colorKey1003: ['#CB8FA9', '粉', '粉色', 'pink'],
+  colorKey1004: [
     '#CBCAB6',
     '浅黄褐',
     '卡其',
@@ -8107,7 +8349,7 @@ export const colorDictionary = {
     'khaki',
     'LightYellowishBrown',
   ],
-  'Green Mist': [
+  colorKey1005: [
     '#CBD3B0',
     '淡绿',
     '浅绿',
@@ -8119,7 +8361,7 @@ export const colorDictionary = {
     'LightGreen',
     'paleGreen',
   ],
-  Nebula: [
+  colorKey1006: [
     '#CBDBD6',
     '薄荷绿',
     '灰绿',
@@ -8134,8 +8376,8 @@ export const colorDictionary = {
     'greyishGreen',
     'MintGreen',
   ],
-  'Persian Red': ['#CC3333', '红', '红色', 'red'],
-  'Burnt Orange': [
+  colorKey1007: ['#CC3333', '红', '红色', 'red'],
+  colorKey1008: [
     '#CC5500',
     '巧克力',
     '橘黄',
@@ -8152,7 +8394,7 @@ export const colorDictionary = {
     'orange',
     'chocolate',
   ],
-  Ochre: [
+  colorKey1009: [
     '#CC7722',
     '橘黄',
     '巧克力',
@@ -8169,7 +8411,7 @@ export const colorDictionary = {
     'orange',
     'chocolate',
   ],
-  Puce: [
+  colorKey1010: [
     '#CC8899',
     '桃红',
     '粉',
@@ -8180,7 +8422,7 @@ export const colorDictionary = {
     'pink',
     'peach',
   ],
-  'Thistle Green': [
+  colorKey1011: [
     '#CCCAA8',
     '浅黄',
     '黄',
@@ -8189,8 +8431,8 @@ export const colorDictionary = {
     'yellow',
     'LightYellow',
   ],
-  Periwinkle: ['#CCCCFF', '紫', '紫色', 'purple'],
-  'Electric Lime': [
+  colorKey1012: ['#CCCCFF', '紫', '紫色', 'purple'],
+  colorKey1013: [
     '#CCFF00',
     '黄绿',
     '亮绿',
@@ -8205,7 +8447,7 @@ export const colorDictionary = {
     'brightGreen',
     'YellowGreen',
   ],
-  Tenn: [
+  colorKey1014: [
     '#CD5700',
     '橘黄',
     '橘',
@@ -8219,17 +8461,9 @@ export const colorDictionary = {
     '橘黄色',
     'orange',
   ],
-  'Chestnut Rose': ['#CD5C5C', '粉红', '粉', '粉色', '粉红色', 'pink'],
-  'Brandy Punch': [
-    '#CD8429',
-    '金黄',
-    '黄',
-    '黄色',
-    '金黄色',
-    'yellow',
-    'golden',
-  ],
-  Onahau: [
+  colorKey1015: ['#CD5C5C', '粉红', '粉', '粉色', '粉红色', 'pink'],
+  colorKey1016: ['#CD8429', '金黄', '黄', '黄色', '金黄色', 'yellow', 'golden'],
+  colorKey1017: [
     '#CDF4FF',
     '薄荷蓝',
     '淡蓝',
@@ -8244,12 +8478,12 @@ export const colorDictionary = {
     'babyBlue',
     'MintBlue',
   ],
-  'Sorrell Brown': ['#CEB98F'],
-  'Cold Turkey': ['#CEBABA'],
-  Yuma: ['#CEC291', '土褐', '褐', '褐色', '土褐色', 'brownness', 'tan'],
-  Chino: ['#CEC7A7', '土褐', '褐', '褐色', '土褐色', 'brownness', 'tan'],
-  Eunry: ['#CFA39D', '粉红', '粉', '粉色', '粉红色', 'pink'],
-  'Old Gold': [
+  colorKey1018: ['#CEB98F'],
+  colorKey1019: ['#CEBABA'],
+  colorKey1020: ['#CEC291', '土褐', '褐', '褐色', '土褐色', 'brownness', 'tan'],
+  colorKey1021: ['#CEC7A7', '土褐', '褐', '褐色', '土褐色', 'brownness', 'tan'],
+  colorKey1022: ['#CFA39D', '粉红', '粉', '粉色', '粉红色', 'pink'],
+  colorKey1023: [
     '#CFB53B',
     '金',
     '金黄',
@@ -8260,7 +8494,7 @@ export const colorDictionary = {
     'yellow',
     'golden',
   ],
-  Tasman: [
+  colorKey1024: [
     '#CFDCCF',
     '薄荷绿',
     '灰绿',
@@ -8275,7 +8509,7 @@ export const colorDictionary = {
     'greyishGreen',
     'MintGreen',
   ],
-  'Surf Crest': [
+  colorKey1025: [
     '#CFE5D2',
     '薄荷绿',
     '灰绿',
@@ -8290,7 +8524,7 @@ export const colorDictionary = {
     'greyishGreen',
     'MintGreen',
   ],
-  'Humming Bird': [
+  colorKey1026: [
     '#CFF9F3',
     '薄荷绿',
     '青',
@@ -8299,8 +8533,16 @@ export const colorDictionary = {
     'cyan',
     'MintGreen',
   ],
-  Scandal: ['#CFFAF4', '薄荷绿', '青', '青色', '薄荷绿色', 'cyan', 'MintGreen'],
-  'Red Stage': [
+  colorKey1027: [
+    '#CFFAF4',
+    '薄荷绿',
+    '青',
+    '青色',
+    '薄荷绿色',
+    'cyan',
+    'MintGreen',
+  ],
+  colorKey1028: [
     '#D05F04',
     '桔黄',
     '桔',
@@ -8317,8 +8559,8 @@ export const colorDictionary = {
     'coral',
     'orange',
   ],
-  Hopbush: ['#D06DA1', '粉', '粉色', 'pink'],
-  Meteor: [
+  colorKey1029: ['#D06DA1', '粉', '粉色', 'pink'],
+  colorKey1030: [
     '#D07D12',
     '桔黄',
     '桔',
@@ -8332,7 +8574,7 @@ export const colorDictionary = {
     '桔黄色',
     'orange',
   ],
-  Perfume: [
+  colorKey1031: [
     '#D0BEF8',
     '浅紫',
     '淡紫',
@@ -8344,7 +8586,7 @@ export const colorDictionary = {
     'orchid',
     'lilac',
   ],
-  Prelude: [
+  colorKey1032: [
     '#D0C0E5',
     '浅紫',
     '淡紫',
@@ -8356,7 +8598,7 @@ export const colorDictionary = {
     'orchid',
     'lilac',
   ],
-  'Tea Green': [
+  colorKey1033: [
     '#D0F0C0',
     '浅绿',
     '绿',
@@ -8365,7 +8607,7 @@ export const colorDictionary = {
     'green',
     'LightGreen',
   ],
-  Geebung: [
+  colorKey1034: [
     '#D18F1B',
     '深秋',
     '金黄',
@@ -8377,9 +8619,17 @@ export const colorDictionary = {
     'golden',
     'DeepAutumn',
   ],
-  Vanilla: ['#D1BEA8', '浅橘', '橘', '橘色', '浅橘色', 'orange', 'LightOrange'],
-  'Soft Amber': ['#D1C6B4', '米', '卡其', '卡其色', '米色', 'khaki', 'Beige'],
-  Celeste: [
+  colorKey1035: [
+    '#D1BEA8',
+    '浅橘',
+    '橘',
+    '橘色',
+    '浅橘色',
+    'orange',
+    'LightOrange',
+  ],
+  colorKey1036: ['#D1C6B4', '米', '卡其', '卡其色', '米色', 'khaki', 'Beige'],
+  colorKey1037: [
     '#D1D2CA',
     '白',
     '灰白',
@@ -8391,9 +8641,17 @@ export const colorDictionary = {
     'grayWhite',
     'gray',
   ],
-  Mischka: ['#D1D2DD', '蓝灰', '灰', '灰色', '蓝灰色', 'gray', 'blueGray'],
-  Pear: ['#D1E231', '黄绿', '绿', '绿色', '黄绿色', 'green', 'YellowGreen'],
-  'Hot Cinnamon': [
+  colorKey1038: ['#D1D2DD', '蓝灰', '灰', '灰色', '蓝灰色', 'gray', 'blueGray'],
+  colorKey1039: [
+    '#D1E231',
+    '黄绿',
+    '绿',
+    '绿色',
+    '黄绿色',
+    'green',
+    'YellowGreen',
+  ],
+  colorKey1040: [
     '#D2691E',
     '珊瑚',
     '橘黄',
@@ -8409,7 +8667,7 @@ export const colorDictionary = {
     'orange',
     'coral',
   ],
-  'Raw Sienna': [
+  colorKey1041: [
     '#D27D46',
     '桔黄',
     '桔',
@@ -8426,7 +8684,7 @@ export const colorDictionary = {
     'orange',
     'coral',
   ],
-  'Careys Pink': [
+  colorKey1042: [
     '#D29EAA',
     '紫粉',
     '粉',
@@ -8435,9 +8693,25 @@ export const colorDictionary = {
     'pink',
     'PurplePink',
   ],
-  Tan: ['#D2B48C', '实木', '茶', '茶色', '实木色', 'tawny', 'burlywood'],
-  Deco: ['#D2DA97', '浅绿', '绿', '绿色', '浅绿色', 'green', 'LightGreen'],
-  'Blue Romance': [
+  colorKey1043: [
+    '#D2B48C',
+    '实木',
+    '茶',
+    '茶色',
+    '实木色',
+    'tawny',
+    'burlywood',
+  ],
+  colorKey1044: [
+    '#D2DA97',
+    '浅绿',
+    '绿',
+    '绿色',
+    '浅绿色',
+    'green',
+    'LightGreen',
+  ],
+  colorKey1045: [
     '#D2F6DE',
     '薄荷绿',
     '青',
@@ -8446,11 +8720,19 @@ export const colorDictionary = {
     'cyan',
     'MintGreen',
   ],
-  Gossip: ['#D2F8B0', '浅绿', '绿', '绿色', '浅绿色', 'green', 'LightGreen'],
-  Sisal: ['#D3CBBA', '米', '卡其', '卡其色', '米色', 'khaki', 'Beige'],
-  Swirl: ['#D3CDC5', '米', '卡其', '卡其色', '米色', 'khaki', 'Beige'],
-  Charm: ['#D47494', '粉红', '粉', '粉色', '粉红色', 'pink'],
-  'Clam Shell': [
+  colorKey1046: [
+    '#D2F8B0',
+    '浅绿',
+    '绿',
+    '绿色',
+    '浅绿色',
+    'green',
+    'LightGreen',
+  ],
+  colorKey1047: ['#D3CBBA', '米', '卡其', '卡其色', '米色', 'khaki', 'Beige'],
+  colorKey1048: ['#D3CDC5', '米', '卡其', '卡其色', '米色', 'khaki', 'Beige'],
+  colorKey1049: ['#D47494', '粉红', '粉', '粉色', '粉红色', 'pink'],
+  colorKey1050: [
     '#D4B6AF',
     '肉粉',
     '肉',
@@ -8462,8 +8744,16 @@ export const colorDictionary = {
     'FleshColor',
     'MeatPink',
   ],
-  Straw: ['#D4BF8D', '黄褐', '褐', '褐色', '黄褐色', 'brownness', 'tawny'],
-  Akaroa: [
+  colorKey1051: [
+    '#D4BF8D',
+    '黄褐',
+    '褐',
+    '褐色',
+    '黄褐色',
+    'brownness',
+    'tawny',
+  ],
+  colorKey1052: [
     '#D4C4A8',
     '浅褐',
     '黄褐',
@@ -8475,10 +8765,18 @@ export const colorDictionary = {
     'tawny',
     'lightBrown',
   ],
-  'Bird Flower': ['#D4CD16', '黄褐', '黄', '黄色', '黄褐色', 'yellow', 'tawny'],
-  Iron: ['#D4D7D9', '灰', '灰色', 'gray'],
-  Geyser: ['#D4DFE2', '灰蓝', '蓝', '蓝色', '灰蓝色', 'blue', 'dustyBlue'],
-  'Hawkes Blue': [
+  colorKey1053: ['#D4CD16', '黄褐', '黄', '黄色', '黄褐色', 'yellow', 'tawny'],
+  colorKey1054: ['#D4D7D9', '灰', '灰色', 'gray'],
+  colorKey1055: [
+    '#D4DFE2',
+    '灰蓝',
+    '蓝',
+    '蓝色',
+    '灰蓝色',
+    'blue',
+    'dustyBlue',
+  ],
+  colorKey1056: [
     '#D4E2FC',
     '淡紫',
     '浅紫',
@@ -8490,9 +8788,17 @@ export const colorDictionary = {
     'lilac',
     'orchid',
   ],
-  Grenadier: ['#D54600', '橘红', '橘', '橘色', '橘红色', 'orange', 'tangerine'],
-  'Can Can': ['#D591A4', '深粉', '粉', '粉色', '深粉色', 'pink', 'deepPink'],
-  Whiskey: [
+  colorKey1057: [
+    '#D54600',
+    '橘红',
+    '橘',
+    '橘色',
+    '橘红色',
+    'orange',
+    'tangerine',
+  ],
+  colorKey1058: ['#D591A4', '深粉', '粉', '粉色', '深粉色', 'pink', 'deepPink'],
+  colorKey1059: [
     '#D59A6F',
     '褐',
     '沙棕',
@@ -8507,7 +8813,7 @@ export const colorDictionary = {
     'SandyBrown',
     'brownness',
   ],
-  'Winter Hazel': [
+  colorKey1060: [
     '#D5D195',
     '淡橘黄',
     '黄',
@@ -8516,9 +8822,9 @@ export const colorDictionary = {
     'yellow',
     'LightOrange',
   ],
-  'Granny Apple': ['#D5F6E3', '薄荷', '青', '青色', '薄荷色', 'cyan', 'Mint'],
-  'My Pink': ['#D69188', '粉', '粉色', 'pink'],
-  Tacha: [
+  colorKey1061: ['#D5F6E3', '薄荷', '青', '青色', '薄荷色', 'cyan', 'Mint'],
+  colorKey1062: ['#D69188', '粉', '粉色', 'pink'],
+  colorKey1063: [
     '#D6C562',
     '金黄',
     '黄',
@@ -8529,8 +8835,8 @@ export const colorDictionary = {
     'golden',
     'yellow',
   ],
-  'Moon Raker': ['#D6CEF6', '紫', '紫色', 'purple'],
-  'Quill Gray': [
+  colorKey1064: ['#D6CEF6', '紫', '紫色', 'purple'],
+  colorKey1065: [
     '#D6D6D1',
     '淡灰',
     '灰',
@@ -8539,7 +8845,7 @@ export const colorDictionary = {
     'gray',
     'LightGrey',
   ],
-  'Snowy Mint': [
+  colorKey1066: [
     '#D6FFDB',
     '薄荷绿',
     '青',
@@ -8551,8 +8857,8 @@ export const colorDictionary = {
     'cyan',
     'MintGreen',
   ],
-  'New York Pink': ['#D7837F', '粉', '粉色', 'pink'],
-  Pavlova: [
+  colorKey1067: ['#D7837F', '粉', '粉色', 'pink'],
+  colorKey1068: [
     '#D7C498',
     '黄',
     '米黄',
@@ -8564,8 +8870,8 @@ export const colorDictionary = {
     'Beige',
     'yellow',
   ],
-  Fog: ['#D7D0FF', '紫', '紫色', 'purple'],
-  Valencia: [
+  colorKey1069: ['#D7D0FF', '紫', '紫色', 'purple'],
+  colorKey1070: [
     '#D84437',
     '橙红',
     '橘红',
@@ -8574,7 +8880,7 @@ export const colorDictionary = {
     'tangerine',
     'OrangeRed',
   ],
-  Japonica: [
+  colorKey1071: [
     '#D87C63',
     '珊瑚',
     '橘红',
@@ -8583,9 +8889,9 @@ export const colorDictionary = {
     'tangerine',
     'coral',
   ],
-  Thistle: ['#D8BFD8', '粉', '粉色', 'pink'],
-  Maverick: ['#D8C2D5', '粉', '粉色', 'pink'],
-  Foam: [
+  colorKey1072: ['#D8BFD8', '粉', '粉色', 'pink'],
+  colorKey1073: ['#D8C2D5', '粉', '粉色', 'pink'],
+  colorKey1074: [
     '#D8FCFA',
     '天蓝',
     '浅蓝',
@@ -8600,7 +8906,7 @@ export const colorDictionary = {
     'wathetBlue',
     'skyBlue',
   ],
-  Cabaret: [
+  colorKey1075: [
     '#D94972',
     '粉红',
     '深粉',
@@ -8611,7 +8917,7 @@ export const colorDictionary = {
     'pink',
     'deepPink',
   ],
-  'Burning Sand': [
+  colorKey1076: [
     '#D99376',
     '深肉',
     '肉',
@@ -8620,7 +8926,7 @@ export const colorDictionary = {
     'FleshColor',
     'DarkFlesh',
   ],
-  Cameo: [
+  colorKey1077: [
     '#D9B99B',
     '肉',
     '木',
@@ -8632,8 +8938,8 @@ export const colorDictionary = {
     'timber',
     'FleshColor',
   ],
-  Timberwolf: ['#D9D6CF', '灰', '灰色', 'gray'],
-  Tana: [
+  colorKey1078: ['#D9D6CF', '灰', '灰色', 'gray'],
+  colorKey1079: [
     '#D9DCC1',
     '淡绿',
     '浅绿',
@@ -8645,7 +8951,7 @@ export const colorDictionary = {
     'LightGreen',
     'paleGreen',
   ],
-  'Link Water': [
+  colorKey1080: [
     '#D9E4F5',
     '淡蓝',
     '浅蓝',
@@ -8660,7 +8966,7 @@ export const colorDictionary = {
     'wathetBlue',
     'babyBlue',
   ],
-  Mabel: [
+  colorKey1081: [
     '#D9F7FF',
     '天蓝',
     '浅蓝',
@@ -8672,7 +8978,7 @@ export const colorDictionary = {
     'wathetBlue',
     'skyBlue',
   ],
-  Cerise: [
+  colorKey1082: [
     '#DA3287',
     '粉红',
     '深粉',
@@ -8683,7 +8989,7 @@ export const colorDictionary = {
     'pink',
     'deepPink',
   ],
-  'Flame Pea': [
+  colorKey1083: [
     '#DA5B38',
     '浅橘红',
     '橘红',
@@ -8695,7 +9001,7 @@ export const colorDictionary = {
     'tangerine',
     'LightOrange',
   ],
-  Bamboo: [
+  colorKey1084: [
     '#DA6304',
     '浅橘红',
     '橘红',
@@ -8707,7 +9013,7 @@ export const colorDictionary = {
     'tangerine',
     'LightOrange',
   ],
-  'Red Damask': [
+  colorKey1085: [
     '#DA6A41',
     '浅橘红',
     '橘红',
@@ -8719,7 +9025,7 @@ export const colorDictionary = {
     'tangerine',
     'LightOrange',
   ],
-  Orchid: [
+  colorKey1086: [
     '#DA70D6',
     '粉',
     '艳紫粉',
@@ -8731,7 +9037,7 @@ export const colorDictionary = {
     'BrilliantPurplePink',
     'pink',
   ],
-  Copperfield: [
+  colorKey1087: [
     '#DA8A67',
     '浅橘红',
     '橘红',
@@ -8743,7 +9049,7 @@ export const colorDictionary = {
     'tangerine',
     'LightOrange',
   ],
-  'Golden Grass': [
+  colorKey1088: [
     '#DAA520',
     '金',
     '金黄',
@@ -8754,7 +9060,7 @@ export const colorDictionary = {
     'yellow',
     'golden',
   ],
-  Zanah: [
+  colorKey1089: [
     '#DAECD6',
     '薄荷绿',
     '浅绿',
@@ -8769,7 +9075,7 @@ export const colorDictionary = {
     'LightGreen',
     'MintGreen',
   ],
-  Iceberg: [
+  colorKey1090: [
     '#DAF4F0',
     '天蓝',
     '淡蓝',
@@ -8784,7 +9090,7 @@ export const colorDictionary = {
     'babyBlue',
     'skyBlue',
   ],
-  'Oyster Bay': [
+  colorKey1091: [
     '#DAFAFF',
     '淡蓝',
     '天蓝',
@@ -8799,7 +9105,7 @@ export const colorDictionary = {
     'skyBlue',
     'babyBlue',
   ],
-  Cranberry: [
+  colorKey1092: [
     '#DB5079',
     '酒红',
     '粉红',
@@ -8813,8 +9119,8 @@ export const colorDictionary = {
     'deepPink',
     'wineRed',
   ],
-  'Petite Orchid': ['#DB9690'],
-  'Di Serria': [
+  colorKey1093: ['#DB9690'],
+  colorKey1094: [
     '#DB995E',
     '浅棕',
     '棕',
@@ -8826,7 +9132,7 @@ export const colorDictionary = {
     'brown',
     'lightBrown',
   ],
-  Alto: [
+  colorKey1095: [
     '#DBDBDB',
     '白',
     '灰白',
@@ -8841,7 +9147,7 @@ export const colorDictionary = {
     'SmokeWhite',
     'GreyWhite',
   ],
-  'Frosted Mint': [
+  colorKey1096: [
     '#DBFFF8',
     '蓝',
     '薄荷蓝',
@@ -8853,8 +9159,8 @@ export const colorDictionary = {
     'cyan',
     'MintBlue',
   ],
-  Crimson: ['#DC143C', '红', '红色', 'red'],
-  Punch: [
+  colorKey1097: ['#DC143C', '红', '红色', 'red'],
+  colorKey1098: [
     '#DC4333',
     '鲜红',
     '红',
@@ -8866,7 +9172,7 @@ export const colorDictionary = {
     'red',
     'BrightRed',
   ],
-  Galliano: [
+  colorKey1099: [
     '#DCB20C',
     '金黄',
     '黄',
@@ -8877,9 +9183,25 @@ export const colorDictionary = {
     'golden',
     'yellow',
   ],
-  Blossom: ['#DCB4BC', '淡粉', '粉', '粉色', '淡粉色', 'pink', 'LightPink'],
-  Wattle: ['#DCD747', '亮黄', '黄', '黄色', '亮黄色', 'yellow', 'BrightYellow'],
-  Westar: [
+  colorKey1100: [
+    '#DCB4BC',
+    '淡粉',
+    '粉',
+    '粉色',
+    '淡粉色',
+    'pink',
+    'LightPink',
+  ],
+  colorKey1101: [
+    '#DCD747',
+    '亮黄',
+    '黄',
+    '黄色',
+    '亮黄色',
+    'yellow',
+    'BrightYellow',
+  ],
+  colorKey1102: [
     '#DCD9D2',
     '浅灰',
     '米',
@@ -8891,7 +9213,7 @@ export const colorDictionary = {
     'Beige',
     'LightGray',
   ],
-  'Moon Mist': [
+  colorKey1103: [
     '#DCDDCC',
     '米黄',
     '浅黄',
@@ -8905,7 +9227,7 @@ export const colorDictionary = {
     'Beige',
     'Yellow',
   ],
-  Caper: [
+  colorKey1104: [
     '#DCEDB4',
     '淡绿',
     '浅绿',
@@ -8917,7 +9239,7 @@ export const colorDictionary = {
     'LightGreen',
     'paleGreen',
   ],
-  'Swans Down': [
+  colorKey1105: [
     '#DCF0EA',
     '淡蓝',
     '浅蓝',
@@ -8932,7 +9254,7 @@ export const colorDictionary = {
     'wathetBlue',
     'babyBlue',
   ],
-  'Swiss Coffee': [
+  colorKey1106: [
     '#DDD6D5',
     '淡粉',
     '粉',
@@ -8941,7 +9263,7 @@ export const colorDictionary = {
     'pink',
     'LightPink',
   ],
-  'White Ice': [
+  colorKey1107: [
     '#DDF9F1',
     '薄荷蓝',
     '青',
@@ -8953,7 +9275,7 @@ export const colorDictionary = {
     'cyan',
     'MintBlue',
   ],
-  'Cerise Red': [
+  colorKey1108: [
     '#DE3163',
     '酒红',
     '深粉',
@@ -8967,7 +9289,7 @@ export const colorDictionary = {
     'deepPink',
     'wineRed',
   ],
-  Roman: [
+  colorKey1109: [
     '#DE6360',
     '浅橘红',
     '橘红',
@@ -8982,8 +9304,8 @@ export const colorDictionary = {
     'tangerine',
     'LightOrange',
   ],
-  Tumbleweed: ['#DEA681', '桃', '肉', '肉色', '桃色', 'FleshColor', 'Peach'],
-  'Gold Tips': [
+  colorKey1110: ['#DEA681', '桃', '肉', '肉色', '桃色', 'FleshColor', 'Peach'],
+  colorKey1111: [
     '#DEBA13',
     '金',
     '金黄',
@@ -8994,8 +9316,8 @@ export const colorDictionary = {
     'yellow',
     'golden',
   ],
-  Brandy: ['#DEC196', '肉', '肉色', 'FleshColor'],
-  Wafer: [
+  colorKey1112: ['#DEC196', '肉', '肉色', 'FleshColor'],
+  colorKey1113: [
     '#DECBC6',
     '灰粉',
     '浅粉',
@@ -9007,7 +9329,7 @@ export const colorDictionary = {
     'LightPink',
     'GreyPink',
   ],
-  Sapling: [
+  colorKey1114: [
     '#DED4A4',
     '淡黄',
     '黄',
@@ -9022,8 +9344,8 @@ export const colorDictionary = {
     'yellow',
     'canaryYellow',
   ],
-  Barberry: ['#DED717', '金', '黄', '黄色', '金色', 'yellow', 'golden'],
-  'Beryl Green': [
+  colorKey1115: ['#DED717', '金', '黄', '黄色', '金色', 'yellow', 'golden'],
+  colorKey1116: [
     '#DEE5C0',
     '浅绿',
     '淡绿',
@@ -9038,7 +9360,7 @@ export const colorDictionary = {
     'paleGreen',
     'LightGreen',
   ],
-  'Pattens Blue': [
+  colorKey1117: [
     '#DEF5FF',
     '天蓝',
     '浅蓝',
@@ -9050,7 +9372,7 @@ export const colorDictionary = {
     'wathetBlue',
     'skyBlue',
   ],
-  Heliotrope: [
+  colorKey1118: [
     '#DF73FF',
     '艳紫粉',
     '玫红',
@@ -9059,7 +9381,7 @@ export const colorDictionary = {
     'roseRed',
     'BrilliantPurplePink',
   ],
-  Apache: [
+  colorKey1119: [
     '#DFBE6F',
     '深秋',
     '金黄',
@@ -9071,9 +9393,9 @@ export const colorDictionary = {
     'golden',
     'DeepAutumn',
   ],
-  Chenin: ['#DFCD6F', '黄', '黄色', 'yellow'],
-  Lola: ['#DFCFDB', '灰粉', '粉', '粉色', '灰粉色', 'pink', 'GreyPink'],
-  'Willow Brook': [
+  colorKey1120: ['#DFCD6F', '黄', '黄色', 'yellow'],
+  colorKey1121: ['#DFCFDB', '灰粉', '粉', '粉色', '灰粉色', 'pink', 'GreyPink'],
+  colorKey1122: [
     '#DFECDA',
     '薄荷绿',
     '浅绿',
@@ -9085,7 +9407,7 @@ export const colorDictionary = {
     'LightGreen',
     'MintGreen',
   ],
-  'Chartreuse Yellow': [
+  colorKey1123: [
     '#DFFF00',
     '黄绿',
     '亮绿',
@@ -9100,8 +9422,8 @@ export const colorDictionary = {
     'brightGreen',
     'YellowGreen',
   ],
-  Mauve: ['#E0B0FF', '紫', '紫色', 'purple'],
-  Anzac: [
+  colorKey1124: ['#E0B0FF', '紫', '紫色', 'purple'],
+  colorKey1125: [
     '#E0B646',
     '金黄',
     '金',
@@ -9112,7 +9434,7 @@ export const colorDictionary = {
     'yellow',
     'golden',
   ],
-  'Harvest Gold': [
+  colorKey1126: [
     '#E0B974',
     '橘黄',
     '橘',
@@ -9123,8 +9445,8 @@ export const colorDictionary = {
     'yellow',
     'orange',
   ],
-  Calico: ['#E0C095', '肉', '肉色', 'FleshColor'],
-  'Baby Blue': [
+  colorKey1127: ['#E0C095', '肉', '肉色', 'FleshColor'],
+  colorKey1128: [
     '#E0FFFF',
     '浅蓝',
     '蓝',
@@ -9133,7 +9455,7 @@ export const colorDictionary = {
     'blue',
     'wathetBlue',
   ],
-  Sunglo: [
+  colorKey1129: [
     '#E16865',
     '桃红',
     '粉',
@@ -9144,7 +9466,7 @@ export const colorDictionary = {
     'pink',
     'peach',
   ],
-  Equator: [
+  colorKey1130: [
     '#E1BC64',
     '金',
     '金黄',
@@ -9155,8 +9477,8 @@ export const colorDictionary = {
     'yellow',
     'golden',
   ],
-  'Pink Flare': ['#E1C0C8', '灰粉', '粉', '粉色', '灰粉色', 'pink', 'GreyPink'],
-  'Periglacial Blue': [
+  colorKey1131: ['#E1C0C8', '灰粉', '粉', '粉色', '灰粉色', 'pink', 'GreyPink'],
+  colorKey1132: [
     '#E1E6D6',
     '淡绿',
     '浅绿',
@@ -9168,7 +9490,7 @@ export const colorDictionary = {
     'LightGreen',
     'paleGreen',
   ],
-  Kidnapper: [
+  colorKey1133: [
     '#E1EAD4',
     '淡绿',
     '浅绿',
@@ -9180,7 +9502,7 @@ export const colorDictionary = {
     'LightGreen',
     'paleGreen',
   ],
-  Tara: [
+  colorKey1134: [
     '#E1F6E8',
     '淡绿',
     '浅绿',
@@ -9192,7 +9514,7 @@ export const colorDictionary = {
     'LightGreen',
     'paleGreen',
   ],
-  Mandy: [
+  colorKey1135: [
     '#E25465',
     '桃红',
     '粉',
@@ -9203,7 +9525,7 @@ export const colorDictionary = {
     'pink',
     'peach',
   ],
-  Terracotta: [
+  colorKey1136: [
     '#E2725B',
     '西柚',
     '橘',
@@ -9215,19 +9537,11 @@ export const colorDictionary = {
     'orange',
     'Grapefruit',
   ],
-  'Golden Bell': [
-    '#E28913',
-    '金黄',
-    '黄',
-    '黄色',
-    '金黄色',
-    'yellow',
-    'golden',
-  ],
-  Shocking: ['#E292C0', '粉', '粉色', 'pink'],
-  Dixie: ['#E29418', '金黄', '黄', '黄色', '金黄色', 'yellow', 'golden'],
-  'Light Orchid': ['#E29CD2', '粉', '粉色', 'pink'],
-  Snuff: [
+  colorKey1137: ['#E28913', '金黄', '黄', '黄色', '金黄色', 'yellow', 'golden'],
+  colorKey1138: ['#E292C0', '粉', '粉色', 'pink'],
+  colorKey1139: ['#E29418', '金黄', '黄', '黄色', '金黄色', 'yellow', 'golden'],
+  colorKey1140: ['#E29CD2', '粉', '粉色', 'pink'],
+  colorKey1141: [
     '#E2D8ED',
     '浅紫',
     '淡紫',
@@ -9239,8 +9553,16 @@ export const colorDictionary = {
     'orchid',
     'lilac',
   ],
-  Mystic: ['#E2EBED', '蓝白', '白', '白色', '蓝白色', 'white', 'blueWhite'],
-  'Apple Green': [
+  colorKey1142: [
+    '#E2EBED',
+    '蓝白',
+    '白',
+    '白色',
+    '蓝白色',
+    'white',
+    'blueWhite',
+  ],
+  colorKey1143: [
     '#E2F3EC',
     '浅绿',
     '淡绿',
@@ -9252,7 +9574,7 @@ export const colorDictionary = {
     'paleGreen',
     'LightGreen',
   ],
-  Razzmatazz: [
+  colorKey1144: [
     '#E30B5C',
     '粉',
     '粉红',
@@ -9263,9 +9585,17 @@ export const colorDictionary = {
     'roseRed',
     'pink',
   ],
-  'Alizarin Crimson': ['#E32636', '红', '红色', 'red'],
-  Cinnabar: ['#E34234', '橘红', '橘', '橘色', '橘红色', 'orange', 'tangerine'],
-  'Cavern Pink': [
+  colorKey1145: ['#E32636', '红', '红色', 'red'],
+  colorKey1146: [
+    '#E34234',
+    '橘红',
+    '橘',
+    '橘色',
+    '橘红色',
+    'orange',
+    'tangerine',
+  ],
+  colorKey1147: [
     '#E3BEBE',
     '浅粉',
     '淡粉',
@@ -9277,7 +9607,7 @@ export const colorDictionary = {
     'LightPink',
     'LightPink',
   ],
-  Peppermint: [
+  colorKey1148: [
     '#E3F5E1',
     '浅绿',
     '淡绿',
@@ -9289,7 +9619,7 @@ export const colorDictionary = {
     'paleGreen',
     'LightGreen',
   ],
-  Mindaro: [
+  colorKey1149: [
     '#E3F988',
     '黄绿',
     '亮绿',
@@ -9304,9 +9634,9 @@ export const colorDictionary = {
     'brightGreen',
     'YellowGreen',
   ],
-  'Deep Blush': ['#E47698', '粉', '粉色', 'pink'],
-  Gamboge: ['#E49B0F', '金黄', '黄', '黄色', '金黄色', 'yellow', 'golden'],
-  Melanie: [
+  colorKey1150: ['#E47698', '粉', '粉色', 'pink'],
+  colorKey1151: ['#E49B0F', '金黄', '黄', '黄色', '金黄色', 'yellow', 'golden'],
+  colorKey1152: [
     '#E4C2D5',
     '浅粉',
     '淡粉',
@@ -9318,7 +9648,7 @@ export const colorDictionary = {
     'LightPink',
     'LightPink',
   ],
-  Twilight: [
+  colorKey1153: [
     '#E4CFDE',
     '浅粉',
     '淡粉',
@@ -9330,9 +9660,9 @@ export const colorDictionary = {
     'LightPink',
     'LightPink',
   ],
-  Bone: ['#E4D1C0', '米', '卡其', '卡其色', '米色', 'khaki', 'Beige'],
-  Sunflower: ['#E4D422', '黄', '黄色', 'yellow'],
-  'Grain Brown': [
+  colorKey1154: ['#E4D1C0', '米', '卡其', '卡其色', '米色', 'khaki', 'Beige'],
+  colorKey1155: ['#E4D422', '黄', '黄色', 'yellow'],
+  colorKey1156: [
     '#E4D5B7',
     '小麦',
     '米',
@@ -9347,8 +9677,8 @@ export const colorDictionary = {
     'Beige',
     'Wheat',
   ],
-  Zombie: ['#E4D69B', '黄', '黄色', 'yellow'],
-  Frostee: [
+  colorKey1157: ['#E4D69B', '黄', '黄色', 'yellow'],
+  colorKey1158: [
     '#E4F6E7',
     '淡绿',
     '浅绿',
@@ -9360,7 +9690,7 @@ export const colorDictionary = {
     'LightGreen',
     'paleGreen',
   ],
-  'Snow Flurry': [
+  colorKey1159: [
     '#E4FFD1',
     '淡绿',
     '浅绿',
@@ -9372,11 +9702,11 @@ export const colorDictionary = {
     'LightGreen',
     'paleGreen',
   ],
-  Amaranth: ['#E52B50', '桃红', '红', '红色', '桃红色', 'red', 'peach'],
-  Zest: ['#E5841B', '桔', '橘', '橙', '橙色', '橘色', '桔色', 'orange'],
-  'Dust Storm': ['#E5CCC9', '粉', '粉色', 'pink'],
-  'Stark White': ['#E5D7BD', '米', '卡其', '卡其色', '米色', 'khaki', 'Beige'],
-  Hampton: [
+  colorKey1160: ['#E52B50', '桃红', '红', '红色', '桃红色', 'red', 'peach'],
+  colorKey1161: ['#E5841B', '桔', '橘', '橙', '橙色', '橘色', '桔色', 'orange'],
+  colorKey1162: ['#E5CCC9', '粉', '粉色', 'pink'],
+  colorKey1163: ['#E5D7BD', '米', '卡其', '卡其色', '米色', 'khaki', 'Beige'],
+  colorKey1164: [
     '#E5D8AF',
     '淡黄',
     '黄',
@@ -9391,9 +9721,9 @@ export const colorDictionary = {
     'yellow',
     'canaryYellow',
   ],
-  'Bon Jour': ['#E5E0E1', '杏', '米', '米色', '杏色', 'Beige'],
-  Mercury: ['#E5E5E5', '浅灰', '灰', '灰色', '浅灰色', 'gray'],
-  Polar: [
+  colorKey1165: ['#E5E0E1', '杏', '米', '米色', '杏色', 'Beige'],
+  colorKey1166: ['#E5E5E5', '浅灰', '灰', '灰色', '浅灰色', 'gray'],
+  colorKey1167: [
     '#E5F9F6',
     '天蓝',
     '浅蓝',
@@ -9408,7 +9738,7 @@ export const colorDictionary = {
     'wathetBlue',
     'skyBlue',
   ],
-  Trinidad: [
+  colorKey1168: [
     '#E64E03',
     '桔',
     '橙',
@@ -9421,7 +9751,7 @@ export const colorDictionary = {
     'tangerine',
     'orange',
   ],
-  'Gold Sand': [
+  colorKey1169: [
     '#E6BE8A',
     '肉',
     '卡其',
@@ -9433,10 +9763,10 @@ export const colorDictionary = {
     'khaki',
     'FleshColor',
   ],
-  Cashmere: ['#E6BEA5', '肉', '肉色', 'FleshColor'],
-  'Double Spanish White': ['#E6D7B9', '肉', '肉色', 'FleshColor'],
-  'Satin Linen': ['#E6E4D4', '灰', '灰色', 'gray'],
-  Harp: [
+  colorKey1170: ['#E6BEA5', '肉', '肉色', 'FleshColor'],
+  colorKey1171: ['#E6D7B9', '肉', '肉色', 'FleshColor'],
+  colorKey1172: ['#E6E4D4', '灰', '灰色', 'gray'],
+  colorKey1173: [
     '#E6F2EA',
     '淡绿',
     '浅绿',
@@ -9448,8 +9778,8 @@ export const colorDictionary = {
     'LightGreen',
     'paleGreen',
   ],
-  'Off Green': ['#E6F8F3', '薄荷', '青', '青色', '薄荷色', 'cyan', 'Mint'],
-  'Hint of Green': [
+  colorKey1174: ['#E6F8F3', '薄荷', '青', '青色', '薄荷色', 'cyan', 'Mint'],
+  colorKey1175: [
     '#E6FFE9',
     '淡绿',
     '浅绿',
@@ -9461,7 +9791,7 @@ export const colorDictionary = {
     'LightGreen',
     'paleGreen',
   ],
-  Tranquil: [
+  colorKey1176: [
     '#E6FFFF',
     '薄荷',
     '淡蓝',
@@ -9476,18 +9806,9 @@ export const colorDictionary = {
     'babyBlue',
     'Mint',
   ],
-  'Mango Tango': [
-    '#E77200',
-    '桔',
-    '橙',
-    '橘',
-    '橘色',
-    '橙色',
-    '桔色',
-    'orange',
-  ],
-  Christine: ['#E7730A', '桔', '橙', '橘', '橘色', '橙色', '桔色', 'orange'],
-  'Tonys Pink': [
+  colorKey1177: ['#E77200', '桔', '橙', '橘', '橘色', '橙色', '桔色', 'orange'],
+  colorKey1178: ['#E7730A', '桔', '橙', '橘', '橘色', '橙色', '桔色', 'orange'],
+  colorKey1179: [
     '#E79F8C',
     '粉',
     '肉',
@@ -9503,9 +9824,17 @@ export const colorDictionary = {
     'LightPink',
     'pink',
   ],
-  Kobi: ['#E79FC4', '淡粉', '粉', '粉色', '淡粉色', 'pink', 'LightPink'],
-  'Rose Fog': ['#E7BCB4', '粉', '肉粉', '肉粉色', '粉色', 'MeatPink', 'pink'],
-  Corn: [
+  colorKey1180: [
+    '#E79FC4',
+    '淡粉',
+    '粉',
+    '粉色',
+    '淡粉色',
+    'pink',
+    'LightPink',
+  ],
+  colorKey1181: ['#E7BCB4', '粉', '肉粉', '肉粉色', '粉色', 'MeatPink', 'pink'],
+  colorKey1182: [
     '#E7BF05',
     '金黄',
     '黄',
@@ -9516,7 +9845,7 @@ export const colorDictionary = {
     'golden',
     'yellow',
   ],
-  Putty: [
+  colorKey1183: [
     '#E7CD8C',
     '金',
     '金黄',
@@ -9527,7 +9856,7 @@ export const colorDictionary = {
     'yellow',
     'golden',
   ],
-  'Gray Nurse': [
+  colorKey1184: [
     '#E7ECE6',
     '白',
     '烟白',
@@ -9545,7 +9874,7 @@ export const colorDictionary = {
     'GreyWhite',
     'SmokeWhite',
   ],
-  'Lily White': [
+  colorKey1185: [
     '#E7F8FF',
     '淡蓝',
     '天蓝',
@@ -9560,8 +9889,8 @@ export const colorDictionary = {
     'skyBlue',
     'babyBlue',
   ],
-  Bubbles: ['#E7FEFF', '青', '青色', 'cyan'],
-  'Fire Bush': [
+  colorKey1186: ['#E7FEFF', '青', '青色', 'cyan'],
+  colorKey1187: [
     '#E89928',
     '桔黄',
     '桔',
@@ -9575,10 +9904,10 @@ export const colorDictionary = {
     '桔黄色',
     'orange',
   ],
-  Shilo: ['#E8B9B3', '粉', '粉色', 'pink'],
-  'Pearl Bush': ['#E8E0D5', '卡其', '米', '米色', '卡其色', 'Beige', 'khaki'],
-  'Green White': ['#E8EBE0', '灰', '灰色', 'gray'],
-  'Chrome White': [
+  colorKey1188: ['#E8B9B3', '粉', '粉色', 'pink'],
+  colorKey1189: ['#E8E0D5', '卡其', '米', '米色', '卡其色', 'Beige', 'khaki'],
+  colorKey1190: ['#E8EBE0', '灰', '灰色', 'gray'],
+  colorKey1191: [
     '#E8F1D4',
     '淡绿',
     '浅绿',
@@ -9590,8 +9919,16 @@ export const colorDictionary = {
     'LightGreen',
     'paleGreen',
   ],
-  Gin: ['#E8F2EB', '银白', '银', '银色', '银白色', 'silver', 'silveryWhite'],
-  'Aqua Squeeze': [
+  colorKey1192: [
+    '#E8F2EB',
+    '银白',
+    '银',
+    '银色',
+    '银白色',
+    'silver',
+    'silveryWhite',
+  ],
+  colorKey1193: [
     '#E8F5F2',
     '淡青',
     '青',
@@ -9600,7 +9937,7 @@ export const colorDictionary = {
     'cyan',
     'LightCyan',
   ],
-  Clementine: [
+  colorKey1194: [
     '#E96E00',
     '桔黄',
     '桔',
@@ -9614,7 +9951,7 @@ export const colorDictionary = {
     '桔黄色',
     'orange',
   ],
-  'Burnt Sienna': [
+  colorKey1195: [
     '#E97451',
     '桔',
     '橘粉',
@@ -9627,7 +9964,7 @@ export const colorDictionary = {
     'orange',
     'tangerine',
   ],
-  'Tahiti Gold': [
+  colorKey1196: [
     '#E97C07',
     '桔黄',
     '桔',
@@ -9641,10 +9978,18 @@ export const colorDictionary = {
     '桔黄色',
     'orange',
   ],
-  'Oyster Pink': ['#E9CECD', '粉', '粉色', 'pink'],
-  Confetti: ['#E9D75A', '黄', '黄色', 'yellow'],
-  Ebb: ['#E9E3E3', '淡粉', '粉', '粉色', '淡粉色', 'pink', 'LightPink'],
-  Ottoman: [
+  colorKey1197: ['#E9CECD', '粉', '粉色', 'pink'],
+  colorKey1198: ['#E9D75A', '黄', '黄色', 'yellow'],
+  colorKey1199: [
+    '#E9E3E3',
+    '淡粉',
+    '粉',
+    '粉色',
+    '淡粉色',
+    'pink',
+    'LightPink',
+  ],
+  colorKey1200: [
     '#E9F8ED',
     '淡青',
     '浅青',
@@ -9656,7 +10001,7 @@ export const colorDictionary = {
     'LightCyan',
     'LightCyan',
   ],
-  'Clear Day': [
+  colorKey1201: [
     '#E9FFFD',
     '淡青',
     '浅青',
@@ -9668,8 +10013,8 @@ export const colorDictionary = {
     'LightCyan',
     'LightCyan',
   ],
-  Carissma: ['#EA88A8', '粉红', '粉', '粉色', '粉红色', 'pink'],
-  Porsche: [
+  colorKey1202: ['#EA88A8', '粉红', '粉', '粉色', '粉红色', 'pink'],
+  colorKey1203: [
     '#EAAE69',
     '桔黄',
     '桔',
@@ -9683,7 +10028,7 @@ export const colorDictionary = {
     '桔黄色',
     'orange',
   ],
-  'Tulip Tree': [
+  colorKey1204: [
     '#EAB33B',
     '深黄',
     '黄',
@@ -9692,7 +10037,7 @@ export const colorDictionary = {
     'yellow',
     'darkYellow',
   ],
-  'Rob Roy': [
+  colorKey1205: [
     '#EAC674',
     '淡黄',
     '浅黄',
@@ -9704,7 +10049,7 @@ export const colorDictionary = {
     'LightYellow',
     'canaryYellow',
   ],
-  Raffia: [
+  colorKey1206: [
     '#EADAB8',
     '米',
     '淡黄',
@@ -9719,9 +10064,9 @@ export const colorDictionary = {
     'canaryYellow',
     'Beige',
   ],
-  'White Rock': ['#EAE8D4', '卡其', '米', '米色', '卡其色', 'Beige', 'khaki'],
-  Panache: ['#EAF6EE', '青', '青色', 'cyan'],
-  Solitude: [
+  colorKey1207: ['#EAE8D4', '卡其', '米', '米色', '卡其色', 'Beige', 'khaki'],
+  colorKey1208: ['#EAF6EE', '青', '青色', 'cyan'],
+  colorKey1209: [
     '#EAF6FF',
     '天蓝',
     '淡蓝',
@@ -9736,9 +10081,9 @@ export const colorDictionary = {
     'babyBlue',
     'skyBlue',
   ],
-  'Aqua Spring': ['#EAF9F5', '青', '青色', 'cyan'],
-  Dew: ['#EAFFFE', '青', '青色', 'cyan'],
-  Apricot: [
+  colorKey1210: ['#EAF9F5', '青', '青色', 'cyan'],
+  colorKey1211: ['#EAFFFE', '青', '青色', 'cyan'],
+  colorKey1212: [
     '#EB9373',
     '浅橘红',
     '橘红',
@@ -9750,8 +10095,8 @@ export const colorDictionary = {
     'tangerine',
     'LightOrange',
   ],
-  Zinnwaldite: ['#EBC2AF', '肉', '肉色', 'FleshColor'],
-  'Fuel Yellow': [
+  colorKey1213: ['#EBC2AF', '肉', '肉色', 'FleshColor'],
+  colorKey1214: [
     '#ECA927',
     '深黄',
     '金黄',
@@ -9765,8 +10110,8 @@ export const colorDictionary = {
     'golden',
     'darkYellow',
   ],
-  Ronchi: ['#ECC54E', '黄', '黄色', 'yellow'],
-  'French Lilac': [
+  colorKey1215: ['#ECC54E', '黄', '黄色', 'yellow'],
+  colorKey1216: [
     '#ECC7EE',
     '淡粉',
     '浅粉',
@@ -9778,9 +10123,9 @@ export const colorDictionary = {
     'LightPink',
     'LightPink',
   ],
-  'Just Right': ['#ECCDB9', '肉', '肉色', 'FleshColor'],
-  'Wild Rice': ['#ECE090', '黄', '黄色', 'yellow'],
-  'Fall Green': [
+  colorKey1217: ['#ECCDB9', '肉', '肉色', 'FleshColor'],
+  colorKey1218: ['#ECE090', '黄', '黄色', 'yellow'],
+  colorKey1219: [
     '#ECEBBD',
     '暗黄',
     '黄',
@@ -9789,10 +10134,10 @@ export const colorDictionary = {
     'yellow',
     'DarkYellow',
   ],
-  'Aths Special': ['#ECEBCE', '卡其', '米', '米色', '卡其色', 'Beige', 'khaki'],
-  Starship: ['#ECF245', '黄', '黄色', 'yellow'],
-  'Red Ribbon': ['#ED0A3F', '红', '红色', 'red'],
-  Tango: [
+  colorKey1220: ['#ECEBCE', '卡其', '米', '米色', '卡其色', 'Beige', 'khaki'],
+  colorKey1221: ['#ECF245', '黄', '黄色', 'yellow'],
+  colorKey1222: ['#ED0A3F', '红', '红色', 'red'],
+  colorKey1223: [
     '#ED7A1C',
     '桔黄',
     '桔',
@@ -9806,7 +10151,7 @@ export const colorDictionary = {
     '桔黄色',
     'orange',
   ],
-  'Carrot Orange': [
+  colorKey1224: [
     '#ED9121',
     '桔黄',
     '桔',
@@ -9820,8 +10165,8 @@ export const colorDictionary = {
     '桔黄色',
     'orange',
   ],
-  'Sea Pink': ['#ED989E', '粉', '粉色', 'pink'],
-  Tacao: [
+  colorKey1225: ['#ED989E', '粉', '粉色', 'pink'],
+  colorKey1226: [
     '#EDB381',
     '浅桔黄',
     '桔',
@@ -9839,7 +10184,7 @@ export const colorDictionary = {
     'lightOrange',
     'lightOrange',
   ],
-  'Desert Sand': [
+  colorKey1227: [
     '#EDC9AF',
     '浅肉',
     '肉',
@@ -9848,7 +10193,7 @@ export const colorDictionary = {
     'FleshColor',
     'LightFleshColor',
   ],
-  Pancho: [
+  colorKey1228: [
     '#EDCDAB',
     '浅肉',
     '肉',
@@ -9857,8 +10202,8 @@ export const colorDictionary = {
     'FleshColor',
     'LightFleshColor',
   ],
-  Chamois: ['#EDDCB1', '黄', '黄色', 'yellow'],
-  Primrose: [
+  colorKey1229: ['#EDDCB1', '黄', '黄色', 'yellow'],
+  colorKey1230: [
     '#EDEA99',
     '黄绿',
     '黄',
@@ -9867,7 +10212,7 @@ export const colorDictionary = {
     'yellow',
     'YellowGreen',
   ],
-  Frost: [
+  colorKey1231: [
     '#EDF5DD',
     '淡绿',
     '浅绿',
@@ -9879,7 +10224,7 @@ export const colorDictionary = {
     'LightGreen',
     'paleGreen',
   ],
-  'Aqua Haze': [
+  colorKey1232: [
     '#EDF5F5',
     '淡蓝',
     '浅蓝',
@@ -9894,7 +10239,7 @@ export const colorDictionary = {
     'wathetBlue',
     'babyBlue',
   ],
-  Zumthor: [
+  colorKey1233: [
     '#EDF6FF',
     '淡蓝',
     '浅蓝',
@@ -9909,9 +10254,9 @@ export const colorDictionary = {
     'wathetBlue',
     'babyBlue',
   ],
-  Narvik: ['#EDF9F1', '青', '青色', 'cyan'],
-  Honeysuckle: ['#EDFC84', '黄', '黄色', 'yellow'],
-  'Lavender Magenta': [
+  colorKey1234: ['#EDF9F1', '青', '青色', 'cyan'],
+  colorKey1235: ['#EDFC84', '黄', '黄色', 'yellow'],
+  colorKey1236: [
     '#EE82EE',
     '粉',
     '荧光粉',
@@ -9920,9 +10265,9 @@ export const colorDictionary = {
     'FluorescentPink',
     'pink',
   ],
-  'Beauty Bush': ['#EEC1BE', '粉', '粉色', 'pink'],
-  Chalky: ['#EED794', '黄', '黄色', 'yellow'],
-  Almond: [
+  colorKey1237: ['#EEC1BE', '粉', '粉色', 'pink'],
+  colorKey1238: ['#EED794', '黄', '黄色', 'yellow'],
+  colorKey1239: [
     '#EED9C4',
     '木',
     '米',
@@ -9937,12 +10282,20 @@ export const colorDictionary = {
     'Beige',
     'timber',
   ],
-  Flax: ['#EEDC82', '黄', '黄色', 'yellow'],
-  Bizarre: ['#EEDEDA', '粉', '粉色', 'pink'],
-  'Double Colonial White': ['#EEE3AD', '黄', '黄色', 'yellow'],
-  Cararra: ['#EEEEE8', '米白', '米', '米色', '米白色', 'Beige', 'OffWhite'],
-  Manz: ['#EEEF78', '黄', '黄色', 'yellow'],
-  'Tahuna Sands': [
+  colorKey1240: ['#EEDC82', '黄', '黄色', 'yellow'],
+  colorKey1241: ['#EEDEDA', '粉', '粉色', 'pink'],
+  colorKey1242: ['#EEE3AD', '黄', '黄色', 'yellow'],
+  colorKey1243: [
+    '#EEEEE8',
+    '米白',
+    '米',
+    '米色',
+    '米白色',
+    'Beige',
+    'OffWhite',
+  ],
+  colorKey1244: ['#EEEF78', '黄', '黄色', 'yellow'],
+  colorKey1245: [
     '#EEF0C8',
     '黄绿',
     '黄',
@@ -9951,7 +10304,7 @@ export const colorDictionary = {
     'yellow',
     'YellowGreen',
   ],
-  'Athens Gray': [
+  colorKey1246: [
     '#EEF0F3',
     '浅灰',
     '灰白',
@@ -9966,8 +10319,8 @@ export const colorDictionary = {
     'GreyWhite',
     'gray',
   ],
-  Tusk: ['#EEF3C3', '黄', '黄色', 'yellow'],
-  Loafer: [
+  colorKey1247: ['#EEF3C3', '黄', '黄色', 'yellow'],
+  colorKey1248: [
     '#EEF4DE',
     '淡绿',
     '浅绿',
@@ -9979,7 +10332,7 @@ export const colorDictionary = {
     'LightGreen',
     'paleGreen',
   ],
-  'Catskill White': [
+  colorKey1249: [
     '#EEF6F7',
     '浅灰',
     '灰白',
@@ -9994,7 +10347,7 @@ export const colorDictionary = {
     'GreyWhite',
     'gray',
   ],
-  'Twilight Blue': [
+  colorKey1250: [
     '#EEFDFF',
     '天蓝',
     '浅蓝',
@@ -10009,8 +10362,16 @@ export const colorDictionary = {
     'wathetBlue',
     'skyBlue',
   ],
-  Jonquil: ['#EEFF9A', '黄绿', '黄', '黄色', '黄绿色', 'yellow', 'YellowGreen'],
-  'Rice Flower': [
+  colorKey1251: [
+    '#EEFF9A',
+    '黄绿',
+    '黄',
+    '黄色',
+    '黄绿色',
+    'yellow',
+    'YellowGreen',
+  ],
+  colorKey1252: [
     '#EEFFE2',
     '淡绿',
     '浅绿',
@@ -10022,7 +10383,7 @@ export const colorDictionary = {
     'LightGreen',
     'paleGreen',
   ],
-  Jaffa: [
+  colorKey1253: [
     '#EF863F',
     '桔黄',
     '桔',
@@ -10038,7 +10399,7 @@ export const colorDictionary = {
     '桔黄色',
     'orange',
   ],
-  Gallery: [
+  colorKey1254: [
     '#EFEFEF',
     '浅灰',
     '灰白',
@@ -10053,7 +10414,7 @@ export const colorDictionary = {
     'GreyWhite',
     'gray',
   ],
-  Porcelain: [
+  colorKey1255: [
     '#EFF2F3',
     '银',
     '银白',
@@ -10074,7 +10435,7 @@ export const colorDictionary = {
     'silveryWhite',
     'silver',
   ],
-  Mauvelous: [
+  colorKey1256: [
     '#F091A9',
     '粉红',
     '桃粉',
@@ -10085,10 +10446,10 @@ export const colorDictionary = {
     'pink',
     'PeachPink',
   ],
-  'Golden Dream': ['#F0D52D', '黄', '黄色', 'yellow'],
-  'Golden Sand': ['#F0DB7D', '黄', '黄色', 'yellow'],
-  Buff: ['#F0DC82', '黄', '黄色', 'yellow'],
-  Prim: [
+  colorKey1257: ['#F0D52D', '黄', '黄色', 'yellow'],
+  colorKey1258: ['#F0DB7D', '黄', '黄色', 'yellow'],
+  colorKey1259: ['#F0DC82', '黄', '黄色', 'yellow'],
+  colorKey1260: [
     '#F0E2EC',
     '淡紫',
     '浅紫',
@@ -10103,8 +10464,8 @@ export const colorDictionary = {
     'lilac',
     'orchid',
   ],
-  Khaki: ['#F0E68C', '黄', '黄色', 'yellow'],
-  Selago: [
+  colorKey1261: ['#F0E68C', '黄', '黄色', 'yellow'],
+  colorKey1262: [
     '#F0EEFD',
     '淡紫',
     '浅紫',
@@ -10119,7 +10480,7 @@ export const colorDictionary = {
     'lilac',
     'orchid',
   ],
-  'Titan White': [
+  colorKey1263: [
     '#F0EEFF',
     '淡紫',
     '浅紫',
@@ -10134,7 +10495,7 @@ export const colorDictionary = {
     'lilac',
     'orchid',
   ],
-  'Alice Blue': [
+  colorKey1264: [
     '#F0F8FF',
     '天蓝',
     '淡蓝',
@@ -10149,7 +10510,7 @@ export const colorDictionary = {
     'babyBlue',
     'skyBlue',
   ],
-  Feta: [
+  colorKey1265: [
     '#F0FCEA',
     '淡绿',
     '浅绿',
@@ -10161,7 +10522,7 @@ export const colorDictionary = {
     'LightGreen',
     'paleGreen',
   ],
-  'Gold Drop': [
+  colorKey1266: [
     '#F18200',
     '桔黄',
     '桔',
@@ -10177,7 +10538,7 @@ export const colorDictionary = {
     '桔黄色',
     'orange',
   ],
-  Wewak: [
+  colorKey1267: [
     '#F19BAB',
     '粉红',
     '桃粉',
@@ -10188,9 +10549,9 @@ export const colorDictionary = {
     'pink',
     'PeachPink',
   ],
-  'Sahara Sand': ['#F1E788', '黄', '黄色', 'yellow'],
-  Parchment: ['#F1E9D2', '卡其', '米', '米色', '卡其色', 'Beige', 'khaki'],
-  'Blue Chalk': [
+  colorKey1268: ['#F1E788', '黄', '黄色', 'yellow'],
+  colorKey1269: ['#F1E9D2', '卡其', '米', '米色', '卡其色', 'Beige', 'khaki'],
+  colorKey1270: [
     '#F1E9FF',
     '淡紫',
     '浅紫',
@@ -10205,8 +10566,8 @@ export const colorDictionary = {
     'lilac',
     'orchid',
   ],
-  'Mint Julep': ['#F1EEC1', '黄', '黄色', 'yellow'],
-  Seashell: [
+  colorKey1271: ['#F1EEC1', '黄', '黄色', 'yellow'],
+  colorKey1272: [
     '#F1F1F1',
     '银白',
     '银',
@@ -10227,7 +10588,7 @@ export const colorDictionary = {
     'silver',
     'silveryWhite',
   ],
-  Saltpan: [
+  colorKey1273: [
     '#F1F7F2',
     '白',
     '银白',
@@ -10250,9 +10611,25 @@ export const colorDictionary = {
     'silver',
     'silveryWhite',
   ],
-  Tidal: ['#F1FFAD', '黄绿', '绿', '绿色', '黄绿色', 'green', 'YellowGreen'],
-  Chiffon: ['#F1FFC8', '黄绿', '绿', '绿色', '黄绿色', 'green', 'YellowGreen'],
-  Flamingo: [
+  colorKey1274: [
+    '#F1FFAD',
+    '黄绿',
+    '绿',
+    '绿色',
+    '黄绿色',
+    'green',
+    'YellowGreen',
+  ],
+  colorKey1275: [
+    '#F1FFC8',
+    '黄绿',
+    '绿',
+    '绿色',
+    '黄绿色',
+    'green',
+    'YellowGreen',
+  ],
+  colorKey1276: [
     '#F2552A',
     '桔红',
     '桔',
@@ -10266,7 +10643,7 @@ export const colorDictionary = {
     'tangerine',
     'OrangeRed',
   ],
-  Tangerine: [
+  colorKey1277: [
     '#F28500',
     '桔黄',
     '桔',
@@ -10282,16 +10659,8 @@ export const colorDictionary = {
     '桔黄色',
     'orange',
   ],
-  'Mandys Pink': [
-    '#F2C3B2',
-    '肉粉',
-    '粉',
-    '粉色',
-    '肉粉色',
-    'pink',
-    'MeatPink',
-  ],
-  Concrete: [
+  colorKey1278: ['#F2C3B2', '肉粉', '粉', '粉色', '肉粉色', 'pink', 'MeatPink'],
+  colorKey1279: [
     '#F2F2F2',
     '银白',
     '烟白',
@@ -10306,7 +10675,7 @@ export const colorDictionary = {
     'SmokeWhite',
     'silveryWhite',
   ],
-  'Black Squeeze': [
+  colorKey1280: [
     '#F2FAFA',
     '淡青',
     '浅青',
@@ -10318,7 +10687,7 @@ export const colorDictionary = {
     'LightCyan',
     'LightCyan',
   ],
-  Pomegranate: [
+  colorKey1281: [
     '#F34723',
     '橘红',
     '橘',
@@ -10327,7 +10696,7 @@ export const colorDictionary = {
     'orange',
     'tangerine',
   ],
-  Buttercup: [
+  colorKey1282: [
     '#F3AD16',
     '桔黄',
     '桔',
@@ -10343,7 +10712,7 @@ export const colorDictionary = {
     '桔黄色',
     'orange',
   ],
-  'New Orleans': [
+  colorKey1283: [
     '#F3D69D',
     '小麦黄',
     '小麦',
@@ -10355,8 +10724,8 @@ export const colorDictionary = {
     'Wheat',
     'WheatYellow',
   ],
-  'Vanilla Ice': ['#F3D9DF', '粉', '粉色', 'pink'],
-  Sidecar: [
+  colorKey1284: ['#F3D9DF', '粉', '粉色', 'pink'],
+  colorKey1285: [
     '#F3E7BB',
     '小麦黄',
     '小麦',
@@ -10368,7 +10737,7 @@ export const colorDictionary = {
     'Wheat',
     'WheatYellow',
   ],
-  'Dawn Pink': [
+  colorKey1286: [
     '#F3E9E5',
     '浅粉',
     '淡粉',
@@ -10380,7 +10749,7 @@ export const colorDictionary = {
     'LightPink',
     'LightPink',
   ],
-  Wheatfield: [
+  colorKey1287: [
     '#F3EDCF',
     '米',
     '卡其',
@@ -10398,8 +10767,8 @@ export const colorDictionary = {
     'khaki',
     'Beige',
   ],
-  Canary: ['#F3FB62', '黄', '黄色', 'yellow'],
-  Orinoco: [
+  colorKey1288: ['#F3FB62', '黄', '黄色', 'yellow'],
+  colorKey1289: [
     '#F3FBD4',
     '淡绿',
     '浅绿',
@@ -10411,7 +10780,7 @@ export const colorDictionary = {
     'LightGreen',
     'paleGreen',
   ],
-  Carla: [
+  colorKey1290: [
     '#F3FFD8',
     '淡绿',
     '浅绿',
@@ -10423,8 +10792,8 @@ export const colorDictionary = {
     'LightGreen',
     'paleGreen',
   ],
-  'Hollywood Cerise': ['#F400A1', '桃', '桃红', '桃红色', '桃色', 'peach'],
-  'Sandy brown': [
+  colorKey1291: ['#F400A1', '桃', '桃红', '桃红色', '桃色', 'peach'],
+  colorKey1292: [
     '#F4A460',
     '桔黄',
     '桔',
@@ -10438,7 +10807,7 @@ export const colorDictionary = {
     '桔黄色',
     'orange',
   ],
-  Saffron: [
+  colorKey1293: [
     '#F4C430',
     '金',
     '金黄',
@@ -10449,11 +10818,19 @@ export const colorDictionary = {
     'yellow',
     'golden',
   ],
-  'Ripe Lemon': ['#F4D81C', '金黄', '黄', '黄色', '金黄色', 'yellow', 'golden'],
-  Janna: ['#F4EBD3', '黄', '鹅黄', '鹅黄色', '黄色', 'lightyellow', 'yellow'],
-  Pampas: ['#F4F2EE', '银', '灰', '灰色', '银色', 'gray', 'silver'],
-  'Wild Sand': ['#F4F4F4', '银', '灰', '灰色', '银色', 'gray', 'silver'],
-  Zircon: [
+  colorKey1294: ['#F4D81C', '金黄', '黄', '黄色', '金黄色', 'yellow', 'golden'],
+  colorKey1295: [
+    '#F4EBD3',
+    '黄',
+    '鹅黄',
+    '鹅黄色',
+    '黄色',
+    'lightyellow',
+    'yellow',
+  ],
+  colorKey1296: ['#F4F2EE', '银', '灰', '灰色', '银色', 'gray', 'silver'],
+  colorKey1297: ['#F4F4F4', '银', '灰', '灰色', '银色', 'gray', 'silver'],
+  colorKey1298: [
     '#F4F8FF',
     '浅蓝',
     '天蓝',
@@ -10468,8 +10845,8 @@ export const colorDictionary = {
     'skyBlue',
     'wathetBlue',
   ],
-  Froly: ['#F57584', '桃', '桃红', '桃红色', '桃色', 'peach'],
-  'Cream Can': [
+  colorKey1299: ['#F57584', '桃', '桃红', '桃红色', '桃色', 'peach'],
+  colorKey1300: [
     '#F5C85C',
     '金',
     '金黄',
@@ -10480,10 +10857,18 @@ export const colorDictionary = {
     'yellow',
     'golden',
   ],
-  Manhattan: ['#F5C999', '肉', '桃', '桃色', '肉色', 'Peach', 'FleshColor'],
-  Maize: ['#F5D5A0', '肉', '肉色', 'FleshColor'],
-  Wheat: ['#F5DEB3', '卡其', '肉', '肉色', '卡其色', 'FleshColor', 'khaki'],
-  Sandwisp: [
+  colorKey1301: ['#F5C999', '肉', '桃', '桃色', '肉色', 'Peach', 'FleshColor'],
+  colorKey1302: ['#F5D5A0', '肉', '肉色', 'FleshColor'],
+  colorKey1303: [
+    '#F5DEB3',
+    '卡其',
+    '肉',
+    '肉色',
+    '卡其色',
+    'FleshColor',
+    'khaki',
+  ],
+  colorKey1304: [
     '#F5E7A2',
     '黄绿',
     '黄',
@@ -10492,17 +10877,9 @@ export const colorDictionary = {
     'yellow',
     'YellowGreen',
   ],
-  'Pot Pourri': ['#F5E7E2', '粉', '粉色', 'pink'],
-  'Albescent White': [
-    '#F5E9D3',
-    '卡其',
-    '米',
-    '米色',
-    '卡其色',
-    'Beige',
-    'khaki',
-  ],
-  'Soft Peach': [
+  colorKey1305: ['#F5E7E2', '粉', '粉色', 'pink'],
+  colorKey1306: ['#F5E9D3', '卡其', '米', '米色', '卡其色', 'Beige', 'khaki'],
+  colorKey1307: [
     '#F5EDEF',
     '浅粉',
     '淡粉',
@@ -10514,9 +10891,9 @@ export const colorDictionary = {
     'LightPink',
     'LightPink',
   ],
-  'Ecru White': ['#F5F3E5', '卡其', '米', '米色', '卡其色', 'Beige', 'khaki'],
-  Beige: ['#F5F5DC', '卡其', '米', '米色', '卡其色', 'Beige', 'khaki'],
-  'Golden Fizz': [
+  colorKey1308: ['#F5F3E5', '卡其', '米', '米色', '卡其色', 'Beige', 'khaki'],
+  colorKey1309: ['#F5F5DC', '卡其', '米', '米色', '卡其色', 'Beige', 'khaki'],
+  colorKey1310: [
     '#F5FB3D',
     '深黄',
     '黄',
@@ -10525,7 +10902,7 @@ export const colorDictionary = {
     'yellow',
     'darkYellow',
   ],
-  'Australian Mint': [
+  colorKey1311: [
     '#F5FFBE',
     '黄绿',
     '浅绿',
@@ -10540,7 +10917,7 @@ export const colorDictionary = {
     'LightGreen',
     'YellowGreen',
   ],
-  'French Rose': [
+  colorKey1312: [
     '#F64A8A',
     '桃',
     '桃红',
@@ -10554,7 +10931,7 @@ export const colorDictionary = {
     'Brightpink',
     'peach',
   ],
-  'Brilliant Rose': [
+  colorKey1313: [
     '#F653A6',
     '桃',
     '桃红',
@@ -10568,8 +10945,8 @@ export const colorDictionary = {
     'Brightpink',
     'peach',
   ],
-  Illusion: ['#F6A4C9', '粉', '粉色', 'pink'],
-  Merino: [
+  colorKey1314: ['#F6A4C9', '粉', '粉色', 'pink'],
+  colorKey1315: [
     '#F6F0E6',
     '卡其',
     '肉',
@@ -10581,7 +10958,7 @@ export const colorDictionary = {
     'FleshColor',
     'khaki',
   ],
-  'Black Haze': [
+  colorKey1316: [
     '#F6F7F7',
     '白',
     '灰白',
@@ -10599,7 +10976,7 @@ export const colorDictionary = {
     'silveryWhite',
     'GreyWhite',
   ],
-  'Spring Sun': [
+  colorKey1317: [
     '#F6FFDC',
     '淡绿',
     '浅绿',
@@ -10611,8 +10988,8 @@ export const colorDictionary = {
     'LightGreen',
     'paleGreen',
   ],
-  'Violet Red': ['#F7468A', '桃', '桃红', '桃红色', '桃色', 'peach'],
-  'Chilean Fire': [
+  colorKey1318: ['#F7468A', '桃', '桃红', '桃红色', '桃色', 'peach'],
+  colorKey1319: [
     '#F77703',
     '桔黄',
     '桔',
@@ -10626,7 +11003,7 @@ export const colorDictionary = {
     '桔黄色',
     'orange',
   ],
-  'Persian Pink': [
+  colorKey1320: [
     '#F77FBE',
     '桃',
     '桃红',
@@ -10640,7 +11017,7 @@ export const colorDictionary = {
     'Brightpink',
     'peach',
   ],
-  Rajah: [
+  colorKey1321: [
     '#F7B668',
     '桔黄',
     '桔',
@@ -10654,9 +11031,9 @@ export const colorDictionary = {
     '桔黄色',
     'orange',
   ],
-  Azalea: ['#F7C8DA', '粉', '粉色', 'pink'],
-  'We Peep': ['#F7DBE6', '粉', '粉色', 'pink'],
-  'Quarter Spanish White': [
+  colorKey1322: ['#F7C8DA', '粉', '粉色', 'pink'],
+  colorKey1323: ['#F7DBE6', '粉', '粉色', 'pink'],
+  colorKey1324: [
     '#F7F2E1',
     '浅米',
     '米',
@@ -10665,7 +11042,7 @@ export const colorDictionary = {
     'Beige',
     'Lightbeige',
   ],
-  Whisper: [
+  colorKey1325: [
     '#F7F5FA',
     '银白',
     '银',
@@ -10677,7 +11054,7 @@ export const colorDictionary = {
     'silver',
     'silveryWhite',
   ],
-  'Snow Drift': [
+  colorKey1326: [
     '#F7FAF7',
     '银白',
     '银',
@@ -10689,7 +11066,7 @@ export const colorDictionary = {
     'silver',
     'silveryWhite',
   ],
-  Casablanca: [
+  colorKey1327: [
     '#F8B853',
     '桔黄',
     '桔',
@@ -10703,9 +11080,9 @@ export const colorDictionary = {
     '桔黄色',
     'orange',
   ],
-  Chantilly: ['#F8C3DF', '粉', '粉色', 'pink'],
-  Cherub: ['#F8D9E9', '粉', '粉色', 'pink'],
-  Marzipan: [
+  colorKey1328: ['#F8C3DF', '粉', '粉色', 'pink'],
+  colorKey1329: ['#F8D9E9', '粉', '粉色', 'pink'],
+  colorKey1330: [
     '#F8DB9D',
     '深黄',
     '深秋',
@@ -10717,7 +11094,7 @@ export const colorDictionary = {
     'DeepAutumn',
     'darkYellow',
   ],
-  'Energy Yellow': [
+  colorKey1331: [
     '#F8DD5C',
     '金黄',
     '金',
@@ -10728,8 +11105,16 @@ export const colorDictionary = {
     'yellow',
     'golden',
   ],
-  Givry: ['#F8E4BF', '卡其', '肉', '肉色', '卡其色', 'FleshColor', 'khaki'],
-  'White Linen': [
+  colorKey1332: [
+    '#F8E4BF',
+    '卡其',
+    '肉',
+    '肉色',
+    '卡其色',
+    'FleshColor',
+    'khaki',
+  ],
+  colorKey1333: [
     '#F8F0E8',
     '浅粉',
     '浅米',
@@ -10744,7 +11129,7 @@ export const colorDictionary = {
     'Lightbeige',
     'LightPink',
   ],
-  Magnolia: [
+  colorKey1334: [
     '#F8F4FF',
     '浅紫',
     '淡紫',
@@ -10756,7 +11141,7 @@ export const colorDictionary = {
     'orchid',
     'lilac',
   ],
-  'Spring Wood': [
+  colorKey1335: [
     '#F8F6F1',
     '贝壳',
     '浅米',
@@ -10771,7 +11156,7 @@ export const colorDictionary = {
     'Lightbeige',
     'ShellColor',
   ],
-  'Coconut Cream': [
+  colorKey1336: [
     '#F8F7DC',
     '淡黄',
     '浅黄',
@@ -10783,7 +11168,7 @@ export const colorDictionary = {
     'LightYellow',
     'canaryYellow',
   ],
-  'White Lilac': [
+  colorKey1337: [
     '#F8F7FC',
     '银白',
     '白',
@@ -10801,7 +11186,7 @@ export const colorDictionary = {
     'white',
     'silveryWhite',
   ],
-  'Desert Storm': [
+  colorKey1338: [
     '#F8F8F7',
     '银白',
     '白',
@@ -10819,8 +11204,8 @@ export const colorDictionary = {
     'white',
     'silveryWhite',
   ],
-  Texas: ['#F8F99C', '黄', '黄色', 'yellow'],
-  'Corn Field': [
+  colorKey1339: ['#F8F99C', '黄', '黄色', 'yellow'],
+  colorKey1340: [
     '#F8FACD',
     '鹅黄',
     '黄',
@@ -10829,9 +11214,25 @@ export const colorDictionary = {
     'yellow',
     'lightyellow',
   ],
-  Mimosa: ['#F8FDD3', '黄', '鹅黄', '鹅黄色', '黄色', 'lightyellow', 'yellow'],
-  Carnation: ['#F95A61', '粉红', '珊瑚', '珊瑚色', '粉红色', 'coral', 'pink'],
-  'Saffron Mango': [
+  colorKey1341: [
+    '#F8FDD3',
+    '黄',
+    '鹅黄',
+    '鹅黄色',
+    '黄色',
+    'lightyellow',
+    'yellow',
+  ],
+  colorKey1342: [
+    '#F95A61',
+    '粉红',
+    '珊瑚',
+    '珊瑚色',
+    '粉红色',
+    'coral',
+    'pink',
+  ],
+  colorKey1343: [
     '#F9BF58',
     '橘',
     '桔',
@@ -10848,8 +11249,8 @@ export const colorDictionary = {
     'yellow',
     'orange',
   ],
-  'Carousel Pink': ['#F9E0ED', '粉', '粉色', 'pink'],
-  'Dairy Cream': [
+  colorKey1344: ['#F9E0ED', '粉', '粉色', 'pink'],
+  colorKey1345: [
     '#F9E4BC',
     '乳黄',
     '卡其',
@@ -10864,7 +11265,7 @@ export const colorDictionary = {
     'khaki',
     'creamLike',
   ],
-  Portica: [
+  colorKey1346: [
     '#F9E663',
     '金黄',
     '金',
@@ -10875,10 +11276,10 @@ export const colorDictionary = {
     'yellow',
     'golden',
   ],
-  Amour: ['#F9EAF3', '粉', '粉色', 'pink'],
-  'Rum Swizzle': ['#F9F8E4', '卡其', '米', '米色', '卡其色', 'Beige', 'khaki'],
-  Dolly: ['#F9FF8B', '黄', '黄色', 'yellow'],
-  'Sugar Cane': [
+  colorKey1347: ['#F9EAF3', '粉', '粉色', 'pink'],
+  colorKey1348: ['#F9F8E4', '卡其', '米', '米色', '卡其色', 'Beige', 'khaki'],
+  colorKey1349: ['#F9FF8B', '黄', '黄色', 'yellow'],
+  colorKey1350: [
     '#F9FFF6',
     '银白',
     '白',
@@ -10896,7 +11297,7 @@ export const colorDictionary = {
     'white',
     'silveryWhite',
   ],
-  Ecstasy: [
+  colorKey1351: [
     '#FA7814',
     '橘',
     '桔',
@@ -10910,7 +11311,7 @@ export const colorDictionary = {
     '橘色',
     'orange',
   ],
-  'Tan Hide': [
+  colorKey1352: [
     '#FA9D5A',
     '橘',
     '桔',
@@ -10924,7 +11325,7 @@ export const colorDictionary = {
     '橘色',
     'orange',
   ],
-  Corvette: [
+  colorKey1353: [
     '#FAD3A2',
     '乳黄',
     '鹿皮',
@@ -10936,7 +11337,7 @@ export const colorDictionary = {
     'Moccasin',
     'creamLike',
   ],
-  'Peach Yellow': [
+  colorKey1354: [
     '#FADFAD',
     '乳黄',
     '鹿皮',
@@ -10948,7 +11349,7 @@ export const colorDictionary = {
     'Moccasin',
     'creamLike',
   ],
-  Turbo: [
+  colorKey1355: [
     '#FAE600',
     '金黄',
     '金',
@@ -10959,7 +11360,7 @@ export const colorDictionary = {
     'yellow',
     'golden',
   ],
-  Astra: [
+  colorKey1356: [
     '#FAEAB9',
     '乳黄',
     '鹿皮',
@@ -10971,7 +11372,7 @@ export const colorDictionary = {
     'Moccasin',
     'creamLike',
   ],
-  Champagne: [
+  colorKey1357: [
     '#FAECCC',
     '乳黄',
     '鹿皮',
@@ -10983,10 +11384,18 @@ export const colorDictionary = {
     'Moccasin',
     'creamLike',
   ],
-  Linen: ['#FAF0E6', '米', '米色', 'Beige'],
-  Fantasy: ['#FAF3F0', '雪白', '白', '白色', '雪白色', 'white', 'SnowWhite'],
-  'Citrine White': ['#FAF7D6', '黄', '黄色', 'yellow'],
-  Alabaster: [
+  colorKey1358: ['#FAF0E6', '米', '米色', 'Beige'],
+  colorKey1359: [
+    '#FAF3F0',
+    '雪白',
+    '白',
+    '白色',
+    '雪白色',
+    'white',
+    'SnowWhite',
+  ],
+  colorKey1360: ['#FAF7D6', '黄', '黄色', 'yellow'],
+  colorKey1361: [
     '#FAFAFA',
     '银白',
     '白',
@@ -11004,7 +11413,7 @@ export const colorDictionary = {
     'white',
     'silveryWhite',
   ],
-  'Hint of Yellow': [
+  colorKey1362: [
     '#FAFDE4',
     '淡黄',
     '黄',
@@ -11013,8 +11422,16 @@ export const colorDictionary = {
     'yellow',
     'canaryYellow',
   ],
-  Milan: ['#FAFFA4', '黄绿', '黄', '黄色', '黄绿色', 'yellow', 'YellowGreen'],
-  'Brink Pink': [
+  colorKey1363: [
+    '#FAFFA4',
+    '黄绿',
+    '黄',
+    '黄色',
+    '黄绿色',
+    'yellow',
+    'YellowGreen',
+  ],
+  colorKey1364: [
     '#FB607F',
     '桃红',
     '粉',
@@ -11025,8 +11442,8 @@ export const colorDictionary = {
     'pink',
     'peach',
   ],
-  Geraldine: ['#FB8989', '粉', '粉红', '粉红色', '粉色', 'pink'],
-  'Lavender Rose': [
+  colorKey1365: ['#FB8989', '粉', '粉红', '粉红色', '粉色', 'pink'],
+  colorKey1366: [
     '#FBA0E3',
     '芭比粉',
     '粉',
@@ -11037,7 +11454,7 @@ export const colorDictionary = {
     'pink',
     'BarbiePink',
   ],
-  'Sea Buckthorn': [
+  colorKey1367: [
     '#FBA129',
     '橘',
     '桔',
@@ -11051,7 +11468,7 @@ export const colorDictionary = {
     '橘色',
     'orange',
   ],
-  Sun: [
+  colorKey1368: [
     '#FBAC13',
     '橘',
     '桔',
@@ -11065,11 +11482,11 @@ export const colorDictionary = {
     '橘色',
     'orange',
   ],
-  'Lavender Pink': ['#FBAED2', '粉', '粉色', 'pink'],
-  'Rose Bud': ['#FBB2A3', '珊瑚', '粉', '粉色', '珊瑚色', 'pink', 'coral'],
-  Cupid: ['#FBBEDA', '粉', '粉色', 'pink'],
-  'Classic Rose': ['#FBCCE7', '粉', '粉色', 'pink'],
-  'Apricot Peach': [
+  colorKey1369: ['#FBAED2', '粉', '粉色', 'pink'],
+  colorKey1370: ['#FBB2A3', '珊瑚', '粉', '粉色', '珊瑚色', 'pink', 'coral'],
+  colorKey1371: ['#FBBEDA', '粉', '粉色', 'pink'],
+  colorKey1372: ['#FBCCE7', '粉', '粉色', 'pink'],
+  colorKey1373: [
     '#FBCEB1',
     '深肉',
     '肉',
@@ -11081,7 +11498,7 @@ export const colorDictionary = {
     'FleshColor',
     'DarkFlesh',
   ],
-  'Banana Mania': [
+  colorKey1374: [
     '#FBE7B2',
     '淡菊黄',
     '黄',
@@ -11090,7 +11507,7 @@ export const colorDictionary = {
     'yellow',
     'PaleChrysanthemumYellow',
   ],
-  'Marigold Yellow': [
+  colorKey1375: [
     '#FBE870',
     '金黄',
     '金',
@@ -11101,7 +11518,7 @@ export const colorDictionary = {
     'yellow',
     'golden',
   ],
-  Festival: [
+  colorKey1376: [
     '#FBE96C',
     '金黄',
     '金',
@@ -11112,7 +11529,7 @@ export const colorDictionary = {
     'yellow',
     'golden',
   ],
-  'Sweet Corn': [
+  colorKey1377: [
     '#FBEA8C',
     '金黄',
     '金',
@@ -11123,7 +11540,7 @@ export const colorDictionary = {
     'yellow',
     'golden',
   ],
-  'Candy Corn': [
+  colorKey1378: [
     '#FBEC5D',
     '金黄',
     '金',
@@ -11134,7 +11551,7 @@ export const colorDictionary = {
     'yellow',
     'golden',
   ],
-  'Hint of Red': [
+  colorKey1379: [
     '#FBF9F9',
     '银白',
     '白',
@@ -11152,8 +11569,8 @@ export const colorDictionary = {
     'white',
     'silveryWhite',
   ],
-  Shalimar: ['#FBFFBA', '黄', '黄色', 'yellow'],
-  'Shocking Pink': [
+  colorKey1380: ['#FBFFBA', '黄', '黄色', 'yellow'],
+  colorKey1381: [
     '#FC0FC0',
     '紫红',
     '洋红',
@@ -11162,7 +11579,7 @@ export const colorDictionary = {
     'carmine',
     'fuchsia',
   ],
-  'Tickle Me Pink': [
+  colorKey1382: [
     '#FC80A5',
     '桃红',
     '粉',
@@ -11173,7 +11590,7 @@ export const colorDictionary = {
     'pink',
     'peach',
   ],
-  'Tree Poppy': [
+  colorKey1383: [
     '#FC9C1D',
     '深秋',
     '深黄',
@@ -11185,7 +11602,7 @@ export const colorDictionary = {
     'darkYellow',
     'DeepAutumn',
   ],
-  'Lightning Yellow': [
+  colorKey1384: [
     '#FCC01E',
     '金黄',
     '金',
@@ -11196,7 +11613,7 @@ export const colorDictionary = {
     'yellow',
     'golden',
   ],
-  Goldenrod: [
+  colorKey1385: [
     '#FCD667',
     '金黄',
     '金',
@@ -11207,7 +11624,7 @@ export const colorDictionary = {
     'yellow',
     'golden',
   ],
-  Candlelight: [
+  colorKey1386: [
     '#FCD917',
     '金黄',
     '金',
@@ -11218,7 +11635,7 @@ export const colorDictionary = {
     'yellow',
     'golden',
   ],
-  Cherokee: [
+  colorKey1387: [
     '#FCDA98',
     '深卡其',
     '鹿皮',
@@ -11230,7 +11647,7 @@ export const colorDictionary = {
     'Moccasin',
     'DarkKhaki',
   ],
-  'Double Pearl Lusta': [
+  colorKey1388: [
     '#FCF4D0',
     '卡其',
     '浅卡其',
@@ -11242,7 +11659,7 @@ export const colorDictionary = {
     'lightKhaki',
     'khaki',
   ],
-  'Pearl Lusta': [
+  colorKey1389: [
     '#FCF4DC',
     '卡其',
     '浅卡其',
@@ -11254,7 +11671,7 @@ export const colorDictionary = {
     'lightKhaki',
     'khaki',
   ],
-  'Vista White': [
+  colorKey1390: [
     '#FCF8F7',
     '银白',
     '白',
@@ -11272,7 +11689,7 @@ export const colorDictionary = {
     'white',
     'silveryWhite',
   ],
-  Bianca: [
+  colorKey1391: [
     '#FCFBF3',
     '银白',
     '白',
@@ -11290,7 +11707,7 @@ export const colorDictionary = {
     'white',
     'silveryWhite',
   ],
-  'Moon Glow': [
+  colorKey1392: [
     '#FCFEDA',
     '黄绿',
     '黄',
@@ -11299,7 +11716,7 @@ export const colorDictionary = {
     'yellow',
     'YellowGreen',
   ],
-  'China Ivory': [
+  colorKey1393: [
     '#FCFFE7',
     '淡绿',
     '浅绿',
@@ -11311,7 +11728,7 @@ export const colorDictionary = {
     'LightGreen',
     'paleGreen',
   ],
-  Ceramic: [
+  colorKey1394: [
     '#FCFFF9',
     '银白',
     '白',
@@ -11329,8 +11746,8 @@ export const colorDictionary = {
     'white',
     'silveryWhite',
   ],
-  'Torch Red': ['#FD0E35', '红', '红色', 'red'],
-  'Wild Watermelon': [
+  colorKey1395: ['#FD0E35', '红', '红色', 'red'],
+  colorKey1396: [
     '#FD5B78',
     '桃红',
     '粉',
@@ -11341,7 +11758,7 @@ export const colorDictionary = {
     'pink',
     'peach',
   ],
-  Crusta: [
+  colorKey1397: [
     '#FD7B33',
     '橘',
     '桔',
@@ -11355,7 +11772,7 @@ export const colorDictionary = {
     '橘色',
     'orange',
   ],
-  Sorbus: [
+  colorKey1398: [
     '#FD7C07',
     '橘',
     '桔',
@@ -11369,19 +11786,11 @@ export const colorDictionary = {
     '橘色',
     'orange',
   ],
-  'Sweet Pink': ['#FD9FA2', '粉', '粉色', 'pink'],
-  'Light Apricot': [
-    '#FDD5B1',
-    '肉',
-    '桃',
-    '桃色',
-    '肉色',
-    'Peach',
-    'FleshColor',
-  ],
-  'Pig Pink': ['#FDD7E4', '粉', '粉色', 'pink'],
-  Cinderella: ['#FDE1DC', '粉', '粉色', 'pink'],
-  'Golden Glow': [
+  colorKey1399: ['#FD9FA2', '粉', '粉色', 'pink'],
+  colorKey1400: ['#FDD5B1', '肉', '桃', '桃色', '肉色', 'Peach', 'FleshColor'],
+  colorKey1401: ['#FDD7E4', '粉', '粉色', 'pink'],
+  colorKey1402: ['#FDE1DC', '粉', '粉色', 'pink'],
+  colorKey1403: [
     '#FDE295',
     '深秋黄',
     '土黄',
@@ -11393,7 +11802,7 @@ export const colorDictionary = {
     'earthYellow',
     'LateAutumnYellow',
   ],
-  Lemon: [
+  colorKey1404: [
     '#FDE910',
     '金黄',
     '金',
@@ -11404,7 +11813,7 @@ export const colorDictionary = {
     'yellow',
     'golden',
   ],
-  'Old Lace': [
+  colorKey1405: [
     '#FDF5E6',
     '浅米',
     '米',
@@ -11413,7 +11822,7 @@ export const colorDictionary = {
     'Beige',
     'Lightbeige',
   ],
-  'Half Colonial White': [
+  colorKey1406: [
     '#FDF6D3',
     '鹅黄',
     '黄',
@@ -11422,9 +11831,9 @@ export const colorDictionary = {
     'yellow',
     'lightyellow',
   ],
-  Drover: ['#FDF7AD', '黄', '黄色', 'yellow'],
-  'Pale Prim': ['#FDFEB8', '黄', '黄色', 'yellow'],
-  Cumulus: [
+  colorKey1407: ['#FDF7AD', '黄', '黄色', 'yellow'],
+  colorKey1408: ['#FDFEB8', '黄', '黄色', 'yellow'],
+  colorKey1409: [
     '#FDFFD5',
     '黄绿',
     '鹅黄',
@@ -11436,16 +11845,8 @@ export const colorDictionary = {
     'lightyellow',
     'YellowGreen',
   ],
-  'Persian Rose': [
-    '#FE28A2',
-    '粉',
-    '深粉',
-    '深粉色',
-    '粉色',
-    'deepPink',
-    'pink',
-  ],
-  'Sunset Orange': [
+  colorKey1410: ['#FE28A2', '粉', '深粉', '深粉色', '粉色', 'deepPink', 'pink'],
+  colorKey1411: [
     '#FE4C40',
     '桃红',
     '粉',
@@ -11456,8 +11857,8 @@ export const colorDictionary = {
     'pink',
     'peach',
   ],
-  Bittersweet: ['#FE6F5E', '粉', '珊瑚', '珊瑚色', '粉色', 'coral', 'pink'],
-  California: [
+  colorKey1412: ['#FE6F5E', '粉', '珊瑚', '珊瑚色', '粉色', 'coral', 'pink'],
+  colorKey1413: [
     '#FE9D04',
     '深秋',
     '深黄',
@@ -11469,7 +11870,7 @@ export const colorDictionary = {
     'darkYellow',
     'DeepAutumn',
   ],
-  'Yellow Sea': [
+  colorKey1414: [
     '#FEA904',
     '深秋',
     '深黄',
@@ -11481,8 +11882,8 @@ export const colorDictionary = {
     'darkYellow',
     'DeepAutumn',
   ],
-  Melon: ['#FEBAAD', '粉', '粉色', 'pink'],
-  'Bright Sun': [
+  colorKey1415: ['#FEBAAD', '粉', '粉色', 'pink'],
+  colorKey1416: [
     '#FED33C',
     '金黄',
     '金',
@@ -11493,7 +11894,7 @@ export const colorDictionary = {
     'yellow',
     'golden',
   ],
-  Dandelion: [
+  colorKey1417: [
     '#FED85D',
     '金黄',
     '金',
@@ -11504,8 +11905,16 @@ export const colorDictionary = {
     'yellow',
     'golden',
   ],
-  Salomie: ['#FEDB8D', '乳黄', '黄', '黄色', '乳黄色', 'yellow', 'creamLike'],
-  'Cape Honey': [
+  colorKey1418: [
+    '#FEDB8D',
+    '乳黄',
+    '黄',
+    '黄色',
+    '乳黄色',
+    'yellow',
+    'creamLike',
+  ],
+  colorKey1419: [
     '#FEE5AC',
     '乳黄',
     '黄',
@@ -11514,7 +11923,7 @@ export const colorDictionary = {
     'yellow',
     'creamLike',
   ],
-  Remy: [
+  colorKey1420: [
     '#FEEBF3',
     '淡紫',
     '浅紫',
@@ -11526,7 +11935,7 @@ export const colorDictionary = {
     'lilac',
     'orchid',
   ],
-  Oasis: [
+  colorKey1421: [
     '#FEEFCE',
     '卡其',
     '乳黄',
@@ -11541,8 +11950,8 @@ export const colorDictionary = {
     'creamLike',
     'khaki',
   ],
-  Bridesmaid: ['#FEF0EC', '粉', '粉色', 'pink'],
-  Beeswax: [
+  colorKey1422: ['#FEF0EC', '粉', '粉色', 'pink'],
+  colorKey1423: [
     '#FEF2C7',
     '卡其',
     '乳黄',
@@ -11557,7 +11966,7 @@ export const colorDictionary = {
     'creamLike',
     'khaki',
   ],
-  'Bleach White': [
+  colorKey1424: [
     '#FEF3D8',
     '卡其',
     '乳黄',
@@ -11572,7 +11981,7 @@ export const colorDictionary = {
     'creamLike',
     'khaki',
   ],
-  Pipi: [
+  colorKey1425: [
     '#FEF4CC',
     '小麦',
     '黄',
@@ -11587,7 +11996,7 @@ export const colorDictionary = {
     'yellow',
     'Wheat',
   ],
-  'Half Spanish White': [
+  colorKey1426: [
     '#FEF4DB',
     '小麦',
     '黄',
@@ -11602,7 +12011,7 @@ export const colorDictionary = {
     'yellow',
     'Wheat',
   ],
-  'Wisp Pink': [
+  colorKey1427: [
     '#FEF4F8',
     '浅粉',
     '淡粉',
@@ -11614,7 +12023,7 @@ export const colorDictionary = {
     'LightPink',
     'LightPink',
   ],
-  'Provincial Pink': [
+  colorKey1428: [
     '#FEF5F1',
     '浅粉',
     '淡粉',
@@ -11626,7 +12035,7 @@ export const colorDictionary = {
     'LightPink',
     'LightPink',
   ],
-  'Half Dutch White': [
+  colorKey1429: [
     '#FEF7DE',
     '小麦',
     '黄',
@@ -11641,7 +12050,7 @@ export const colorDictionary = {
     'yellow',
     'Wheat',
   ],
-  Solitaire: [
+  colorKey1430: [
     '#FEF8E2',
     '小麦',
     '黄',
@@ -11656,7 +12065,7 @@ export const colorDictionary = {
     'yellow',
     'Wheat',
   ],
-  'White Pointer': [
+  colorKey1431: [
     '#FEF8FF',
     '银白',
     '白',
@@ -11674,7 +12083,7 @@ export const colorDictionary = {
     'white',
     'silveryWhite',
   ],
-  'Off Yellow': [
+  colorKey1432: [
     '#FEF9E3',
     '小麦',
     '黄',
@@ -11689,10 +12098,10 @@ export const colorDictionary = {
     'yellow',
     'Wheat',
   ],
-  'Orange White': ['#FEFCED', '米', '卡其', '卡其色', '米色', 'khaki', 'Beige'],
-  Red: ['#FF0000', '红', '红色', 'red'],
-  Rose: ['#FF007F', '深粉', '粉', '粉色', '深粉色', 'pink', 'deepPink'],
-  'Purple Pizzazz': [
+  colorKey1433: ['#FEFCED', '米', '卡其', '卡其色', '米色', 'khaki', 'Beige'],
+  colorKey1434: ['#FF0000', '红', '红色', 'red'],
+  colorKey1435: ['#FF007F', '深粉', '粉', '粉色', '深粉色', 'pink', 'deepPink'],
+  colorKey1436: [
     '#FF00CC',
     '深粉',
     '粉',
@@ -11704,9 +12113,9 @@ export const colorDictionary = {
     'pink',
     'deepPink',
   ],
-  'Magenta / Fuchsia': ['#FF00FF', '紫', '紫色', 'purple'],
-  Scarlet: ['#FF2400', '红', '红色', 'red'],
-  'Wild Strawberry': [
+  colorKey1437: ['#FF00FF', '紫', '紫色', 'purple'],
+  colorKey1438: ['#FF2400', '红', '红色', 'red'],
+  colorKey1439: [
     '#FF3399',
     '芭比粉',
     '粉红',
@@ -11717,7 +12126,7 @@ export const colorDictionary = {
     'pink',
     'BarbiePink',
   ],
-  'Razzle Dazzle Rose': [
+  colorKey1440: [
     '#FF33CC',
     '深粉',
     '粉',
@@ -11729,7 +12138,7 @@ export const colorDictionary = {
     'pink',
     'deepPink',
   ],
-  'Radical Red': [
+  colorKey1441: [
     '#FF355E',
     '珊瑚',
     '桃红',
@@ -11741,7 +12150,7 @@ export const colorDictionary = {
     'peach',
     'coral',
   ],
-  'Red Orange': [
+  colorKey1442: [
     '#FF3F34',
     '橘',
     '橙',
@@ -11755,7 +12164,7 @@ export const colorDictionary = {
     'tangerine',
     'orange',
   ],
-  'Coral Red': [
+  colorKey1443: [
     '#FF4040',
     '橘',
     '橙',
@@ -11769,7 +12178,7 @@ export const colorDictionary = {
     'tangerine',
     'orange',
   ],
-  Vermilion: [
+  colorKey1444: [
     '#FF4D00',
     '橘',
     '桔',
@@ -11783,7 +12192,7 @@ export const colorDictionary = {
     '橘色',
     'orange',
   ],
-  'International Orange': [
+  colorKey1445: [
     '#FF4F00',
     '橘',
     '桔',
@@ -11797,7 +12206,7 @@ export const colorDictionary = {
     '橘色',
     'orange',
   ],
-  'Outrageous Orange': [
+  colorKey1446: [
     '#FF6037',
     '橘',
     '桔',
@@ -11811,7 +12220,7 @@ export const colorDictionary = {
     '橘色',
     'orange',
   ],
-  'Blaze Orange': [
+  colorKey1447: [
     '#FF6600',
     '橘',
     '桔',
@@ -11825,7 +12234,7 @@ export const colorDictionary = {
     '橘色',
     'orange',
   ],
-  'Pink Flamingo': [
+  colorKey1448: [
     '#FF66FF',
     '深粉',
     '粉',
@@ -11837,7 +12246,7 @@ export const colorDictionary = {
     'pink',
     'deepPink',
   ],
-  Orange: [
+  colorKey1449: [
     '#FF681F',
     '橘',
     '桔',
@@ -11851,7 +12260,7 @@ export const colorDictionary = {
     '橘色',
     'orange',
   ],
-  'Hot Pink': [
+  colorKey1450: [
     '#FF69B4',
     '深粉',
     '粉',
@@ -11863,7 +12272,7 @@ export const colorDictionary = {
     'pink',
     'deepPink',
   ],
-  Persimmon: [
+  colorKey1451: [
     '#FF6B53',
     '橘',
     '桔',
@@ -11877,7 +12286,7 @@ export const colorDictionary = {
     '橘色',
     'orange',
   ],
-  'Blush Pink': [
+  colorKey1452: [
     '#FF6FFF',
     '深粉',
     '粉',
@@ -11889,7 +12298,7 @@ export const colorDictionary = {
     'pink',
     'deepPink',
   ],
-  'Burning Orange': [
+  colorKey1453: [
     '#FF7034',
     '橘',
     '桔',
@@ -11903,7 +12312,7 @@ export const colorDictionary = {
     '橘色',
     'orange',
   ],
-  Pumpkin: [
+  colorKey1454: [
     '#FF7518',
     '橘',
     '桔',
@@ -11917,7 +12326,7 @@ export const colorDictionary = {
     '橘色',
     'orange',
   ],
-  Flamenco: [
+  colorKey1455: [
     '#FF7D07',
     '橘',
     '桔',
@@ -11931,7 +12340,7 @@ export const colorDictionary = {
     '橘色',
     'orange',
   ],
-  'Flush Orange': [
+  colorKey1456: [
     '#FF7F00',
     '橘',
     '桔',
@@ -11945,7 +12354,7 @@ export const colorDictionary = {
     '橘色',
     'orange',
   ],
-  Coral: [
+  colorKey1457: [
     '#FF7F50',
     '橘',
     '桔',
@@ -11959,7 +12368,7 @@ export const colorDictionary = {
     '橘色',
     'orange',
   ],
-  Salmon: [
+  colorKey1458: [
     '#FF8C69',
     '橘',
     '桔',
@@ -11973,7 +12382,7 @@ export const colorDictionary = {
     '橘色',
     'orange',
   ],
-  Pizazz: [
+  colorKey1459: [
     '#FF9000',
     '橘',
     '桔',
@@ -11987,7 +12396,7 @@ export const colorDictionary = {
     '橘色',
     'orange',
   ],
-  'West Side': [
+  colorKey1460: [
     '#FF910F',
     '橘',
     '桔',
@@ -12001,7 +12410,7 @@ export const colorDictionary = {
     '橘色',
     'orange',
   ],
-  'Pink Salmon': [
+  colorKey1461: [
     '#FF91A4',
     '桃粉',
     '粉',
@@ -12010,7 +12419,7 @@ export const colorDictionary = {
     'pink',
     'PeachPink',
   ],
-  'Neon Carrot': [
+  colorKey1462: [
     '#FF9933',
     '橘',
     '桔',
@@ -12024,7 +12433,7 @@ export const colorDictionary = {
     '橘色',
     'orange',
   ],
-  'Atomic Tangerine': [
+  colorKey1463: [
     '#FF9966',
     '珊瑚',
     '浅肉',
@@ -12042,7 +12451,7 @@ export const colorDictionary = {
     'LightFleshColor',
     'coral',
   ],
-  'Vivid Tangerine': [
+  colorKey1464: [
     '#FF9980',
     '珊瑚',
     '浅肉',
@@ -12060,7 +12469,7 @@ export const colorDictionary = {
     'LightFleshColor',
     'coral',
   ],
-  Sunshade: [
+  colorKey1465: [
     '#FF9E2C',
     '橘',
     '桔',
@@ -12074,7 +12483,7 @@ export const colorDictionary = {
     '橘色',
     'orange',
   ],
-  'Orange Peel': [
+  colorKey1466: [
     '#FFA000',
     '深秋',
     '金黄',
@@ -12097,8 +12506,16 @@ export const colorDictionary = {
     'golden',
     'DeepAutumn',
   ],
-  'Mona Lisa': ['#FFA194', '浅粉', '粉', '粉色', '浅粉色', 'pink', 'LightPink'],
-  'Web Orange': [
+  colorKey1467: [
+    '#FFA194',
+    '浅粉',
+    '粉',
+    '粉色',
+    '浅粉色',
+    'pink',
+    'LightPink',
+  ],
+  colorKey1468: [
     '#FFA500',
     '深秋',
     '金黄',
@@ -12121,8 +12538,8 @@ export const colorDictionary = {
     'golden',
     'DeepAutumn',
   ],
-  'Carnation Pink': ['#FFA6C9', '粉', '粉色', 'pink'],
-  'Hit Pink': [
+  colorKey1469: ['#FFA6C9', '粉', '粉色', 'pink'],
+  colorKey1470: [
     '#FFAB81',
     '浅肉',
     '肉',
@@ -12137,7 +12554,7 @@ export const colorDictionary = {
     'FleshColor',
     'LightFleshColor',
   ],
-  'Yellow Orange': [
+  colorKey1471: [
     '#FFAE42',
     '深秋',
     '金黄',
@@ -12149,9 +12566,9 @@ export const colorDictionary = {
     'golden',
     'DeepAutumn',
   ],
-  'Cornflower Lilac': ['#FFB0AC', '粉', '粉色', 'pink'],
-  Sundown: ['#FFB1B3', '粉', '粉色', 'pink'],
-  'My Sin': [
+  colorKey1472: ['#FFB0AC', '粉', '粉色', 'pink'],
+  colorKey1473: ['#FFB1B3', '粉', '粉色', 'pink'],
+  colorKey1474: [
     '#FFB31F',
     '深秋',
     '金黄',
@@ -12163,7 +12580,7 @@ export const colorDictionary = {
     'golden',
     'DeepAutumn',
   ],
-  'Texas Rose': [
+  colorKey1475: [
     '#FFB555',
     '深秋',
     '金黄',
@@ -12175,8 +12592,8 @@ export const colorDictionary = {
     'golden',
     'DeepAutumn',
   ],
-  'Cotton Candy': ['#FFB7D5', '粉', '粉色', 'pink'],
-  'Macaroni and Cheese': [
+  colorKey1476: ['#FFB7D5', '粉', '粉色', 'pink'],
+  colorKey1477: [
     '#FFB97B',
     '浅肉',
     '肉',
@@ -12191,7 +12608,7 @@ export const colorDictionary = {
     'FleshColor',
     'LightFleshColor',
   ],
-  'Selective Yellow': [
+  colorKey1478: [
     '#FFBA00',
     '深秋',
     '金黄',
@@ -12203,7 +12620,7 @@ export const colorDictionary = {
     'golden',
     'DeepAutumn',
   ],
-  Koromiko: [
+  colorKey1479: [
     '#FFBD5F',
     '深秋',
     '黄',
@@ -12223,7 +12640,7 @@ export const colorDictionary = {
     'yellow',
     'DeepAutumn',
   ],
-  Amber: [
+  colorKey1480: [
     '#FFBF00',
     '金',
     '金黄',
@@ -12234,7 +12651,7 @@ export const colorDictionary = {
     'yellow',
     'golden',
   ],
-  'Wax Flower': [
+  colorKey1481: [
     '#FFC0A8',
     '肉粉',
     '肉',
@@ -12246,9 +12663,9 @@ export const colorDictionary = {
     'FleshColor',
     'MeatPink',
   ],
-  Pink: ['#FFC0CB', '粉', '粉色', 'pink'],
-  'Your Pink': ['#FFC3C0', '粉', '粉色', 'pink'],
-  Supernova: [
+  colorKey1482: ['#FFC0CB', '粉', '粉色', 'pink'],
+  colorKey1483: ['#FFC3C0', '粉', '粉色', 'pink'],
+  colorKey1484: [
     '#FFC901',
     '金',
     '金黄',
@@ -12259,8 +12676,8 @@ export const colorDictionary = {
     'yellow',
     'golden',
   ],
-  Flesh: ['#FFCBA4', '肉', '肉色', 'FleshColor'],
-  Sunglow: [
+  colorKey1485: ['#FFCBA4', '肉', '肉色', 'FleshColor'],
+  colorKey1486: [
     '#FFCC33',
     '金',
     '金黄',
@@ -12271,7 +12688,7 @@ export const colorDictionary = {
     'yellow',
     'golden',
   ],
-  'Golden Tainoi': [
+  colorKey1487: [
     '#FFCC5C',
     '金',
     '金黄',
@@ -12282,16 +12699,8 @@ export const colorDictionary = {
     'yellow',
     'golden',
   ],
-  'Peach Orange': [
-    '#FFCC99',
-    '桃',
-    '肉',
-    '肉色',
-    '桃色',
-    'FleshColor',
-    'Peach',
-  ],
-  Chardonnay: [
+  colorKey1488: ['#FFCC99', '桃', '肉', '肉色', '桃色', 'FleshColor', 'Peach'],
+  colorKey1489: [
     '#FFCD8C',
     '浅肉',
     '肉',
@@ -12300,8 +12709,8 @@ export const colorDictionary = {
     'FleshColor',
     'LightFleshColor',
   ],
-  'Pastel Pink': ['#FFD1DC', '粉', '粉色', 'pink'],
-  Romantic: [
+  colorKey1490: ['#FFD1DC', '粉', '粉色', 'pink'],
+  colorKey1491: [
     '#FFD2B7',
     '浅肉',
     '肉',
@@ -12310,8 +12719,8 @@ export const colorDictionary = {
     'FleshColor',
     'LightFleshColor',
   ],
-  Grandis: ['#FFD38C', '小麦', '黄', '黄色', '小麦色', 'yellow', 'Wheat'],
-  Gold: [
+  colorKey1492: ['#FFD38C', '小麦', '黄', '黄色', '小麦色', 'yellow', 'Wheat'],
+  colorKey1493: [
     '#FFD700',
     '金',
     '金黄',
@@ -12322,7 +12731,7 @@ export const colorDictionary = {
     'yellow',
     'golden',
   ],
-  'School bus Yellow': [
+  colorKey1494: [
     '#FFD800',
     '金',
     '金黄',
@@ -12333,8 +12742,8 @@ export const colorDictionary = {
     'yellow',
     'golden',
   ],
-  Cosmos: ['#FFD8D9', '粉', '粉色', 'pink'],
-  Mustard: [
+  colorKey1495: ['#FFD8D9', '粉', '粉色', 'pink'],
+  colorKey1496: [
     '#FFDB58',
     '金',
     '金黄',
@@ -12345,8 +12754,8 @@ export const colorDictionary = {
     'yellow',
     'golden',
   ],
-  'Peach Schnapps': ['#FFDCD6', '粉', '粉色', 'pink'],
-  Caramel: [
+  colorKey1497: ['#FFDCD6', '粉', '粉色', 'pink'],
+  colorKey1498: [
     '#FFDDAF',
     '浅肉',
     '肉',
@@ -12355,7 +12764,7 @@ export const colorDictionary = {
     'FleshColor',
     'LightFleshColor',
   ],
-  'Tuft Bush': [
+  colorKey1499: [
     '#FFDDCD',
     '肉',
     '肉粉',
@@ -12367,7 +12776,7 @@ export const colorDictionary = {
     'MeatPink',
     'FleshColor',
   ],
-  Watusi: [
+  colorKey1500: [
     '#FFDDCF',
     '肉',
     '肉粉',
@@ -12379,12 +12788,12 @@ export const colorDictionary = {
     'MeatPink',
     'FleshColor',
   ],
-  'Pink Lace': ['#FFDDF4', '粉', '粉色', 'pink'],
-  'Navajo White': ['#FFDEAD', '肉', '肉色', 'FleshColor'],
-  Frangipani: ['#FFDEB3', '肉', '肉色', 'FleshColor'],
-  Pippin: ['#FFE1DF', '粉', '粉色', 'pink'],
-  'Pale Rose': ['#FFE1F2', '粉', '粉色', 'pink'],
-  Negroni: [
+  colorKey1501: ['#FFDDF4', '粉', '粉色', 'pink'],
+  colorKey1502: ['#FFDEAD', '肉', '肉色', 'FleshColor'],
+  colorKey1503: ['#FFDEB3', '肉', '肉色', 'FleshColor'],
+  colorKey1504: ['#FFE1DF', '粉', '粉色', 'pink'],
+  colorKey1505: ['#FFE1F2', '粉', '粉色', 'pink'],
+  colorKey1506: [
     '#FFE2C5',
     '浅肉',
     '肉',
@@ -12393,16 +12802,8 @@ export const colorDictionary = {
     'FleshColor',
     'LightFleshColor',
   ],
-  'Cream Brulee': [
-    '#FFE5A0',
-    '小麦',
-    '黄',
-    '黄色',
-    '小麦色',
-    'yellow',
-    'Wheat',
-  ],
-  Peach: [
+  colorKey1507: ['#FFE5A0', '小麦', '黄', '黄色', '小麦色', 'yellow', 'Wheat'],
+  colorKey1508: [
     '#FFE5B4',
     '卡其',
     '小麦',
@@ -12414,7 +12815,7 @@ export const colorDictionary = {
     'Wheat',
     'khaki',
   ],
-  Tequila: [
+  colorKey1509: [
     '#FFE6C7',
     '卡其',
     '小麦',
@@ -12426,7 +12827,7 @@ export const colorDictionary = {
     'Wheat',
     'khaki',
   ],
-  Kournikova: [
+  colorKey1510: [
     '#FFE772',
     '金',
     '金黄',
@@ -12437,7 +12838,7 @@ export const colorDictionary = {
     'yellow',
     'golden',
   ],
-  'Sandy Beach': [
+  colorKey1511: [
     '#FFEAC8',
     '卡其',
     '肉',
@@ -12446,7 +12847,7 @@ export const colorDictionary = {
     'FleshColor',
     'khaki',
   ],
-  Karry: [
+  colorKey1512: [
     '#FFEAD4',
     '卡其',
     '米',
@@ -12458,7 +12859,7 @@ export const colorDictionary = {
     'Beige',
     'khaki',
   ],
-  Broom: [
+  colorKey1513: [
     '#FFEC13',
     '金',
     '金黄',
@@ -12469,16 +12870,8 @@ export const colorDictionary = {
     'yellow',
     'golden',
   ],
-  'Colonial White': [
-    '#FFEDBC',
-    '小麦',
-    '黄',
-    '黄色',
-    '小麦色',
-    'yellow',
-    'Wheat',
-  ],
-  Derby: [
+  colorKey1514: ['#FFEDBC', '小麦', '黄', '黄色', '小麦色', 'yellow', 'Wheat'],
+  colorKey1515: [
     '#FFEED8',
     '卡其',
     '肉',
@@ -12490,8 +12883,8 @@ export const colorDictionary = {
     'FleshColor',
     'khaki',
   ],
-  'Vis Vis': ['#FFEFA1', '黄', '黄色', 'yellow'],
-  'Egg White': [
+  colorKey1516: ['#FFEFA1', '黄', '黄色', 'yellow'],
+  colorKey1517: [
     '#FFEFC1',
     '小麦',
     '淡黄',
@@ -12503,7 +12896,7 @@ export const colorDictionary = {
     'canaryYellow',
     'Wheat',
   ],
-  'Papaya Whip': [
+  colorKey1518: [
     '#FFEFD5',
     '卡其',
     '肉',
@@ -12515,7 +12908,7 @@ export const colorDictionary = {
     'FleshColor',
     'khaki',
   ],
-  'Fair Pink': [
+  colorKey1519: [
     '#FFEFEC',
     '淡粉',
     '浅粉',
@@ -12527,7 +12920,7 @@ export const colorDictionary = {
     'LightPink',
     'LightPink',
   ],
-  'Peach Cream': [
+  colorKey1520: [
     '#FFF0DB',
     '卡其',
     '肉',
@@ -12539,8 +12932,8 @@ export const colorDictionary = {
     'FleshColor',
     'khaki',
   ],
-  'Lavender blush': ['#FFF0F5', '粉', '粉色', 'pink'],
-  Gorse: [
+  colorKey1521: ['#FFF0F5', '粉', '粉色', 'pink'],
+  colorKey1522: [
     '#FFF14F',
     '金',
     '金黄',
@@ -12551,8 +12944,8 @@ export const colorDictionary = {
     'yellow',
     'golden',
   ],
-  Buttermilk: ['#FFF1B5', '黄', '黄色', 'yellow'],
-  'Pink Lady': [
+  colorKey1523: ['#FFF1B5', '黄', '黄色', 'yellow'],
+  colorKey1524: [
     '#FFF1D8',
     '卡其',
     '肉',
@@ -12564,7 +12957,7 @@ export const colorDictionary = {
     'FleshColor',
     'khaki',
   ],
-  'Forget Me Not': [
+  colorKey1525: [
     '#FFF1EE',
     '淡粉',
     '浅粉',
@@ -12576,7 +12969,7 @@ export const colorDictionary = {
     'LightPink',
     'LightPink',
   ],
-  Tutu: [
+  colorKey1526: [
     '#FFF1F9',
     '淡粉',
     '浅粉',
@@ -12588,7 +12981,7 @@ export const colorDictionary = {
     'LightPink',
     'LightPink',
   ],
-  Picasso: [
+  colorKey1527: [
     '#FFF39D',
     '淡黄',
     '浅黄',
@@ -12600,7 +12993,7 @@ export const colorDictionary = {
     'LightYellow',
     'canaryYellow',
   ],
-  Chardon: [
+  colorKey1528: [
     '#FFF3F1',
     '淡粉',
     '浅粉',
@@ -12612,7 +13005,7 @@ export const colorDictionary = {
     'LightPink',
     'LightPink',
   ],
-  'Paris Daisy': [
+  colorKey1529: [
     '#FFF46E',
     '金',
     '金黄',
@@ -12623,7 +13016,7 @@ export const colorDictionary = {
     'yellow',
     'golden',
   ],
-  'Barley White': [
+  colorKey1530: [
     '#FFF4CE',
     '卡其',
     '浅黄',
@@ -12638,7 +13031,7 @@ export const colorDictionary = {
     'LightYellow',
     'khaki',
   ],
-  'Egg Sour': [
+  colorKey1531: [
     '#FFF4DD',
     '米',
     '肉',
@@ -12650,7 +13043,7 @@ export const colorDictionary = {
     'FleshColor',
     'Beige',
   ],
-  Sazerac: [
+  colorKey1532: [
     '#FFF4E0',
     '米',
     '肉',
@@ -12662,7 +13055,7 @@ export const colorDictionary = {
     'FleshColor',
     'Beige',
   ],
-  Serenade: [
+  colorKey1533: [
     '#FFF4E8',
     '米',
     '肉',
@@ -12674,7 +13067,7 @@ export const colorDictionary = {
     'FleshColor',
     'Beige',
   ],
-  Chablis: [
+  colorKey1534: [
     '#FFF4F3',
     '淡粉',
     '浅粉',
@@ -12686,7 +13079,7 @@ export const colorDictionary = {
     'LightPink',
     'LightPink',
   ],
-  'Seashell Peach': [
+  colorKey1535: [
     '#FFF5EE',
     '淡粉',
     '浅粉',
@@ -12698,7 +13091,7 @@ export const colorDictionary = {
     'LightPink',
     'LightPink',
   ],
-  Sauvignon: [
+  colorKey1536: [
     '#FFF5F3',
     '淡粉',
     '浅粉',
@@ -12710,7 +13103,7 @@ export const colorDictionary = {
     'LightPink',
     'LightPink',
   ],
-  'Milk Punch': [
+  colorKey1537: [
     '#FFF6D4',
     '卡其',
     '浅黄',
@@ -12725,7 +13118,7 @@ export const colorDictionary = {
     'LightYellow',
     'khaki',
   ],
-  Varden: [
+  colorKey1538: [
     '#FFF6DF',
     '卡其',
     '浅黄',
@@ -12740,7 +13133,7 @@ export const colorDictionary = {
     'LightYellow',
     'khaki',
   ],
-  'Rose White': [
+  colorKey1539: [
     '#FFF6F5',
     '淡粉',
     '浅粉',
@@ -12752,7 +13145,7 @@ export const colorDictionary = {
     'LightPink',
     'LightPink',
   ],
-  'Baja White': [
+  colorKey1540: [
     '#FFF8D1',
     '浅黄',
     '淡黄',
@@ -12764,9 +13157,9 @@ export const colorDictionary = {
     'canaryYellow',
     'LightYellow',
   ],
-  'Gin Fizz': ['#FFF9E2', '米', '卡其', '卡其色', '米色', 'khaki', 'Beige'],
-  'Early Dawn': ['#FFF9E6', '米', '卡其', '卡其色', '米色', 'khaki', 'Beige'],
-  'Lemon Chiffon': [
+  colorKey1541: ['#FFF9E2', '米', '卡其', '卡其色', '米色', 'khaki', 'Beige'],
+  colorKey1542: ['#FFF9E6', '米', '卡其', '卡其色', '米色', 'khaki', 'Beige'],
+  colorKey1543: [
     '#FFFACD',
     '浅黄',
     '淡黄',
@@ -12778,7 +13171,7 @@ export const colorDictionary = {
     'canaryYellow',
     'LightYellow',
   ],
-  'Bridal Heath': [
+  colorKey1544: [
     '#FFFAF4',
     '银白',
     '白',
@@ -12790,7 +13183,7 @@ export const colorDictionary = {
     'white',
     'silveryWhite',
   ],
-  'Scotch Mist': [
+  colorKey1545: [
     '#FFFBDC',
     '浅黄',
     '淡黄',
@@ -12802,7 +13195,7 @@ export const colorDictionary = {
     'canaryYellow',
     'LightYellow',
   ],
-  Soapstone: [
+  colorKey1546: [
     '#FFFBF9',
     '银白',
     '白',
@@ -12814,8 +13207,8 @@ export const colorDictionary = {
     'white',
     'silveryWhite',
   ],
-  'Witch Haze': ['#FFFC99', '黄', '黄色', 'yellow'],
-  'Buttery White': [
+  colorKey1547: ['#FFFC99', '黄', '黄色', 'yellow'],
+  colorKey1548: [
     '#FFFCEA',
     '浅黄',
     '淡黄',
@@ -12827,7 +13220,7 @@ export const colorDictionary = {
     'canaryYellow',
     'LightYellow',
   ],
-  'Island Spice': [
+  colorKey1549: [
     '#FFFCEE',
     '米白',
     '米',
@@ -12836,7 +13229,7 @@ export const colorDictionary = {
     'Beige',
     'OffWhite',
   ],
-  Cream: [
+  colorKey1550: [
     '#FFFDD0',
     '浅黄',
     '淡黄',
@@ -12848,17 +13241,9 @@ export const colorDictionary = {
     'canaryYellow',
     'LightYellow',
   ],
-  'Chilean Heath': [
-    '#FFFDE6',
-    '卡其',
-    '米',
-    '米色',
-    '卡其色',
-    'Beige',
-    'khaki',
-  ],
-  Travertine: ['#FFFDE8', '卡其', '米', '米色', '卡其色', 'Beige', 'khaki'],
-  'Orchid White': [
+  colorKey1551: ['#FFFDE6', '卡其', '米', '米色', '卡其色', 'Beige', 'khaki'],
+  colorKey1552: ['#FFFDE8', '卡其', '米', '米色', '卡其色', 'Beige', 'khaki'],
+  colorKey1553: [
     '#FFFDF3',
     '米白',
     '米',
@@ -12867,7 +13252,7 @@ export const colorDictionary = {
     'Beige',
     'OffWhite',
   ],
-  'Quarter Pearl Lusta': [
+  colorKey1554: [
     '#FFFDF4',
     '米白',
     '米',
@@ -12876,7 +13261,7 @@ export const colorDictionary = {
     'Beige',
     'OffWhite',
   ],
-  'Half and Half': [
+  colorKey1555: [
     '#FFFEE1',
     '浅黄',
     '淡黄',
@@ -12888,7 +13273,7 @@ export const colorDictionary = {
     'canaryYellow',
     'LightYellow',
   ],
-  'Apricot White': [
+  colorKey1556: [
     '#FFFEEC',
     '米白',
     '米',
@@ -12897,8 +13282,16 @@ export const colorDictionary = {
     'Beige',
     'OffWhite',
   ],
-  'Rice Cake': ['#FFFEF0', '米白', '米', '米色', '米白色', 'Beige', 'OffWhite'],
-  'Black White': [
+  colorKey1557: [
+    '#FFFEF0',
+    '米白',
+    '米',
+    '米色',
+    '米白色',
+    'Beige',
+    'OffWhite',
+  ],
+  colorKey1558: [
     '#FFFEF6',
     '银白',
     '白',
@@ -12910,7 +13303,7 @@ export const colorDictionary = {
     'white',
     'silveryWhite',
   ],
-  Romance: [
+  colorKey1559: [
     '#FFFEFD',
     '银白',
     '白',
@@ -12922,9 +13315,9 @@ export const colorDictionary = {
     'white',
     'silveryWhite',
   ],
-  Yellow: ['#FFFF00', '黄', '黄色', 'yellow'],
-  'Laser Lemon': ['#FFFF66', '黄', '黄色', 'yellow'],
-  'Pale Canary': [
+  colorKey1560: ['#FFFF00', '黄', '黄色', 'yellow'],
+  colorKey1561: ['#FFFF66', '黄', '黄色', 'yellow'],
+  colorKey1562: [
     '#FFFF99',
     '浅黄',
     '淡黄',
@@ -12936,7 +13329,7 @@ export const colorDictionary = {
     'canaryYellow',
     'LightYellow',
   ],
-  Portafino: [
+  colorKey1563: [
     '#FFFFB4',
     '浅黄',
     '淡黄',
@@ -12948,9 +13341,17 @@ export const colorDictionary = {
     'canaryYellow',
     'LightYellow',
   ],
-  Ivory: ['#FFFFF0', '米白', '米', '米色', '米白色', 'Beige', 'OffWhite'],
-  White: ['#FFFFFF', '白', '白色', 'white'],
-  'Cyan white': [
+  colorKey1564: [
+    '#FFFFF0',
+    '米白',
+    '米',
+    '米色',
+    '米白色',
+    'Beige',
+    'OffWhite',
+  ],
+  colorKey1565: ['#FFFFFF', '白', '白色', 'white'],
+  colorKey1566: [
     '#d0d9d9',
     '淡青',
     '浅青',
@@ -12964,7 +13365,7 @@ export const colorDictionary = {
     'SkyCyan',
     'LightCyan',
   ],
-  'Grey light green': [
+  colorKey1567: [
     '#dce1dc',
     '灰绿',
     '淡绿',
@@ -12978,7 +13379,7 @@ export const colorDictionary = {
     'LightGreen',
     'GrayishGreen',
   ],
-  QianLan: [
+  colorKey1568: [
     '#8d96b4',
     '淡蓝',
     '天蓝',
@@ -12993,7 +13394,7 @@ export const colorDictionary = {
     'skyBlue',
     'babyBlue',
   ],
-  ShenHui: [
+  colorKey1569: [
     '#414045',
     '暗灰',
     '深灰',
@@ -13005,7 +13406,7 @@ export const colorDictionary = {
     'darkGrey',
     'Dimgray',
   ],
-  chengqiangse: [
+  colorKey1570: [
     '#49413e',
     '深棕',
     '土褐',
@@ -13019,7 +13420,7 @@ export const colorDictionary = {
     'brownness',
     'tan',
   ],
-  huibaise: [
+  colorKey1571: [
     '#cfd3da',
     '蓝灰',
     '灰白',
@@ -13030,7 +13431,7 @@ export const colorDictionary = {
     'grayWhite',
     'gray',
   ],
-  HelvSe: [
+  colorKey1572: [
     '#a7a77f',
     '黄绿',
     '褐绿',
@@ -13042,7 +13443,7 @@ export const colorDictionary = {
     'yellowGreen',
     'darkGreen',
   ],
-  QianZongSe: [
+  colorKey1573: [
     '#948d85',
     '浅棕',
     '褐',
@@ -13054,8 +13455,16 @@ export const colorDictionary = {
     'brownness',
     'lightBrown',
   ],
-  huiLv: ['#abb0ad', '灰绿', '绿', '绿色', '灰绿色', 'green', 'greyishGreen'],
-  shenLv: [
+  colorKey1574: [
+    '#abb0ad',
+    '灰绿',
+    '绿',
+    '绿色',
+    '灰绿色',
+    'green',
+    'greyishGreen',
+  ],
+  colorKey1575: [
     '#252826',
     '墨绿',
     '深绿',
@@ -13067,8 +13476,8 @@ export const colorDictionary = {
     'DarkGreen',
     'blackishGreen',
   ],
-  huise: ['#b6b3b0', '灰', '灰色', 'gray'],
-  zongse: [
+  colorKey1576: ['#b6b3b0', '灰', '灰色', 'gray'],
+  colorKey1577: [
     '#aa7b65',
     '巧克力',
     '褐',
