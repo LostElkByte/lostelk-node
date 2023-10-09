@@ -74,26 +74,44 @@ export const imageResizer = async (image: Jimp, file: Express.Multer.File) => {
 
   // 大尺寸
   if (width > 1280) {
-    image
-      .resize(1280, Jimp.AUTO)
-      .quality(100)
-      .write(`${largeFilePath}`);
+    await Jimp.read(image)
+      .then(img => {
+        img
+          .resize(1280, Jimp.AUTO)
+          .quality(100)
+          .write(`${largeFilePath}`);
+      })
+      .catch(err => {
+        console.log(err);
+      });
   }
 
   // 中等尺寸
   if (width > 640) {
-    image
-      .resize(640, Jimp.AUTO)
-      .quality(85)
-      .write(`${mediumFilePath}`);
+    await Jimp.read(image)
+      .then(img => {
+        img
+          .resize(640, Jimp.AUTO)
+          .quality(85)
+          .write(`${mediumFilePath}`);
+      })
+      .catch(err => {
+        console.log(err);
+      });
   }
 
   // 缩略图
   if (width > 320) {
-    image
-      .resize(320, Jimp.AUTO)
-      .quality(20)
-      .write(`${thumbnailFilePath}`);
+    await Jimp.read(image)
+      .then(img => {
+        img
+          .resize(320, Jimp.AUTO)
+          .quality(20)
+          .write(`${thumbnailFilePath}`);
+      })
+      .catch(err => {
+        console.log(err);
+      });
   }
 };
 
